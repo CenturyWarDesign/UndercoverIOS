@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C357032018B650310060AC3E /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C357031F18B650310060AC3E /* icon.png */; };
+		C3700D3018BCE6D300B6CBFC /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = C3700D2F18BCE6D300B6CBFC /* Card.m */; };
 		C3F06C2018B6432C00F08642 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F06C1F18B6432C00F08642 /* Foundation.framework */; };
 		C3F06C2218B6432D00F08642 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F06C2118B6432D00F08642 /* CoreGraphics.framework */; };
 		C3F06C2418B6432D00F08642 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F06C2318B6432D00F08642 /* UIKit.framework */; };
@@ -36,6 +37,8 @@
 
 /* Begin PBXFileReference section */
 		C357031F18B650310060AC3E /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../../../Desktop/icon.png; sourceTree = "<group>"; };
+		C3700D2E18BCE6D300B6CBFC /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Card.h; path = ../../UndercoverIOS/UnderCoverIOS/UnderCoverIOS/Model/Card.h; sourceTree = "<group>"; };
+		C3700D2F18BCE6D300B6CBFC /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Card.m; path = ../../UndercoverIOS/UnderCoverIOS/UnderCoverIOS/Model/Card.m; sourceTree = "<group>"; };
 		C3F06C1C18B6432C00F08642 /* UnderCoverIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnderCoverIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3F06C1F18B6432C00F08642 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C3F06C2118B6432D00F08642 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -81,9 +84,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C3700D3118BCED5900B6CBFC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C3700D2E18BCE6D300B6CBFC /* Card.h */,
+				C3700D2F18BCE6D300B6CBFC /* Card.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		C3F06C1318B6432C00F08642 = {
 			isa = PBXGroup;
 			children = (
+				C3700D3118BCED5900B6CBFC /* Model */,
 				C3F06C2518B6432D00F08642 /* UnderCoverIOS */,
 				C3F06C4418B6432D00F08642 /* UnderCoverIOSTests */,
 				C3F06C1E18B6432C00F08642 /* Frameworks */,
@@ -257,6 +270,7 @@
 				C3F06C3018B6432D00F08642 /* UCIAppDelegate.m in Sources */,
 				C3F06C2C18B6432D00F08642 /* main.m in Sources */,
 				C3F06C3618B6432D00F08642 /* UCIViewController.m in Sources */,
+				C3700D3018BCE6D300B6CBFC /* Card.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
