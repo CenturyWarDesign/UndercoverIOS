@@ -10,9 +10,20 @@
 
 @interface UCIViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
+@property (nonatomic) int flipCount;
+
 @end
 
 @implementation UCIViewController
+
+- (void)setFlipCount:(int)flipCount
+{
+    _flipCount = flipCount;
+    self.flipsLabel.text = [NSString stringWithFormat:@"ClickCount:%d",self.flipCount];
+    NSLog(@"Flip Count %d",self.flipCount);
+}
+
 
 - (IBAction)touchCardButton:(UIButton *)sender {
     
@@ -25,9 +36,7 @@
         [sender setBackgroundImage:cardFront forState:UIControlStateNormal];
         [sender setTitle:@"卧底" forState:UIControlStateNormal];
     }
-    
-    
-    
+    self.flipCount++;
 }
 
 @end
