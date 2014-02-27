@@ -12,6 +12,7 @@
 		C3700D3418BE33BB00B6CBFC /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = C3700D3318BE33BB00B6CBFC /* Deck.m */; };
 		C3700D3718BE397700B6CBFC /* PlayCard.m in Sources */ = {isa = PBXBuildFile; fileRef = C3700D3618BE397700B6CBFC /* PlayCard.m */; };
 		C3700D3A18BE3F6E00B6CBFC /* PlayCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = C3700D3918BE3F6E00B6CBFC /* PlayCardDeck.m */; };
+		C3700D3D18BF962B00B6CBFC /* UnderCoverGame.m in Sources */ = {isa = PBXBuildFile; fileRef = C3700D3C18BF962B00B6CBFC /* UnderCoverGame.m */; };
 		C3F06C2018B6432C00F08642 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F06C1F18B6432C00F08642 /* Foundation.framework */; };
 		C3F06C2218B6432D00F08642 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F06C2118B6432D00F08642 /* CoreGraphics.framework */; };
 		C3F06C2418B6432D00F08642 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F06C2318B6432D00F08642 /* UIKit.framework */; };
@@ -48,6 +49,8 @@
 		C3700D3618BE397700B6CBFC /* PlayCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayCard.m; path = ../../UndercoverIOS/UnderCoverIOS/UnderCoverIOS/Model/PlayCard.m; sourceTree = "<group>"; };
 		C3700D3818BE3F6E00B6CBFC /* PlayCardDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayCardDeck.h; path = ../../UndercoverIOS/UnderCoverIOS/UnderCoverIOS/Model/PlayCardDeck.h; sourceTree = "<group>"; };
 		C3700D3918BE3F6E00B6CBFC /* PlayCardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayCardDeck.m; path = ../../UndercoverIOS/UnderCoverIOS/UnderCoverIOS/Model/PlayCardDeck.m; sourceTree = "<group>"; };
+		C3700D3B18BF962B00B6CBFC /* UnderCoverGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UnderCoverGame.h; path = UnderCoverIOS/Model/UnderCoverGame.h; sourceTree = "<group>"; };
+		C3700D3C18BF962B00B6CBFC /* UnderCoverGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UnderCoverGame.m; path = UnderCoverIOS/Model/UnderCoverGame.m; sourceTree = "<group>"; };
 		C3F06C1C18B6432C00F08642 /* UnderCoverIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnderCoverIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3F06C1F18B6432C00F08642 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C3F06C2118B6432D00F08642 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -104,6 +107,8 @@
 				C3700D3618BE397700B6CBFC /* PlayCard.m */,
 				C3700D3818BE3F6E00B6CBFC /* PlayCardDeck.h */,
 				C3700D3918BE3F6E00B6CBFC /* PlayCardDeck.m */,
+				C3700D3B18BF962B00B6CBFC /* UnderCoverGame.h */,
+				C3700D3C18BF962B00B6CBFC /* UnderCoverGame.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -284,6 +289,7 @@
 			files = (
 				C3700D3418BE33BB00B6CBFC /* Deck.m in Sources */,
 				C3700D3718BE397700B6CBFC /* PlayCard.m in Sources */,
+				C3700D3D18BF962B00B6CBFC /* UnderCoverGame.m in Sources */,
 				C3F06C3018B6432D00F08642 /* UCIAppDelegate.m in Sources */,
 				C3700D3A18BE3F6E00B6CBFC /* PlayCardDeck.m in Sources */,
 				C3F06C2C18B6432D00F08642 /* main.m in Sources */,

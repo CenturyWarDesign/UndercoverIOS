@@ -7,15 +7,30 @@
 //
 
 #import "UCIViewController.h"
+#import "PlayCardDeck.h"
 
 @interface UCIViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
 @property (nonatomic) int flipCount;
+@property (strong,nonatomic) Deck *deck;
 
 @end
 
 @implementation UCIViewController
+
+
+- (Deck *)deck
+{
+    if(!_deck) _deck = [self createDeck];
+    return _deck;
+}
+
+- (Deck *)createDeck
+{
+    return [[PlayCardDeck alloc] init];
+}
+
 
 - (void)setFlipCount:(int)flipCount
 {
@@ -32,11 +47,14 @@
         [sender setBackgroundImage:cardFront forState:UIControlStateNormal];
         [sender setTitle:@"" forState:UIControlStateNormal];
     }else{
-        UIImage *cardFront = [UIImage imageNamed:@"cardFront"];
-        [sender setBackgroundImage:cardFront forState:UIControlStateNormal];
-        [sender setTitle:@"卧底" forState:UIControlStateNormal];
+        Card *card = [self.deck drawRandomCard];
+        if (card) {
+            UIImage *cardFront = [UIImage imageNamed:@"cardFront"];
+            [sender setBackgroundImage:cardFront forState:UIControlStateNormal];
+            [sender setTitle:card.contents forState:UIControlStateNormal];
+            self.flipCount++;
+        }
     }
-    self.flipCount++;
 }
 
 @end
