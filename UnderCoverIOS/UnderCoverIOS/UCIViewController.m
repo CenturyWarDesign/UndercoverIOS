@@ -8,16 +8,29 @@
 
 #import "UCIViewController.h"
 #import "PlayCardDeck.h"
+#import "UnderCoverGame.h"
 
 @interface UCIViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
 @property (nonatomic) int flipCount;
 @property (strong,nonatomic) Deck *deck;
-
+@property (nonatomic,strong) UnderCoverGame *game;
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
 @end
 
 @implementation UCIViewController
+
+- (UnderCoverGame *)game
+{
+    NSLog(@"%lu",(unsigned long)[self.cardButtons count]);
+
+    if (_game) {
+        _game = [[UnderCoverGame alloc] initGameWithCards:[self.cardButtons count]
+                                                  theDeck:[self createDeck]];
+    }
+    return _game;
+}
 
 
 - (Deck *)deck
@@ -42,19 +55,35 @@
 
 - (IBAction)touchCardButton:(UIButton *)sender {
     
-    if ([sender.currentTitle length]) {
-        UIImage *cardFront = [UIImage imageNamed:@"cardBack"];
-        [sender setBackgroundImage:cardFront forState:UIControlStateNormal];
-        [sender setTitle:@"" forState:UIControlStateNormal];
-    }else{
-        Card *card = [self.deck drawRandomCard];
-        if (card) {
-            UIImage *cardFront = [UIImage imageNamed:@"cardFront"];
-            [sender setBackgroundImage:cardFront forState:UIControlStateNormal];
-            [sender setTitle:card.contents forState:UIControlStateNormal];
-            self.flipCount++;
-        }
+    NSInteger cardIndex = [self.cardButtons indexOfObject:sender];
+    [self.game choosenCardAtIndex:cardIndex];
+    
+    [self updateUI];
+    
+}
+
+- (void)updateUI
+{
+    for (UIButton *cardButton in self.cardButtons) {
+        NSInteger cardIndex = [self.cardButtons indexOfObject:cardButton];
+        Card *card = [self.game cardAtIndex:cardIndex];
+        [cardButton setTitle:[self titleForCard:card] forState:UIControlStateNormal];
+        [cardButton setBackgroundImage:[self backgroundImageForCard:card] forState:UIControlStateNormal];
+        cardButton.enabled = !card.matched;
+
     }
 }
+
+- (NSString *)titleForCard:(Card *)card
+{
+    return card.choosen ? card.contents:Nil;
+}
+
+
+- (UIImage *)backgroundImageForCard:(Card *)card
+{
+    return [UIImage imageNamed:card.choosen ? @"cardFront":@"cardBack"];
+}
+
 
 @end

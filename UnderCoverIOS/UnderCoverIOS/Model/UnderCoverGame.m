@@ -11,7 +11,7 @@
 @interface UnderCoverGame()
 
 @property (nonatomic,readwrite) NSInteger score;
-@property (strong,nonatomic) NSMutableArray *cards;
+@property (strong,nonatomic) NSMutableArray *cards;     //of cards
 
 @end
 
@@ -23,6 +23,18 @@
 {
     self = [super init];
     if (self) {
+        for (int i=0; i<cardCount; i++) {
+            Card *card =[deck drawRandomCard];
+            NSLog(@"%@",card.contents);
+            if (card) {
+                [self.cards addObject:card];
+            }else{
+                self = Nil;
+                break;
+            }
+            
+        }
+        
         
     }
     return self;
@@ -33,16 +45,43 @@
     return _cards;
 }
 
+static const int MATCH_BONUS = 1;
+static const int MISTAKE_PENALTY = 2;
+static const int COST_TO_CHOOSE = 2;
+
 - (void)choosenCardAtIndex:(NSInteger)index
 {
     Card *card = [self.cards objectAtIndex:index];
-    card.choosen = YES;
+    //如果牌还未匹配，则可继续
+    if (!card.matched) {
+        if (!card.choosen) {
+            card.choosen = NO;
+        }else{
+            //macth against another card
+            for (Card *otherCard in self.cards) {
+                if (card.choosen && !card.matched) {
+                    int matchScore = [card match:@[otherCard]];
+                    if (matchScore) {
+                        self.score += MATCH_BONUS;
+                        card.matched = YES;
+                        otherCard.matched = YES;
+                    }else{
+                        self.score -= MISTAKE_PENALTY;
+                        otherCard.choosen = NO;
+                    }
+                    break;
+                }
+            }
+            
+            self.score -= COST_TO_CHOOSE;
+            card.choosen = YES;
+        }
+    }
 }
 
 - (Card *)cardAtIndex:(NSInteger)index
 {
-    Card *card = [self.cards objectAtIndex:index];
-    return card;
+    return (index < [self.cards count]) ? self.cards[index]:Nil;
 }
 
 @end

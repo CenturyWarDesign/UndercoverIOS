@@ -13,6 +13,7 @@
 
 @property (nonatomic,readonly) NSInteger score;
 
+// designated initializer
 - (instancetype)initGameWithCards:(NSInteger) cardCount
                           theDeck:(Deck *)deck;
 
