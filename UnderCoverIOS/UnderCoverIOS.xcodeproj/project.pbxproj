@@ -39,6 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		38CCFD1F18C36AE000E18BD4 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../Downloads/icon/ios/icon.png; sourceTree = "<group>"; };
+		38CCFD2018C36B1200E18BD4 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../../Downloads/icon/ios/Icon@2x.png"; sourceTree = "<group>"; };
+		38CCFD2118C36B3900E18BD4 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-60@2x.png"; path = "../../Downloads/icon/ios7/Icon-60@2x.png"; sourceTree = "<group>"; };
+		38CCFD2218C36B7300E18BD4 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "../../Downloads/icon/ios/Icon-Small.png"; sourceTree = "<group>"; };
+		38CCFD2318C36B8C00E18BD4 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "../../Downloads/icon/ios/Icon-Small@2x.png"; sourceTree = "<group>"; };
+		38CCFD2418C36BA200E18BD4 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
 		C3700D2E18BCE6D300B6CBFC /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Card.h; path = ../../UndercoverIOS/UnderCoverIOS/UnderCoverIOS/Model/Card.h; sourceTree = "<group>"; };
 		C3700D2F18BCE6D300B6CBFC /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Card.m; path = ../../UndercoverIOS/UnderCoverIOS/UnderCoverIOS/Model/Card.m; sourceTree = "<group>"; };
 		C3700D3218BE33BB00B6CBFC /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Deck.h; path = ../../UndercoverIOS/UnderCoverIOS/UnderCoverIOS/Model/Deck.h; sourceTree = "<group>"; };
@@ -114,6 +120,12 @@
 		C3F06C1318B6432C00F08642 = {
 			isa = PBXGroup;
 			children = (
+				38CCFD2418C36BA200E18BD4 /* Icon-40@2x.png */,
+				38CCFD2318C36B8C00E18BD4 /* Icon-Small@2x.png */,
+				38CCFD2218C36B7300E18BD4 /* Icon-Small.png */,
+				38CCFD2118C36B3900E18BD4 /* Icon-60@2x.png */,
+				38CCFD2018C36B1200E18BD4 /* Icon@2x.png */,
+				38CCFD1F18C36AE000E18BD4 /* icon.png */,
 				C3700D3118BCED5900B6CBFC /* Model */,
 				C3F06C2518B6432D00F08642 /* UnderCoverIOS */,
 				C3F06C4418B6432D00F08642 /* UnderCoverIOSTests */,
@@ -415,11 +427,11 @@
 		C3F06C4F18B6432D00F08642 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UnderCoverIOS/UnderCoverIOS-Prefix.pch";
 				INFOPLIST_FILE = "UnderCoverIOS/UnderCoverIOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -428,11 +440,11 @@
 		C3F06C5018B6432D00F08642 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UnderCoverIOS/UnderCoverIOS-Prefix.pch";
 				INFOPLIST_FILE = "UnderCoverIOS/UnderCoverIOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
