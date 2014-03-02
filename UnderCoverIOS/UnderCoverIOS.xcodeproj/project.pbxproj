@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C357032018B650310060AC3E /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C357031F18B650310060AC3E /* icon.png */; };
 		C3700D3018BCE6D300B6CBFC /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = C3700D2F18BCE6D300B6CBFC /* Card.m */; };
 		C3700D3418BE33BB00B6CBFC /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = C3700D3318BE33BB00B6CBFC /* Deck.m */; };
 		C3700D3718BE397700B6CBFC /* PlayCard.m in Sources */ = {isa = PBXBuildFile; fileRef = C3700D3618BE397700B6CBFC /* PlayCard.m */; };
@@ -40,7 +39,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C357031F18B650310060AC3E /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../../../Desktop/icon.png; sourceTree = "<group>"; };
 		C3700D2E18BCE6D300B6CBFC /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Card.h; path = ../../UndercoverIOS/UnderCoverIOS/UnderCoverIOS/Model/Card.h; sourceTree = "<group>"; };
 		C3700D2F18BCE6D300B6CBFC /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Card.m; path = ../../UndercoverIOS/UnderCoverIOS/UnderCoverIOS/Model/Card.m; sourceTree = "<group>"; };
 		C3700D3218BE33BB00B6CBFC /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Deck.h; path = ../../UndercoverIOS/UnderCoverIOS/UnderCoverIOS/Model/Deck.h; sourceTree = "<group>"; };
@@ -159,7 +157,6 @@
 		C3F06C2618B6432D00F08642 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				C357031F18B650310060AC3E /* icon.png */,
 				C3F06C2E18B6432D00F08642 /* UCIAppDelegate.h */,
 				C3F06C2F18B6432D00F08642 /* UCIAppDelegate.m */,
 				C3F06C2718B6432D00F08642 /* UnderCoverIOS-Info.plist */,
@@ -265,7 +262,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C357032018B650310060AC3E /* icon.png in Resources */,
 				C3F06C3818B6432D00F08642 /* Images.xcassets in Resources */,
 				C3F06C2A18B6432D00F08642 /* InfoPlist.strings in Resources */,
 				C3F06C3318B6432D00F08642 /* Main.storyboard in Resources */,
