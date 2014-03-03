@@ -25,7 +25,6 @@
     if (self) {
         for (int i=0; i<cardCount; i++) {
             Card *card =[deck drawRandomCard];
-            NSLog(@"%@",card.contents);
             if (card) {
                 [self.cards addObject:card];
             }else{
@@ -51,16 +50,17 @@ static const int COST_TO_CHOOSE = 2;
 
 - (void)choosenCardAtIndex:(NSInteger)index
 {
-    Card *card = [self.cards objectAtIndex:index];
+    Card *card = [self cardAtIndex:index];
     //如果牌还未匹配，则可继续
     if (!card.matched) {
-        if (!card.choosen) {
+        if (card.choosen) {
             card.choosen = NO;
         }else{
             //macth against another card
             for (Card *otherCard in self.cards) {
-                if (card.choosen && !card.matched) {
+                if (otherCard.choosen && !otherCard.matched) {
                     int matchScore = [card match:@[otherCard]];
+                    NSLog(@"matchScore:%d",matchScore);
                     if (matchScore) {
                         self.score += MATCH_BONUS;
                         card.matched = YES;

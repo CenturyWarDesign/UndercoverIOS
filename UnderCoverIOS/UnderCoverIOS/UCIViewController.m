@@ -11,9 +11,7 @@
 #import "UnderCoverGame.h"
 
 @interface UCIViewController ()
-
-@property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
-@property (nonatomic) int flipCount;
+@property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (strong,nonatomic) Deck *deck;
 @property (nonatomic,strong) UnderCoverGame *game;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
@@ -23,9 +21,7 @@
 
 - (UnderCoverGame *)game
 {
-    NSLog(@"%lu",(unsigned long)[self.cardButtons count]);
-
-    if (_game) {
+    if (!_game) {
         _game = [[UnderCoverGame alloc] initGameWithCards:[self.cardButtons count]
                                                   theDeck:[self createDeck]];
     }
@@ -45,17 +41,11 @@
 }
 
 
-- (void)setFlipCount:(int)flipCount
-{
-    _flipCount = flipCount;
-    self.flipsLabel.text = [NSString stringWithFormat:@"ClickCount:%d",self.flipCount];
-    NSLog(@"Flip Count %d",self.flipCount);
-}
-
 
 - (IBAction)touchCardButton:(UIButton *)sender {
     
     NSInteger cardIndex = [self.cardButtons indexOfObject:sender];
+    
     [self.game choosenCardAtIndex:cardIndex];
     
     [self updateUI];
@@ -70,7 +60,7 @@
         [cardButton setTitle:[self titleForCard:card] forState:UIControlStateNormal];
         [cardButton setBackgroundImage:[self backgroundImageForCard:card] forState:UIControlStateNormal];
         cardButton.enabled = !card.matched;
-
+        self.scoreLabel.text = [NSString stringWithFormat:@"Score: %ld",(long)self.game.score];
     }
 }
 
