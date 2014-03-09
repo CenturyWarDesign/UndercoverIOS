@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "EAIntroView.h"
 
-@interface UCIViewController : UIViewController <EAIntroDelegate>
 
+@interface UCIViewController : UIViewController<UCIHttpCallback>
+-(void)callBack:(NSArray *)data commandName:(NSString*) command;
 @end
