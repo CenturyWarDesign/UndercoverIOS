@@ -9,7 +9,6 @@
 #import "UCIViewController.h"
 #import "PlayCardDeck.h"
 #import "UnderCoverGame.h"
-#import "AFHTTPRequestOperation.h"
 #import "HTTPBase.h"
 
 @interface UCIViewController ()
