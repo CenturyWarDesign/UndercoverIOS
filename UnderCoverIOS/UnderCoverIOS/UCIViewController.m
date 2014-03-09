@@ -9,6 +9,7 @@
 #import "UCIViewController.h"
 #import "PlayCardDeck.h"
 #import "UnderCoverGame.h"
+#import "AFHTTPRequestOperation.h"
 
 @interface UCIViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
@@ -246,7 +247,7 @@
     
     [self.game choosenCardAtIndex:cardIndex];
     
-    [self updateUI];
+//    [self updateUI];
     
 }
 
@@ -265,6 +266,62 @@
 - (NSString *)titleForCard:(Card *)card
 {
     return card.choosen ? card.contents:Nil;
+}
+
+- (IBAction)testHttp:(id)sender {
+    NSString *URLTmp = @"http://42.121.123.185/CenturyServer/Entry.php?cmd=PublishRandomOne";
+    NSString *URLTmp1 = [URLTmp stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];  //转码成UTF-8  否则可能会出现错误
+    URLTmp = URLTmp1;
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString: URLTmp]];
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"Success: %@", operation.responseString);
+        
+        NSString *requestTmp = [NSString stringWithString:operation.responseString];
+        NSData *resData = [[NSData alloc] initWithData:[requestTmp dataUsingEncoding:NSUTF8StringEncoding]];
+        //系统自带JSON解析
+        NSDictionary *resultDic = [NSJSONSerialization JSONObjectWithData:resData options:NSJSONReadingMutableLeaves error:nil];
+//        NSLog(resultDic);
+        
+        
+        
+
+        NSString * datastr=[resultDic objectForKey:@"data"];
+        
+        NSData *resData2 = [[NSData alloc] initWithData:[datastr dataUsingEncoding:NSUTF8StringEncoding]];
+        //系统自带JSON解析
+        NSArray *resultDic2 = [NSJSONSerialization JSONObjectWithData:resData2 options:NSJSONReadingMutableLeaves error:nil];
+        
+//        NSData *datastr = [[NSData alloc] initWithData:([resultDic objectForKey:[@"data"]) UsingEncoding:NSUTF8StringEncoding]];
+        //系统自带JSON解析
+//        NSDictionary *resultDic2 = [NSJSONSerialization JSONObjectWithData:resData options:NSJSONReadingMutableLeaves error:nil];
+
+        
+        
+        
+//        NSArray *dataarr=resultDic2;
+        if([resultDic2 count]>0){
+            
+        NSDictionary *tem=(NSDictionary *)[resultDic2 objectAtIndex:0];
+        NSString * temstr=[tem objectForKey:@"content"];
+          self.scoreLabel.text = [NSString stringWithFormat:@"%@",temstr];
+    }
+//        NSLog(@"%@",);
+//        NSDictionary * first=(NSDictionary *)[data objectAtIndex:0];
+//        NSDictionary *datacontent=;
+//        NSLog(@"%@",[tem objectForKey:@"content"]);
+        
+//        NSLog(datacontent);
+//        NSString *jsonString = ;
+//        NSDictionary * content=[data objectAtIndex:0];
+//        NSString *content2=[data objectForKey:@"content"];
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Failure: %@", error);
+        
+    }];
+    [operation start];
+
 }
 
 
