@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3807004018CE25C2007E7C03 /* HTTPBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3807003E18CE25C2007E7C03 /* HTTPBase.m */; };
 		C3089DC518C778D400A7BAAD /* EAIntroPage.m in Sources */ = {isa = PBXBuildFile; fileRef = C3089DC218C778D400A7BAAD /* EAIntroPage.m */; };
 		C3089DC618C778D400A7BAAD /* EAIntroView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3089DC418C778D400A7BAAD /* EAIntroView.m */; };
 		C3089DE418C77A9D00A7BAAD /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = C3089DC918C77A9D00A7BAAD /* 1.png */; };
@@ -54,6 +55,7 @@
 		C3F06C4118B6432D00F08642 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F06C2318B6432D00F08642 /* UIKit.framework */; };
 		C3F06C4918B6432D00F08642 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3F06C4718B6432D00F08642 /* InfoPlist.strings */; };
 		C3F06C4B18B6432D00F08642 /* UnderCoverIOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F06C4A18B6432D00F08642 /* UnderCoverIOSTests.m */; };
+		E942FB52B1864BB083516D97 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BE7E3E78284ADCB3BDD953 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,12 +69,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07BE7E3E78284ADCB3BDD953 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3807003D18CE25C2007E7C03 /* HTTPBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HTTPBase.h; path = UnderCoverIOS/Model/HTTPBase.h; sourceTree = "<group>"; };
+		3807003E18CE25C2007E7C03 /* HTTPBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HTTPBase.m; path = UnderCoverIOS/Model/HTTPBase.m; sourceTree = "<group>"; };
+		3807003F18CE25C2007E7C03 /* UCIHttpCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UCIHttpCallback.h; path = UnderCoverIOS/Model/UCIHttpCallback.h; sourceTree = "<group>"; };
 		38CCFD1F18C36AE000E18BD4 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../Downloads/icon/ios/icon.png; sourceTree = "<group>"; };
 		38CCFD2018C36B1200E18BD4 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../../Downloads/icon/ios/Icon@2x.png"; sourceTree = "<group>"; };
 		38CCFD2118C36B3900E18BD4 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-60@2x.png"; path = "../../Downloads/icon/ios7/Icon-60@2x.png"; sourceTree = "<group>"; };
 		38CCFD2218C36B7300E18BD4 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "../../Downloads/icon/ios/Icon-Small.png"; sourceTree = "<group>"; };
 		38CCFD2318C36B8C00E18BD4 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "../../Downloads/icon/ios/Icon-Small@2x.png"; sourceTree = "<group>"; };
 		38CCFD2418C36BA200E18BD4 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
+		69C0D4BC55754114AF83A8A1 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		C3089DC118C778D400A7BAAD /* EAIntroPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAIntroPage.h; sourceTree = "<group>"; };
 		C3089DC218C778D400A7BAAD /* EAIntroPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAIntroPage.m; sourceTree = "<group>"; };
 		C3089DC318C778D400A7BAAD /* EAIntroView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAIntroView.h; sourceTree = "<group>"; };
@@ -142,6 +149,7 @@
 				C3F06C2218B6432D00F08642 /* CoreGraphics.framework in Frameworks */,
 				C3F06C2418B6432D00F08642 /* UIKit.framework in Frameworks */,
 				C3F06C2018B6432C00F08642 /* Foundation.framework in Frameworks */,
+				E942FB52B1864BB083516D97 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +236,9 @@
 		C3700D3118BCED5900B6CBFC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3807003D18CE25C2007E7C03 /* HTTPBase.h */,
+				3807003E18CE25C2007E7C03 /* HTTPBase.m */,
+				3807003F18CE25C2007E7C03 /* UCIHttpCallback.h */,
 				C3700D2E18BCE6D300B6CBFC /* Card.h */,
 				C3700D2F18BCE6D300B6CBFC /* Card.m */,
 				C3700D3218BE33BB00B6CBFC /* Deck.h */,
@@ -253,6 +264,7 @@
 				C3F06C4418B6432D00F08642 /* UnderCoverIOSTests */,
 				C3F06C1E18B6432C00F08642 /* Frameworks */,
 				C3F06C1D18B6432C00F08642 /* Products */,
+				69C0D4BC55754114AF83A8A1 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -272,6 +284,7 @@
 				C3F06C2118B6432D00F08642 /* CoreGraphics.framework */,
 				C3F06C2318B6432D00F08642 /* UIKit.framework */,
 				C3F06C3E18B6432D00F08642 /* XCTest.framework */,
+				07BE7E3E78284ADCB3BDD953 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -326,9 +339,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C3F06C4E18B6432D00F08642 /* Build configuration list for PBXNativeTarget "UnderCoverIOS" */;
 			buildPhases = (
+				B667EA2FF9AA478BB2DE03E3 /* Check Pods Manifest.lock */,
 				C3F06C1818B6432C00F08642 /* Sources */,
 				C3F06C1918B6432C00F08642 /* Frameworks */,
 				C3F06C1A18B6432C00F08642 /* Resources */,
+				8EEF9C613BFA4A90AB03B10B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -438,11 +453,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8EEF9C613BFA4A90AB03B10B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B667EA2FF9AA478BB2DE03E3 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C3F06C1818B6432C00F08642 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3807004018CE25C2007E7C03 /* HTTPBase.m in Sources */,
 				C3700D3418BE33BB00B6CBFC /* Deck.m in Sources */,
 				C3700D3718BE397700B6CBFC /* PlayCard.m in Sources */,
 				C3700D3D18BF962B00B6CBFC /* UnderCoverGame.m in Sources */,
@@ -576,6 +625,7 @@
 		};
 		C3F06C4F18B6432D00F08642 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69C0D4BC55754114AF83A8A1 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -589,6 +639,7 @@
 		};
 		C3F06C5018B6432D00F08642 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69C0D4BC55754114AF83A8A1 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

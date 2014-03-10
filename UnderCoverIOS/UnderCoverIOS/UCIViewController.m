@@ -306,11 +306,11 @@
     return YES;
 }
 
--(void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    [self becomeFirstResponder];
-}
+//-(void)viewDidAppear:(BOOL)animated
+//{
+//    [super viewDidAppear:animated];
+//    [self becomeFirstResponder];
+//}
 
 - (void)viewWillDisappear:(BOOL)animated {
     [self resignFirstResponder];
