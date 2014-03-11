@@ -7,12 +7,18 @@
 //
 
 #import "UCIAppDelegate.h"
-
+#import "MobClick.h"
 @implementation UCIAppDelegate
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     application.applicationSupportsShakeToEdit = YES;//添加此处
+    //友盟SDK
+    [MobClick startWithAppkey:@"531f3fcd56240b7b2a0415ac" reportPolicy:SEND_INTERVAL   channelId:@"TEST"];
+    NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+    [MobClick setAppVersion:version];
+    [MobClick setLogEnabled:YES];
     // Override point for customization after application launch.
     return YES;
 }

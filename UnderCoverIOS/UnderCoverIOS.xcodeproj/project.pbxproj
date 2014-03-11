@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3807004018CE25C2007E7C03 /* HTTPBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3807003E18CE25C2007E7C03 /* HTTPBase.m */; };
+		38BA191918CF783700F6741E /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38BA191718CF783700F6741E /* libMobClickLibrary.a */; };
+		38BA191B18CF785800F6741E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 38BA191A18CF785800F6741E /* libz.dylib */; };
 		C3089DC518C778D400A7BAAD /* EAIntroPage.m in Sources */ = {isa = PBXBuildFile; fileRef = C3089DC218C778D400A7BAAD /* EAIntroPage.m */; };
 		C3089DC618C778D400A7BAAD /* EAIntroView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3089DC418C778D400A7BAAD /* EAIntroView.m */; };
 		C3089DE418C77A9D00A7BAAD /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = C3089DC918C77A9D00A7BAAD /* 1.png */; };
@@ -73,6 +75,9 @@
 		3807003D18CE25C2007E7C03 /* HTTPBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HTTPBase.h; path = UnderCoverIOS/Model/HTTPBase.h; sourceTree = "<group>"; };
 		3807003E18CE25C2007E7C03 /* HTTPBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HTTPBase.m; path = UnderCoverIOS/Model/HTTPBase.m; sourceTree = "<group>"; };
 		3807003F18CE25C2007E7C03 /* UCIHttpCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UCIHttpCallback.h; path = UnderCoverIOS/Model/UCIHttpCallback.h; sourceTree = "<group>"; };
+		38BA191718CF783700F6741E /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
+		38BA191818CF783700F6741E /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
+		38BA191A18CF785800F6741E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		38CCFD1F18C36AE000E18BD4 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../Downloads/icon/ios/icon.png; sourceTree = "<group>"; };
 		38CCFD2018C36B1200E18BD4 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../../Downloads/icon/ios/Icon@2x.png"; sourceTree = "<group>"; };
 		38CCFD2118C36B3900E18BD4 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-60@2x.png"; path = "../../Downloads/icon/ios7/Icon-60@2x.png"; sourceTree = "<group>"; };
@@ -146,10 +151,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38BA191B18CF785800F6741E /* libz.dylib in Frameworks */,
 				C3F06C2218B6432D00F08642 /* CoreGraphics.framework in Frameworks */,
 				C3F06C2418B6432D00F08642 /* UIKit.framework in Frameworks */,
 				C3F06C2018B6432C00F08642 /* Foundation.framework in Frameworks */,
 				E942FB52B1864BB083516D97 /* libPods.a in Frameworks */,
+				38BA191918CF783700F6741E /* libMobClickLibrary.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +173,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		38BA191318CF77E900F6741E /* ext */ = {
+			isa = PBXGroup;
+			children = (
+				38BA191718CF783700F6741E /* libMobClickLibrary.a */,
+				38BA191818CF783700F6741E /* MobClick.h */,
+			);
+			name = ext;
+			sourceTree = "<group>";
+		};
 		C3089DC018C778D400A7BAAD /* EAIntroView */ = {
 			isa = PBXGroup;
 			children = (
@@ -256,6 +272,7 @@
 		C3F06C1318B6432C00F08642 = {
 			isa = PBXGroup;
 			children = (
+				38BA191318CF77E900F6741E /* ext */,
 				C3089DC818C77A9D00A7BAAD /* Resources */,
 				C3089DC018C778D400A7BAAD /* EAIntroView */,
 				C3089DC718C778F500A7BAAD /* Icon */,
@@ -280,6 +297,7 @@
 		C3F06C1E18B6432C00F08642 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				38BA191A18CF785800F6741E /* libz.dylib */,
 				C3F06C1F18B6432C00F08642 /* Foundation.framework */,
 				C3F06C2118B6432D00F08642 /* CoreGraphics.framework */,
 				C3F06C2318B6432D00F08642 /* UIKit.framework */,
@@ -632,6 +650,11 @@
 				GCC_PREFIX_HEADER = "UnderCoverIOS/UnderCoverIOS-Prefix.pch";
 				INFOPLIST_FILE = "UnderCoverIOS/UnderCoverIOS-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/wanbin/Downloads/Analytics_iOS_SDK_2.2.2.OpenUDID/UMAnalytics_Sdk_2.2.2.OpenUDID,
+					/Users/wanbin/UndercoverIOS/UnderCoverIOS,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -646,6 +669,11 @@
 				GCC_PREFIX_HEADER = "UnderCoverIOS/UnderCoverIOS-Prefix.pch";
 				INFOPLIST_FILE = "UnderCoverIOS/UnderCoverIOS-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/wanbin/Downloads/Analytics_iOS_SDK_2.2.2.OpenUDID/UMAnalytics_Sdk_2.2.2.OpenUDID,
+					/Users/wanbin/UndercoverIOS/UnderCoverIOS,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

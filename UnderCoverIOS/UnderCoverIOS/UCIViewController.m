@@ -247,7 +247,7 @@
     
     [self.game choosenCardAtIndex:cardIndex];
     
-//    [self updateUI];
+    [self updateUI];
     
 }
 
@@ -267,9 +267,12 @@
 {
     return card.choosen ? card.contents:Nil;
 }
+- (IBAction)http:(id)sender {
+        [self initnewword];
+}
 
 - (IBAction)testHttp:(id)sender {
-    [self initnewword];
+
 }
 
 -(void)initnewword{
