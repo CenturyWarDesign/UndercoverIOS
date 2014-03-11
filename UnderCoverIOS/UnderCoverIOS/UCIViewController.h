@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "EAIntroView.h"
 #import "UCIHttpCallback.h"
+#import "UCIBaseViewController.h"
 
 
-@interface UCIViewController : UIViewController<UCIHttpCallback>
+@interface UCIViewController : UCIBaseViewController<UCIHttpCallback>
 -(void)callBack:(NSArray *)data commandName:(NSString*) command;
 @end

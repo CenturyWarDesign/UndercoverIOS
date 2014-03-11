@@ -327,6 +327,7 @@
         [self initnewword];
         NSLog(@"摇啊摇");
     }
+    [self uMengClick:@"shack"];
 }
 ////以上为摇啊摇代码
 
