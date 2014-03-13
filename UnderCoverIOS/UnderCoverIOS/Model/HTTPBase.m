@@ -8,15 +8,19 @@
 
 #import "HTTPBase.h"
 #import "AFHTTPRequestOperation.h"
-
+#import "MobClick.h"
 @implementation HTTPBase
 
 @synthesize delegate;
 
 - (void)baseHttp:(NSString *)command {
-    NSString *URLTmp = [NSString stringWithFormat:@"http://42.121.123.185/CenturyServer/Entry.php?cmd=%@",command];
+//    NSDictionary * device_id=[MobClick ];
+
+    
+    NSString *URLTmp = [NSString stringWithFormat:@"http://192.168.1.102/CenturyServer/Entry.php?cmd=%@&page=1&sign=23423423",command];
     NSString *URLTmp1 = [URLTmp stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];  //转码成UTF-8  否则可能会出现错误
     URLTmp = URLTmp1;
+    NSLog(@"调用的报文:%@",URLTmp);
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString: URLTmp]];
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {

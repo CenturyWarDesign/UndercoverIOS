@@ -12,6 +12,6 @@
 #import "UCIBaseViewController.h"
 
 
-@interface UCIViewController : UCIBaseViewController<UCIHttpCallback>
--(void)callBack:(NSArray *)data commandName:(NSString*) command;
+@interface UCIViewController : UCIBaseViewController
+
 @end

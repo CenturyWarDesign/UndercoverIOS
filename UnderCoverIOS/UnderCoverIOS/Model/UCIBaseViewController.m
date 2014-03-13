@@ -41,4 +41,6 @@
 -(void)uMengClick:(NSString *) event{
     [MobClick event:event];
 }
+-(void)callBack:(NSArray *)data commandName:(NSString*) command{
+}
 @end

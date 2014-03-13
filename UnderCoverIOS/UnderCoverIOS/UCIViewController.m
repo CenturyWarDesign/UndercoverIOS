@@ -267,19 +267,12 @@
 {
     return card.choosen ? card.contents:Nil;
 }
-- (IBAction)http:(id)sender {
-        [self initnewword];
-}
 
 - (IBAction)testHttp:(id)sender {
 
 }
 
--(void)initnewword{
-    HTTPBase *classBtest = [[HTTPBase alloc] init];
-    classBtest.delegate = self;
-    [classBtest baseHttp:@"PublishRandomOne"];
-}
+
 
 - (UIImage *)backgroundImageForCard:(Card *)card
 {
@@ -287,48 +280,8 @@
 }
 
 
--(void)callBack:(NSArray *)data commandName:(NSString*) command{
-    if([command isEqualToString:@"PublishRandomOne"]){
-        if([data count]>0){
-            NSDictionary * contentone=[data objectAtIndex:0];
-            self.scoreLabel.text = [NSString stringWithFormat:@"Score: %@",[contentone objectForKey:@"content"]];
-        }
-        else{
-            self.scoreLabel.text =@"可以免除惩罚";
-        }
-
-        NSLog(@"PublishRandomOne 函数的回调");
-    }
-}
 
 
 
-////以下为摇啊摇代码
-
--(BOOL)canBecomeFirstResponder {
-    return YES;
-}
-
-//-(void)viewDidAppear:(BOOL)animated
-//{
-//    [super viewDidAppear:animated];
-//    [self becomeFirstResponder];
-//}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [self resignFirstResponder];
-    [super viewWillDisappear:animated];
-}
-
-- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
-{
-    if (motion == UIEventSubtypeMotionShake)
-    {
-        [self initnewword];
-        NSLog(@"摇啊摇");
-    }
-    [self uMengClick:@"shack"];
-}
-////以上为摇啊摇代码
 
 @end
