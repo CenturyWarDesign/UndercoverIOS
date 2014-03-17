@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3807004018CE25C2007E7C03 /* HTTPBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3807003E18CE25C2007E7C03 /* HTTPBase.m */; };
-		38BA191918CF783700F6741E /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38BA191718CF783700F6741E /* libMobClickLibrary.a */; };
 		38BA191B18CF785800F6741E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 38BA191A18CF785800F6741E /* libz.dylib */; };
 		38BA191E18CF7BCD00F6741E /* UCIBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BA191D18CF7BCD00F6741E /* UCIBaseViewController.m */; };
 		C3089DC518C778D400A7BAAD /* EAIntroPage.m in Sources */ = {isa = PBXBuildFile; fileRef = C3089DC218C778D400A7BAAD /* EAIntroPage.m */; };
@@ -39,11 +38,14 @@
 		C3089DFB18C77A9D00A7BAAD /* introBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3089DE118C77A9D00A7BAAD /* introBg@2x.png */; };
 		C3089DFC18C77A9D00A7BAAD /* original@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3089DE218C77A9D00A7BAAD /* original@2x.png */; };
 		C3089DFD18C77A9D00A7BAAD /* supportcat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3089DE318C77A9D00A7BAAD /* supportcat@2x.png */; };
+		C36F0CD418D74C0E003DAD1E /* book.xml in Resources */ = {isa = PBXBuildFile; fileRef = C36F0CD318D74C0E003DAD1E /* book.xml */; };
+		C36F0CD718D74C71003DAD1E /* UCIBookXML.m in Sources */ = {isa = PBXBuildFile; fileRef = C36F0CD618D74C71003DAD1E /* UCIBookXML.m */; };
 		C3700D3018BCE6D300B6CBFC /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = C3700D2F18BCE6D300B6CBFC /* Card.m */; };
 		C3700D3418BE33BB00B6CBFC /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = C3700D3318BE33BB00B6CBFC /* Deck.m */; };
 		C3700D3718BE397700B6CBFC /* PlayCard.m in Sources */ = {isa = PBXBuildFile; fileRef = C3700D3618BE397700B6CBFC /* PlayCard.m */; };
 		C3700D3A18BE3F6E00B6CBFC /* PlayCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = C3700D3918BE3F6E00B6CBFC /* PlayCardDeck.m */; };
 		C3700D3D18BF962B00B6CBFC /* UnderCoverGame.m in Sources */ = {isa = PBXBuildFile; fileRef = C3700D3C18BF962B00B6CBFC /* UnderCoverGame.m */; };
+		C3C5B76D18D2069E00D77599 /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38BA191718CF783700F6741E /* libMobClickLibrary.a */; };
 		C3F06C2018B6432C00F08642 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F06C1F18B6432C00F08642 /* Foundation.framework */; };
 		C3F06C2218B6432D00F08642 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F06C2118B6432D00F08642 /* CoreGraphics.framework */; };
 		C3F06C2418B6432D00F08642 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F06C2318B6432D00F08642 /* UIKit.framework */; };
@@ -118,6 +120,9 @@
 		C3089DE118C77A9D00A7BAAD /* introBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "introBg@2x.png"; sourceTree = "<group>"; };
 		C3089DE218C77A9D00A7BAAD /* original@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "original@2x.png"; sourceTree = "<group>"; };
 		C3089DE318C77A9D00A7BAAD /* supportcat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "supportcat@2x.png"; sourceTree = "<group>"; };
+		C36F0CD318D74C0E003DAD1E /* book.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = book.xml; sourceTree = "<group>"; };
+		C36F0CD518D74C71003DAD1E /* UCIBookXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UCIBookXML.h; path = UnderCoverIOS/Model/UCIBookXML.h; sourceTree = "<group>"; };
+		C36F0CD618D74C71003DAD1E /* UCIBookXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UCIBookXML.m; path = UnderCoverIOS/Model/UCIBookXML.m; sourceTree = "<group>"; };
 		C3700D2E18BCE6D300B6CBFC /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Card.h; path = ../../UndercoverIOS/UnderCoverIOS/UnderCoverIOS/Model/Card.h; sourceTree = "<group>"; };
 		C3700D2F18BCE6D300B6CBFC /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Card.m; path = ../../UndercoverIOS/UnderCoverIOS/UnderCoverIOS/Model/Card.m; sourceTree = "<group>"; };
 		C3700D3218BE33BB00B6CBFC /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Deck.h; path = ../../UndercoverIOS/UnderCoverIOS/UnderCoverIOS/Model/Deck.h; sourceTree = "<group>"; };
@@ -154,12 +159,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3C5B76D18D2069E00D77599 /* libMobClickLibrary.a in Frameworks */,
 				38BA191B18CF785800F6741E /* libz.dylib in Frameworks */,
 				C3F06C2218B6432D00F08642 /* CoreGraphics.framework in Frameworks */,
 				C3F06C2418B6432D00F08642 /* UIKit.framework in Frameworks */,
 				C3F06C2018B6432C00F08642 /* Foundation.framework in Frameworks */,
 				E942FB52B1864BB083516D97 /* libPods.a in Frameworks */,
-				38BA191918CF783700F6741E /* libMobClickLibrary.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,6 +218,7 @@
 		C3089DC818C77A9D00A7BAAD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C36F0CD318D74C0E003DAD1E /* book.xml */,
 				C3089DD018C77A9D00A7BAAD /* Icon */,
 				C3089DC918C77A9D00A7BAAD /* 1.png */,
 				C3089DCA18C77A9D00A7BAAD /* 2.png */,
@@ -270,6 +276,8 @@
 				C3700D3C18BF962B00B6CBFC /* UnderCoverGame.m */,
 				38BA191C18CF7BCD00F6741E /* UCIBaseViewController.h */,
 				38BA191D18CF7BCD00F6741E /* UCIBaseViewController.m */,
+				C36F0CD518D74C71003DAD1E /* UCIBookXML.h */,
+				C36F0CD618D74C71003DAD1E /* UCIBookXML.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -440,6 +448,7 @@
 				C3F06C3818B6432D00F08642 /* Images.xcassets in Resources */,
 				C3089DFD18C77A9D00A7BAAD /* supportcat@2x.png in Resources */,
 				C3089DF418C77A9D00A7BAAD /* Icon-Small-50@2x.png in Resources */,
+				C36F0CD418D74C0E003DAD1E /* book.xml in Resources */,
 				C3089DE418C77A9D00A7BAAD /* 1.png in Resources */,
 				C3089DEA18C77A9D00A7BAAD /* femalecodertocat@2x.png in Resources */,
 				C3089DEE18C77A9D00A7BAAD /* Icon-60@2x.png in Resources */,
@@ -515,6 +524,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3807004018CE25C2007E7C03 /* HTTPBase.m in Sources */,
+				C36F0CD718D74C71003DAD1E /* UCIBookXML.m in Sources */,
 				C3700D3418BE33BB00B6CBFC /* Deck.m in Sources */,
 				C3700D3718BE397700B6CBFC /* PlayCard.m in Sources */,
 				C3700D3D18BF962B00B6CBFC /* UnderCoverGame.m in Sources */,
@@ -658,8 +668,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/wanbin/Downloads/Analytics_iOS_SDK_2.2.2.OpenUDID/UMAnalytics_Sdk_2.2.2.OpenUDID,
-					/Users/wanbin/UndercoverIOS/UnderCoverIOS,
+					/Users/wensonsmith/Github/UndercoverIOS,
+					/Users/wensonsmith/Github/UndercoverIOS/UnderCoverIOS,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -677,8 +687,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/wanbin/Downloads/Analytics_iOS_SDK_2.2.2.OpenUDID/UMAnalytics_Sdk_2.2.2.OpenUDID,
-					/Users/wanbin/UndercoverIOS/UnderCoverIOS,
+					/Users/wensonsmith/Github/UndercoverIOS,
+					/Users/wensonsmith/Github/UndercoverIOS/UnderCoverIOS,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
