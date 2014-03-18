@@ -39,7 +39,8 @@
 		C3089DFC18C77A9D00A7BAAD /* original@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3089DE218C77A9D00A7BAAD /* original@2x.png */; };
 		C3089DFD18C77A9D00A7BAAD /* supportcat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3089DE318C77A9D00A7BAAD /* supportcat@2x.png */; };
 		C36F0CD418D74C0E003DAD1E /* book.xml in Resources */ = {isa = PBXBuildFile; fileRef = C36F0CD318D74C0E003DAD1E /* book.xml */; };
-		C36F0CD718D74C71003DAD1E /* UCIBookXML.m in Sources */ = {isa = PBXBuildFile; fileRef = C36F0CD618D74C71003DAD1E /* UCIBookXML.m */; };
+		C36F0CDC18D8A2D0003DAD1E /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C36F0CDB18D8A2D0003DAD1E /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C36F0CDE18D8A479003DAD1E /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C36F0CDD18D8A479003DAD1E /* libxml2.dylib */; };
 		C3700D3018BCE6D300B6CBFC /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = C3700D2F18BCE6D300B6CBFC /* Card.m */; };
 		C3700D3418BE33BB00B6CBFC /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = C3700D3318BE33BB00B6CBFC /* Deck.m */; };
 		C3700D3718BE397700B6CBFC /* PlayCard.m in Sources */ = {isa = PBXBuildFile; fileRef = C3700D3618BE397700B6CBFC /* PlayCard.m */; };
@@ -121,8 +122,9 @@
 		C3089DE218C77A9D00A7BAAD /* original@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "original@2x.png"; sourceTree = "<group>"; };
 		C3089DE318C77A9D00A7BAAD /* supportcat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "supportcat@2x.png"; sourceTree = "<group>"; };
 		C36F0CD318D74C0E003DAD1E /* book.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = book.xml; sourceTree = "<group>"; };
-		C36F0CD518D74C71003DAD1E /* UCIBookXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UCIBookXML.h; path = UnderCoverIOS/Model/UCIBookXML.h; sourceTree = "<group>"; };
-		C36F0CD618D74C71003DAD1E /* UCIBookXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UCIBookXML.m; path = UnderCoverIOS/Model/UCIBookXML.m; sourceTree = "<group>"; };
+		C36F0CDA18D8A2D0003DAD1E /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
+		C36F0CDB18D8A2D0003DAD1E /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
+		C36F0CDD18D8A479003DAD1E /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		C3700D2E18BCE6D300B6CBFC /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Card.h; path = ../../UndercoverIOS/UnderCoverIOS/UnderCoverIOS/Model/Card.h; sourceTree = "<group>"; };
 		C3700D2F18BCE6D300B6CBFC /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Card.m; path = ../../UndercoverIOS/UnderCoverIOS/UnderCoverIOS/Model/Card.m; sourceTree = "<group>"; };
 		C3700D3218BE33BB00B6CBFC /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Deck.h; path = ../../UndercoverIOS/UnderCoverIOS/UnderCoverIOS/Model/Deck.h; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C36F0CDE18D8A479003DAD1E /* libxml2.dylib in Frameworks */,
 				C3C5B76D18D2069E00D77599 /* libMobClickLibrary.a in Frameworks */,
 				38BA191B18CF785800F6741E /* libz.dylib in Frameworks */,
 				C3F06C2218B6432D00F08642 /* CoreGraphics.framework in Frameworks */,
@@ -258,6 +261,24 @@
 			path = Icon;
 			sourceTree = "<group>";
 		};
+		C36F0CD818D8A296003DAD1E /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				C36F0CD918D8A2D0003DAD1E /* GDataXML */,
+				C3089DC018C778D400A7BAAD /* EAIntroView */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		C36F0CD918D8A2D0003DAD1E /* GDataXML */ = {
+			isa = PBXGroup;
+			children = (
+				C36F0CDA18D8A2D0003DAD1E /* GDataXMLNode.h */,
+				C36F0CDB18D8A2D0003DAD1E /* GDataXMLNode.m */,
+			);
+			path = GDataXML;
+			sourceTree = "<group>";
+		};
 		C3700D3118BCED5900B6CBFC /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,8 +297,6 @@
 				C3700D3C18BF962B00B6CBFC /* UnderCoverGame.m */,
 				38BA191C18CF7BCD00F6741E /* UCIBaseViewController.h */,
 				38BA191D18CF7BCD00F6741E /* UCIBaseViewController.m */,
-				C36F0CD518D74C71003DAD1E /* UCIBookXML.h */,
-				C36F0CD618D74C71003DAD1E /* UCIBookXML.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -287,7 +306,7 @@
 			children = (
 				38BA191318CF77E900F6741E /* ext */,
 				C3089DC818C77A9D00A7BAAD /* Resources */,
-				C3089DC018C778D400A7BAAD /* EAIntroView */,
+				C36F0CD818D8A296003DAD1E /* Library */,
 				C3089DC718C778F500A7BAAD /* Icon */,
 				C3700D3118BCED5900B6CBFC /* Model */,
 				C3F06C2518B6432D00F08642 /* UnderCoverIOS */,
@@ -310,6 +329,7 @@
 		C3F06C1E18B6432C00F08642 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C36F0CDD18D8A479003DAD1E /* libxml2.dylib */,
 				38BA191A18CF785800F6741E /* libz.dylib */,
 				C3F06C1F18B6432C00F08642 /* Foundation.framework */,
 				C3F06C2118B6432D00F08642 /* CoreGraphics.framework */,
@@ -524,7 +544,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3807004018CE25C2007E7C03 /* HTTPBase.m in Sources */,
-				C36F0CD718D74C71003DAD1E /* UCIBookXML.m in Sources */,
+				C36F0CDC18D8A2D0003DAD1E /* GDataXMLNode.m in Sources */,
 				C3700D3418BE33BB00B6CBFC /* Deck.m in Sources */,
 				C3700D3718BE397700B6CBFC /* PlayCard.m in Sources */,
 				C3700D3D18BF962B00B6CBFC /* UnderCoverGame.m in Sources */,
@@ -664,12 +684,29 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UnderCoverIOS/UnderCoverIOS-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"${PODS_ROOT}/Headers\"",
+					"\"${PODS_ROOT}/Headers/AFNetworking\"",
+					/usr/include/libxml2,
+				);
 				INFOPLIST_FILE = "UnderCoverIOS/UnderCoverIOS-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/wensonsmith/Github/UndercoverIOS,
 					/Users/wensonsmith/Github/UndercoverIOS/UnderCoverIOS,
+				);
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"-ObjC",
+					"-framework",
+					CoreGraphics,
+					"-framework",
+					MobileCoreServices,
+					"-framework",
+					Security,
+					"-framework",
+					SystemConfiguration,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -683,12 +720,29 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UnderCoverIOS/UnderCoverIOS-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"${PODS_ROOT}/Headers\"",
+					"\"${PODS_ROOT}/Headers/AFNetworking\"",
+					/usr/include/libxml2,
+				);
 				INFOPLIST_FILE = "UnderCoverIOS/UnderCoverIOS-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/wensonsmith/Github/UndercoverIOS,
 					/Users/wensonsmith/Github/UndercoverIOS/UnderCoverIOS,
+				);
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"-ObjC",
+					"-framework",
+					CoreGraphics,
+					"-framework",
+					MobileCoreServices,
+					"-framework",
+					Security,
+					"-framework",
+					SystemConfiguration,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
