@@ -26,6 +26,7 @@
         for (int i=0; i<cardCount; i++) {
             Card *card =[deck drawRandomCard];
             if (card) {
+                NSLog(@"card content is %@",card.contents);
                 [self.cards addObject:card];
             }else{
                 self = Nil;

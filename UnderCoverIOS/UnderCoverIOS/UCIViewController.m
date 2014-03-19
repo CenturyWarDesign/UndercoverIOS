@@ -28,7 +28,7 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     // all settings are basic, pages with custom packgrounds, title image on each page
-    [self showIntroWithCrossDissolve];
+//    [self showIntroWithCrossDissolve];
     
     // all settings are basic, introview with custom background, title image on each page
     //[self showBasicIntroWithBg];
