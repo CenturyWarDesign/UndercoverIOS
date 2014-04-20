@@ -8,6 +8,7 @@
 
 #import "UCIAppDelegate.h"
 #import "MobClick.h"
+#import "APService.h"
 @implementation UCIAppDelegate
 
 
@@ -22,8 +23,31 @@
     [MobClick setAppVersion:version];
     [MobClick setLogEnabled:YES];
     // Override point for customization after application launch.
+    
+
+    // Required
+    [APService registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge |
+                                                   UIRemoteNotificationTypeSound |
+                                                   UIRemoteNotificationTypeAlert)];
+    // Required
+    [APService setupWithOption:launchOptions];
+    
+    [APService setAlias:@"wanbin" callbackSelector:nil object:self];
+    NSLog(@"why no data");
     return YES;
 }
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    [APService registerDeviceToken:deviceToken];
+}
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *) error {
+    NSLog(@"did Fail To Register For Remote Notifications With Error: %@", error);
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    [APService handleRemoteNotification:userInfo];
+}
+
 							
 - (void)applicationWillResignActive:(UIApplication *)application
 {

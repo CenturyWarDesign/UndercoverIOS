@@ -7,6 +7,7 @@
 //
 
 #import "UCIPublishNet.h"
+#import "BIDNameAndColorTableViewCell.h"
 
 @interface UCIPublishNet ()
 
@@ -27,6 +28,8 @@
     [super viewDidLoad];
     self.dowarves=@[];
     [self initPunish];
+
+    
 	// Do any additional setup after loading the view.
 }
 
@@ -41,13 +44,35 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString * SimpleTableI=@"simpleTableI";
-    UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:SimpleTableI];
-    if(cell==nil){
-        cell=[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:SimpleTableI];
-
+    static NSString *CustomCellIdentifier = @"CustomCellIdentifier";
+    static BOOL nibsRegistered = NO;
+    if (!nibsRegistered) {
+        UINib *nib = [UINib nibWithNibName:@"ColorAndName" bundle:nil];
+        [tableView registerNib:nib forCellReuseIdentifier:CustomCellIdentifier];
+        nibsRegistered = YES;
     }
-    cell.textLabel.text=[self.dowarves[indexPath.row] objectForKey:@"content"];
+    
+    BIDNameAndColorTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:CustomCellIdentifier];
+    if(cell==nil){
+        cell=[[BIDNameAndColorTableViewCell alloc] init];
+    }
+    
+//    cell.txtName.text=@"wanbin";
+//    [cell txtName] setText
+
+    cell.txt3.text=[self.dowarves[indexPath.row] objectForKey:@"content"];
+//    cell..text=[self.dowarves[indexPath.row] objectForKey:@"content"];
+    NSString * txtLike=[NSString stringWithFormat:@"喜欢 %@",[self.dowarves[indexPath.row] objectForKey:@"like"] ];
+    NSString * distxtLike=[NSString stringWithFormat:@"不喜欢 %@",[self.dowarves[indexPath.row] objectForKey:@"dislike"] ];
+
+    [cell.btnLike  setTitle:txtLike forState:UIControlStateNormal];
+    [cell.btnLike setEnabled:(BOOL)[self.dowarves[indexPath.row] objectForKey:@"liked"]];
+    
+    [cell.btnUnlike  setTitle:distxtLike forState:UIControlStateNormal];
+    [cell.btnUnlike setEnabled:(BOOL)[self.dowarves[indexPath.row] objectForKey:@"disliked"]];
+
+//    cell.btnImport.titleLabel.text=[self.dowarves[indexPath.row] objectForKey:@"content"];
+    
     return cell;
 }
 
