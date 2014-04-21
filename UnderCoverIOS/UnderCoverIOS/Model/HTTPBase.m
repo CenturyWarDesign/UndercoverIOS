@@ -13,11 +13,29 @@
 
 @synthesize delegate;
 
-- (void)baseHttp:(NSString *)command {
-//    NSDictionary * device_id=[MobClick ];
 
+- (void)baseHttp:(NSString *)command paramsdata:(NSDictionary *)data{
     
-    NSString *URLTmp = [NSString stringWithFormat:@"http://192.168.1.100/CenturyServer/Entry.php?cmd=%@&page=1&sign=23423423",command];
+//    NSMutableString * temstring=[[NSMutableString alloc] initWithString:@""];
+//    if([data count]>0){
+//        NSEnumerator * enumerator = [data keyEnumerator];;
+//        id object;
+//        //遍历输出
+//        while(object = [enumerator nextObject])
+//        {
+//            //在这里我们得到的是键值，可以通过（1）得到，也可以通过这里得到的键值来得到它对应的value值
+//            //通过NSDictionary对象的objectForKey方法来得到
+//            //其实这里定义objectValue这个对象可以直接用NSObject，因为我们已经知道它的类型了，id在不知道类型的情况下使用
+//            id objectValue = [data objectForKey:object];
+//            if(objectValue != nil){
+//                [temstring appendString:[NSString stringWithFormat:@"&%@=%@",objectValue,object]];
+//            }
+//        }
+////        NSString ;
+//
+    NSString * temjson= [self DataTOjsonString:data];
+    NSString * sign=[self DataTOjsonString:[NSDictionary dictionaryWithObjectsAndKeys:@"werere",@"uid",nil]];
+    NSString *URLTmp = [NSString stringWithFormat:@"http://192.168.1.100/CenturyServer/Entry.php?cmd=%@&sign=%@&data=%@",command,sign,temjson];
     NSString *URLTmp1 = [URLTmp stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];  //转码成UTF-8  否则可能会出现错误
     URLTmp = URLTmp1;
     NSLog(@"调用的报文:%@",URLTmp);
@@ -45,6 +63,14 @@
         
     }];
     [operation start];
+}
+
+
+
+- (void)baseHttp:(NSString *)command  {
+//    NSDictionary * device_id=[MobClick ];
+
+    [self baseHttp:command paramsdata:[NSDictionary dictionaryWithObjectsAndKeys:nil]];
     
 }
 
@@ -55,4 +81,20 @@
 
 //    }
 //}
+
+-(NSString*)DataTOjsonString:(id)object
+{
+    NSString *jsonString = nil;
+    NSError *error;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:object
+                                                       options:0 // Pass 0 if you don't care about the readability of the generated string
+                                                    error:&error];
+    if (! jsonData) {
+        NSLog(@"Got an error: %@", error);
+    } else {
+        jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    }
+    return jsonString;
+}
+
 @end

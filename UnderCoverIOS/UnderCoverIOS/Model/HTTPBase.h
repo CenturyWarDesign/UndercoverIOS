@@ -17,5 +17,6 @@
 @property(nonatomic,retain)id<UCIHttpCallback>delegate;
 
 - (void)baseHttp:(NSString *)command;
+- (void)baseHttp:(NSString *)command paramsdata:(NSDictionary *)data;
 
 @end

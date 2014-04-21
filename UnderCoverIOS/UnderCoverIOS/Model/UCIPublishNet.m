@@ -68,19 +68,64 @@
     [cell.btnLike  setTitle:txtLike forState:UIControlStateNormal];
     [cell.btnLike setEnabled:(BOOL)[self.dowarves[indexPath.row] objectForKey:@"liked"]];
     
+    [cell.btnLike setTag:[[self.dowarves[indexPath.row] objectForKey:@"id"] intValue]];
+    [cell.btnUnlike setTag:[[self.dowarves[indexPath.row] objectForKey:@"id"] intValue]];
+    
+    [cell.btnLike setTag:indexPath.row];
+    [cell.btnUnlike setTag:indexPath.row];
+
+
+    [cell.btnLike addTarget:self  action:@selector(likeit:) forControlEvents:UIControlEventTouchUpInside];
+    [cell.btnUnlike addTarget:self  action:@selector(unlikeit:) forControlEvents:UIControlEventTouchUpInside];
+    
     [cell.btnUnlike  setTitle:distxtLike forState:UIControlStateNormal];
     [cell.btnUnlike setEnabled:(BOOL)[self.dowarves[indexPath.row] objectForKey:@"disliked"]];
+    
+    
 
 //    cell.btnImport.titleLabel.text=[self.dowarves[indexPath.row] objectForKey:@"content"];
     
     return cell;
 }
 
+-(IBAction)likeit:(id)sender{
+    UIButton *btn =(UIButton *)sender;
+    int index=[[self.dowarves[btn.tag] objectForKey:@"id"] intValue];
+    HTTPBase *classBtest = [[HTTPBase alloc] init];
+    int temcount=[[self.dowarves[btn.tag] objectForKey:@"like"] intValue]+1;
+
+    [btn setTitle:[NSString stringWithFormat:@"喜欢 %d",temcount] forState:UIControlStateNormal];
+        [btn setEnabled:false];
+    classBtest.delegate = self;
+    [classBtest baseHttp:@"PublishCollect" paramsdata:[NSDictionary dictionaryWithObjectsAndKeys: [NSString stringWithFormat:@"%d",index],@"id",@"1",@"type",nil]];
+}
+
+-(IBAction)unlikeit:(id)sender{
+    UIButton *btn =(UIButton *)sender;
+    int index=[[self.dowarves[btn.tag] objectForKey:@"id"] intValue];
+    
+    int temcount=[[self.dowarves[btn.tag] objectForKey:@"dislike"] intValue]+1;
+//    [self.dowarves[btn.tag] setObject:[NSString stringWithFormat:@"%d",temcount] forKey:@"dislike"];
+//    [self.tableview reloadData];
+    [btn setTitle:[NSString stringWithFormat:@"不喜欢 %d",temcount] forState:UIControlStateNormal];
+    [btn setEnabled:false];
+    
+    HTTPBase *classBtest = [[HTTPBase alloc] init];
+    classBtest.delegate = self;
+        [classBtest baseHttp:@"PublishCollect" paramsdata:[NSDictionary dictionaryWithObjectsAndKeys: [NSString stringWithFormat:@"%d",index],@"id",@"2",@"type",nil]];
+}
+
+-(void)PublishCollect:(int)index{
+    HTTPBase *classBtest = [[HTTPBase alloc] init];
+    classBtest.delegate = self;
+    [classBtest baseHttp:@"PublishCollect"];
+}
+
 
 -(void)initPunish{
     HTTPBase *classBtest = [[HTTPBase alloc] init];
     classBtest.delegate = self;
-    [classBtest baseHttp:@"PublishAll"];
+    [classBtest baseHttp:@"PublishAll" ];
 }
 
 
@@ -92,6 +137,12 @@
             [self.tableview reloadData];
         }
         NSLog(@"PublishAll 函数的回调");
+    }else if([command isEqualToString:@"PublishCollect"]){
+        if([data count]>0){
+            self.dowarves=data;
+//            [self.tableview reloadData];
+        }
+        NSLog(@"PublishCollect 函数的回调");
     }
 }
 - (IBAction)getPunish:(id)sender {
