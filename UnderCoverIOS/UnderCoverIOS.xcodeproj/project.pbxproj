@@ -8,17 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3807004018CE25C2007E7C03 /* HTTPBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3807003E18CE25C2007E7C03 /* HTTPBase.m */; };
-		38512C2518D09B6C007139FF /* UCIPunishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38512C2418D09B6C007139FF /* UCIPunishViewController.m */; };
-		38512C2818D0BC0A007139FF /* UCIPublishNet.m in Sources */ = {isa = PBXBuildFile; fileRef = 38512C2718D0BC0A007139FF /* UCIPublishNet.m */; };
-		385892A618F5A68300D3ACA0 /* BIDNameAndColorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 385892A418F5A68300D3ACA0 /* BIDNameAndColorTableViewCell.m */; };
-		38A9D84A18F5BC4500386F47 /* ColorAndName.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38A9D84918F5BC4500386F47 /* ColorAndName.xib */; };
-		38A9D84D18F6EEA600386F47 /* libPushSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38A9D84C18F6EEA600386F47 /* libPushSDK.a */; };
-		38A9D84F18F6EF1E00386F47 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38A9D84E18F6EF1E00386F47 /* CFNetwork.framework */; };
-		38A9D85118F6EF2A00386F47 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38A9D85018F6EF2A00386F47 /* CoreFoundation.framework */; };
-		38A9D85318F6EF3700386F47 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38A9D85218F6EF3700386F47 /* SystemConfiguration.framework */; };
-		38A9D85518F6EF7B00386F47 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38A9D85418F6EF7B00386F47 /* CoreTelephony.framework */; };
-		38A9D85918F6F6A000386F47 /* PushConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38A9D85818F6F6A000386F47 /* PushConfig.plist */; };
-		38BA191918CF783700F6741E /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38BA191718CF783700F6741E /* libMobClickLibrary.a */; };
+		3873F70519055D26003827E4 /* UCIPublishNet.m in Sources */ = {isa = PBXBuildFile; fileRef = 3873F70219055D26003827E4 /* UCIPublishNet.m */; };
+		3873F70619055D26003827E4 /* UCIPunishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3873F70419055D26003827E4 /* UCIPunishViewController.m */; };
+		3873F70919055D51003827E4 /* BIDNameAndColorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3873F70819055D51003827E4 /* BIDNameAndColorTableViewCell.m */; };
 		38BA191B18CF785800F6741E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 38BA191A18CF785800F6741E /* libz.dylib */; };
 		38BA191E18CF7BCD00F6741E /* UCIBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BA191D18CF7BCD00F6741E /* UCIBaseViewController.m */; };
 		C3089DC518C778D400A7BAAD /* EAIntroPage.m in Sources */ = {isa = PBXBuildFile; fileRef = C3089DC218C778D400A7BAAD /* EAIntroPage.m */; };
@@ -57,14 +49,12 @@
 		C3700D3718BE397700B6CBFC /* PlayCard.m in Sources */ = {isa = PBXBuildFile; fileRef = C3700D3618BE397700B6CBFC /* PlayCard.m */; };
 		C3700D3A18BE3F6E00B6CBFC /* PlayCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = C3700D3918BE3F6E00B6CBFC /* PlayCardDeck.m */; };
 		C3700D3D18BF962B00B6CBFC /* UnderCoverGame.m in Sources */ = {isa = PBXBuildFile; fileRef = C3700D3C18BF962B00B6CBFC /* UnderCoverGame.m */; };
-		C3C5B76D18D2069E00D77599 /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38BA191718CF783700F6741E /* libMobClickLibrary.a */; };
 		C3F06C2018B6432C00F08642 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F06C1F18B6432C00F08642 /* Foundation.framework */; };
 		C3F06C2218B6432D00F08642 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F06C2118B6432D00F08642 /* CoreGraphics.framework */; };
 		C3F06C2418B6432D00F08642 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F06C2318B6432D00F08642 /* UIKit.framework */; };
 		C3F06C2A18B6432D00F08642 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3F06C2818B6432D00F08642 /* InfoPlist.strings */; };
 		C3F06C2C18B6432D00F08642 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F06C2B18B6432D00F08642 /* main.m */; };
 		C3F06C3018B6432D00F08642 /* UCIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F06C2F18B6432D00F08642 /* UCIAppDelegate.m */; };
-		C3F06C3318B6432D00F08642 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3F06C3118B6432D00F08642 /* Main.storyboard */; };
 		C3F06C3618B6432D00F08642 /* UCIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F06C3518B6432D00F08642 /* UCIViewController.m */; };
 		C3F06C3818B6432D00F08642 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3F06C3718B6432D00F08642 /* Images.xcassets */; };
 		C3F06C3F18B6432D00F08642 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F06C3E18B6432D00F08642 /* XCTest.framework */; };
@@ -90,22 +80,12 @@
 		3807003D18CE25C2007E7C03 /* HTTPBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HTTPBase.h; path = UnderCoverIOS/Model/HTTPBase.h; sourceTree = "<group>"; };
 		3807003E18CE25C2007E7C03 /* HTTPBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HTTPBase.m; path = UnderCoverIOS/Model/HTTPBase.m; sourceTree = "<group>"; };
 		3807003F18CE25C2007E7C03 /* UCIHttpCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UCIHttpCallback.h; path = UnderCoverIOS/Model/UCIHttpCallback.h; sourceTree = "<group>"; };
-		38512C2318D09B6C007139FF /* UCIPunishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UCIPunishViewController.h; path = Model/UCIPunishViewController.h; sourceTree = "<group>"; };
-		38512C2418D09B6C007139FF /* UCIPunishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UCIPunishViewController.m; path = Model/UCIPunishViewController.m; sourceTree = "<group>"; };
-		38512C2618D0BC0A007139FF /* UCIPublishNet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UCIPublishNet.h; path = Model/UCIPublishNet.h; sourceTree = "<group>"; };
-		38512C2718D0BC0A007139FF /* UCIPublishNet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UCIPublishNet.m; path = Model/UCIPublishNet.m; sourceTree = "<group>"; };
-		385892A318F5A68300D3ACA0 /* BIDNameAndColorTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BIDNameAndColorTableViewCell.h; path = Model/BIDNameAndColorTableViewCell.h; sourceTree = "<group>"; };
-		385892A418F5A68300D3ACA0 /* BIDNameAndColorTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BIDNameAndColorTableViewCell.m; path = Model/BIDNameAndColorTableViewCell.m; sourceTree = "<group>"; };
-		38A9D84918F5BC4500386F47 /* ColorAndName.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorAndName.xib; sourceTree = "<group>"; };
-		38A9D84B18F6EEA600386F47 /* APService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APService.h; path = UnderCoverIOS/External/JPUSH/APService.h; sourceTree = "<group>"; };
-		38A9D84C18F6EEA600386F47 /* libPushSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPushSDK.a; path = UnderCoverIOS/External/JPUSH/libPushSDK.a; sourceTree = "<group>"; };
-		38A9D84E18F6EF1E00386F47 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		38A9D85018F6EF2A00386F47 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
-		38A9D85218F6EF3700386F47 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		38A9D85418F6EF7B00386F47 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
-		38A9D85818F6F6A000386F47 /* PushConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PushConfig.plist; sourceTree = "<group>"; };
-		38BA191718CF783700F6741E /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
-		38BA191818CF783700F6741E /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
+		3873F70119055D26003827E4 /* UCIPublishNet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UCIPublishNet.h; path = UnderCoverIOS/Model/UCIPublishNet.h; sourceTree = "<group>"; };
+		3873F70219055D26003827E4 /* UCIPublishNet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UCIPublishNet.m; path = UnderCoverIOS/Model/UCIPublishNet.m; sourceTree = "<group>"; };
+		3873F70319055D26003827E4 /* UCIPunishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UCIPunishViewController.h; path = UnderCoverIOS/Model/UCIPunishViewController.h; sourceTree = "<group>"; };
+		3873F70419055D26003827E4 /* UCIPunishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UCIPunishViewController.m; path = UnderCoverIOS/Model/UCIPunishViewController.m; sourceTree = "<group>"; };
+		3873F70719055D51003827E4 /* BIDNameAndColorTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BIDNameAndColorTableViewCell.h; path = UnderCoverIOS/Model/BIDNameAndColorTableViewCell.h; sourceTree = "<group>"; };
+		3873F70819055D51003827E4 /* BIDNameAndColorTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BIDNameAndColorTableViewCell.m; path = UnderCoverIOS/Model/BIDNameAndColorTableViewCell.m; sourceTree = "<group>"; };
 		38BA191A18CF785800F6741E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		38BA191C18CF7BCD00F6741E /* UCIBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UCIBaseViewController.h; path = UnderCoverIOS/Model/UCIBaseViewController.h; sourceTree = "<group>"; };
 		38BA191D18CF7BCD00F6741E /* UCIBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UCIBaseViewController.m; path = UnderCoverIOS/Model/UCIBaseViewController.m; sourceTree = "<group>"; };
@@ -187,18 +167,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C36F0CDE18D8A479003DAD1E /* libxml2.dylib in Frameworks */,
-				C3C5B76D18D2069E00D77599 /* libMobClickLibrary.a in Frameworks */,
-				C3F06C2018B6432C00F08642 /* Foundation.framework in Frameworks */,
-				38A9D85518F6EF7B00386F47 /* CoreTelephony.framework in Frameworks */,
-				38A9D85318F6EF3700386F47 /* SystemConfiguration.framework in Frameworks */,
-				38A9D85118F6EF2A00386F47 /* CoreFoundation.framework in Frameworks */,
-				38A9D84F18F6EF1E00386F47 /* CFNetwork.framework in Frameworks */,
 				38BA191B18CF785800F6741E /* libz.dylib in Frameworks */,
 				C3F06C2218B6432D00F08642 /* CoreGraphics.framework in Frameworks */,
 				C3F06C2418B6432D00F08642 /* UIKit.framework in Frameworks */,
+				C3F06C2018B6432C00F08642 /* Foundation.framework in Frameworks */,
 				E942FB52B1864BB083516D97 /* libPods.a in Frameworks */,
-				38A9D84D18F6EEA600386F47 /* libPushSDK.a in Frameworks */,
-				38BA191918CF783700F6741E /* libMobClickLibrary.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,24 +188,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		385892A018F5A43D00D3ACA0 /* cell */ = {
-			isa = PBXGroup;
-			children = (
-				385892A318F5A68300D3ACA0 /* BIDNameAndColorTableViewCell.h */,
-				38A9D84918F5BC4500386F47 /* ColorAndName.xib */,
-				385892A418F5A68300D3ACA0 /* BIDNameAndColorTableViewCell.m */,
-			);
-			name = cell;
-			sourceTree = "<group>";
-		};
 		38BA191318CF77E900F6741E /* ext */ = {
 			isa = PBXGroup;
 			children = (
-				38A9D85818F6F6A000386F47 /* PushConfig.plist */,
-				38A9D84B18F6EEA600386F47 /* APService.h */,
-				38A9D84C18F6EEA600386F47 /* libPushSDK.a */,
-				38BA191718CF783700F6741E /* libMobClickLibrary.a */,
-				38BA191818CF783700F6741E /* MobClick.h */,
 			);
 			name = ext;
 			sourceTree = "<group>";
@@ -326,6 +284,12 @@
 		C3700D3118BCED5900B6CBFC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3873F70719055D51003827E4 /* BIDNameAndColorTableViewCell.h */,
+				3873F70819055D51003827E4 /* BIDNameAndColorTableViewCell.m */,
+				3873F70119055D26003827E4 /* UCIPublishNet.h */,
+				3873F70219055D26003827E4 /* UCIPublishNet.m */,
+				3873F70319055D26003827E4 /* UCIPunishViewController.h */,
+				3873F70419055D26003827E4 /* UCIPunishViewController.m */,
 				3807003D18CE25C2007E7C03 /* HTTPBase.h */,
 				3807003E18CE25C2007E7C03 /* HTTPBase.m */,
 				3807003F18CE25C2007E7C03 /* UCIHttpCallback.h */,
@@ -374,10 +338,6 @@
 			isa = PBXGroup;
 			children = (
 				C36F0CDD18D8A479003DAD1E /* libxml2.dylib */,
-				38A9D85418F6EF7B00386F47 /* CoreTelephony.framework */,
-				38A9D85218F6EF3700386F47 /* SystemConfiguration.framework */,
-				38A9D85018F6EF2A00386F47 /* CoreFoundation.framework */,
-				38A9D84E18F6EF1E00386F47 /* CFNetwork.framework */,
 				38BA191A18CF785800F6741E /* libz.dylib */,
 				C3F06C1F18B6432C00F08642 /* Foundation.framework */,
 				C3F06C2118B6432D00F08642 /* CoreGraphics.framework */,
@@ -391,7 +351,6 @@
 		C3F06C2518B6432D00F08642 /* UnderCoverIOS */ = {
 			isa = PBXGroup;
 			children = (
-				385892A018F5A43D00D3ACA0 /* cell */,
 				C3F06C3118B6432D00F08642 /* Main.storyboard */,
 				C3F06C3418B6432D00F08642 /* UCIViewController.h */,
 				C3F06C3518B6432D00F08642 /* UCIViewController.m */,
@@ -482,13 +441,6 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = CenturyGame;
 				TargetAttributes = {
-					C3F06C1B18B6432C00F08642 = {
-						SystemCapabilities = {
-							com.apple.BackgroundModes = {
-								enabled = 1;
-							};
-						};
-					};
 					C3F06C3C18B6432D00F08642 = {
 						TestTargetID = C3F06C1B18B6432C00F08642;
 					};
@@ -529,8 +481,6 @@
 				C3089DEA18C77A9D00A7BAAD /* femalecodertocat@2x.png in Resources */,
 				C3089DEE18C77A9D00A7BAAD /* Icon-60@2x.png in Resources */,
 				C3089DE518C77A9D00A7BAAD /* 2.png in Resources */,
-				38A9D85918F6F6A000386F47 /* PushConfig.plist in Resources */,
-				38A9D84A18F5BC4500386F47 /* ColorAndName.xib in Resources */,
 				C3089DFC18C77A9D00A7BAAD /* original@2x.png in Resources */,
 				C3089DE918C77A9D00A7BAAD /* Default@2x.png in Resources */,
 				C3089DF518C77A9D00A7BAAD /* Icon-Small.png in Resources */,
@@ -546,7 +496,6 @@
 				C3089DEF18C77A9D00A7BAAD /* Icon-72.png in Resources */,
 				C3089DEC18C77A9D00A7BAAD /* Icon-40@2x.png in Resources */,
 				C3089DEB18C77A9D00A7BAAD /* Icon-40.png in Resources */,
-				C3F06C3318B6432D00F08642 /* Main.storyboard in Resources */,
 				C3089DFA18C77A9D00A7BAAD /* iTunesArtwork@2x.png in Resources */,
 				C3089DF918C77A9D00A7BAAD /* iTunesArtwork.png in Resources */,
 				C3089DF618C77A9D00A7BAAD /* Icon-Small@2x.png in Resources */,
@@ -608,13 +557,14 @@
 				C3700D3D18BF962B00B6CBFC /* UnderCoverGame.m in Sources */,
 				C3F06C3018B6432D00F08642 /* UCIAppDelegate.m in Sources */,
 				38BA191E18CF7BCD00F6741E /* UCIBaseViewController.m in Sources */,
-				385892A618F5A68300D3ACA0 /* BIDNameAndColorTableViewCell.m in Sources */,
-				38512C2518D09B6C007139FF /* UCIPunishViewController.m in Sources */,
 				C3700D3A18BE3F6E00B6CBFC /* PlayCardDeck.m in Sources */,
 				C3F06C2C18B6432D00F08642 /* main.m in Sources */,
+				3873F70519055D26003827E4 /* UCIPublishNet.m in Sources */,
 				C3F06C3618B6432D00F08642 /* UCIViewController.m in Sources */,
 				C3700D3018BCE6D300B6CBFC /* Card.m in Sources */,
+				3873F70619055D26003827E4 /* UCIPunishViewController.m in Sources */,
 				C3089DC518C778D400A7BAAD /* EAIntroPage.m in Sources */,
+				3873F70919055D51003827E4 /* BIDNameAndColorTableViewCell.m in Sources */,
 				C3089DC618C778D400A7BAAD /* EAIntroView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -741,8 +691,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 69C0D4BC55754114AF83A8A1 /* Pods.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UnderCoverIOS/UnderCoverIOS-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -752,11 +701,7 @@
 				);
 				INFOPLIST_FILE = "UnderCoverIOS/UnderCoverIOS-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/wensonsmith/Github/UndercoverIOS,
-					/Users/wensonsmith/Github/UndercoverIOS/UnderCoverIOS,
-				);
+				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"-ObjC",
@@ -768,9 +713,6 @@
 					Security,
 					"-framework",
 					SystemConfiguration,
-					/Users/wanbin/Downloads/Analytics_iOS_SDK_2.2.2.OpenUDID/UMAnalytics_Sdk_2.2.2.OpenUDID,
-					/Users/wanbin/UndercoverIOS/UnderCoverIOS,
-					"$(PROJECT_DIR)/UnderCoverIOS/External/JPUSH",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -781,8 +723,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 69C0D4BC55754114AF83A8A1 /* Pods.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UnderCoverIOS/UnderCoverIOS-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -792,11 +733,7 @@
 				);
 				INFOPLIST_FILE = "UnderCoverIOS/UnderCoverIOS-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/wensonsmith/Github/UndercoverIOS,
-					/Users/wensonsmith/Github/UndercoverIOS/UnderCoverIOS,
-				);
+				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"-ObjC",
@@ -808,9 +745,6 @@
 					Security,
 					"-framework",
 					SystemConfiguration,
-					/Users/wanbin/Downloads/Analytics_iOS_SDK_2.2.2.OpenUDID/UMAnalytics_Sdk_2.2.2.OpenUDID,
-					/Users/wanbin/UndercoverIOS/UnderCoverIOS,
-					"$(PROJECT_DIR)/UnderCoverIOS/External/JPUSH",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

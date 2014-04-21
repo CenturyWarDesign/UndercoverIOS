@@ -7,7 +7,7 @@
 //
 
 #import "UCIBaseViewController.h"
-#import "MobClick.h"
+//#import "MobClick.h"
 
 @interface UCIBaseViewController ()
 
@@ -39,7 +39,7 @@
 
 //友盟打点数据
 -(void)uMengClick:(NSString *) event{
-    [MobClick event:event];
+//    [MobClick event:event];
 }
 -(void)callBack:(NSArray *)data commandName:(NSString*) command{
 }
