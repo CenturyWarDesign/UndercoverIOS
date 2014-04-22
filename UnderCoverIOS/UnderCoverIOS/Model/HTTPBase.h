@@ -18,5 +18,5 @@
 
 - (void)baseHttp:(NSString *)command;
 - (void)baseHttp:(NSString *)command paramsdata:(NSDictionary *)data;
-
+- (NSString *)getUDID;
 @end

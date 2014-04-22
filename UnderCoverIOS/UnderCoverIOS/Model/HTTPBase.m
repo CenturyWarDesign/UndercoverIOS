@@ -8,7 +8,7 @@
 
 #import "HTTPBase.h"
 #import "AFHTTPRequestOperation.h"
-//#import "MobClick.h"
+#import "MobClick.h"
 @implementation HTTPBase
 
 @synthesize delegate;
@@ -34,7 +34,7 @@
 ////        NSString ;
 //
     NSString * temjson= [self DataTOjsonString:data];
-    NSString * sign=[self DataTOjsonString:[NSDictionary dictionaryWithObjectsAndKeys:@"werere",@"uid",nil]];
+    NSString * sign=[self DataTOjsonString:[NSDictionary dictionaryWithObjectsAndKeys:[self getUDID],@"uid",nil]];
     NSString *URLTmp = [NSString stringWithFormat:@"http://192.168.1.100/CenturyServer/Entry.php?cmd=%@&sign=%@&data=%@",command,sign,temjson];
     NSString *URLTmp1 = [URLTmp stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];  //转码成UTF-8  否则可能会出现错误
     URLTmp = URLTmp1;
@@ -95,6 +95,11 @@
         jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
     }
     return jsonString;
+}
+
+//取得设备唯一标识
+-(NSString *)getUDID{
+    return     [[[UIDevice currentDevice] identifierForVendor] UUIDString];
 }
 
 @end

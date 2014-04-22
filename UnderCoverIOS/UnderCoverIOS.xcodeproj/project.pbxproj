@@ -11,6 +11,7 @@
 		3873F70519055D26003827E4 /* UCIPublishNet.m in Sources */ = {isa = PBXBuildFile; fileRef = 3873F70219055D26003827E4 /* UCIPublishNet.m */; };
 		3873F70619055D26003827E4 /* UCIPunishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3873F70419055D26003827E4 /* UCIPunishViewController.m */; };
 		3873F70919055D51003827E4 /* BIDNameAndColorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3873F70819055D51003827E4 /* BIDNameAndColorTableViewCell.m */; };
+		3873F70C1906CC40003827E4 /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3873F70A1906CC40003827E4 /* libMobClickLibrary.a */; };
 		38BA191B18CF785800F6741E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 38BA191A18CF785800F6741E /* libz.dylib */; };
 		38BA191E18CF7BCD00F6741E /* UCIBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BA191D18CF7BCD00F6741E /* UCIBaseViewController.m */; };
 		C3089DC518C778D400A7BAAD /* EAIntroPage.m in Sources */ = {isa = PBXBuildFile; fileRef = C3089DC218C778D400A7BAAD /* EAIntroPage.m */; };
@@ -86,6 +87,8 @@
 		3873F70419055D26003827E4 /* UCIPunishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UCIPunishViewController.m; path = UnderCoverIOS/Model/UCIPunishViewController.m; sourceTree = "<group>"; };
 		3873F70719055D51003827E4 /* BIDNameAndColorTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BIDNameAndColorTableViewCell.h; path = UnderCoverIOS/Model/BIDNameAndColorTableViewCell.h; sourceTree = "<group>"; };
 		3873F70819055D51003827E4 /* BIDNameAndColorTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BIDNameAndColorTableViewCell.m; path = UnderCoverIOS/Model/BIDNameAndColorTableViewCell.m; sourceTree = "<group>"; };
+		3873F70A1906CC40003827E4 /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMobClickLibrary.a; path = UnderCoverIOS/External/umeng/libMobClickLibrary.a; sourceTree = "<group>"; };
+		3873F70B1906CC40003827E4 /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MobClick.h; path = UnderCoverIOS/External/umeng/MobClick.h; sourceTree = "<group>"; };
 		38BA191A18CF785800F6741E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		38BA191C18CF7BCD00F6741E /* UCIBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UCIBaseViewController.h; path = UnderCoverIOS/Model/UCIBaseViewController.h; sourceTree = "<group>"; };
 		38BA191D18CF7BCD00F6741E /* UCIBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UCIBaseViewController.m; path = UnderCoverIOS/Model/UCIBaseViewController.m; sourceTree = "<group>"; };
@@ -171,6 +174,7 @@
 				C3F06C2218B6432D00F08642 /* CoreGraphics.framework in Frameworks */,
 				C3F06C2418B6432D00F08642 /* UIKit.framework in Frameworks */,
 				C3F06C2018B6432C00F08642 /* Foundation.framework in Frameworks */,
+				3873F70C1906CC40003827E4 /* libMobClickLibrary.a in Frameworks */,
 				E942FB52B1864BB083516D97 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -191,6 +195,8 @@
 		38BA191318CF77E900F6741E /* ext */ = {
 			isa = PBXGroup;
 			children = (
+				3873F70A1906CC40003827E4 /* libMobClickLibrary.a */,
+				3873F70B1906CC40003827E4 /* MobClick.h */,
 			);
 			name = ext;
 			sourceTree = "<group>";
@@ -701,7 +707,7 @@
 				);
 				INFOPLIST_FILE = "UnderCoverIOS/UnderCoverIOS-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/UnderCoverIOS/External/umeng";
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"-ObjC",
@@ -733,7 +739,7 @@
 				);
 				INFOPLIST_FILE = "UnderCoverIOS/UnderCoverIOS-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/UnderCoverIOS/External/umeng";
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"-ObjC",

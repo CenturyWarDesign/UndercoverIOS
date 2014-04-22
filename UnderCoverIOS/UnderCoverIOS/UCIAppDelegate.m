@@ -7,7 +7,7 @@
 //
 
 #import "UCIAppDelegate.h"
-//#import "MobClick.h"
+#import "MobClick.h"
 @implementation UCIAppDelegate
 
 
@@ -17,12 +17,16 @@
     NSLog(@"Hello world!");
     application.applicationSupportsShakeToEdit = YES;//添加此处
     //友盟SDK
-//    [MobClick startWithAppkey:@"531f3fcd56240b7b2a0415ac" reportPolicy:SEND_INTERVAL   channelId:@"TEST"];
-//    NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
-//    [MobClick setAppVersion:version];
-//    [MobClick setLogEnabled:YES];
+    [MobClick startWithAppkey:@"531f3fcd56240b7b2a0415ac" reportPolicy:SEND_INTERVAL   channelId:@"TEST"];
+    NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+    [MobClick setAppVersion:version];
+    [MobClick setLogEnabled:YES];
     // Override point for customization after application launch.
     
+//        NSArray * tem=[MobClick classFallbacksForKeyedArchiver];
+    //取得设备标识符
+    NSString * name=[[[UIDevice currentDevice] identifierForVendor] UUIDString];
+//    NSDictionary * temss=[MobClick getConfigParams];
     NSLog(@"why no data");
     return YES;
 }
