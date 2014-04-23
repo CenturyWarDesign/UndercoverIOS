@@ -13,8 +13,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [self readXML];
-    NSLog(@"Hello world!");
+//    [self readXML];
+//    NSLog(@"Hello world!");
     application.applicationSupportsShakeToEdit = YES;//添加此处
     //友盟SDK
     [MobClick startWithAppkey:@"531f3fcd56240b7b2a0415ac" reportPolicy:SEND_INTERVAL   channelId:@"TEST"];
@@ -25,9 +25,8 @@
     
 //        NSArray * tem=[MobClick classFallbacksForKeyedArchiver];
     //取得设备标识符
-    NSString * name=[[[UIDevice currentDevice] identifierForVendor] UUIDString];
+//    NSString * name=[[[UIDevice currentDevice] identifierForVendor] UUIDString];
 //    NSDictionary * temss=[MobClick getConfigParams];
-    NSLog(@"why no data");
     return YES;
 }
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
@@ -79,8 +78,6 @@
         GDataXMLElement *summary = [[book elementsForName:@"summary"] objectAtIndex:0];
         NSString *bookSummary = [summary stringValue];
         NSLog(@"Book Author is %@",bookSummary);
-        
-        
     }
 }
 

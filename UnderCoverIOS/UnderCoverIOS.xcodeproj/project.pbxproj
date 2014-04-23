@@ -14,6 +14,8 @@
 		3873F70C1906CC40003827E4 /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3873F70A1906CC40003827E4 /* libMobClickLibrary.a */; };
 		38BA191B18CF785800F6741E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 38BA191A18CF785800F6741E /* libz.dylib */; };
 		38BA191E18CF7BCD00F6741E /* UCIBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BA191D18CF7BCD00F6741E /* UCIBaseViewController.m */; };
+		38E53E5F1907FA06004F8F51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E53E5D1907FA06004F8F51 /* Main.storyboard */; };
+		38E53E661907FB96004F8F51 /* ColorAndName.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38E53E651907FB96004F8F51 /* ColorAndName.xib */; };
 		C3089DC518C778D400A7BAAD /* EAIntroPage.m in Sources */ = {isa = PBXBuildFile; fileRef = C3089DC218C778D400A7BAAD /* EAIntroPage.m */; };
 		C3089DC618C778D400A7BAAD /* EAIntroView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3089DC418C778D400A7BAAD /* EAIntroView.m */; };
 		C3089DE418C77A9D00A7BAAD /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = C3089DC918C77A9D00A7BAAD /* 1.png */; };
@@ -98,6 +100,8 @@
 		38CCFD2218C36B7300E18BD4 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "../../Downloads/icon/ios/Icon-Small.png"; sourceTree = "<group>"; };
 		38CCFD2318C36B8C00E18BD4 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "../../Downloads/icon/ios/Icon-Small@2x.png"; sourceTree = "<group>"; };
 		38CCFD2418C36BA200E18BD4 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
+		38E53E5E1907FA06004F8F51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		38E53E651907FB96004F8F51 /* ColorAndName.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ColorAndName.xib; path = UnderCoverIOS/ColorAndName.xib; sourceTree = "<group>"; };
 		69C0D4BC55754114AF83A8A1 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		C3089DC118C778D400A7BAAD /* EAIntroPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAIntroPage.h; sourceTree = "<group>"; };
 		C3089DC218C778D400A7BAAD /* EAIntroPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAIntroPage.m; sourceTree = "<group>"; };
@@ -153,7 +157,6 @@
 		C3F06C2D18B6432D00F08642 /* UnderCoverIOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UnderCoverIOS-Prefix.pch"; sourceTree = "<group>"; };
 		C3F06C2E18B6432D00F08642 /* UCIAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UCIAppDelegate.h; sourceTree = "<group>"; };
 		C3F06C2F18B6432D00F08642 /* UCIAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UCIAppDelegate.m; sourceTree = "<group>"; };
-		C3F06C3218B6432D00F08642 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C3F06C3418B6432D00F08642 /* UCIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UCIViewController.h; sourceTree = "<group>"; };
 		C3F06C3518B6432D00F08642 /* UCIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UCIViewController.m; sourceTree = "<group>"; };
 		C3F06C3718B6432D00F08642 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -199,6 +202,13 @@
 				3873F70B1906CC40003827E4 /* MobClick.h */,
 			);
 			name = ext;
+			sourceTree = "<group>";
+		};
+		38E53E601907FAC7004F8F51 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		C3089DC018C778D400A7BAAD /* EAIntroView */ = {
@@ -290,6 +300,7 @@
 		C3700D3118BCED5900B6CBFC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				38E53E651907FB96004F8F51 /* ColorAndName.xib */,
 				3873F70719055D51003827E4 /* BIDNameAndColorTableViewCell.h */,
 				3873F70819055D51003827E4 /* BIDNameAndColorTableViewCell.m */,
 				3873F70119055D26003827E4 /* UCIPublishNet.h */,
@@ -318,6 +329,7 @@
 		C3F06C1318B6432C00F08642 = {
 			isa = PBXGroup;
 			children = (
+				38E53E601907FAC7004F8F51 /* View */,
 				38BA191318CF77E900F6741E /* ext */,
 				C3089DC818C77A9D00A7BAAD /* Resources */,
 				C36F0CD818D8A296003DAD1E /* Library */,
@@ -357,7 +369,7 @@
 		C3F06C2518B6432D00F08642 /* UnderCoverIOS */ = {
 			isa = PBXGroup;
 			children = (
-				C3F06C3118B6432D00F08642 /* Main.storyboard */,
+				38E53E5D1907FA06004F8F51 /* Main.storyboard */,
 				C3F06C3418B6432D00F08642 /* UCIViewController.h */,
 				C3F06C3518B6432D00F08642 /* UCIViewController.m */,
 				C3F06C3718B6432D00F08642 /* Images.xcassets */,
@@ -488,6 +500,7 @@
 				C3089DEE18C77A9D00A7BAAD /* Icon-60@2x.png in Resources */,
 				C3089DE518C77A9D00A7BAAD /* 2.png in Resources */,
 				C3089DFC18C77A9D00A7BAAD /* original@2x.png in Resources */,
+				38E53E661907FB96004F8F51 /* ColorAndName.xib in Resources */,
 				C3089DE918C77A9D00A7BAAD /* Default@2x.png in Resources */,
 				C3089DF518C77A9D00A7BAAD /* Icon-Small.png in Resources */,
 				C3089DF718C77A9D00A7BAAD /* Icon.png in Resources */,
@@ -497,6 +510,7 @@
 				C3F06C2A18B6432D00F08642 /* InfoPlist.strings in Resources */,
 				C3089DF218C77A9D00A7BAAD /* Icon-76@2x.png in Resources */,
 				C3089DF018C77A9D00A7BAAD /* Icon-72@2x.png in Resources */,
+				38E53E5F1907FA06004F8F51 /* Main.storyboard in Resources */,
 				C3089DE718C77A9D00A7BAAD /* Default-568h@2x.png in Resources */,
 				C3089DF118C77A9D00A7BAAD /* Icon-76.png in Resources */,
 				C3089DEF18C77A9D00A7BAAD /* Icon-72.png in Resources */,
@@ -594,20 +608,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		38E53E5D1907FA06004F8F51 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38E53E5E1907FA06004F8F51 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		C3F06C2818B6432D00F08642 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				C3F06C2918B6432D00F08642 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		C3F06C3118B6432D00F08642 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C3F06C3218B6432D00F08642 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		C3F06C4718B6432D00F08642 /* InfoPlist.strings */ = {
