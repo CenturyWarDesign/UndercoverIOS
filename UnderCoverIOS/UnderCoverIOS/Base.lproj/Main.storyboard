@@ -173,7 +173,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Da-MK-kaU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="364" y="227"/>
+            <point key="canvasLocation" x="221" y="285"/>
         </scene>
         <!--View Fenpei View Controller - 分配身份-->
         <scene sceneID="3y1-ri-h5W">
@@ -200,6 +200,9 @@
                                 <state key="normal" title="下一位">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="nextOne:" destination="3ho-0x-a8w" eventType="touchUpInside" id="Fev-63-EcP"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="original.png" translatesAutoresizingMaskIntoConstraints="NO" id="K2Q-D2-sH0">
                                 <rect key="frame" x="40" y="110" width="240" height="196"/>
@@ -214,11 +217,31 @@
                         <outlet property="btnNext" destination="iJh-1U-NIV" id="add-es-dsk"/>
                         <outlet property="imgHide" destination="K2Q-D2-sH0" id="lc3-bq-qfI"/>
                         <outlet property="labContent" destination="z9V-UN-AsI" id="joD-is-SN6"/>
+                        <segue destination="n7B-ON-LDM" kind="push" identifier="segueToGuess" id="wyT-cG-RUe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kUq-j8-1eC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1064" y="129"/>
+            <point key="canvasLocation" x="573" y="-170"/>
+        </scene>
+        <!--View Controller - 猜卧底-->
+        <scene sceneID="6mT-1H-gE2">
+            <objects>
+                <viewController id="n7B-ON-LDM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TIw-2h-Nqa"/>
+                        <viewControllerLayoutGuide type="bottom" id="snl-E4-yBR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="O3V-v4-t18">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="猜卧底" id="7A1-lu-3qG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4kg-1d-1xi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="995" y="295"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">

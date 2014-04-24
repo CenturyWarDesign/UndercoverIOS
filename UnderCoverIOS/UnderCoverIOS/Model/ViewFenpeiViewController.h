@@ -12,6 +12,8 @@
     NSMutableDictionary * arrContent;
     int PeopleCount;
     int SonCount;
+    BOOL showContent;
+    int nowIndex;
 }
 @property (strong, nonatomic) IBOutlet UIImageView *imgHide;
 @property (strong, nonatomic) IBOutlet UILabel *labContent;

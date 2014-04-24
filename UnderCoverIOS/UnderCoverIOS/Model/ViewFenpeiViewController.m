@@ -26,10 +26,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    PeopleCount=12;
-    SonCount=4;
+    PeopleCount=4;
+    SonCount=1;
     arrContent=[[NSMutableDictionary alloc] init];
     [self initWords];
+    showContent=true;
+    nowIndex=1;
+    [self.labContent setText:@""];
+    [self.btnNext setTitle:[NSString stringWithFormat:@"第%d号",nowIndex] forState:UIControlStateNormal];
+//       [self performSegueWithIdentifier:@"segueToGuess" sender:self];
     // Do any additional setup after loading the view.
 }
 
@@ -54,8 +59,29 @@
             SonCount--;
         }
     }
-    
 }
+
+
+- (IBAction)nextOne:(id)sender {
+    if(showContent){
+        NSString * showtem=[arrContent objectForKey:[NSString stringWithFormat:@"%d",nowIndex]];
+        [self.labContent setText:showtem];
+        [self.btnNext setTitle:@"请交给下一位" forState:UIControlStateNormal];
+        if(nowIndex==PeopleCount){
+            [self.btnNext setTitle:@"开始竞猜" forState:UIControlStateNormal];
+            [self performSegueWithIdentifier:@"segueToGuess" sender:self];
+        }
+    }
+    else{
+        nowIndex++;
+        [self.labContent setText:@""];
+        [self.btnNext setTitle:[NSString stringWithFormat:@"第%d号",nowIndex] forState:UIControlStateNormal];
+    }
+    showContent=!showContent;
+    [self.imgHide setHidden:!showContent];
+    [self.labContent setHidden:showContent];
+}
+
 
 /*
 #pragma mark - Navigation
