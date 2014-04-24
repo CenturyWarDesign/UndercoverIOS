@@ -48,7 +48,7 @@
             </objects>
             <point key="canvasLocation" x="146" y="-473"/>
         </scene>
-        <!--Punish View Controller-->
+        <!--Punish View Controller - 开始惩罚-->
         <scene sceneID="0mk-5d-dsp">
             <objects>
                 <viewController id="mE6-is-2BY" customClass="UCIPunishViewController" sceneMemberID="viewController">
@@ -57,25 +57,19 @@
                         <viewControllerLayoutGuide type="bottom" id="m2p-CW-3u2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fzD-5b-Qgc">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="真心话大冒险" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2WN-18-8XG">
-                                <rect key="frame" x="109" y="52" width="102" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="真心话大冒险" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="j2J-Pg-6nT">
+                                <rect key="frame" x="20" y="154" width="280" height="107"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="真心话大冒险" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="j2J-Pg-6nT">
-                                <rect key="frame" x="20" y="176" width="280" height="107"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SEr-dc-mga">
-                                <rect key="frame" x="110" y="402" width="100" height="30"/>
+                                <rect key="frame" x="85" y="353" width="150" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="下一条">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -87,6 +81,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="开始惩罚" id="lBQ-3p-11Y"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="publishWords" destination="j2J-Pg-6nT" id="Vym-k4-Fvf"/>
@@ -94,7 +89,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="maQ-9T-zzx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-194" y="-486"/>
+            <point key="canvasLocation" x="1380" y="301"/>
         </scene>
         <!--View Undercover View Controller - 设置-->
         <scene sceneID="hQE-GW-FuC">
@@ -156,7 +151,7 @@
                                 </state>
                                 <connections>
                                     <action selector="btnStart:" destination="dXO-cT-2Iv" eventType="touchUpInside" id="p3M-Ej-6wZ"/>
-                                    <segue destination="3ho-0x-a8w" kind="push" id="BI6-rl-BTu"/>
+                                    <segue destination="3ho-0x-a8w" kind="push" identifier="segueFenpei" id="BI6-rl-BTu"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -224,10 +219,10 @@
             </objects>
             <point key="canvasLocation" x="573" y="-170"/>
         </scene>
-        <!--View Controller - 猜卧底-->
+        <!--View Guess View Controller - 猜卧底-->
         <scene sceneID="6mT-1H-gE2">
             <objects>
-                <viewController id="n7B-ON-LDM" sceneMemberID="viewController">
+                <viewController id="n7B-ON-LDM" customClass="ViewGuessViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TIw-2h-Nqa"/>
                         <viewControllerLayoutGuide type="bottom" id="snl-E4-yBR"/>
@@ -235,9 +230,33 @@
                     <view key="view" contentMode="scaleToFill" id="O3V-v4-t18">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="faO-SV-KoQ">
+                                <rect key="frame" x="85" y="353" width="150" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="contentStretch" x="1.3877787807814457e-17" y="0.0" width="1" height="1"/>
+                                <size key="titleShadowOffset" width="1" height="0.0"/>
+                                <state key="normal" title="接受惩罚">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextOne:" destination="3ho-0x-a8w" eventType="touchUpInside" id="Ch7-oy-sUy"/>
+                                    <segue destination="mE6-is-2BY" kind="push" id="hSa-lq-HVx"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="viewGuess" translatesAutoresizingMaskIntoConstraints="NO" id="ouL-ln-wfd">
+                                <rect key="frame" x="0.0" y="11" width="320" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="猜卧底" id="7A1-lu-3qG"/>
+                    <connections>
+                        <outlet property="btnPublish" destination="faO-SV-KoQ" id="FGI-Qj-Tr0"/>
+                        <outlet property="viewGuess" destination="ouL-ln-wfd" id="JT2-1Y-km8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4kg-1d-1xi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

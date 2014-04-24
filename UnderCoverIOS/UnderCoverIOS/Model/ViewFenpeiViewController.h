@@ -14,10 +14,16 @@
     int SonCount;
     BOOL showContent;
     int nowIndex;
+    NSString * fatherWrod;
+    NSString * sonWord;
 }
 @property (strong, nonatomic) IBOutlet UIImageView *imgHide;
 @property (strong, nonatomic) IBOutlet UILabel *labContent;
 @property (strong, nonatomic) IBOutlet UIButton *btnNext;
 
+
+
+@property(nonatomic,weak)NSString *fathercount;
+@property(nonatomic,weak)NSString *soncount;
 
 @end

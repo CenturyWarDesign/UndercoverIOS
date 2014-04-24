@@ -75,6 +75,17 @@
     self.sliUndercover.value=UndercoverCount;
     self.labUndercoverCount.text=[NSString stringWithFormat:@"%d",UndercoverCount];
 }
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"segueFenpei"]) //"goView2"是SEGUE连线的标识
+    {
+        id theSegue = segue.destinationViewController;
+        //界面之间进行传值
+        [theSegue setValue:[NSString stringWithFormat:@"%d",PeopleCount] forKey:@"fathercount"];
+        [theSegue setValue:[NSString stringWithFormat:@"%d",UndercoverCount] forKey:@"soncount"];
+    }
+}
 /*
 #pragma mark - Navigation
 

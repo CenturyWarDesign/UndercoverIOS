@@ -16,6 +16,7 @@
 		3873F70C1906CC40003827E4 /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3873F70A1906CC40003827E4 /* libMobClickLibrary.a */; };
 		38BA191B18CF785800F6741E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 38BA191A18CF785800F6741E /* libz.dylib */; };
 		38BA191E18CF7BCD00F6741E /* UCIBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BA191D18CF7BCD00F6741E /* UCIBaseViewController.m */; };
+		38BEA93B190978A60017F3D9 /* ViewGuessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BEA93A190978A60017F3D9 /* ViewGuessViewController.m */; };
 		38E53E5F1907FA06004F8F51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E53E5D1907FA06004F8F51 /* Main.storyboard */; };
 		38E53E661907FB96004F8F51 /* ColorAndName.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38E53E651907FB96004F8F51 /* ColorAndName.xib */; };
 		C3089DC518C778D400A7BAAD /* EAIntroPage.m in Sources */ = {isa = PBXBuildFile; fileRef = C3089DC218C778D400A7BAAD /* EAIntroPage.m */; };
@@ -100,6 +101,8 @@
 		38BA191A18CF785800F6741E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		38BA191C18CF7BCD00F6741E /* UCIBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UCIBaseViewController.h; path = UnderCoverIOS/Model/UCIBaseViewController.h; sourceTree = "<group>"; };
 		38BA191D18CF7BCD00F6741E /* UCIBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UCIBaseViewController.m; path = UnderCoverIOS/Model/UCIBaseViewController.m; sourceTree = "<group>"; };
+		38BEA939190978A60017F3D9 /* ViewGuessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewGuessViewController.h; path = Model/ViewGuessViewController.h; sourceTree = "<group>"; };
+		38BEA93A190978A60017F3D9 /* ViewGuessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewGuessViewController.m; path = Model/ViewGuessViewController.m; sourceTree = "<group>"; };
 		38CCFD1F18C36AE000E18BD4 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../Downloads/icon/ios/icon.png; sourceTree = "<group>"; };
 		38CCFD2018C36B1200E18BD4 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../../Downloads/icon/ios/Icon@2x.png"; sourceTree = "<group>"; };
 		38CCFD2118C36B3900E18BD4 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-60@2x.png"; path = "../../Downloads/icon/ios7/Icon-60@2x.png"; sourceTree = "<group>"; };
@@ -380,6 +383,8 @@
 			isa = PBXGroup;
 			children = (
 				38E53E5D1907FA06004F8F51 /* Main.storyboard */,
+				38BEA939190978A60017F3D9 /* ViewGuessViewController.h */,
+				38BEA93A190978A60017F3D9 /* ViewGuessViewController.m */,
 				C3F06C3418B6432D00F08642 /* UCIViewController.h */,
 				C3F06C3518B6432D00F08642 /* UCIViewController.m */,
 				C3F06C3718B6432D00F08642 /* Images.xcassets */,
@@ -598,6 +603,7 @@
 				C3089DC518C778D400A7BAAD /* EAIntroPage.m in Sources */,
 				3873F70919055D51003827E4 /* BIDNameAndColorTableViewCell.m in Sources */,
 				C3089DC618C778D400A7BAAD /* EAIntroView.m in Sources */,
+				38BEA93B190978A60017F3D9 /* ViewGuessViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
