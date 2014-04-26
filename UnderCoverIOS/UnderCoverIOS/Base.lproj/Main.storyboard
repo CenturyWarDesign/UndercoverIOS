@@ -89,9 +89,61 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="maQ-9T-zzx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1380" y="301"/>
+            <point key="canvasLocation" x="464" y="675"/>
         </scene>
-        <!--View Undercover View Controller - 设置-->
+        <!--View Home View Controller - 爱上聚会-->
+        <scene sceneID="6pO-dm-WvA">
+            <objects>
+                <viewController id="NCY-t9-dYo" customClass="ViewHomeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dBa-0m-3Te"/>
+                        <viewControllerLayoutGuide type="bottom" id="BTi-FT-Rse"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="h3x-1c-cu4">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="71r-NF-zOv">
+                                <rect key="frame" x="85" y="109" width="150" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="谁是卧底">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="dXO-cT-2Iv" kind="push" id="Awr-Ge-zui"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJP-8m-skA">
+                                <rect key="frame" x="85" y="176" width="150" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="真心话大冒险">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="mE6-is-2BY" kind="push" id="Nkf-oU-wE6"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="H26-rP-k46">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.70242745535714279" green="0.48353826441793457" blue="0.52784687258488172" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="爱上聚会" id="b9X-UG-2bZ"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="labMessage" destination="H26-rP-k46" id="Y33-bP-Syb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M3f-qJ-oUi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-99" y="621"/>
+        </scene>
+        <!--View Undercover View Controller - 谁是卧底-->
         <scene sceneID="hQE-GW-FuC">
             <objects>
                 <viewController id="dXO-cT-2Iv" customClass="ViewUndercoverViewController" sceneMemberID="viewController">
@@ -157,7 +209,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="设置" id="5Dd-Vr-SU6"/>
+                    <navigationItem key="navigationItem" title="谁是卧底" id="5Dd-Vr-SU6"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="labPeopleCount" destination="CI6-dU-56y" id="pUL-f3-d5M"/>
@@ -168,7 +220,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Da-MK-kaU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="221" y="285"/>
+            <point key="canvasLocation" x="289" y="134"/>
         </scene>
         <!--View Fenpei View Controller - 分配身份-->
         <scene sceneID="3y1-ri-h5W">
@@ -463,12 +515,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="dXO-cT-2Iv" kind="relationship" relationship="rootViewController" id="R66-LR-Txt"/>
+                        <segue destination="NCY-t9-dYo" kind="relationship" relationship="rootViewController" id="Ofd-Dc-tju"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="97u-fU-eAO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-235" y="167"/>
+            <point key="canvasLocation" x="-267" y="-8"/>
         </scene>
     </scenes>
     <resources>
@@ -481,4 +533,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="Nkf-oU-wE6"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -10,5 +10,5 @@
 
 @protocol UCIHttpCallback <NSObject>
 @required
--(void)callBack:(NSArray *)data commandName:(NSString*) command;
+-(void)callBack:(NSDictionary *)data commandName:(NSString*) command;
 @end

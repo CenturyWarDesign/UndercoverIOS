@@ -83,10 +83,11 @@
 
 
 
--(void)callBack:(NSArray *)data commandName:(NSString*) command{
+-(void)callBack:(NSDictionary *)data commandName:(NSString*) command{
     if([command isEqualToString:@"PublishRandomOne"]){
-        if([data count]>0){
-            NSDictionary * contentone=[data objectAtIndex:0];
+        NSArray * punishArr=[data objectForKey:@"content"];
+        if([punishArr count]>0){
+            NSDictionary * contentone=[punishArr objectAtIndex:0];
             [self reflashWords:[contentone objectForKey:@"content"]];
         }
         else{

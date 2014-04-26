@@ -10,6 +10,7 @@
 		3807004018CE25C2007E7C03 /* HTTPBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3807003E18CE25C2007E7C03 /* HTTPBase.m */; };
 		3817917119080A5500A313ED /* ViewUndercoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3817917019080A5500A313ED /* ViewUndercoverViewController.m */; };
 		381791771908159A00A313ED /* ViewFenpeiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 381791761908159A00A313ED /* ViewFenpeiViewController.m */; };
+		387172DC190C231B009D649B /* ViewHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 387172DB190C231B009D649B /* ViewHomeViewController.m */; };
 		3873F70519055D26003827E4 /* UCIPublishNet.m in Sources */ = {isa = PBXBuildFile; fileRef = 3873F70219055D26003827E4 /* UCIPublishNet.m */; };
 		3873F70619055D26003827E4 /* UCIPunishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3873F70419055D26003827E4 /* UCIPunishViewController.m */; };
 		3873F70919055D51003827E4 /* BIDNameAndColorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3873F70819055D51003827E4 /* BIDNameAndColorTableViewCell.m */; };
@@ -90,6 +91,8 @@
 		3817917019080A5500A313ED /* ViewUndercoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewUndercoverViewController.m; path = UnderCoverIOS/Model/ViewUndercoverViewController.m; sourceTree = "<group>"; };
 		381791751908159A00A313ED /* ViewFenpeiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewFenpeiViewController.h; path = UnderCoverIOS/Model/ViewFenpeiViewController.h; sourceTree = "<group>"; };
 		381791761908159A00A313ED /* ViewFenpeiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewFenpeiViewController.m; path = UnderCoverIOS/Model/ViewFenpeiViewController.m; sourceTree = "<group>"; };
+		387172DA190C231B009D649B /* ViewHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewHomeViewController.h; path = Model/ViewHomeViewController.h; sourceTree = "<group>"; };
+		387172DB190C231B009D649B /* ViewHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewHomeViewController.m; path = Model/ViewHomeViewController.m; sourceTree = "<group>"; };
 		3873F70119055D26003827E4 /* UCIPublishNet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UCIPublishNet.h; path = UnderCoverIOS/Model/UCIPublishNet.h; sourceTree = "<group>"; };
 		3873F70219055D26003827E4 /* UCIPublishNet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UCIPublishNet.m; path = UnderCoverIOS/Model/UCIPublishNet.m; sourceTree = "<group>"; };
 		3873F70319055D26003827E4 /* UCIPunishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UCIPunishViewController.h; path = UnderCoverIOS/Model/UCIPunishViewController.h; sourceTree = "<group>"; };
@@ -383,6 +386,8 @@
 			isa = PBXGroup;
 			children = (
 				38E53E5D1907FA06004F8F51 /* Main.storyboard */,
+				387172DA190C231B009D649B /* ViewHomeViewController.h */,
+				387172DB190C231B009D649B /* ViewHomeViewController.m */,
 				38BEA939190978A60017F3D9 /* ViewGuessViewController.h */,
 				38BEA93A190978A60017F3D9 /* ViewGuessViewController.m */,
 				C3F06C3418B6432D00F08642 /* UCIViewController.h */,
@@ -603,6 +608,7 @@
 				C3089DC518C778D400A7BAAD /* EAIntroPage.m in Sources */,
 				3873F70919055D51003827E4 /* BIDNameAndColorTableViewCell.m in Sources */,
 				C3089DC618C778D400A7BAAD /* EAIntroView.m in Sources */,
+				387172DC190C231B009D649B /* ViewHomeViewController.m in Sources */,
 				38BEA93B190978A60017F3D9 /* ViewGuessViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

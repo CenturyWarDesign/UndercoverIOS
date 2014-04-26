@@ -15,6 +15,7 @@
 
 
 - (void)baseHttp:(NSString *)command paramsdata:(NSDictionary *)data{
+    NSString * ipaddress=@"http://192.168.1.102/";
     
 //    NSMutableString * temstring=[[NSMutableString alloc] initWithString:@""];
 //    if([data count]>0){
@@ -35,7 +36,7 @@
 //
     NSString * temjson= [self DataTOjsonString:data];
     NSString * sign=[self DataTOjsonString:[NSDictionary dictionaryWithObjectsAndKeys:[self getUDID],@"uid",nil]];
-    NSString *URLTmp = [NSString stringWithFormat:@"http://192.168.1.100/CenturyServer/Entry.php?cmd=%@&sign=%@&data=%@",command,sign,temjson];
+    NSString *URLTmp = [NSString stringWithFormat:@"%@CenturyServer/Entry.php?cmd=%@&sign=%@&data=%@",ipaddress,command,sign,temjson];
     NSString *URLTmp1 = [URLTmp stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];  //转码成UTF-8  否则可能会出现错误
     URLTmp = URLTmp1;
     NSLog(@"调用的报文:%@",URLTmp);
@@ -53,7 +54,7 @@
         
         NSData *resData2 = [[NSData alloc] initWithData:[datastr dataUsingEncoding:NSUTF8StringEncoding]];
         //系统自带JSON解析
-        NSArray *resultDic2 = [NSJSONSerialization JSONObjectWithData:resData2 options:NSJSONReadingMutableLeaves error:nil];
+        NSDictionary *resultDic2 = [NSJSONSerialization JSONObjectWithData:resData2 options:NSJSONReadingMutableLeaves error:nil];
         
         
         [self.delegate callBack:resultDic2 commandName:command];

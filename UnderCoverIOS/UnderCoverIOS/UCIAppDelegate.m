@@ -21,6 +21,8 @@
     NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
     [MobClick setAppVersion:version];
     [MobClick setLogEnabled:YES];
+    [MobClick updateOnlineConfig];
+    
     // Override point for customization after application launch.
     
 //        NSArray * tem=[MobClick classFallbacksForKeyedArchiver];
