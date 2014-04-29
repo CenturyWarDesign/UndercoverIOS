@@ -9,7 +9,9 @@
 
 #import "UCIBaseViewController.h"
 
-@interface UCIPublishNet : UCIBaseViewController<UITableViewDataSource,UITableViewDelegate>
+@interface UCIPublishNet : UCIBaseViewController<UITableViewDataSource,UITableViewDelegate>{
+    BOOL nibsRegistered;
+}
 
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
 @property (copy,nonatomic)NSArray *dowarves;

@@ -12,4 +12,6 @@
 @interface UCIBaseViewController : UIViewController<UCIHttpCallback>
 -(void)uMengClick:(NSString *) event;
 -(void)callBack:(NSArray *)data commandName:(NSString*) command;
+-(id) getObjectFromDefault:(NSString *)key;
+-(void) setObjectFromDefault:(NSObject *)object key:(NSString *)key;
 @end

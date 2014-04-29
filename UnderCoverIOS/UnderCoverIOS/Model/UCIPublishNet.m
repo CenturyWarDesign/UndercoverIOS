@@ -28,7 +28,7 @@
     [super viewDidLoad];
     self.dowarves=@[];
     [self initPunish];
-
+    nibsRegistered = NO;
     
 	// Do any additional setup after loading the view.
 }
@@ -45,7 +45,6 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *CustomCellIdentifier = @"CustomCellIdentifier";
-    static BOOL nibsRegistered = NO;
     if (!nibsRegistered) {
         UINib *nib = [UINib nibWithNibName:@"ColorAndName" bundle:nil];
         [tableView registerNib:nib forCellReuseIdentifier:CustomCellIdentifier];
@@ -98,6 +97,10 @@
         [btn setEnabled:false];
     classBtest.delegate = self;
     [classBtest baseHttp:@"PublishCollect" paramsdata:[NSDictionary dictionaryWithObjectsAndKeys: [NSString stringWithFormat:@"%d",index],@"id",@"1",@"type",nil]];
+
+    //把喜欢的词汇加入到词组里面
+    [self addliketoDefault:[self.dowarves[btn.tag] objectForKey:@"content"]];
+   
 }
 
 -(IBAction)unlikeit:(id)sender{
@@ -113,6 +116,28 @@
     HTTPBase *classBtest = [[HTTPBase alloc] init];
     classBtest.delegate = self;
         [classBtest baseHttp:@"PublishCollect" paramsdata:[NSDictionary dictionaryWithObjectsAndKeys: [NSString stringWithFormat:@"%d",index],@"id",@"2",@"type",nil]];
+
+    
+    //从喜欢的列表里面移除
+    [self removeliketoDefault:[self.dowarves[btn.tag] objectForKey:@"content"]];
+
+}
+
+-(void)addliketoDefault:(NSString *)word{
+    NSMutableArray * punisharr=[[NSMutableArray alloc]init];
+    [punisharr addObjectsFromArray: (NSMutableArray *)[self getObjectFromDefault:@"punisharray"]];
+    if(![punisharr containsObject:word]){
+        [punisharr addObject:word];
+    }
+    [self setObjectFromDefault:punisharr key:@"punisharray"];
+}
+-(void)removeliketoDefault:(NSString *)word{
+    NSMutableArray * punisharr=[[NSMutableArray alloc]init];
+    [punisharr addObjectsFromArray: (NSMutableArray *)[self getObjectFromDefault:@"punisharray"]];
+    if([punisharr containsObject:word]){
+        [punisharr removeObject:word];
+        [self setObjectFromDefault:punisharr key:@"punisharray"];
+    }
 }
 
 -(void)PublishCollect:(int)index{
@@ -148,6 +173,8 @@
 - (IBAction)getPunish:(id)sender {
     [self initPunish];
 }
+
+
 
 
 @end

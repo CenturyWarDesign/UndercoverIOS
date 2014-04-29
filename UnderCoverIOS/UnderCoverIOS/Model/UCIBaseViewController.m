@@ -27,6 +27,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+   
+    
+    
 
 	// Do any additional setup after loading the view.
 }
@@ -43,5 +47,16 @@
 //    [MobClick event:event];
 }
 -(void)callBack:(NSArray *)data commandName:(NSString*) command{
+}
+
+//取持久化对象
+-(id) getObjectFromDefault:(NSString *)key{
+    NSUserDefaults *persistentDefaults=[NSUserDefaults standardUserDefaults];
+    return [persistentDefaults objectForKey:key];
+}
+//设置持久化对象
+-(void) setObjectFromDefault:(NSObject *)object key:(NSString *)key{
+    NSUserDefaults *persistentDefaults=[NSUserDefaults standardUserDefaults];
+     [persistentDefaults setObject:object forKey:key];
 }
 @end

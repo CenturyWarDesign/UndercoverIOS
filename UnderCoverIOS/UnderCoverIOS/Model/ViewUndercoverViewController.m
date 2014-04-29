@@ -85,6 +85,7 @@
         [theSegue setValue:[NSString stringWithFormat:@"%d",PeopleCount] forKey:@"fathercount"];
         [theSegue setValue:[NSString stringWithFormat:@"%d",UndercoverCount] forKey:@"soncount"];
     }
+    [self uMengClick:@""];
 }
 /*
 #pragma mark - Navigation

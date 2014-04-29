@@ -26,6 +26,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+//    NSString * temstring=[self getObjectFromDefault:@"tem"];
+//    [self setObjectFromDefault:@"wanbin" key:@"tem"];
+//    
 	// Do any additional setup after loading the view.
 }
 
@@ -46,11 +50,21 @@
 
 
 -(void)initnewword{
+    NSMutableArray * punisharr=[[NSMutableArray alloc]init];
+    [punisharr addObjectsFromArray: (NSMutableArray *)[self getObjectFromDefault:@"punisharray"]];
+    if([punisharr count]>0){
+         srand((unsigned)time(0));
+        int i=rand()%[punisharr count];
+         [self reflashWords:[punisharr objectAtIndex:i]];
+    }
+    
+   
+}
+-(void)initwordfromnet{
     HTTPBase *classBtest = [[HTTPBase alloc] init];
     classBtest.delegate = self;
     [classBtest baseHttp:@"PublishRandomOne"];
 }
-
 
 
 ////以下为摇啊摇代码
@@ -98,5 +112,12 @@
     }
 }
 
+
+//从网上获取喜欢的真心话大冒险,以后每次维护
+-(void)getPunishFromNet{
+    HTTPBase *classBtest = [[HTTPBase alloc] init];
+    classBtest.delegate = self;
+    [classBtest baseHttp:@"PublishRandomOne"];
+}
 
 @end
