@@ -29,7 +29,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="真心话大冒险" id="KrQ-YK-LXI"/>
+                    <navigationItem key="navigationItem" title="真心话大冒险" id="KrQ-YK-LXI">
+                        <barButtonItem key="rightBarButtonItem" title="提交" id="TiW-vi-oz8">
+                            <connections>
+                                <segue destination="62g-0L-c1o" kind="push" identifier="sendPunishNew" id="HZO-YN-lmf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="tableview" destination="dvD-ua-O5D" id="Baa-ix-TGy"/>
@@ -37,7 +43,75 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o6V-HP-Nni" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="878" y="627"/>
+            <point key="canvasLocation" x="839" y="664"/>
+        </scene>
+        <!--New Punish View Controller - 新词汇-->
+        <scene sceneID="3dC-D5-dRf">
+            <objects>
+                <viewController id="62g-0L-c1o" customClass="NewPunishViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7dH-Qi-kVe"/>
+                        <viewControllerLayoutGuide type="bottom" id="3wb-1E-XHi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="I7q-fx-gEQ">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Q5-7n-tqy">
+                                <rect key="frame" x="20" y="38" width="237" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="clickContent:" destination="62g-0L-c1o" eventType="touchDown" id="Orn-Sc-HIk"/>
+                                    <action selector="textFieldDoneEditing:" destination="62g-0L-c1o" eventType="editingDidEnd" id="Qjn-q5-Onn"/>
+                                    <action selector="updateTextView:" destination="62g-0L-c1o" eventType="editingChanged" id="z0H-Ub-ybs"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DSj-4N-erD">
+                                <rect key="frame" x="85" y="353" width="150" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="提交">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitPunish:" destination="62g-0L-c1o" eventType="touchUpInside" id="zjv-n3-p3G"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o5V-If-HFe">
+                                <rect key="frame" x="20" y="84" width="280" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nV5-D5-OWP">
+                                <rect key="frame" x="260" y="37" width="40" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                <state key="normal" title="提交">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitPunish:" destination="62g-0L-c1o" eventType="touchUpInside" id="xO4-Bl-4aK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="新词汇" id="oCQ-Xw-hNb"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="btnSubmit2" destination="nV5-D5-OWP" id="lGR-lA-DSc"/>
+                        <outlet property="txtField" destination="3Q5-7n-tqy" id="MGJ-Nq-ic7"/>
+                        <outlet property="txtPlace" destination="o5V-If-HFe" id="wvG-ej-4bT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="stc-Pp-Jge" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1386" y="675"/>
         </scene>
         <!--Punish View Controller - 开始惩罚-->
         <scene sceneID="0mk-5d-dsp">

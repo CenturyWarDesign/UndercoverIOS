@@ -28,9 +28,7 @@
 {
     [super viewDidLoad];
     
-   
-    
-    
+
 
 	// Do any additional setup after loading the view.
 }
@@ -58,5 +56,36 @@
 -(void) setObjectFromDefault:(NSObject *)object key:(NSString *)key{
     NSUserDefaults *persistentDefaults=[NSUserDefaults standardUserDefaults];
      [persistentDefaults setObject:object forKey:key];
+}
+
+
+
+
+
+- (void)timerFireMethod:(NSTimer*)theTimer
+{
+    UIAlertView *promptAlert = (UIAlertView*)[theTimer userInfo];
+    [promptAlert dismissWithClickedButtonIndex:0 animated:NO];
+    
+    promptAlert =NULL;
+}
+
+
+- (void)showAlert:(NSString *)title content:(NSString *) content
+{
+    
+//    UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"my test title" message:@"my test message 1" delegate:self cancelButtonTitle:@"yes" otherButtonTitles:@"no",@"what", @"you sure", nil];
+//    [alertView show];
+//    return;
+    
+    UIAlertView *promptAlert = [[UIAlertView alloc] initWithTitle:title message:content delegate:nil cancelButtonTitle:nil otherButtonTitles:nil];
+    
+    [NSTimer scheduledTimerWithTimeInterval:2.0f
+                                     target:self
+                                   selector:@selector(timerFireMethod:)
+                                   userInfo:promptAlert
+                                    repeats:NO];
+    
+    [promptAlert show];
 }
 @end

@@ -72,6 +72,10 @@
     
     [cell.btnLike setTag:indexPath.row];
     [cell.btnUnlike setTag:indexPath.row];
+    
+    
+    [cell.btnEdit setTag:indexPath.row];
+    [cell.btnEdit addTarget:self  action:@selector(editPunish:) forControlEvents:UIControlEventTouchUpInside];
 
 
     [cell.btnLike addTarget:self  action:@selector(likeit:) forControlEvents:UIControlEventTouchUpInside];
@@ -79,10 +83,6 @@
     
     [cell.btnUnlike  setTitle:distxtLike forState:UIControlStateNormal];
     [cell.btnUnlike setEnabled:(BOOL)[self.dowarves[indexPath.row] objectForKey:@"disliked"]];
-    
-    
-
-//    cell.btnImport.titleLabel.text=[self.dowarves[indexPath.row] objectForKey:@"content"];
     
     return cell;
 }
@@ -116,12 +116,29 @@
     HTTPBase *classBtest = [[HTTPBase alloc] init];
     classBtest.delegate = self;
         [classBtest baseHttp:@"PublishCollect" paramsdata:[NSDictionary dictionaryWithObjectsAndKeys: [NSString stringWithFormat:@"%d",index],@"id",@"2",@"type",nil]];
-
     
     //从喜欢的列表里面移除
     [self removeliketoDefault:[self.dowarves[btn.tag] objectForKey:@"content"]];
 
 }
+
+-(IBAction)editPunish:(id)sender{
+    UIButton *btn =(UIButton *)sender;
+    temContentToSend=[self.dowarves[btn.tag] objectForKey:@"content"];
+    [self performSegueWithIdentifier:@"sendPunishNew" sender:self];
+}
+
+//向猜卧底里面传值
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"sendPunishNew"]) 
+    {
+        id theSegue = segue.destinationViewController;
+        //界面之间进行传值
+        [theSegue setValue:temContentToSend forKey:@"temContent"];
+    }
+}
+
 
 -(void)addliketoDefault:(NSString *)word{
     NSMutableArray * punisharr=[[NSMutableArray alloc]init];
@@ -174,6 +191,10 @@
     [self initPunish];
 }
 
+
+//点击添加新的词汇
+- (IBAction)btnAdddPunish:(id)sender {
+}
 
 
 

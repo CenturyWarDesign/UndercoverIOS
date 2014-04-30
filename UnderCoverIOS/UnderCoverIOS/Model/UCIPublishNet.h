@@ -11,6 +11,7 @@
 
 @interface UCIPublishNet : UCIBaseViewController<UITableViewDataSource,UITableViewDelegate>{
     BOOL nibsRegistered;
+    NSString * temContentToSend;
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *tableview;

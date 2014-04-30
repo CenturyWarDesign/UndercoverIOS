@@ -28,7 +28,6 @@
     [super viewDidLoad];
     [self getMessage];
 
-    
 //
     // Do any additional setup after loading the view.
 }
