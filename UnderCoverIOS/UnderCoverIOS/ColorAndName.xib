@@ -34,18 +34,9 @@
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                     </button>
-                    <button opaque="NO" contentMode="top" fixedFrame="YES" restorationIdentifier="btnImport" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RGu-eC-qNi">
-                        <rect key="frame" x="280" y="2" width="40" height="27"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <state key="normal" title="编辑">
-                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                        </state>
-                    </button>
                 </subviews>
             </tableViewCellContentView>
             <connections>
-                <outlet property="btnEdit" destination="RGu-eC-qNi" id="r1j-H3-Re3"/>
                 <outlet property="btnLike" destination="Unw-Ar-Jrj" id="dNN-hF-Uho"/>
                 <outlet property="btnUnlike" destination="2rg-RR-zMX" id="PTF-TM-anN"/>
                 <outlet property="txt3" destination="GJR-UF-Qh4" id="GOW-87-9HE"/>

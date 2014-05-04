@@ -9,12 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface BIDNameAndColorTableViewCell : UITableViewCell{
-
 }
 
 @property (strong, nonatomic) IBOutlet UILabel *txt3;
 @property (strong, nonatomic) IBOutlet UIButton *btnLike;
 @property (strong, nonatomic) IBOutlet UIButton *btnUnlike;
-@property (strong, nonatomic) IBOutlet UIButton *btnEdit;
-
 @end

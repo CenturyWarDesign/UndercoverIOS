@@ -56,6 +56,8 @@
         cell=[[BIDNameAndColorTableViewCell alloc] init];
     }
     
+    
+    
 //    cell.txtName.text=@"wanbin";
 //    [cell txtName] setText
 
@@ -74,8 +76,8 @@
     [cell.btnUnlike setTag:indexPath.row];
     
     
-    [cell.btnEdit setTag:indexPath.row];
-    [cell.btnEdit addTarget:self  action:@selector(editPunish:) forControlEvents:UIControlEventTouchUpInside];
+//    [cell.btnEdit setTag:indexPath.row];
+//    [cell.btnEdit addTarget:self  action:@selector(editPunish:) forControlEvents:UIControlEventTouchUpInside];
 
 
     [cell.btnLike addTarget:self  action:@selector(likeit:) forControlEvents:UIControlEventTouchUpInside];
@@ -170,6 +172,7 @@
     [classBtest baseHttp:@"PublishAll" ];
 }
 
+//-(void)callb
 
 
 -(void)callBack:(NSArray *)data commandName:(NSString*) command{
@@ -196,6 +199,13 @@
 - (IBAction)btnAdddPunish:(id)sender {
 }
 
+//点击回调
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    //选择列进行编辑
+    temContentToSend=[self.dowarves[indexPath.row] objectForKey:@"content"];
+    [self performSegueWithIdentifier:@"sendPunishNew" sender:self];
+
+}
 
 
 @end
