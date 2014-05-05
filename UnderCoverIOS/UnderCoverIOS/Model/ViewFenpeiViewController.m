@@ -37,6 +37,13 @@
     [self.labContent setText:@""];
     [self.btnNext setTitle:[NSString stringWithFormat:@"第%d号",nowIndex] forState:UIControlStateNormal];
     
+    
+    //给imageview添加点击事件
+    self.imgHide.userInteractionEnabled = YES;
+    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(nextOne:)];
+    [self.imgHide addGestureRecognizer:singleTap];
+    
+    
 //       [self performSegueWithIdentifier:@"segueToGuess" sender:self];
     // Do any additional setup after loading the view.
 }

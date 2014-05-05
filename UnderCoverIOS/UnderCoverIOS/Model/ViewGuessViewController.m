@@ -32,7 +32,9 @@
 {
     [super viewDidLoad];
     PeopleCount=[fathercount intValue];
+    MaxPeopleCount=PeopleCount;
     SonCount=[soncount intValue];
+    MaxSonCount=SonCount;
     [self initGuess];
     // Do any additional setup after loading the view.
 }
@@ -46,7 +48,7 @@
 -(void)initGuess{
     
     int width=self.viewGuess.bounds.size.width;
-    int height=self.viewGuess.bounds.size.height;
+//    int height=self.viewGuess.bounds.size.height;
     int btnWidth=(width-30)/4;
     int btnHeight=40;
     for (int i=0; i<PeopleCount; i++) {
@@ -70,14 +72,43 @@
     else{
         SonCount--;
     }
-    if(PeopleCount<=SonCount){
-        [self.btnPublish setTitle:@"卧底胜利" forState:UIControlStateNormal];
-    }else if(SonCount<=0){
-        [self.btnPublish setTitle:@"卧底失败" forState:UIControlStateNormal];
-    }
+    
     txtShenFen=@"出局";
     [sender setTitle:txtShenFen forState:UIControlStateDisabled];
     [sender setEnabled:false];
+    
+    if(PeopleCount<=SonCount){
+        [self.btnPublish setTitle:@"卧底胜利" forState:UIControlStateNormal];
+        [self disabledAllButton];
+    }else if(SonCount<=0){
+        [self.btnPublish setTitle:@"卧底失败" forState:UIControlStateNormal];
+        [self disabledAllButton];
+    }
+
+}
+
+//使所有的按键失效并显示相应的身份
+-(void)disabledAllButton{
+    for (int i=0; i<MaxPeopleCount; i++) {
+        UIButton * tembtn=(UIButton *)[self.view viewWithTag:i+1];
+        NSString * txtShenFen=[arrContent objectForKey:[NSString stringWithFormat:@"%d",i+1]];
+        [tembtn setEnabled:false];
+        [tembtn setTitle:txtShenFen forState:UIControlStateDisabled];
+        
+    }
+}
+
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"restart"]) //"goView2"是SEGUE连线的标识
+    {
+        id theSegue = segue.destinationViewController;
+        //界面之间进行传值
+        [theSegue setValue:[NSString stringWithFormat:@"%d",MaxPeopleCount] forKey:@"fathercount"];
+        [theSegue setValue:[NSString stringWithFormat:@"%d",MaxSonCount] forKey:@"soncount"];
+    }
+    [self uMengClick:@""];
 }
 
 /*
