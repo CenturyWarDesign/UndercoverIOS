@@ -59,9 +59,9 @@
     fatherWrod=@"父亲";
     sonWord=@"孩子";
     
-    NSString * wordstring=[MobClick getConfigParams:@"under_string_version"];
+//    NSString * wordstring=[MobClick getConfigParams:@"under_string_version"];
 //    NSString* str = @"here be dragons";
-    NSArray * wordArray= [wordstring componentsSeparatedByString:@"\n"];
+    NSArray * wordArray=[self getAllWords];
     if([wordArray count]>0){
     srand((unsigned)time(0));
     NSString *randWord= [wordArray objectAtIndex:rand()%[wordArray count]];

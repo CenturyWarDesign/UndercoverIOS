@@ -15,4 +15,5 @@
 -(id) getObjectFromDefault:(NSString *)key;
 -(void) setObjectFromDefault:(NSObject *)object key:(NSString *)key;
 - (void)showAlert:(NSString *)title content:(NSString *) content;
+-(NSArray *)getAllWords;
 @end

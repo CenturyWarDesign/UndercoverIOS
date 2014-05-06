@@ -88,4 +88,20 @@
     
     [promptAlert show];
 }
+
+//取得所有词汇，包括本地的和网络的
+-(NSArray *)getAllWords{
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"words" ofType:@"plist"];
+    NSMutableArray *array = [[NSMutableArray alloc] initWithContentsOfFile:plistPath];
+    
+    NSString * wordstring=[MobClick getConfigParams:@"under_string_version"];
+    //    NSString* str = @"here be dragons";
+    NSArray * wordArray= [wordstring componentsSeparatedByString:@"\n"];
+    for (int i=0; i<[wordArray count]; i++) {
+        [array addObject:[wordArray objectAtIndex:i]];
+    }
+    
+    return array;
+}
+
 @end

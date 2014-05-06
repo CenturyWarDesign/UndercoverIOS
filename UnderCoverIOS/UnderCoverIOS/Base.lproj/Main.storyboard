@@ -144,11 +144,10 @@
                                     <action selector="clickNew:" destination="mE6-is-2BY" eventType="touchUpInside" id="z6E-GM-yMA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZq-7H-RwK">
-                                <rect key="frame" x="269" y="17" width="40" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZq-7H-RwK">
+                                <rect key="frame" x="270" y="30" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
-                                <state key="normal" title="网络">
+                                <state key="normal" title="网络" image="net.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -667,6 +666,7 @@
     </scenes>
     <resources>
         <image name="cardBack" width="185" height="260"/>
+        <image name="net.png" width="256" height="256"/>
         <image name="original.png" width="224" height="224"/>
     </resources>
     <color key="tintColor" red="0.37399760466176168" green="0.80554339169236644" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -676,8 +676,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="rcE-j1-qVg"/>
-        <segue reference="naQ-IE-CSe"/>
+        <segue reference="XPZ-9K-31X"/>
         <segue reference="hSa-lq-HVx"/>
+        <segue reference="naQ-IE-CSe"/>
     </inferredMetricsTieBreakers>
 </document>

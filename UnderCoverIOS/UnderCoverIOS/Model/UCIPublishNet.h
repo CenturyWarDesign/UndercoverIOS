@@ -8,12 +8,18 @@
 //
 
 #import "UCIBaseViewController.h"
+#import "EGORefreshTableHeaderView.h"
 
 @interface UCIPublishNet : UCIBaseViewController<UITableViewDataSource,UITableViewDelegate>{
     BOOL nibsRegistered;
     NSString * temContentToSend;
+    EGORefreshTableHeaderView *_refreshHeaderView;
+    BOOL _reloading;
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
 @property (copy,nonatomic)NSArray *dowarves;
+
+- (void)reloadTableViewDataSource;
+- (void)doneLoadingTableViewData;
 @end
