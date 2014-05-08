@@ -57,8 +57,8 @@
         int i=rand()%[punisharr count];
          [self reflashWords:[punisharr objectAtIndex:i]];
     }
-    
-   
+    //摇一摇
+    [self uMengClick:@"punish_shack"];
 }
 -(void)initwordfromnet{
     HTTPBase *classBtest = [[HTTPBase alloc] init];
@@ -83,11 +83,17 @@
     [self resignFirstResponder];
     [super viewWillDisappear:animated];
 }
+- (IBAction)netPunish:(id)sender {
+    //点击网络版
+    [self uMengClick:@"click_intenet"];
+}
 
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
 {
     if (motion == UIEventSubtypeMotionShake)
     {
+
+        
         [self initnewword];
         NSLog(@"摇啊摇");
     }

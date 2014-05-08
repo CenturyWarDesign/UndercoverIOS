@@ -42,7 +42,7 @@
 
 //友盟打点数据
 -(void)uMengClick:(NSString *) event{
-//    [MobClick event:event];
+    [MobClick event:event];
 }
 -(void)callBack:(NSArray *)data commandName:(NSString*) command{
 }

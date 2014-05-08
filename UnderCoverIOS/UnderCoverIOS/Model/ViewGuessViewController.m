@@ -63,7 +63,12 @@
     }
 }
 -(void)tapPeople:(UIButton *)sender{
-    int tag=sender.tag;
+    if(PeopleCount==MaxPeopleCount&&SonCount==MaxSonCount){
+        //点投票第一步
+         [self uMengClick:@"click_guess_first"];
+    }
+    
+    int tag=(int)sender.tag;
     NSString * txtShenFen=[arrContent objectForKey:[NSString stringWithFormat:@"%d",tag]];
     if([txtShenFen isEqualToString:fatherWord])
     {
@@ -77,12 +82,19 @@
     [sender setTitle:txtShenFen forState:UIControlStateDisabled];
     [sender setEnabled:false];
     
+    BOOL finish=false;
     if(PeopleCount<=SonCount){
         [self.btnPublish setTitle:@"卧底胜利" forState:UIControlStateNormal];
         [self disabledAllButton];
+        finish=true;
     }else if(SonCount<=0){
         [self.btnPublish setTitle:@"卧底失败" forState:UIControlStateNormal];
         [self disabledAllButton];
+        finish=true;
+    }
+    if(finish){
+        //点投票最后一步
+        [self uMengClick:@"click_guess_last"];
     }
 
 }
@@ -107,8 +119,14 @@
         //界面之间进行传值
         [theSegue setValue:[NSString stringWithFormat:@"%d",MaxPeopleCount] forKey:@"fathercount"];
         [theSegue setValue:[NSString stringWithFormat:@"%d",MaxSonCount] forKey:@"soncount"];
+        //结束之后快速开始
+        [self uMengClick:@"game_undercover_quickresert"];
     }
     [self uMengClick:@""];
+}
+- (IBAction)punish:(id)sender {
+    //点击游戏惩罚
+    [self uMengClick:@"game_undercover_punish"];
 }
 
 /*

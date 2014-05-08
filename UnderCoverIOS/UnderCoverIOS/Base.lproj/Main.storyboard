@@ -14,11 +14,11 @@
                         <viewControllerLayoutGuide type="bottom" id="rI7-T4-NDT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="DK5-dn-zyI" customClass="UCI">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="simpleTableI" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="76" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="dvD-ua-O5D">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -54,7 +54,7 @@
                         <viewControllerLayoutGuide type="bottom" id="3wb-1E-XHi"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="I7q-fx-gEQ">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Q5-7n-tqy">
@@ -123,7 +123,7 @@
                         <viewControllerLayoutGuide type="bottom" id="m2p-CW-3u2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fzD-5b-Qgc">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="真心话大冒险" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="j2J-Pg-6nT">
@@ -151,6 +151,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="netPunish:" destination="mE6-is-2BY" eventType="touchUpInside" id="YO6-HI-tne"/>
                                     <segue destination="qbm-nY-QCr" kind="push" id="XPZ-9K-31X"/>
                                 </connections>
                             </button>
@@ -186,6 +187,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="gameUndercover:" destination="NCY-t9-dYo" eventType="touchUpInside" id="ESX-5m-Dam"/>
                                     <segue destination="dXO-cT-2Iv" kind="push" id="Awr-Ge-zui"/>
                                 </connections>
                             </button>
@@ -196,6 +198,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="gamePunish:" destination="NCY-t9-dYo" eventType="touchUpInside" id="MOc-tR-D4t"/>
                                     <segue destination="mE6-is-2BY" kind="push" id="Nkf-oU-wE6"/>
                                 </connections>
                             </button>
@@ -439,6 +442,7 @@
                                 </state>
                                 <connections>
                                     <action selector="nextOne:" destination="3ho-0x-a8w" eventType="touchUpInside" id="Ch7-oy-sUy"/>
+                                    <action selector="punish:" destination="n7B-ON-LDM" eventType="touchUpInside" id="1EI-Mx-KHV"/>
                                     <segue destination="mE6-is-2BY" kind="push" id="hSa-lq-HVx"/>
                                 </connections>
                             </button>
@@ -677,7 +681,7 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="XPZ-9K-31X"/>
-        <segue reference="hSa-lq-HVx"/>
+        <segue reference="Nkf-oU-wE6"/>
         <segue reference="naQ-IE-CSe"/>
     </inferredMetricsTieBreakers>
 </document>

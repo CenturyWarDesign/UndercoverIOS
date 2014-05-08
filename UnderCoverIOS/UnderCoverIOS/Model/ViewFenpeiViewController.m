@@ -84,7 +84,7 @@
     }
     int temSonCount=SonCount;
     while (temSonCount>0) {
-        int tem=lroundf(rand()%PeopleCount);
+        int tem=(int)lroundf(rand()%PeopleCount);
         NSString * temword=[arrContent objectForKey:[NSString stringWithFormat:@"%d",tem]];
         if(![temword isEqualToString:sonWord]){
             [arrContent setValue:sonWord forKey:[NSString stringWithFormat:@"%d",tem]];
@@ -113,6 +113,10 @@
         nowIndex++;
         [self.labContent setText:@""];
         [self.btnNext setTitle:[NSString stringWithFormat:@"第%d号",nowIndex] forState:UIControlStateNormal];
+        if(nowIndex==1){
+            //点击翻牌第一步
+            [self uMengClick:@"click_undercover_pai_first"];
+        }
     }
     showContent=!showContent;
     [self.imgHide setHidden:!showContent];
@@ -132,6 +136,8 @@
         [theSegue setValue:[NSString stringWithFormat:@"%d",SonCount] forKey:@"soncount"];
         [theSegue setValue:arrContent forKey:@"arrContent"];
         [theSegue setValue:fatherWrod forKey:@"fatherWord"];
+        //点击翻牌最后一步
+        [self uMengClick:@"click_undercover_pai_last"];
     }
 }
 

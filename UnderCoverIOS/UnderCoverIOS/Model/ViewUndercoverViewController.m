@@ -55,14 +55,14 @@
 }
 
 - (IBAction)sliPeoplechange:(UISlider *)sender {
-    int progress=lroundf(sender.value);
+    int progress=(int)lroundf(sender.value);
     PeopleCount=progress;
-    UndercoverCount=MIN(lroundf(PeopleCount/3), UndercoverCount);
+    UndercoverCount=MIN((int)lroundf(PeopleCount/3), UndercoverCount);
     //计算平民和卧底的比例
     [self updateCount];
 }
 - (IBAction)sliUndercoverChange:(UISlider *)sender {
-    int progress=lroundf(sender.value);
+    int progress=(int)lroundf(sender.value);
     UndercoverCount=progress;
     //计算平民和卧底的比例
     PeopleCount=MAX(UndercoverCount*3, PeopleCount);
@@ -84,8 +84,10 @@
         //界面之间进行传值
         [theSegue setValue:[NSString stringWithFormat:@"%d",PeopleCount] forKey:@"fathercount"];
         [theSegue setValue:[NSString stringWithFormat:@"%d",UndercoverCount] forKey:@"soncount"];
+        //点击之后开始游戏
+        [self uMengClick:@"game_undercover_start"];
     }
-    [self uMengClick:@""];
+
 }
 /*
 #pragma mark - Navigation

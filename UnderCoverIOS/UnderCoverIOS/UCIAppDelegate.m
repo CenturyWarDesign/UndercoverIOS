@@ -23,6 +23,14 @@
     [MobClick setLogEnabled:YES];
     [MobClick updateOnlineConfig];
     
+    
+    Class cls = NSClassFromString(@"UMANUtil");
+    SEL deviceIDSelector = @selector(openUDIDString);
+    NSString *deviceID = nil;
+    if(cls && [cls respondsToSelector:deviceIDSelector]){
+        deviceID = [cls performSelector:deviceIDSelector];
+    }
+    NSLog(@"{\"oid\": \"%@\"}", deviceID);
     // Override point for customization after application launch.
     
 //        NSArray * tem=[MobClick classFallbacksForKeyedArchiver];

@@ -70,8 +70,18 @@
 //            [self reflashWords:@"可以免除惩罚"];
         }
         
-        NSLog(@"PublishRandomOne 函数的回调");
+        NSLog(@"UserGetInfo 函数的回调");
     }
+}
+
+- (IBAction)gamePunish:(id)sender {
+    //点击真心话大冒险
+    [self uMengClick:@"game_zhenxinhua_damaoxian"];
+    
+}
+- (IBAction)gameUndercover:(id)sender {
+    //点击谁是卧底
+    [self uMengClick:@"game_undercover"];
 }
 
 @end
