@@ -8,7 +8,7 @@
 
 #import "UCIBaseViewController.h"
 #import "MobClick.h"
-
+#import <AudioToolbox/AudioToolbox.h>
 @interface UCIBaseViewController ()
 
 @end
@@ -102,6 +102,33 @@
     }
     
     return array;
+}
+
+-(void)playChuishsao{
+    [self initSound:@"whistle.mp3"];
+}
+
+-(void)playNahan{
+    [self initSound:@"failshout.mp3"];
+}
+
+-(void)playHuanhu{
+    [self initSound:@"hiscore02.mp3"];
+}
+
+-(void)playGuzhang{
+    [self initSound:@"normalscore.mp3"];
+}
+
+
+-(void) initSound:(NSString *)soundName{
+    NSString *path = [NSString stringWithFormat: @"%@/%@",
+                      [[NSBundle mainBundle] resourcePath], soundName];
+    
+    NSURL* filePath = [NSURL fileURLWithPath: path isDirectory: NO];
+    SystemSoundID soundID;
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef)filePath, &soundID);
+    AudioServicesPlaySystemSound(soundID);
 }
 
 @end

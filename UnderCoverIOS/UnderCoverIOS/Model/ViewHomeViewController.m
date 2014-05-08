@@ -77,7 +77,7 @@
 - (IBAction)gamePunish:(id)sender {
     //点击真心话大冒险
     [self uMengClick:@"game_zhenxinhua_damaoxian"];
-    
+//    [self playChuishsao];
 }
 - (IBAction)gameUndercover:(id)sender {
     //点击谁是卧底

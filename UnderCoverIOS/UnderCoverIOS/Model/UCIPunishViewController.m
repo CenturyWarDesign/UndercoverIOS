@@ -50,6 +50,7 @@
 
 
 -(void)initnewword{
+    [self playGuzhang];
     NSMutableArray * punisharr=[[NSMutableArray alloc]init];
     [punisharr addObjectsFromArray: (NSMutableArray *)[self getObjectFromDefault:@"punisharray"]];
     if([punisharr count]>0){
@@ -92,8 +93,6 @@
 {
     if (motion == UIEventSubtypeMotionShake)
     {
-
-        
         [self initnewword];
         NSLog(@"摇啊摇");
     }

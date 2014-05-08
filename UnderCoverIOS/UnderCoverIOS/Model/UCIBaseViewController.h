@@ -16,4 +16,12 @@
 -(void) setObjectFromDefault:(NSObject *)object key:(NSString *)key;
 - (void)showAlert:(NSString *)title content:(NSString *) content;
 -(NSArray *)getAllWords;
+
+
+
+-(void)playChuishsao;
+-(void)playNahan;
+-(void)playHuanhu;
+-(void)playGuzhang;
+
 @end

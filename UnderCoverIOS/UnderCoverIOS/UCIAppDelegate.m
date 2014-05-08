@@ -8,6 +8,7 @@
 
 #import "UCIAppDelegate.h"
 #import "MobClick.h"
+#import "APService.h"
 @implementation UCIAppDelegate
 
 
@@ -37,9 +38,25 @@
     //取得设备标识符
 //    NSString * name=[[[UIDevice currentDevice] identifierForVendor] UUIDString];
 //    NSDictionary * temss=[MobClick getConfigParams];
+    
+    
+//    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+//    self.window.backgroundColor = [UIColor whiteColor];
+//    [self.window makeKeyAndVisible];
+//    
+//    // Required
+//    [APService registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge |
+//                                                   UIRemoteNotificationTypeSound |
+//                                                   UIRemoteNotificationTypeAlert)];
+//    // Required
+//    [APService setupWithOption:launchOptions];
+    
+    
     return YES;
 }
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    // Required
+//    [APService registerDeviceToken:deviceToken];
 }
 
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *) error {
@@ -110,6 +127,15 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+
+
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    
+    // Required
+//    [APService handleRemoteNotification:userInfo];
 }
 
 @end

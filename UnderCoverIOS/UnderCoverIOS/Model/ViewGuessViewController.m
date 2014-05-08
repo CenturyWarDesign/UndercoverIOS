@@ -72,9 +72,11 @@
     NSString * txtShenFen=[arrContent objectForKey:[NSString stringWithFormat:@"%d",tag]];
     if([txtShenFen isEqualToString:fatherWord])
     {
+        [self playNahan];
         PeopleCount--;
     }
     else{
+        [self playChuishsao];
         SonCount--;
     }
     
@@ -95,6 +97,7 @@
     if(finish){
         //点投票最后一步
         [self uMengClick:@"click_guess_last"];
+        [self playHuanhu];
     }
 
 }
