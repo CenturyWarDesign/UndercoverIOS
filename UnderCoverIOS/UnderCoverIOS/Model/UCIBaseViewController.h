@@ -24,4 +24,7 @@
 -(void)playHuanhu;
 -(void)playGuzhang;
 
+
+-(void)removeliketoDefault:(NSString *)word;
+-(void)addliketoDefault:(NSString *)word;
 @end

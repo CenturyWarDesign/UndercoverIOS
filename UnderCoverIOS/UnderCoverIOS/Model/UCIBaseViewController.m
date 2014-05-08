@@ -131,4 +131,22 @@
     AudioServicesPlaySystemSound(soundID);
 }
 
+
+-(void)addliketoDefault:(NSString *)word{
+    NSMutableArray * punisharr=[[NSMutableArray alloc]init];
+    [punisharr addObjectsFromArray: (NSMutableArray *)[self getObjectFromDefault:@"punisharray"]];
+    if(![punisharr containsObject:word]){
+        [punisharr addObject:word];
+    }
+    [self setObjectFromDefault:punisharr key:@"punisharray"];
+}
+-(void)removeliketoDefault:(NSString *)word{
+    NSMutableArray * punisharr=[[NSMutableArray alloc]init];
+    [punisharr addObjectsFromArray: (NSMutableArray *)[self getObjectFromDefault:@"punisharray"]];
+    if([punisharr containsObject:word]){
+        [punisharr removeObject:word];
+        [self setObjectFromDefault:punisharr key:@"punisharray"];
+    }
+}
+
 @end
