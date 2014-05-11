@@ -53,11 +53,21 @@
     [self playGuzhang];
     NSMutableArray * punisharr=[[NSMutableArray alloc]init];
     [punisharr addObjectsFromArray: (NSMutableArray *)[self getObjectFromDefault:@"punisharray"]];
-    if([punisharr count]>0){
-         srand((unsigned)time(0));
-        int i=rand()%[punisharr count];
-         [self reflashWords:[punisharr objectAtIndex:i]];
+    
+    
+    if([punisharr count]<100){
+        srand((unsigned)time(0));
+        int randisdefault=rand()%100;
+        if(randisdefault>[punisharr count]){
+            NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"punish" ofType:@"plist"];
+            punisharr = [[NSMutableArray alloc] initWithContentsOfFile:plistPath];
+        }
     }
+    
+    srand((unsigned)time(0));
+    int i=rand()%[punisharr count];
+    [self reflashWords:[punisharr objectAtIndex:i]];
+    
     //摇一摇
     [self uMengClick:@"punish_shack"];
 }

@@ -9,13 +9,14 @@
 #import "HTTPBase.h"
 #import "AFHTTPRequestOperation.h"
 #import "MobClick.h"
+
 @implementation HTTPBase
 
 @synthesize delegate;
 
 
 - (void)baseHttp:(NSString *)command paramsdata:(NSDictionary *)data{
-    NSString * ipaddress=@"http://192.168.1.107/";
+    NSString * ipaddress=@"http://192.168.1.104/";
     
 //    NSMutableString * temstring=[[NSMutableString alloc] initWithString:@""];
 //    if([data count]>0){
@@ -100,7 +101,10 @@
 
 //取得设备唯一标识
 -(NSString *)getUDID{
-    return     [[[UIDevice currentDevice] identifierForVendor] UUIDString];
+    NSString * udid= [[[UIDevice currentDevice] identifierForVendor] UUIDString];
+    udid=[udid stringByReplacingOccurrencesOfString:@"-" withString:@""];
+    NSLog(@"UDID:%@",udid);
+    return udid;
 }
 
 @end

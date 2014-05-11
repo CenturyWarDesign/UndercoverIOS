@@ -188,9 +188,14 @@
     [btn setTitle:[NSString stringWithFormat:@"不喜欢 %d",temcount] forState:UIControlStateNormal];
     [btn setEnabled:false];
     
+    
+
+    
+    
     HTTPBase *classBtest = [[HTTPBase alloc] init];
     classBtest.delegate = self;
-        [classBtest baseHttp:@"PublishCollect" paramsdata:[NSDictionary dictionaryWithObjectsAndKeys: [NSString stringWithFormat:@"%d",index],@"id",@"2",@"type",nil]];
+    [classBtest baseHttp:@"PublishCollect" paramsdata:[NSDictionary dictionaryWithObjectsAndKeys: [NSString stringWithFormat:@"%d",index],@"id",@"2",@"type",nil]];
+
     
     //从喜欢的列表里面移除
     [self removeliketoDefault:[self.dowarves[btn.tag] objectForKey:@"content"]];

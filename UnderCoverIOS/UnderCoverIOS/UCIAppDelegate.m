@@ -9,6 +9,7 @@
 #import "UCIAppDelegate.h"
 #import "MobClick.h"
 #import "APService.h"
+#import "HTTPBase.h"
 @implementation UCIAppDelegate
 
 
@@ -43,20 +44,24 @@
 //    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
 //    self.window.backgroundColor = [UIColor whiteColor];
 //    [self.window makeKeyAndVisible];
-//    
-//    // Required
-//    [APService registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge |
-//                                                   UIRemoteNotificationTypeSound |
-//                                                   UIRemoteNotificationTypeAlert)];
-//    // Required
-//    [APService setupWithOption:launchOptions];
     
+    // Required
+    [APService registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge |
+                                                   UIRemoteNotificationTypeSound |
+                                                   UIRemoteNotificationTypeAlert)];
+    // Required
+    [APService setupWithOption:launchOptions];
+    
+    
+
     
     return YES;
 }
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     // Required
-//    [APService registerDeviceToken:deviceToken];
+    [APService registerDeviceToken:deviceToken];
+    HTTPBase *http= [[HTTPBase alloc] init];
+    [APService setAlias:http.getUDID callbackSelector:nil object:self];
 }
 
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *) error {
@@ -133,9 +138,8 @@
 
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
-    
     // Required
-//    [APService handleRemoteNotification:userInfo];
+    [APService handleRemoteNotification:userInfo];
 }
 
 @end

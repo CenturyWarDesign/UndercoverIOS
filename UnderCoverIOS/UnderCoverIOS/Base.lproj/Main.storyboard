@@ -28,9 +28,7 @@
                             <outlet property="delegate" destination="w71-dL-Psr" id="yNo-nk-YDj"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="本地词汇" id="7sa-VP-BhA">
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="YuV-p8-Jmb"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="本地词汇" id="7sa-VP-BhA"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bmr-Y4-iff" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -187,6 +185,10 @@
                                     <segue destination="qbm-nY-QCr" kind="push" id="XPZ-9K-31X"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="shake.png" translatesAutoresizingMaskIntoConstraints="NO" id="gEf-bv-Db9">
+                                <rect key="frame" x="30" y="126" width="260" height="207"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -710,6 +712,7 @@
         <image name="cardBack" width="185" height="260"/>
         <image name="net.png" width="256" height="256"/>
         <image name="original.png" width="224" height="224"/>
+        <image name="shake.png" width="302" height="241"/>
     </resources>
     <color key="tintColor" red="0.37399760466176168" green="0.80554339169236644" blue="1" alpha="1" colorSpace="calibratedRGB"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
