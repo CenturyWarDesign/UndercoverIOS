@@ -52,7 +52,7 @@
     int btnWidth=(width-30)/4;
     int btnHeight=40;
     for (int i=0; i<PeopleCount; i++) {
-        CGRect frame = CGRectMake((btnWidth+5)*(i%4)+10, (i/4)*(btnHeight+20)+20, btnWidth, btnHeight);
+        CGRect frame = CGRectMake((btnWidth+5)*(i%4)+10, (i/4)*(btnHeight+10)+80, btnWidth, btnHeight);
         UIButton *someAddButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         someAddButton.backgroundColor = [UIColor clearColor];
         [someAddButton setTitle:[NSString stringWithFormat:@"%d号",i+1] forState:UIControlStateNormal];
