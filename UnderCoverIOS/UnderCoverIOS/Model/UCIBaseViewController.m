@@ -42,8 +42,18 @@
 
 //友盟打点数据
 -(void)uMengClick:(NSString *) event{
+    if([event isEqual:@""])
+        return;
     [MobClick event:event];
+    [self ClickToServer:event];
 }
+
+-(void)ClickToServer:(NSString *)event{
+        HTTPBase *classBtest = [[HTTPBase alloc] init];
+        classBtest.delegate = self;
+        [classBtest baseHttp:@"BehaveAdd" paramsdata:[NSDictionary dictionaryWithObjectsAndKeys: event,@"behave",nil]];
+}
+
 -(void)callBack:(NSArray *)data commandName:(NSString*) command{
 }
 
@@ -100,9 +110,35 @@
     for (int i=0; i<[wordArray count]; i++) {
         [array addObject:[wordArray objectAtIndex:i]];
     }
+    NSMutableArray *array2=[[NSMutableArray alloc] init];
     
-    return array;
+    //排除已经玩过的词汇
+    NSMutableArray * hasreturn =[self getObjectFromDefault:@"hasPlayed"];
+    for (int j=0; j<[array count]; j++) {
+        if(![hasreturn containsObject:[array objectAtIndex:j ]])
+        {
+            [array2 addObject:[array objectAtIndex:j ]];
+        }
+    }
+    if([array2 count]<20){
+        array2=array;
+        [self setObjectFromDefault:NULL key:@"hasPlayed"];
+    }
+    
+    return array2;
 }
+
+//已经玩过的词汇
+-(void)hasPlayed:(NSString *)words{
+    NSMutableArray * hasreturn =[[NSMutableArray alloc] initWithArray:[self getObjectFromDefault:@"hasPlayed"]];
+    if(hasreturn==nil)
+    {
+        hasreturn =[[NSMutableArray alloc]init];
+    }
+    [hasreturn addObject:words];
+    [self setObjectFromDefault:hasreturn key:@"hasPlayed"];
+}
+
 
 -(void)playChuishsao{
     [self initSound:@"whistle.mp3"];

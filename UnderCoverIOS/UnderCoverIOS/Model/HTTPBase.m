@@ -36,7 +36,7 @@
 ////        NSString ;
 //
     NSString * temjson= [self DataTOjsonString:data];
-    NSString * sign=[self DataTOjsonString:[NSDictionary dictionaryWithObjectsAndKeys:[self getUDID],@"uid",nil]];
+    NSString * sign=[self DataTOjsonString:[NSDictionary dictionaryWithObjectsAndKeys:[self getUDID],@"uid",@"IOS",@"channel",nil]];
     NSString *URLTmp = [NSString stringWithFormat:@"%@CenturyServer/Entry.php?cmd=%@&sign=%@&data=%@",ipaddress,command,sign,temjson];
     NSString *URLTmp1 = [URLTmp stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];  //转码成UTF-8  否则可能会出现错误
     URLTmp = URLTmp1;

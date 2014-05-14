@@ -65,6 +65,7 @@
     if([wordArray count]>0){
     srand((unsigned)time(0));
     NSString *randWord= [wordArray objectAtIndex:rand()%[wordArray count]];
+    [self hasPlayed:randWord];
     //数组包括3项 类别  词汇一、二
     NSArray * wordDetailArray= [randWord componentsSeparatedByString:@"_"];
     srand((unsigned)time(0));
@@ -77,7 +78,6 @@
         fatherWrod=[wordDetailArray objectAtIndex:2];
     }
     }
-    
     
     for (int i=1;i<=PeopleCount; i++) {
         [arrContent setValue:fatherWrod forKey:[NSString stringWithFormat:@"%d",i]];
