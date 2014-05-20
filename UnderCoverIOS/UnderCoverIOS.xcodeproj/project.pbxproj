@@ -48,6 +48,8 @@
 		38E53E661907FB96004F8F51 /* ColorAndName.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38E53E651907FB96004F8F51 /* ColorAndName.xib */; };
 		38ECA849191FCA91007672BA /* shake.png in Resources */ = {isa = PBXBuildFile; fileRef = 38ECA848191FCA91007672BA /* shake.png */; };
 		38ECA84B191FCD4B007672BA /* punish.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38ECA84A191FCD4B007672BA /* punish.plist */; };
+		38ECA84E192BBE2B007672BA /* UCIViewNewNameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ECA84D192BBE2B007672BA /* UCIViewNewNameController.m */; };
+		38ECA851192BD00B007672BA /* UCIRoomHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ECA850192BD00B007672BA /* UCIRoomHomeViewController.m */; };
 		C3089DC518C778D400A7BAAD /* EAIntroPage.m in Sources */ = {isa = PBXBuildFile; fileRef = C3089DC218C778D400A7BAAD /* EAIntroPage.m */; };
 		C3089DC618C778D400A7BAAD /* EAIntroView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3089DC418C778D400A7BAAD /* EAIntroView.m */; };
 		C3089DE418C77A9D00A7BAAD /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = C3089DC918C77A9D00A7BAAD /* 1.png */; };
@@ -175,6 +177,10 @@
 		38E53E651907FB96004F8F51 /* ColorAndName.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ColorAndName.xib; path = UnderCoverIOS/ColorAndName.xib; sourceTree = "<group>"; };
 		38ECA848191FCA91007672BA /* shake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shake.png; sourceTree = "<group>"; };
 		38ECA84A191FCD4B007672BA /* punish.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = punish.plist; sourceTree = "<group>"; };
+		38ECA84C192BBE2B007672BA /* UCIViewNewNameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UCIViewNewNameController.h; path = Model/UCIViewNewNameController.h; sourceTree = "<group>"; };
+		38ECA84D192BBE2B007672BA /* UCIViewNewNameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UCIViewNewNameController.m; path = Model/UCIViewNewNameController.m; sourceTree = "<group>"; };
+		38ECA84F192BD00B007672BA /* UCIRoomHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UCIRoomHomeViewController.h; path = Model/UCIRoomHomeViewController.h; sourceTree = "<group>"; };
+		38ECA850192BD00B007672BA /* UCIRoomHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UCIRoomHomeViewController.m; path = Model/UCIRoomHomeViewController.m; sourceTree = "<group>"; };
 		69C0D4BC55754114AF83A8A1 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		C3089DC118C778D400A7BAAD /* EAIntroPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAIntroPage.h; sourceTree = "<group>"; };
 		C3089DC218C778D400A7BAAD /* EAIntroPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAIntroPage.m; sourceTree = "<group>"; };
@@ -497,6 +503,10 @@
 			isa = PBXGroup;
 			children = (
 				38E53E5D1907FA06004F8F51 /* Main.storyboard */,
+				38ECA84F192BD00B007672BA /* UCIRoomHomeViewController.h */,
+				38ECA850192BD00B007672BA /* UCIRoomHomeViewController.m */,
+				38ECA84C192BBE2B007672BA /* UCIViewNewNameController.h */,
+				38ECA84D192BBE2B007672BA /* UCIViewNewNameController.m */,
 				38B554C8191BF43900E41984 /* LocatePunishTableViewController.h */,
 				38B554C9191BF43900E41984 /* LocatePunishTableViewController.m */,
 				384B3E661916762B0027201E /* testViewController.h */,
@@ -726,6 +736,7 @@
 			files = (
 				38199710191162E3002E644A /* NewPunishViewController.m in Sources */,
 				3807004018CE25C2007E7C03 /* HTTPBase.m in Sources */,
+				38ECA851192BD00B007672BA /* UCIRoomHomeViewController.m in Sources */,
 				3817917119080A5500A313ED /* ViewUndercoverViewController.m in Sources */,
 				C36F0CDC18D8A2D0003DAD1E /* GDataXMLNode.m in Sources */,
 				C3700D3418BE33BB00B6CBFC /* Deck.m in Sources */,
@@ -735,6 +746,7 @@
 				C3F06C3018B6432D00F08642 /* UCIAppDelegate.m in Sources */,
 				38BA191E18CF7BCD00F6741E /* UCIBaseViewController.m in Sources */,
 				C3700D3A18BE3F6E00B6CBFC /* PlayCardDeck.m in Sources */,
+				38ECA84E192BBE2B007672BA /* UCIViewNewNameController.m in Sources */,
 				C3F06C2C18B6432D00F08642 /* main.m in Sources */,
 				3873F70519055D26003827E4 /* UCIPublishNet.m in Sources */,
 				384B3E681916762B0027201E /* testViewController.m in Sources */,

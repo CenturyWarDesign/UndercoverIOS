@@ -16,7 +16,7 @@
 
 
 - (void)baseHttp:(NSString *)command paramsdata:(NSDictionary *)data{
-    NSString * ipaddress=@"http://192.168.1.104/";
+    NSString * ipaddress=@"http://192.168.1.110/";
     
 //    NSMutableString * temstring=[[NSMutableString alloc] initWithString:@""];
 //    if([data count]>0){
