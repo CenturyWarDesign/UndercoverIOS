@@ -26,6 +26,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSString *username=[self getObjectFromDefault:@"username"];
+    //如果已经设置过姓名，则跳过
+    if([username length]>0){
+        [self performSegueWithIdentifier:@"roompage" sender:self];
+    }
     // Do any additional setup after loading the view.
 }
 
@@ -55,7 +60,9 @@
 -(void)callBack:(NSDictionary *)data commandName:(NSString*) command{
     if([command isEqualToString:@"NameChange"]){
         NSLog(@"NameChange 函数的回调");
+        [self setObjectFromDefault:self.labName.text key:@"username"];
         [self performSegueWithIdentifier:@"roompage" sender:self];
+        
     }
 }
 -(IBAction)textFieldDoneEditing:(id)sender{

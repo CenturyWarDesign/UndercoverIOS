@@ -52,13 +52,14 @@
         NSDictionary *resultDic = [NSJSONSerialization JSONObjectWithData:resData options:NSJSONReadingMutableLeaves error:nil];
         //        NSLog(resultDic);
         NSString * datastr=[resultDic objectForKey:@"data"];
+        int code=[[resultDic objectForKey:@"code"] intValue];
         
         NSData *resData2 = [[NSData alloc] initWithData:[datastr dataUsingEncoding:NSUTF8StringEncoding]];
         //系统自带JSON解析
         NSDictionary *resultDic2 = [NSJSONSerialization JSONObjectWithData:resData2 options:NSJSONReadingMutableLeaves error:nil];
         
         
-        [self.delegate callBack:resultDic2 commandName:command];
+        [self.delegate callBack:resultDic2 commandName:command code:code];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Failure: %@", error);

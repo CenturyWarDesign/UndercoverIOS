@@ -213,7 +213,6 @@
             <objects>
                 <tabBarController definesPresentationContext="YES" id="vWh-ec-t9B" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="61w-Xe-XFY">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -321,7 +320,7 @@
                         <viewControllerLayoutGuide type="bottom" id="fmj-Bf-guI"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Vw7-ds-xwF">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="这里的游戏是您参与的网络游戏" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4c-Hz-bbX">
@@ -353,7 +352,6 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="参与" id="9JM-K6-UjN"/>
                     <navigationItem key="navigationItem" title="设置昵称" id="rWV-AI-aQy"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="labName" destination="498-S7-dHE" id="BrQ-gO-qq6"/>
                         <segue destination="IJr-yc-3ge" kind="push" identifier="roompage" id="5Vh-Xy-4nl"/>
@@ -372,18 +370,18 @@
                         <viewControllerLayoutGuide type="bottom" id="5c5-oF-y70"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="T6f-rx-6tu">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="这里的游戏是您参与的网络游戏" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7A-2x-72V">
-                                <rect key="frame" x="41" y="20" width="238" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="欢迎您：先生/女士" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7A-2x-72V">
+                                <rect key="frame" x="41" y="52" width="238" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BK6-if-UO4">
-                                <rect key="frame" x="31" y="115" width="259" height="44"/>
+                                <rect key="frame" x="31" y="127" width="259" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="加入房间">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -395,7 +393,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wW4-6r-6ot">
-                                <rect key="frame" x="31" y="183" width="259" height="44"/>
+                                <rect key="frame" x="31" y="178" width="259" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="创建房间">
                                     <color key="titleColor" red="0.049585682044254099" green="0.45956234056122447" blue="0.29183846718389089" alpha="1" colorSpace="calibratedRGB"/>
@@ -408,7 +406,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入房间号" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vSy-2B-ZsE">
-                                <rect key="frame" x="31" y="57" width="259" height="30"/>
+                                <rect key="frame" x="31" y="89" width="259" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -417,14 +415,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="rx3-FE-Wwz"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="labName" destination="N7A-2x-72V" id="rpk-nx-iqG"/>
                         <outlet property="labRoomId" destination="vSy-2B-ZsE" id="5bw-2P-myf"/>
+                        <segue destination="tcv-I7-KND" kind="push" identifier="createroom" id="jmx-r1-f47"/>
+                        <segue destination="PvZ-nO-PGH" kind="push" identifier="joinroom" id="mTf-vZ-79l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yhW-Gb-EGc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="379" y="1513"/>
+            <point key="canvasLocation" x="346" y="1474"/>
         </scene>
         <!--Navigation Controller - 参与-->
         <scene sceneID="iuH-9g-Zpf">
@@ -483,7 +483,150 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="52t-s0-BeM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="681" y="1637"/>
+            <point key="canvasLocation" x="995" y="1441"/>
+        </scene>
+        <!--Room Setting View Controller - 房间设置-->
+        <scene sceneID="GOg-S3-Nb7">
+            <objects>
+                <viewController id="tcv-I7-KND" customClass="UCIRoomSettingViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JVs-Gm-cIz"/>
+                        <viewControllerLayoutGuide type="bottom" id="RZ6-xa-pgH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3og-7S-wQs">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="房间号码：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1rf-uW-3zW">
+                                <rect key="frame" x="76" y="97" width="85" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSC-3J-dc2">
+                                <rect key="frame" x="169" y="97" width="48" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.030171554529999998" blue="0.055692702410000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFU-Th-gWV">
+                                <rect key="frame" x="29" y="336" width="259" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="谁是卧底">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnJoinRoom:" destination="IJr-yc-3ge" eventType="touchUpInside" id="WhD-d7-02f"/>
+                                    <action selector="btnTest:" destination="S85-1U-6Hg" eventType="touchUpInside" id="Jma-zA-uw5"/>
+                                    <action selector="updateName:" destination="Yz6-45-Sro" eventType="touchUpInside" id="HjZ-5T-ZgV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bh-on-Ml8">
+                                <rect key="frame" x="29" y="392" width="259" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="杀人游戏">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnJoinRoom:" destination="IJr-yc-3ge" eventType="touchUpInside" id="Fzs-dR-zxe"/>
+                                    <action selector="btnTest:" destination="S85-1U-6Hg" eventType="touchUpInside" id="riW-3G-bFN"/>
+                                    <action selector="updateName:" destination="Yz6-45-Sro" eventType="touchUpInside" id="dFp-AL-SUo"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wua-ZY-QI7">
+                                <rect key="frame" x="0.0" y="126" width="320" height="202"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="房间设置" id="WPn-Ch-3xQ"/>
+                    <connections>
+                        <outlet property="labRoomId" destination="GSC-3J-dc2" id="dj9-dE-S6k"/>
+                        <outlet property="scrollUsers" destination="Wua-ZY-QI7" id="Kc6-lC-pYD"/>
+                        <segue destination="PvZ-nO-PGH" kind="push" identifier="startroom" id="owA-5p-LsX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q28-AD-sWs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="647" y="2094"/>
+        </scene>
+        <!--Rome Info View Controller - 游戏信息-->
+        <scene sceneID="JLe-d1-92B">
+            <objects>
+                <viewController id="PvZ-nO-PGH" customClass="UCIRomeInfoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZTH-R7-wNj"/>
+                        <viewControllerLayoutGuide type="bottom" id="a1X-12-46B"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ccV-gj-Kuz">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="房间号码：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="die-f8-8Ob">
+                                <rect key="frame" x="42" y="41" width="85" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="游戏：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iMS-U5-YJl">
+                                <rect key="frame" x="76" y="70" width="51" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="您的词汇" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mkq-hW-jQa">
+                                <rect key="frame" x="126" y="124" width="68" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="您的词汇" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YBg-XV-7j7">
+                                <rect key="frame" x="78" y="173" width="165" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" red="1" green="0.030171554530539435" blue="0.055692702413654982" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iLy-fv-EMR">
+                                <rect key="frame" x="31" y="289" width="259" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="刷新数据">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnJoinRoom:" destination="IJr-yc-3ge" eventType="touchUpInside" id="fmX-ou-sam"/>
+                                    <action selector="btnTest:" destination="S85-1U-6Hg" eventType="touchUpInside" id="aml-fH-f4X"/>
+                                    <action selector="updateName:" destination="Yz6-45-Sro" eventType="touchUpInside" id="4H7-sX-xb3"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deU-t3-9Yc">
+                                <rect key="frame" x="136" y="41" width="48" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8th-nu-R2A">
+                                <rect key="frame" x="136" y="70" width="48" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="游戏信息" id="lZU-JF-Zwu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HT1-te-RJL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1053" y="1835"/>
         </scene>
         <!--View Undercover View Controller - 谁是卧底-->
         <scene sceneID="hQE-GW-FuC">
@@ -895,6 +1038,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="owA-5p-LsX"/>
         <segue reference="Nkf-oU-wE6"/>
         <segue reference="naQ-IE-CSe"/>
         <segue reference="rcE-j1-qVg"/>

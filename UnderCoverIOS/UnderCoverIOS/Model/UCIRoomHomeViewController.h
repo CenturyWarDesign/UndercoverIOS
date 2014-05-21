@@ -11,5 +11,6 @@
 
 @interface UCIRoomHomeViewController : UCIBaseViewController
 @property (strong, nonatomic) IBOutlet UITextField *labRoomId;
+@property (strong, nonatomic) IBOutlet UILabel *labName;
 
 @end

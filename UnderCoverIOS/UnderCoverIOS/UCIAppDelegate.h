@@ -13,4 +13,8 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+
++(int)messageHandler;
++(void) clearHandler;
+
 @end

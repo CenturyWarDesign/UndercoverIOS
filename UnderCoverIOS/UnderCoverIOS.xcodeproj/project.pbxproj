@@ -50,6 +50,10 @@
 		38ECA84B191FCD4B007672BA /* punish.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38ECA84A191FCD4B007672BA /* punish.plist */; };
 		38ECA84E192BBE2B007672BA /* UCIViewNewNameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ECA84D192BBE2B007672BA /* UCIViewNewNameController.m */; };
 		38ECA851192BD00B007672BA /* UCIRoomHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ECA850192BD00B007672BA /* UCIRoomHomeViewController.m */; };
+		38ECA857192CEE24007672BA /* UCIRomeInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ECA856192CEE24007672BA /* UCIRomeInfoViewController.m */; };
+		38ECA85A192CEE5D007672BA /* UCIRoomSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ECA859192CEE5D007672BA /* UCIRoomSettingViewController.m */; };
+		38ECA85D192D2999007672BA /* cerlightblue01.png in Resources */ = {isa = PBXBuildFile; fileRef = 38ECA85B192D2999007672BA /* cerlightblue01.png */; };
+		38ECA85E192D2999007672BA /* cerlightblue02.png in Resources */ = {isa = PBXBuildFile; fileRef = 38ECA85C192D2999007672BA /* cerlightblue02.png */; };
 		C3089DC518C778D400A7BAAD /* EAIntroPage.m in Sources */ = {isa = PBXBuildFile; fileRef = C3089DC218C778D400A7BAAD /* EAIntroPage.m */; };
 		C3089DC618C778D400A7BAAD /* EAIntroView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3089DC418C778D400A7BAAD /* EAIntroView.m */; };
 		C3089DE418C77A9D00A7BAAD /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = C3089DC918C77A9D00A7BAAD /* 1.png */; };
@@ -181,6 +185,12 @@
 		38ECA84D192BBE2B007672BA /* UCIViewNewNameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UCIViewNewNameController.m; path = Model/UCIViewNewNameController.m; sourceTree = "<group>"; };
 		38ECA84F192BD00B007672BA /* UCIRoomHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UCIRoomHomeViewController.h; path = Model/UCIRoomHomeViewController.h; sourceTree = "<group>"; };
 		38ECA850192BD00B007672BA /* UCIRoomHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UCIRoomHomeViewController.m; path = Model/UCIRoomHomeViewController.m; sourceTree = "<group>"; };
+		38ECA855192CEE24007672BA /* UCIRomeInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UCIRomeInfoViewController.h; path = Model/UCIRomeInfoViewController.h; sourceTree = "<group>"; };
+		38ECA856192CEE24007672BA /* UCIRomeInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UCIRomeInfoViewController.m; path = Model/UCIRomeInfoViewController.m; sourceTree = "<group>"; };
+		38ECA858192CEE5D007672BA /* UCIRoomSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UCIRoomSettingViewController.h; path = Model/UCIRoomSettingViewController.h; sourceTree = "<group>"; };
+		38ECA859192CEE5D007672BA /* UCIRoomSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UCIRoomSettingViewController.m; path = Model/UCIRoomSettingViewController.m; sourceTree = "<group>"; };
+		38ECA85B192D2999007672BA /* cerlightblue01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cerlightblue01.png; sourceTree = "<group>"; };
+		38ECA85C192D2999007672BA /* cerlightblue02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cerlightblue02.png; sourceTree = "<group>"; };
 		69C0D4BC55754114AF83A8A1 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		C3089DC118C778D400A7BAAD /* EAIntroPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAIntroPage.h; sourceTree = "<group>"; };
 		C3089DC218C778D400A7BAAD /* EAIntroPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAIntroPage.m; sourceTree = "<group>"; };
@@ -353,6 +363,8 @@
 		C3089DC818C77A9D00A7BAAD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				38ECA85B192D2999007672BA /* cerlightblue01.png */,
+				38ECA85C192D2999007672BA /* cerlightblue02.png */,
 				38ECA848191FCA91007672BA /* shake.png */,
 				38B554B8191BE87000E41984 /* failshout.mp3 */,
 				38B554B9191BE87000E41984 /* hiscore02.mp3 */,
@@ -502,7 +514,11 @@
 		C3F06C2518B6432D00F08642 /* UnderCoverIOS */ = {
 			isa = PBXGroup;
 			children = (
+				38ECA858192CEE5D007672BA /* UCIRoomSettingViewController.h */,
+				38ECA859192CEE5D007672BA /* UCIRoomSettingViewController.m */,
 				38E53E5D1907FA06004F8F51 /* Main.storyboard */,
+				38ECA855192CEE24007672BA /* UCIRomeInfoViewController.h */,
+				38ECA856192CEE24007672BA /* UCIRomeInfoViewController.m */,
 				38ECA84F192BD00B007672BA /* UCIRoomHomeViewController.h */,
 				38ECA850192BD00B007672BA /* UCIRoomHomeViewController.m */,
 				38ECA84C192BBE2B007672BA /* UCIViewNewNameController.h */,
@@ -668,7 +684,9 @@
 				38B554A319194F6F00E41984 /* blueArrow@2x.png in Resources */,
 				C3F06C2A18B6432D00F08642 /* InfoPlist.strings in Resources */,
 				38B55491191946A500E41984 /* words.plist in Resources */,
+				38ECA85E192D2999007672BA /* cerlightblue02.png in Resources */,
 				C3089DF218C77A9D00A7BAAD /* Icon-76@2x.png in Resources */,
+				38ECA85D192D2999007672BA /* cerlightblue01.png in Resources */,
 				38B554BC191BE87000E41984 /* failshout.mp3 in Resources */,
 				C3089DF018C77A9D00A7BAAD /* Icon-72@2x.png in Resources */,
 				38E53E5F1907FA06004F8F51 /* Main.storyboard in Resources */,
@@ -739,6 +757,7 @@
 				38ECA851192BD00B007672BA /* UCIRoomHomeViewController.m in Sources */,
 				3817917119080A5500A313ED /* ViewUndercoverViewController.m in Sources */,
 				C36F0CDC18D8A2D0003DAD1E /* GDataXMLNode.m in Sources */,
+				38ECA857192CEE24007672BA /* UCIRomeInfoViewController.m in Sources */,
 				C3700D3418BE33BB00B6CBFC /* Deck.m in Sources */,
 				C3700D3718BE397700B6CBFC /* PlayCard.m in Sources */,
 				38B554CA191BF43900E41984 /* LocatePunishTableViewController.m in Sources */,
@@ -749,6 +768,7 @@
 				38ECA84E192BBE2B007672BA /* UCIViewNewNameController.m in Sources */,
 				C3F06C2C18B6432D00F08642 /* main.m in Sources */,
 				3873F70519055D26003827E4 /* UCIPublishNet.m in Sources */,
+				38ECA85A192CEE5D007672BA /* UCIRoomSettingViewController.m in Sources */,
 				384B3E681916762B0027201E /* testViewController.m in Sources */,
 				C3F06C3618B6432D00F08642 /* UCIViewController.m in Sources */,
 				C3700D3018BCE6D300B6CBFC /* Card.m in Sources */,

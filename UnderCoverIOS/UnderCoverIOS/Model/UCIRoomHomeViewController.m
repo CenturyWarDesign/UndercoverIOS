@@ -26,6 +26,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSString * welcomeword=[NSString stringWithFormat:@"%@,选一个游戏开始吧",[self getObjectFromDefault:@"username"]];
+    [self.labName setText: welcomeword];
     // Do any additional setup after loading the view.
 }
 
@@ -65,4 +67,19 @@
 - (IBAction)endClickContent:(id)sender {
     [self textFieldDoneEditing:self.labRoomId];
 }
+
+
+-(void)callBack:(NSDictionary *)data commandName:(NSString*) command{
+    if([command isEqualToString:@"RoomNew"]){
+        NSLog(@"RoomNew 函数的回调");
+        [self performSegueWithIdentifier:@"createroom" sender:self];
+    }
+    else if([command isEqualToString:@"RoomJoin"]){
+            [self performSegueWithIdentifier:@"joinroom" sender:self];
+//             [self showAlert:@"提示" content:@"当前房间号不存在或已超期"];
+        NSLog(@"RoomJoin 函数的回调");
+
+    }
+}
+
 @end

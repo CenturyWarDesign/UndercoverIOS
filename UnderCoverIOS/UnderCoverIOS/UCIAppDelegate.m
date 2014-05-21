@@ -11,7 +11,7 @@
 #import "APService.h"
 #import "HTTPBase.h"
 @implementation UCIAppDelegate
-
+static bool messageCount;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -32,6 +32,7 @@
     if(cls && [cls respondsToSelector:deviceIDSelector]){
         deviceID = [cls performSelector:deviceIDSelector];
     }
+    
     NSLog(@"{\"oid\": \"%@\"}", deviceID);
     // Override point for customization after application launch.
     
@@ -52,9 +53,10 @@
     // Required
     [APService setupWithOption:launchOptions];
     
+    //清除脚标
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
     
-
-    
+   
     return YES;
 }
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
@@ -62,6 +64,7 @@
     [APService registerDeviceToken:deviceToken];
     HTTPBase *http= [[HTTPBase alloc] init];
     [APService setAlias:http.getUDID callbackSelector:nil object:self];
+    messageCount=0;
 }
 
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *) error {
@@ -140,6 +143,18 @@
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
     // Required
     [APService handleRemoteNotification:userInfo];
+    messageCount++;
+    
 }
 
+
++(int)messageHandler{
+    return messageCount;
+}
++(void) clearHandler{
+    if(messageCount>0)
+    {
+        messageCount--;
+    }
+}
 @end

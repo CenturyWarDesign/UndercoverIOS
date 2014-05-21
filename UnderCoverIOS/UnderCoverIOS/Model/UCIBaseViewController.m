@@ -53,6 +53,21 @@
         classBtest.delegate = self;
         [classBtest baseHttp:@"BehaveAdd" paramsdata:[NSDictionary dictionaryWithObjectsAndKeys: event,@"behave",nil]];
 }
+-(void)callBack:(NSArray *)data commandName:(NSString*) command code:(int)code{
+    if(code==1000||code==0){
+         [self callBack:data commandName:command ];
+        return;
+    }
+    switch (code) {
+        case 1101:
+            [self showAlert:@"" content:@"房间号不正确"];
+            break;
+            
+        default:
+            break;
+    }
+   
+}
 
 -(void)callBack:(NSArray *)data commandName:(NSString*) command{
 }

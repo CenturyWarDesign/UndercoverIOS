@@ -62,12 +62,8 @@
                 NSDictionary * mailfirst=[mailarr objectAtIndex:0];
                 [self.labMessage setText:[mailfirst objectForKey:@"content"]];
             }
-//            NSDictionary * contentone=[data objectAtIndex:3];
-//            [self reflashWords:[contentone objectForKey:@"content"]];
-          
-        }
-        else{
-//            [self reflashWords:@"可以免除惩罚"];
+            [self setObjectFromDefault:[data objectForKey:@"gameuid"] key:@"gameuid"];
+            [self setObjectFromDefault:[data objectForKey:@"username"] key:@"username"];
         }
         
         NSLog(@"UserGetInfo 函数的回调");
