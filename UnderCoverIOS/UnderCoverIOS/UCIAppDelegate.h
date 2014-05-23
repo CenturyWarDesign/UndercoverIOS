@@ -16,5 +16,5 @@
 
 +(int)messageHandler;
 +(void) clearHandler;
-
++(void)setRoomPush:(NSString *)tag;
 @end

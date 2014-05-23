@@ -67,6 +67,17 @@ static bool messageCount;
     messageCount=0;
 }
 
+
++(void)setRoomPush:(NSString *)tag{
+    if([tag isEqualToString:@""]){
+        [APService setTags:[NSSet set] callbackSelector:nil object:self];
+    }
+    else{
+        [APService setTags:[NSSet setWithObjects:tag,nil] callbackSelector:nil object:self];
+    }
+
+}
+
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *) error {
     NSLog(@"did Fail To Register For Remote Notifications With Error: %@", error);
 }

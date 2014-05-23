@@ -9,5 +9,8 @@
 #import "UCIBaseViewController.h"
 
 @interface UCIRomeInfoViewController : UCIBaseViewController
+@property (strong, nonatomic) IBOutlet UILabel *labRoomId;
+@property (strong, nonatomic) IBOutlet UILabel *labContent;
+@property (strong, nonatomic) IBOutlet UILabel *labGameName;
 
 @end

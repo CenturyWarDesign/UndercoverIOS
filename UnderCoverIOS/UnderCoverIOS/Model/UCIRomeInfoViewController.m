@@ -7,6 +7,7 @@
 //
 
 #import "UCIRomeInfoViewController.h"
+#import "UCIAppDelegate.h"
 
 @interface UCIRomeInfoViewController ()
 
@@ -26,7 +27,33 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    //每秒刷新一下，看是否有要更新的信息
+    [NSTimer scheduledTimerWithTimeInterval:1.5f
+                                     target:self
+                                   selector:@selector(checkFlash)
+                                   userInfo:nil
+                                    repeats:YES];
+    
+    
     // Do any additional setup after loading the view.
+    //每秒刷新一下，看是否有要更新的信息
+    [NSTimer scheduledTimerWithTimeInterval:20.0f
+                                     target:self
+                                   selector:@selector(reflash)
+                                   userInfo:nil
+                                    repeats:YES];
+     [self reflash];
+}
+
+
+-(void)checkFlash{
+    int a=[UCIAppDelegate messageHandler];
+    if(a>0){
+        NSLog(@"reflash");
+        [UCIAppDelegate clearHandler];
+        [self reflash];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,5 +72,42 @@
     // Pass the selected object to the new view controller.
 }
 */
+-(void) reflash{
+    HTTPBase *classBtest = [[HTTPBase alloc] init];
+    classBtest.delegate = self;
+    [classBtest baseHttp:@"RoomGetContent"];
+}
+- (IBAction)btnReflash:(id)sender {
+    [self reflash];
+}
 
+//退出房间
+- (IBAction)btnLevelRoom:(id)sender {
+    HTTPBase *classBtest = [[HTTPBase alloc] init];
+    classBtest.delegate = self;
+    [classBtest baseHttp:@"RoomLevel"];
+}
+
+-(void)callBack:(NSDictionary *)data commandName:(NSString*) command{
+    if([command isEqualToString:@"RoomGetContent"]){
+        NSString *roomid=[data objectForKey:@"roomid"];
+        NSString *content=[data objectForKey:@"content"];
+        NSString *gamename=[data objectForKey:@"gamename"];
+//        NSString *createtime=[data objectForKey:@"createtime"];
+        if(roomid==nil){
+            [self showAlert:@"" content:@"房间已经不存在"];
+//            [self performSegueWithIdentifier:@"backRoomSetting" sender:self];
+            [UCIAppDelegate setRoomPush:@""];
+        }
+        [self.labRoomId setText:roomid];
+        [self.labContent setText:content];
+        [self.labGameName setText:gamename];
+        NSLog(@"RoomGetContent 函数的回调");
+    }
+    else if([command isEqualToString:@"RoomLevel"]){
+        [self performSegueWithIdentifier:@"backRoomSetting" sender:self];
+        [UCIAppDelegate setRoomPush:@""];
+        NSLog(@"RoomLevel 函数的回调");
+    }
+}
 @end

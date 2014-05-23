@@ -7,6 +7,7 @@
 //
 
 #import "UCIRoomHomeViewController.h"
+#import "UCIAppDelegate.h"
 
 @interface UCIRoomHomeViewController ()
 
@@ -72,11 +73,15 @@
 -(void)callBack:(NSDictionary *)data commandName:(NSString*) command{
     if([command isEqualToString:@"RoomNew"]){
         NSLog(@"RoomNew 函数的回调");
+        NSString * roomid=[data objectForKey:@"roomid"];
+        [UCIAppDelegate setRoomPush:[NSString stringWithFormat:@"ROOM_%@",roomid]];
         [self performSegueWithIdentifier:@"createroom" sender:self];
     }
     else if([command isEqualToString:@"RoomJoin"]){
-            [self performSegueWithIdentifier:@"joinroom" sender:self];
+        [self performSegueWithIdentifier:@"joinroom" sender:self];
 //             [self showAlert:@"提示" content:@"当前房间号不存在或已超期"];
+        NSString * roomid=[data objectForKey:@"roomid"];
+        [UCIAppDelegate setRoomPush:[NSString stringWithFormat:@"ROOM_%@",roomid]];
         NSLog(@"RoomJoin 函数的回调");
 
     }

@@ -31,18 +31,20 @@
     
     
     //每秒刷新一下，看是否有要更新的信息
-    [NSTimer scheduledTimerWithTimeInterval:1.0f
+    [NSTimer scheduledTimerWithTimeInterval:1.5f
                                      target:self
                                    selector:@selector(checkFlash)
                                    userInfo:nil
                                     repeats:YES];
+    
     //每秒刷新一下，看是否有要更新的信息
-    [NSTimer scheduledTimerWithTimeInterval:15.0f
+    [NSTimer scheduledTimerWithTimeInterval:10.0f
                                      target:self
                                    selector:@selector(reflash)
                                    userInfo:nil
                                     repeats:YES];
 
+    [self reflash];
     
 //    [UIApplication mess]
     // Do any additional setup after loading the view.
@@ -74,6 +76,9 @@
         NSMutableArray *userinfo=[data objectForKey:@"room_user"];
         [self ReflashUsers:userinfo];
         NSLog(@"RoomGetInfo 函数的回调");
+    }else if([command isEqualToString:@"RoomLevel"]){
+        [self performSegueWithIdentifier:@"backSelectRoom" sender:self];
+        NSLog(@"RoomLevel 函数的回调");
     }
 }
 
@@ -113,5 +118,17 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (IBAction)btnLevel:(id)sender {
+    HTTPBase *classBtest = [[HTTPBase alloc] init];
+    classBtest.delegate = self;
+    [classBtest baseHttp:@"RoomLevel"];
+}
+
+- (IBAction)btnStartUndercover:(id)sender {
+    HTTPBase *classBtest = [[HTTPBase alloc] init];
+    classBtest.delegate = self;
+    [classBtest baseHttp:@"RoomStartGame" paramsdata:[NSDictionary dictionaryWithObjectsAndKeys:@"1",@"type",nil]];
+}
+
 
 @end
