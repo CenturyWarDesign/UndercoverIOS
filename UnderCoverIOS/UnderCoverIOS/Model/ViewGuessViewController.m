@@ -62,6 +62,7 @@
         [self.view addSubview:someAddButton];
     }
 }
+
 -(void)tapPeople:(UIButton *)sender{
     if(PeopleCount==MaxPeopleCount&&SonCount==MaxSonCount){
         //点投票第一步

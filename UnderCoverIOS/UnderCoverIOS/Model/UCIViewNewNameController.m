@@ -26,17 +26,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSString *username=[self getObjectFromDefault:@"username"];
-    //如果已经设置过姓名，则跳过
-    if([username length]>0){
-        [self performSegueWithIdentifier:@"roompage" sender:self];
-    }
+     NSString *username=[self getObjectFromDefault:@"username"];
+    [self.labName setText:username];
     // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+    
     // Dispose of any resources that can be recreated.
 }
 
@@ -61,8 +59,7 @@
     if([command isEqualToString:@"NameChange"]){
         NSLog(@"NameChange 函数的回调");
         [self setObjectFromDefault:self.labName.text key:@"username"];
-        [self performSegueWithIdentifier:@"roompage" sender:self];
-        
+        [self.navigationController popViewControllerAnimated:YES];
     }
 }
 -(IBAction)textFieldDoneEditing:(id)sender{

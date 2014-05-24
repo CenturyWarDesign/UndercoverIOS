@@ -27,8 +27,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSString * welcomeword=[NSString stringWithFormat:@"%@,选一个游戏开始吧",[self getObjectFromDefault:@"username"]];
-    [self.labName setText: welcomeword];
+    NSString *username=[self getObjectFromDefault:@"username"];
+    if([username length]==0){
+        [self performSegueWithIdentifier:@"changeName" sender:self];
+    }
+
+    //如果已经设置过姓名，则跳过
+
     // Do any additional setup after loading the view.
 }
 
@@ -38,6 +43,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    NSString * welcomeword=[NSString stringWithFormat:@"%@,选一个游戏开始吧",[self getObjectFromDefault:@"username"]];
+    [self.labName setText: welcomeword];
+}
 /*
 #pragma mark - Navigation
 

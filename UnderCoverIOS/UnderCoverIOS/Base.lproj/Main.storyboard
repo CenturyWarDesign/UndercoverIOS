@@ -33,7 +33,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bmr-Y4-iff" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1296" y="681"/>
+            <point key="canvasLocation" x="2236" y="-207"/>
         </scene>
         <!--Publish Net - 真心话大冒险-->
         <scene sceneID="3wD-gr-c7l">
@@ -44,11 +44,11 @@
                         <viewControllerLayoutGuide type="bottom" id="rI7-T4-NDT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="DK5-dn-zyI" customClass="UCI">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="simpleTableI" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="76" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="dvD-ua-O5D">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -73,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o6V-HP-Nni" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1144" y="1428"/>
+            <point key="canvasLocation" x="2250" y="500"/>
         </scene>
         <!--New Punish View Controller - 新词汇-->
         <scene sceneID="3dC-D5-dRf">
@@ -84,7 +84,7 @@
                         <viewControllerLayoutGuide type="bottom" id="3wb-1E-XHi"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="I7q-fx-gEQ">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Q5-7n-tqy">
@@ -137,12 +137,11 @@
                         <outlet property="btnSubmit2" destination="nV5-D5-OWP" id="lGR-lA-DSc"/>
                         <outlet property="txtField" destination="3Q5-7n-tqy" id="MGJ-Nq-ic7"/>
                         <outlet property="txtPlace" destination="o5V-If-HFe" id="wvG-ej-4bT"/>
-                        <segue destination="qbm-nY-QCr" kind="push" identifier="hasAddNew" id="rcE-j1-qVg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="stc-Pp-Jge" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1552" y="1428"/>
+            <point key="canvasLocation" x="2634" y="500"/>
         </scene>
         <!--Punish View Controller - 开始惩罚-->
         <scene sceneID="0mk-5d-dsp">
@@ -206,7 +205,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="maQ-9T-zzx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="577" y="938"/>
+            <point key="canvasLocation" x="1765" y="186"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="LMq-iY-C5p">
@@ -227,7 +226,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K8V-d4-Sny" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-889" y="806"/>
+            <point key="canvasLocation" x="-1179" y="744"/>
         </scene>
         <!--View Home View Controller - 爱上聚会-->
         <scene sceneID="6pO-dm-WvA">
@@ -289,7 +288,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M3f-qJ-oUi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-123" y="869"/>
+            <point key="canvasLocation" x="-101" y="174"/>
         </scene>
         <!--View Controller - 玩法-->
         <scene sceneID="DHa-PW-x6M">
@@ -309,7 +308,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="saQ-Kv-9nQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-894" y="1518"/>
+            <point key="canvasLocation" x="-594" y="1498"/>
         </scene>
         <!--View New Name Controller - 设置昵称-->
         <scene sceneID="RNN-ZD-1S2">
@@ -341,7 +340,7 @@
                                     <action selector="updateName:" destination="Yz6-45-Sro" eventType="touchUpInside" id="bD5-I1-Q6v"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入昵称" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="498-S7-dHE">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入昵称" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="498-S7-dHE">
                                 <rect key="frame" x="31" y="84" width="259" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -354,12 +353,11 @@
                     <navigationItem key="navigationItem" title="设置昵称" id="rWV-AI-aQy"/>
                     <connections>
                         <outlet property="labName" destination="498-S7-dHE" id="BrQ-gO-qq6"/>
-                        <segue destination="IJr-yc-3ge" kind="push" identifier="roompage" id="5Vh-Xy-4nl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jdD-KV-7jO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-8" y="1474"/>
+            <point key="canvasLocation" x="369" y="1470"/>
         </scene>
         <!--Room Home View Controller-->
         <scene sceneID="ZSM-DZ-RqK">
@@ -370,22 +368,21 @@
                         <viewControllerLayoutGuide type="bottom" id="5c5-oF-y70"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="T6f-rx-6tu">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="欢迎您：先生/女士" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7A-2x-72V">
-                                <rect key="frame" x="41" y="52" width="238" height="21"/>
+                                <rect key="frame" x="41" y="86" width="238" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BK6-if-UO4">
-                                <rect key="frame" x="31" y="127" width="259" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BK6-if-UO4">
+                                <rect key="frame" x="31" y="161" width="259" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="加入房间">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="加入房间"/>
                                 <connections>
                                     <action selector="btnJoinRoom:" destination="IJr-yc-3ge" eventType="touchUpInside" id="ofq-yn-Nuo"/>
                                     <action selector="btnTest:" destination="S85-1U-6Hg" eventType="touchUpInside" id="JnE-0Y-x2Q"/>
@@ -393,7 +390,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wW4-6r-6ot">
-                                <rect key="frame" x="31" y="178" width="259" height="44"/>
+                                <rect key="frame" x="31" y="212" width="259" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="创建房间">
                                     <color key="titleColor" red="0.049585682044254099" green="0.45956234056122447" blue="0.29183846718389089" alpha="1" colorSpace="calibratedRGB"/>
@@ -405,16 +402,23 @@
                                     <action selector="updateName:" destination="Yz6-45-Sro" eventType="touchUpInside" id="krp-cL-zlW"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入房间号" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vSy-2B-ZsE">
-                                <rect key="frame" x="31" y="89" width="259" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入房间号" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="vSy-2B-ZsE">
+                                <rect key="frame" x="31" y="123" width="259" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="1" green="0.030171554529999998" blue="0.055692702410000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="rx3-FE-Wwz"/>
+                    <navigationItem key="navigationItem" id="rx3-FE-Wwz">
+                        <barButtonItem key="rightBarButtonItem" title="昵称" id="E2W-Sx-oV4">
+                            <connections>
+                                <segue destination="Yz6-45-Sro" kind="push" identifier="changeName" id="qB9-92-fX8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="labName" destination="N7A-2x-72V" id="rpk-nx-iqG"/>
                         <outlet property="labRoomId" destination="vSy-2B-ZsE" id="5bw-2P-myf"/>
@@ -424,7 +428,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yhW-Gb-EGc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="512" y="1694"/>
+            <point key="canvasLocation" x="-18" y="2260"/>
         </scene>
         <!--Navigation Controller - 参与-->
         <scene sceneID="iuH-9g-Zpf">
@@ -435,12 +439,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Yz6-45-Sro" kind="relationship" relationship="rootViewController" id="klj-pr-Zn8"/>
+                        <segue destination="IJr-yc-3ge" kind="relationship" relationship="rootViewController" id="d9h-Tr-3TA"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y7f-x2-xab" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-421" y="1474"/>
+            <point key="canvasLocation" x="-582" y="2260"/>
         </scene>
         <!--Test View Controller - 设置-->
         <scene sceneID="wQY-6K-Fnn">
@@ -483,7 +487,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="52t-s0-BeM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="995" y="1441"/>
+            <point key="canvasLocation" x="-603" y="793"/>
         </scene>
         <!--Room Setting View Controller - 房间设置-->
         <scene sceneID="GOg-S3-Nb7">
@@ -494,18 +498,18 @@
                         <viewControllerLayoutGuide type="bottom" id="RZ6-xa-pgH"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3og-7S-wQs">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="房间号码：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1rf-uW-3zW">
-                                <rect key="frame" x="76" y="97" width="85" height="21"/>
+                                <rect key="frame" x="76" y="84" width="85" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSC-3J-dc2">
-                                <rect key="frame" x="169" y="97" width="48" height="21"/>
+                                <rect key="frame" x="169" y="84" width="48" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.030171554529999998" blue="0.055692702410000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -550,7 +554,7 @@
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wua-ZY-QI7">
-                                <rect key="frame" x="0.0" y="126" width="320" height="202"/>
+                                <rect key="frame" x="0.0" y="121" width="320" height="127"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </scrollView>
                         </subviews>
@@ -560,13 +564,126 @@
                     <connections>
                         <outlet property="labRoomId" destination="GSC-3J-dc2" id="dj9-dE-S6k"/>
                         <outlet property="scrollUsers" destination="Wua-ZY-QI7" id="Kc6-lC-pYD"/>
-                        <segue destination="PvZ-nO-PGH" kind="push" identifier="startroom" id="owA-5p-LsX"/>
-                        <segue destination="IJr-yc-3ge" kind="push" identifier="backSelectRoom" id="q9W-xU-FOo"/>
+                        <segue destination="udg-th-tbP" kind="push" identifier="gameundercover" id="Vpd-qK-9bA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q28-AD-sWs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="566" y="2651"/>
+            <point key="canvasLocation" x="736" y="2667"/>
+        </scene>
+        <!--Room Undercover View Controller - 谁是卧底-->
+        <scene sceneID="mKW-3W-I7f">
+            <objects>
+                <viewController title="谁是卧底" id="udg-th-tbP" customClass="UCIRoomUndercoverViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ErZ-qG-cPJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wrD-YV-ogd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DjM-HY-lLa">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="房间号码：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LOm-Cp-2iL">
+                                <rect key="frame" x="90" y="74" width="85" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YfN-aj-ANf">
+                                <rect key="frame" x="183" y="74" width="48" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.030171554529999998" blue="0.055692702410000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1cs-vN-9Va">
+                                <rect key="frame" x="200" y="378" width="100" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="重新开始">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnJoinRoom:" destination="IJr-yc-3ge" eventType="touchUpInside" id="hVy-wB-7n7"/>
+                                    <action selector="btnStartUndercover:" destination="tcv-I7-KND" eventType="touchUpInside" id="Qz0-1s-qEC"/>
+                                    <action selector="btnTest:" destination="S85-1U-6Hg" eventType="touchUpInside" id="iSh-b5-WpU"/>
+                                    <action selector="restert:" destination="udg-th-tbP" eventType="touchUpInside" id="Ilg-yy-N7d"/>
+                                    <action selector="updateName:" destination="Yz6-45-Sro" eventType="touchUpInside" id="zEB-2I-lyV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="游戏：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gf7-jr-yDA">
+                                <rect key="frame" x="125" y="96" width="51" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qms-hg-lKe">
+                                <rect key="frame" x="185" y="96" width="161" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="游戏状态" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mM1-h8-wSs">
+                                <rect key="frame" x="75" y="409" width="156" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="接受惩罚" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wep-dn-tSh">
+                                <rect key="frame" x="5" y="217" width="315" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e7p-Jh-GUm">
+                                <rect key="frame" x="0.0" y="236" width="320" height="98"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="我的身份：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUN-7o-mVc">
+                                <rect key="frame" x="90" y="122" width="85" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yeF-xn-zPv">
+                                <rect key="frame" x="80" y="145" width="161" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.030171554529999998" blue="0.055692702410000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="I1V-9T-MoU">
+                                <rect key="frame" x="176" y="116" width="79" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="showWord:" destination="udg-th-tbP" eventType="valueChanged" id="ZHl-ed-qd6"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="谁是卧底" id="pYo-GM-ptv"/>
+                    <connections>
+                        <outlet property="btnShowWord" destination="I1V-9T-MoU" id="l7B-1l-i7m"/>
+                        <outlet property="labGameName" destination="Qms-hg-lKe" id="EHV-lJ-2No"/>
+                        <outlet property="labMeWord" destination="yeF-xn-zPv" id="UhM-I6-BxD"/>
+                        <outlet property="labPunishContent" destination="e7p-Jh-GUm" id="0T8-Zm-dB3"/>
+                        <outlet property="labPunishTitle" destination="wep-dn-tSh" id="pkp-4K-26m"/>
+                        <outlet property="labRoomID" destination="YfN-aj-ANf" id="umZ-pg-3G2"/>
+                        <outlet property="labStatus" destination="mM1-h8-wSs" id="jF6-Jf-iks"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JRQ-Fd-EfJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1189" y="2662"/>
         </scene>
         <!--Rome Info View Controller - 游戏信息-->
         <scene sceneID="JLe-d1-92B">
@@ -577,7 +694,7 @@
                         <viewControllerLayoutGuide type="bottom" id="a1X-12-46B"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ccV-gj-Kuz">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="房间号码：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="die-f8-8Ob">
@@ -657,12 +774,11 @@
                         <outlet property="labContent" destination="YBg-XV-7j7" id="e0V-Tf-GSy"/>
                         <outlet property="labGameName" destination="8th-nu-R2A" id="wec-9Y-UFi"/>
                         <outlet property="labRoomId" destination="deU-t3-9Yc" id="yZJ-1U-zuQ"/>
-                        <segue destination="IJr-yc-3ge" kind="push" identifier="backRoomSetting" id="KCS-Fh-Sf5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HT1-te-RJL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1082" y="1811"/>
+            <point key="canvasLocation" x="736" y="1953"/>
         </scene>
         <!--View Undercover View Controller - 谁是卧底-->
         <scene sceneID="hQE-GW-FuC">
@@ -741,7 +857,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Da-MK-kaU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="577" y="224"/>
+            <point key="canvasLocation" x="445" y="-407"/>
         </scene>
         <!--View Fenpei View Controller - 分配身份-->
         <scene sceneID="3y1-ri-h5W">
@@ -752,7 +868,7 @@
                         <viewControllerLayoutGuide type="bottom" id="5J9-fC-V01"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Uzs-JY-hcU">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="马年大吉" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9V-UN-AsI">
@@ -790,7 +906,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kUq-j8-1eC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1059" y="-371"/>
+            <point key="canvasLocation" x="853" y="-413"/>
         </scene>
         <!--View Guess View Controller - 猜卧底-->
         <scene sceneID="6mT-1H-gE2">
@@ -801,7 +917,7 @@
                         <viewControllerLayoutGuide type="bottom" id="snl-E4-yBR"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="O3V-v4-t18">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="viewGuess" translatesAutoresizingMaskIntoConstraints="NO" id="ouL-ln-wfd">
@@ -835,7 +951,6 @@
                                 </state>
                                 <connections>
                                     <action selector="nextOne:" destination="3ho-0x-a8w" eventType="touchUpInside" id="6T5-HI-YMb"/>
-                                    <segue destination="3ho-0x-a8w" kind="push" identifier="restart" id="naQ-IE-CSe"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -849,7 +964,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4kg-1d-1xi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1503" y="-389"/>
+            <point key="canvasLocation" x="1299" y="-407"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -1058,7 +1173,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="97u-fU-eAO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-267" y="-8"/>
+            <point key="canvasLocation" x="-577" y="174"/>
         </scene>
     </scenes>
     <resources>
@@ -1074,10 +1189,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="naQ-IE-CSe"/>
-        <segue reference="Nkf-oU-wE6"/>
-        <segue reference="KCS-Fh-Sf5"/>
-        <segue reference="owA-5p-LsX"/>
-        <segue reference="rcE-j1-qVg"/>
+        <segue reference="hSa-lq-HVx"/>
     </inferredMetricsTieBreakers>
 </document>

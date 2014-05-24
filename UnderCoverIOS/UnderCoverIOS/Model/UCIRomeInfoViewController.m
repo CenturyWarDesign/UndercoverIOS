@@ -28,22 +28,21 @@
 {
     [super viewDidLoad];
     
-    //每秒刷新一下，看是否有要更新的信息
-    [NSTimer scheduledTimerWithTimeInterval:1.5f
-                                     target:self
-                                   selector:@selector(checkFlash)
-                                   userInfo:nil
-                                    repeats:YES];
+    
+    timerCheck= [NSTimer  timerWithTimeInterval:1.0 target:self selector:@selector(checkFlash)userInfo:nil repeats:YES];
+    timerReflash= [NSTimer  timerWithTimeInterval:20.0 target:self selector:@selector(reflash)userInfo:nil repeats:YES];
     
     
-    // Do any additional setup after loading the view.
-    //每秒刷新一下，看是否有要更新的信息
-    [NSTimer scheduledTimerWithTimeInterval:20.0f
-                                     target:self
-                                   selector:@selector(reflash)
-                                   userInfo:nil
-                                    repeats:YES];
+    [[NSRunLoop currentRunLoop]addTimer:timerCheck forMode:NSDefaultRunLoopMode];
+    [[NSRunLoop currentRunLoop]addTimer:timerReflash forMode:NSDefaultRunLoopMode];
+
      [self reflash];
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    //注意，这里添加的定时器必须给清理掉，不然退出的时候会一直运行
+    [timerCheck invalidate];
+    [timerReflash invalidate];
 }
 
 

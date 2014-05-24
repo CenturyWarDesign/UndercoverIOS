@@ -30,24 +30,21 @@
     [self.labRoomId setText:[self getObjectFromDefault:@"gameuid"]];
     
     
-    //每秒刷新一下，看是否有要更新的信息
-    [NSTimer scheduledTimerWithTimeInterval:1.5f
-                                     target:self
-                                   selector:@selector(checkFlash)
-                                   userInfo:nil
-                                    repeats:YES];
+    timerCheck= [NSTimer  timerWithTimeInterval:1.0 target:self selector:@selector(checkFlash)userInfo:nil repeats:YES];
+    timerReflash= [NSTimer  timerWithTimeInterval:10.0 target:self selector:@selector(reflash)userInfo:nil repeats:YES];
     
-    //每秒刷新一下，看是否有要更新的信息
-    [NSTimer scheduledTimerWithTimeInterval:10.0f
-                                     target:self
-                                   selector:@selector(reflash)
-                                   userInfo:nil
-                                    repeats:YES];
-
+    [[NSRunLoop currentRunLoop]addTimer:timerCheck forMode:NSDefaultRunLoopMode];
+    [[NSRunLoop currentRunLoop]addTimer:timerReflash forMode:NSDefaultRunLoopMode];
+    
     [self reflash];
     
 //    [UIApplication mess]
     // Do any additional setup after loading the view.
+}
+-(void)viewWillDisappear:(BOOL)animated{
+    //注意，这里添加的定时器必须给清理掉，不然退出的时候会一直运行
+    [timerCheck invalidate];
+    [timerReflash invalidate];
 }
 
 -(void)checkFlash{
@@ -77,7 +74,13 @@
         [self ReflashUsers:userinfo];
         NSLog(@"RoomGetInfo 函数的回调");
     }else if([command isEqualToString:@"RoomLevel"]){
-        [self performSegueWithIdentifier:@"backSelectRoom" sender:self];
+//        [self dismissViewControllerAnimated:false completion:nil];
+        [self.navigationController popViewControllerAnimated:YES];
+        NSLog(@"RoomLevel 函数的回调");
+    }
+    else if([command isEqualToString:@"RoomStartGame"]){
+        datatosend=data;
+        [self performSegueWithIdentifier:@"gameundercover" sender:self];
         NSLog(@"RoomLevel 函数的回调");
     }
 }
@@ -96,7 +99,7 @@
     }
     
     for(int i=0;i<[userarray count];i++){
-        CGRect frame = CGRectMake((btnWidth+5)*(i%4)+10, (i/4)*(btnHeight+10)+80, btnWidth, btnHeight);
+        CGRect frame = CGRectMake((btnWidth+5)*(i%4)+10, (i/4)*(btnHeight+10), btnWidth, btnHeight);
         UIButton *someAddButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         someAddButton.backgroundColor = [UIColor clearColor];
         [someAddButton setBackgroundImage:[UIImage imageNamed:@"cerlightblue01.png"] forState:UIControlStateNormal];
@@ -130,5 +133,17 @@
     [classBtest baseHttp:@"RoomStartGame" paramsdata:[NSDictionary dictionaryWithObjectsAndKeys:@"1",@"type",nil]];
 }
 
+
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"gameundercover"]) //"goView2"是SEGUE连线的标识
+    {
+        id theSegue = segue.destinationViewController;
+        //界面之间进行传值,把创建游戏的数据发过来
+        [theSegue setValue:datatosend forKey:@"gameundercover"];
+    }
+    
+}
 
 @end

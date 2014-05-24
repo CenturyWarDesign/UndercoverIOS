@@ -8,8 +8,13 @@
 
 #import "UCIBaseViewController.h"
 
-@interface UCIRoomSettingViewController : UCIBaseViewController
+@interface UCIRoomSettingViewController : UCIBaseViewController{
+    NSTimer *timerCheck;
+    NSTimer *timerReflash;
+    NSDictionary * datatosend;
+}
 @property (strong, nonatomic) IBOutlet UILabel *labRoomId;
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollUsers;
+
 
 @end
