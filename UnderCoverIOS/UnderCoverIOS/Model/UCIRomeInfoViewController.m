@@ -95,7 +95,7 @@
 //        NSString *createtime=[data objectForKey:@"createtime"];
         if(roomid==nil){
             [self showAlert:@"" content:@"房间已经不存在"];
-//            [self performSegueWithIdentifier:@"backRoomSetting" sender:self];
+            [self.navigationController popViewControllerAnimated:YES];
             [UCIAppDelegate setRoomPush:@""];
         }
         [self.labRoomId setText:roomid];
@@ -104,7 +104,8 @@
         NSLog(@"RoomGetContent 函数的回调");
     }
     else if([command isEqualToString:@"RoomLevel"]){
-        [self performSegueWithIdentifier:@"backRoomSetting" sender:self];
+        [self setObjectFromDefault:@"" key:@"roomtype"];
+        [self.navigationController popViewControllerAnimated:YES];
         [UCIAppDelegate setRoomPush:@""];
         NSLog(@"RoomLevel 函数的回调");
     }

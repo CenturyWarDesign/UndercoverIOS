@@ -57,19 +57,19 @@
  */
 -(void)initGuess:(NSArray *)initArray{
     
-    int width=self.view.bounds.size.width;
+    int width=self.viewPop.bounds.size.width;
     //    int height=self.viewGuess.bounds.size.height;
     int btnWidth=(width-30)/4;
     int btnHeight=40;
     for (int i=0; i<[initArray count]; i++) {
-        CGRect frame = CGRectMake((btnWidth+5)*(i%4)+10, (i/4)*(btnHeight+10)+100, btnWidth, btnHeight);
+        CGRect frame = CGRectMake((btnWidth+5)*(i%4)+10, (i/4)*(btnHeight+10)+10, btnWidth, btnHeight);
         UIButton *someAddButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         someAddButton.backgroundColor = [UIColor clearColor];
         [someAddButton setTitle:[(NSDictionary *)[initArray objectAtIndex:i] objectForKey:@"user"] forState:UIControlStateNormal];
         [someAddButton setFrame:frame];
         [someAddButton setTag:i+1];
         [someAddButton addTarget:self action:@selector(tapPeople:) forControlEvents:UIControlEventTouchUpInside];
-        [self.view addSubview:someAddButton];
+        [self.viewPop addSubview:someAddButton];
     }
 }
 -(void)tapPeople:(UIButton *)sender{

@@ -74,7 +74,9 @@
         [self ReflashUsers:userinfo];
         NSLog(@"RoomGetInfo 函数的回调");
     }else if([command isEqualToString:@"RoomLevel"]){
+        [self setObjectFromDefault:@"" key:@"roomtype"];
 //        [self dismissViewControllerAnimated:false completion:nil];
+        
         [self.navigationController popViewControllerAnimated:YES];
         NSLog(@"RoomLevel 函数的回调");
     }

@@ -83,7 +83,7 @@
         [self.txtPlace setText:@""];
         [self.txtField setText:@""];
         [self textFieldDoneEditing:self.txtField];
-        [self performSegueWithIdentifier:@"hasAddNew" sender:self];
+        [self.navigationController popViewControllerAnimated:YES];
     }
 }
 

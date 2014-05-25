@@ -27,4 +27,6 @@
 @property (strong, nonatomic) IBOutlet UITextView *labPunishContent;
 @property (strong, nonatomic) IBOutlet UILabel *labMeWord;
 @property (strong, nonatomic) IBOutlet UISwitch *btnShowWord;
+@property (strong, nonatomic) IBOutlet UIScrollView *viewPop;
+@property (strong, nonatomic) IBOutlet UIButton *btnShowPunish;
 @end

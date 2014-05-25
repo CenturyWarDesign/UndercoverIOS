@@ -30,8 +30,16 @@
     NSString *username=[self getObjectFromDefault:@"username"];
     if([username length]==0){
         [self performSegueWithIdentifier:@"changeName" sender:self];
+        return;
     }
 
+    //如果已经在一个房间内，那么直接跳过去
+    NSString *roomtype=[self getObjectFromDefault:@"roomtype"];
+    if([roomtype isEqualToString:@"create"]){
+        [self performSegueWithIdentifier:@"createroom" sender:self];
+    }else if([roomtype isEqualToString:@"join"]){
+        [self performSegueWithIdentifier:@"joinroom" sender:self];
+    }
     //如果已经设置过姓名，则跳过
 
     // Do any additional setup after loading the view.
@@ -44,7 +52,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated{
-    NSString * welcomeword=[NSString stringWithFormat:@"%@,选一个游戏开始吧",[self getObjectFromDefault:@"username"]];
+    NSString * welcomeword=[NSString stringWithFormat:@"%@,创建或加入一个游戏吧",[self getObjectFromDefault:@"username"]];
     [self.labName setText: welcomeword];
 }
 /*
@@ -82,15 +90,17 @@
 -(void)callBack:(NSDictionary *)data commandName:(NSString*) command{
     if([command isEqualToString:@"RoomNew"]){
         NSLog(@"RoomNew 函数的回调");
-        NSString * roomid=[data objectForKey:@"roomid"];
-        [UCIAppDelegate setRoomPush:[NSString stringWithFormat:@"ROOM_%@",roomid]];
+//        NSString * roomid=[data objectForKey:@"roomid"];
+//        [UCIAppDelegate setRoomPush:[NSString stringWithFormat:@"ROOM_%@",roomid]];
+        [self setObjectFromDefault:@"create" key:@"roomtype"];
         [self performSegueWithIdentifier:@"createroom" sender:self];
     }
     else if([command isEqualToString:@"RoomJoin"]){
         [self performSegueWithIdentifier:@"joinroom" sender:self];
 //             [self showAlert:@"提示" content:@"当前房间号不存在或已超期"];
-        NSString * roomid=[data objectForKey:@"roomid"];
-        [UCIAppDelegate setRoomPush:[NSString stringWithFormat:@"ROOM_%@",roomid]];
+//        NSString * roomid=[data objectForKey:@"roomid"];
+        [self setObjectFromDefault:@"join" key:@"roomtype"];
+//        [UCIAppDelegate setRoomPush:[NSString stringWithFormat:@"ROOM_%@",roomid]];
         NSLog(@"RoomJoin 函数的回调");
 
     }
