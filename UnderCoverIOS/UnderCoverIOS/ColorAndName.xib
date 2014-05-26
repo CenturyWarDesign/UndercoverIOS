@@ -14,27 +14,46 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="74"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="298" translatesAutoresizingMaskIntoConstraints="NO" id="GJR-UF-Qh4">
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="298" translatesAutoresizingMaskIntoConstraints="NO" id="GJR-UF-Qh4">
                         <rect key="frame" x="11" y="2" width="298" height="44"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="top" fixedFrame="YES" restorationIdentifier="btnUnlike" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rg-RR-zMX">
+                    <button opaque="NO" contentMode="top" restorationIdentifier="btnUnlike" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rg-RR-zMX">
                         <rect key="frame" x="249" y="54" width="60" height="20"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="89K-2X-JNr"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <state key="normal" title="不喜欢"/>
                     </button>
-                    <button opaque="NO" contentMode="top" fixedFrame="YES" restorationIdentifier="btnLike" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Unw-Ar-Jrj">
+                    <button opaque="NO" contentMode="top" restorationIdentifier="btnLike" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Unw-Ar-Jrj">
                         <rect key="frame" x="177" y="54" width="60" height="20"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="gEK-pO-qUw"/>
+                            <constraint firstAttribute="height" constant="20" id="vlT-Up-XcY"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <state key="normal" title="喜欢">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                     </button>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="Unw-Ar-Jrj" firstAttribute="top" secondItem="GJR-UF-Qh4" secondAttribute="bottom" constant="8" symbolic="YES" id="3My-UD-FuW"/>
+                    <constraint firstAttribute="trailing" secondItem="2rg-RR-zMX" secondAttribute="trailing" constant="11" id="4SE-ai-xg4"/>
+                    <constraint firstItem="2rg-RR-zMX" firstAttribute="leading" secondItem="Unw-Ar-Jrj" secondAttribute="trailing" constant="12" id="ALD-YG-7Yv"/>
+                    <constraint firstItem="Unw-Ar-Jrj" firstAttribute="bottom" secondItem="2rg-RR-zMX" secondAttribute="bottom" id="BAP-Kk-EWH"/>
+                    <constraint firstItem="GJR-UF-Qh4" firstAttribute="top" secondItem="1qc-mp-Epp" secondAttribute="top" constant="2" id="Cjm-ak-rph"/>
+                    <constraint firstItem="GJR-UF-Qh4" firstAttribute="centerX" secondItem="1qc-mp-Epp" secondAttribute="centerX" id="LNY-B5-2oV"/>
+                    <constraint firstAttribute="bottom" secondItem="2rg-RR-zMX" secondAttribute="bottom" id="eZG-cW-aXe"/>
+                    <constraint firstItem="GJR-UF-Qh4" firstAttribute="leading" secondItem="1qc-mp-Epp" secondAttribute="leading" constant="11" id="lRJ-vc-q8L"/>
+                    <constraint firstAttribute="trailing" secondItem="GJR-UF-Qh4" secondAttribute="trailing" constant="11" id="q9N-su-UEI"/>
+                    <constraint firstItem="2rg-RR-zMX" firstAttribute="top" secondItem="GJR-UF-Qh4" secondAttribute="bottom" constant="8" symbolic="YES" id="x20-Xp-men"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="btnLike" destination="Unw-Ar-Jrj" id="dNN-hF-Uho"/>
