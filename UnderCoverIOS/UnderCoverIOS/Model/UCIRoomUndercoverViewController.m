@@ -13,7 +13,7 @@
 @end
 
 @implementation UCIRoomUndercoverViewController
-@synthesize gameundercover;
+@synthesize gameData;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,19 +30,21 @@
     
     [self.labStatus setText:@""];
 //    datagame=gameundercover;
-    [self.labGameName setText:[gameundercover objectForKey:@"name"]];
-    [self.labRoomID setText:[gameundercover objectForKey:@"gameuid"]];
+    [self.labGameName setText:[gameData objectForKey:@"name"]];
+    [self.labRoomID setText:[gameData objectForKey:@"gameuid"]];
     
-    PeopleCount=[(NSArray *)[gameundercover objectForKey:@"room_user"] count];
+    PeopleCount=[(NSArray *)[gameData objectForKey:@"room_user"] count];
     MaxPeopleCount=PeopleCount;
-    SonCount=[[[gameundercover objectForKey:@"room_contente"] objectForKey:@"soncount" ] intValue];
-    sonWord=[[gameundercover objectForKey:@"room_contente"] objectForKey:@"son"];
-        fatherWord=[[gameundercover objectForKey:@"room_contente"] objectForKey:@"father"];
-    NSArray * room_user=[gameundercover objectForKey:@"room_user"];
+    SonCount=[[[gameData objectForKey:@"room_contente"] objectForKey:@"soncount" ] intValue];
+    sonWord=[[gameData objectForKey:@"room_contente"] objectForKey:@"son"];
+    roomtype=[[gameData objectForKey:@"roomtype"] intValue];
+    
+    fatherWord=[[gameData objectForKey:@"room_contente"] objectForKey:@"father"];
+    NSArray * room_user=[gameData objectForKey:@"room_user"];
     datagame =[[NSMutableArray alloc] init];
     for (int i=0; i<[room_user count]; i++) {
         [datagame addObject:[NSDictionary dictionaryWithObjectsAndKeys:[(NSDictionary *)[room_user objectAtIndex:i] objectForKey:@"username"],@"user",[(NSDictionary *)[room_user objectAtIndex:i] objectForKey:@"content"],@"content",[(NSDictionary *)[room_user objectAtIndex:i] objectForKey:@"gameuid"],@"gameuid",nil]];
-        if([[gameundercover objectForKey:@"gameuid"]isEqualToString:[(NSDictionary *)[room_user objectAtIndex:i] objectForKey:@"gameuid"]]){
+        if([[gameData objectForKey:@"gameuid"]isEqualToString:[(NSDictionary *)[room_user objectAtIndex:i] objectForKey:@"gameuid"]]){
             [self.labMeWord setText:[(NSDictionary *)[room_user objectAtIndex:i] objectForKey:@"content"]];
         }
     }
@@ -65,7 +67,14 @@
         CGRect frame = CGRectMake((btnWidth+5)*(i%4)+10, (i/4)*(btnHeight+10)+10, btnWidth, btnHeight);
         UIButton *someAddButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         someAddButton.backgroundColor = [UIColor clearColor];
+        NSString * shenfen=[(NSDictionary *)[initArray objectAtIndex:i] objectForKey:@"content"];
         [someAddButton setTitle:[(NSDictionary *)[initArray objectAtIndex:i] objectForKey:@"user"] forState:UIControlStateNormal];
+        if(roomtype==2&&[shenfen isEqualToString:@"法官"])
+        {
+                NSString * tem=[NSString stringWithFormat:@"%@:%@",[(NSDictionary *)[initArray objectAtIndex:i] objectForKey:@"user"],@"法官"];
+                [someAddButton setTitle:tem forState:UIControlStateNormal];
+            [someAddButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        }
         [someAddButton setFrame:frame];
         [someAddButton setTag:i+1];
         [someAddButton addTarget:self action:@selector(tapPeople:) forControlEvents:UIControlEventTouchUpInside];

@@ -44,6 +44,7 @@
 		38BA191B18CF785800F6741E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 38BA191A18CF785800F6741E /* libz.dylib */; };
 		38BA191E18CF7BCD00F6741E /* UCIBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BA191D18CF7BCD00F6741E /* UCIBaseViewController.m */; };
 		38BEA93B190978A60017F3D9 /* ViewGuessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BEA93A190978A60017F3D9 /* ViewGuessViewController.m */; };
+		38E20ACF193646DB00871388 /* UCIRoomKillerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E20ACE193646DB00871388 /* UCIRoomKillerViewController.m */; };
 		38E53E5F1907FA06004F8F51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E53E5D1907FA06004F8F51 /* Main.storyboard */; };
 		38E53E661907FB96004F8F51 /* ColorAndName.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38E53E651907FB96004F8F51 /* ColorAndName.xib */; };
 		38ECA849191FCA91007672BA /* shake.png in Resources */ = {isa = PBXBuildFile; fileRef = 38ECA848191FCA91007672BA /* shake.png */; };
@@ -178,6 +179,8 @@
 		38CCFD2218C36B7300E18BD4 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "../../Downloads/icon/ios/Icon-Small.png"; sourceTree = "<group>"; };
 		38CCFD2318C36B8C00E18BD4 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "../../Downloads/icon/ios/Icon-Small@2x.png"; sourceTree = "<group>"; };
 		38CCFD2418C36BA200E18BD4 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
+		38E20ACD193646DB00871388 /* UCIRoomKillerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UCIRoomKillerViewController.h; path = Model/UCIRoomKillerViewController.h; sourceTree = "<group>"; };
+		38E20ACE193646DB00871388 /* UCIRoomKillerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UCIRoomKillerViewController.m; path = Model/UCIRoomKillerViewController.m; sourceTree = "<group>"; };
 		38E53E5E1907FA06004F8F51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		38E53E651907FB96004F8F51 /* ColorAndName.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ColorAndName.xib; path = UnderCoverIOS/ColorAndName.xib; sourceTree = "<group>"; };
 		38ECA848191FCA91007672BA /* shake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shake.png; sourceTree = "<group>"; };
@@ -520,6 +523,8 @@
 				38ECA858192CEE5D007672BA /* UCIRoomSettingViewController.h */,
 				38ECA859192CEE5D007672BA /* UCIRoomSettingViewController.m */,
 				38E53E5D1907FA06004F8F51 /* Main.storyboard */,
+				38E20ACD193646DB00871388 /* UCIRoomKillerViewController.h */,
+				38E20ACE193646DB00871388 /* UCIRoomKillerViewController.m */,
 				38ECA85F1930BC60007672BA /* UCIRoomUndercoverViewController.h */,
 				38ECA8601930BC60007672BA /* UCIRoomUndercoverViewController.m */,
 				38ECA855192CEE24007672BA /* UCIRomeInfoViewController.h */,
@@ -757,6 +762,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38E20ACF193646DB00871388 /* UCIRoomKillerViewController.m in Sources */,
 				38199710191162E3002E644A /* NewPunishViewController.m in Sources */,
 				3807004018CE25C2007E7C03 /* HTTPBase.m in Sources */,
 				38ECA851192BD00B007672BA /* UCIRoomHomeViewController.m in Sources */,

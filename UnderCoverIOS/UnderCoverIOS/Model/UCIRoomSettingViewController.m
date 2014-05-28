@@ -82,8 +82,12 @@
     }
     else if([command isEqualToString:@"RoomStartGame"]){
         datatosend=data;
-        [self performSegueWithIdentifier:@"gameundercover" sender:self];
-        NSLog(@"RoomLevel 函数的回调");
+        if(gametype==1){
+            [self performSegueWithIdentifier:@"gameundercover" sender:self];
+        }else if(gametype==2){
+            [self performSegueWithIdentifier:@"gameKiller" sender:self];
+        }
+        NSLog(@"RoomStartGame 函数的回调");
     }
 }
 
@@ -133,6 +137,15 @@
     HTTPBase *classBtest = [[HTTPBase alloc] init];
     classBtest.delegate = self;
     [classBtest baseHttp:@"RoomStartGame" paramsdata:[NSDictionary dictionaryWithObjectsAndKeys:@"1",@"type",nil]];
+    gametype=1;
+}
+
+//开始杀人游戏
+- (IBAction)btnStartKiller:(id)sender {
+    HTTPBase *classBtest = [[HTTPBase alloc] init];
+    classBtest.delegate = self;
+    [classBtest baseHttp:@"RoomStartGame" paramsdata:[NSDictionary dictionaryWithObjectsAndKeys:@"2",@"type",nil]];
+    gametype=2;
 }
 
 
@@ -143,7 +156,13 @@
     {
         id theSegue = segue.destinationViewController;
         //界面之间进行传值,把创建游戏的数据发过来
-        [theSegue setValue:datatosend forKey:@"gameundercover"];
+        [theSegue setValue:datatosend forKey:@"gameData"];
+    }
+    else if([segue.identifier isEqualToString:@"gameKiller"]) //"goView2"是SEGUE连线的标识
+    {
+        id theSegue = segue.destinationViewController;
+        //界面之间进行传值,把创建游戏的数据发过来
+        [theSegue setValue:datatosend forKey:@"gameData"];
     }
     
 }
