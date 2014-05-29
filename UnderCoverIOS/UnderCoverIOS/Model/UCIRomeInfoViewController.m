@@ -94,7 +94,7 @@
         NSString *gamename=[data objectForKey:@"gamename"];
 //        NSString *createtime=[data objectForKey:@"createtime"];
         if(roomid==nil){
-            [self showAlert:@"" content:@"房间已经不存在"];
+            [self showAlert:@"" content:@"房间已经不存在,或已经被踢出房间"];
             [self.navigationController popViewControllerAnimated:YES];
             [UCIAppDelegate setRoomPush:@""];
         }

@@ -13,6 +13,7 @@
     NSTimer *timerReflash;
     NSDictionary * datatosend;
     int gametype;
+    NSMutableArray *userinfo;
 }
 @property (strong, nonatomic) IBOutlet UILabel *labRoomId;
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollUsers;

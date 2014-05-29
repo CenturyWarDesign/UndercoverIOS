@@ -93,14 +93,15 @@
 //        NSString * roomid=[data objectForKey:@"roomid"];
 //        [UCIAppDelegate setRoomPush:[NSString stringWithFormat:@"ROOM_%@",roomid]];
         [self setObjectFromDefault:@"create" key:@"roomtype"];
+        [self uMengClick:@"room_create"];
         [self performSegueWithIdentifier:@"createroom" sender:self];
     }
     else if([command isEqualToString:@"RoomJoin"]){
         [self performSegueWithIdentifier:@"joinroom" sender:self];
 //             [self showAlert:@"提示" content:@"当前房间号不存在或已超期"];
 //        NSString * roomid=[data objectForKey:@"roomid"];
+        [self uMengClick:@"room_join"];
         [self setObjectFromDefault:@"join" key:@"roomtype"];
-//        [UCIAppDelegate setRoomPush:[NSString stringWithFormat:@"ROOM_%@",roomid]];
         NSLog(@"RoomJoin 函数的回调");
 
     }

@@ -31,7 +31,7 @@
     
     
     timerCheck= [NSTimer  timerWithTimeInterval:1.0 target:self selector:@selector(checkFlash)userInfo:nil repeats:YES];
-    timerReflash= [NSTimer  timerWithTimeInterval:10.0 target:self selector:@selector(reflash)userInfo:nil repeats:YES];
+    timerReflash= [NSTimer  timerWithTimeInterval:20.0 target:self selector:@selector(reflash)userInfo:nil repeats:YES];
     
     [[NSRunLoop currentRunLoop]addTimer:timerCheck forMode:NSDefaultRunLoopMode];
     [[NSRunLoop currentRunLoop]addTimer:timerReflash forMode:NSDefaultRunLoopMode];
@@ -70,7 +70,12 @@
 
 -(void)callBack:(NSDictionary *)data commandName:(NSString*) command{
     if([command isEqualToString:@"RoomGetInfo"]){
-        NSMutableArray *userinfo=[data objectForKey:@"room_user"];
+        userinfo=[data objectForKey:@"room_user"];
+        if([userinfo count]==0){
+            [self showAlert:@"" content:@"未取得任何房间信息，请重新创建"];
+            [self.navigationController popViewControllerAnimated:YES];
+            return;
+        }
         [self ReflashUsers:userinfo];
         NSLog(@"RoomGetInfo 函数的回调");
     }else if([command isEqualToString:@"RoomLevel"]){
@@ -89,6 +94,11 @@
         }
         NSLog(@"RoomStartGame 函数的回调");
     }
+    else if([command isEqualToString:@"RoomRemoveSomeone"]){
+        [self showAlert:@"" content:@"删除玩家成功"];
+        [self reflash];
+        NSLog(@"RoomRemoveSomeone 函数的回调");
+    }
 }
 
 //在这里画出玩家
@@ -106,17 +116,29 @@
     
     for(int i=0;i<[userarray count];i++){
         CGRect frame = CGRectMake((btnWidth+5)*(i%4)+10, (i/4)*(btnHeight+10), btnWidth, btnHeight);
-        UIButton *someAddButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-        someAddButton.backgroundColor = [UIColor clearColor];
-        [someAddButton setBackgroundImage:[UIImage imageNamed:@"cerlightblue01.png"] forState:UIControlStateNormal];
+        
+        UIButton *someAddButton = [self getCircleBtn:btnWidth];
+        
         NSString * userName=[(NSMutableDictionary *)[userarray objectAtIndex:i] objectForKey:@"username"];
         [someAddButton setTitle:userName forState:UIControlStateNormal];
         someAddButton.frame = frame;
-        [someAddButton setTag:1];
-//        [someAddButton addTarget:self action:@selector(tapPeople:) forControlEvents:UIControlEventTouchUpInside];
+        [someAddButton setTag:i];
+        //点击删除某个玩家
+        
+        [someAddButton addTarget:self action:@selector(tapPeople:) forControlEvents:UIControlEventTouchUpInside];
         [self.scrollUsers addSubview:someAddButton];
     }
 }
+
+-(void)tapPeople:(UIButton *)sender{
+    int tag=(int)sender.tag;
+    HTTPBase *classBtest = [[HTTPBase alloc] init];
+    NSString * gameuid= [[userinfo objectAtIndex:tag]objectForKey:@"gameuid"];
+    classBtest.delegate = self;
+    [classBtest baseHttp:@"RoomRemoveSomeone" paramsdata:[NSDictionary dictionaryWithObjectsAndKeys:gameuid,@"gameuid",nil]];
+    gametype=1;
+}
+
 /*
 #pragma mark - Navigation
 
@@ -138,6 +160,7 @@
     classBtest.delegate = self;
     [classBtest baseHttp:@"RoomStartGame" paramsdata:[NSDictionary dictionaryWithObjectsAndKeys:@"1",@"type",nil]];
     gametype=1;
+    [self uMengClick:@"room_undercover"];
 }
 
 //开始杀人游戏
@@ -146,6 +169,7 @@
     classBtest.delegate = self;
     [classBtest baseHttp:@"RoomStartGame" paramsdata:[NSDictionary dictionaryWithObjectsAndKeys:@"2",@"type",nil]];
     gametype=2;
+    [self uMengClick:@"room_killer"];
 }
 
 

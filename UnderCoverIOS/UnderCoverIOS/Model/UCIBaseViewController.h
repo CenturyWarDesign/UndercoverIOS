@@ -27,4 +27,5 @@
 
 -(void)removeliketoDefault:(NSString *)word;
 -(void)addliketoDefault:(NSString *)word;
+-(UIButton *)getCircleBtn:(int) width;
 @end

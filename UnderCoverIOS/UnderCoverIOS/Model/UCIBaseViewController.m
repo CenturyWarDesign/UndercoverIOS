@@ -27,7 +27,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
 
 
 	// Do any additional setup after loading the view.
@@ -198,6 +197,20 @@
         [punisharr removeObject:word];
         [self setObjectFromDefault:punisharr key:@"punisharray"];
     }
+}
+
+
+//返回基础原型按键
+-(UIButton *)getCircleBtn:(int) width{
+    UIButton *someAddButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    someAddButton.backgroundColor = [UIColor clearColor];
+    //        [someAddButton setBackgroundImage:[UIImage imageNamed:@"cerlightblue01.png"] forState:UIControlStateNormal];
+    someAddButton.layer.borderWidth=1;
+    someAddButton.layer.borderColor=[UIColor greenColor].CGColor;
+    someAddButton.layer.cornerRadius=width/2;
+    someAddButton.layer.masksToBounds=YES;
+    return someAddButton;
+
 }
 
 

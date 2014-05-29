@@ -11,6 +11,7 @@
 		3817917119080A5500A313ED /* ViewUndercoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3817917019080A5500A313ED /* ViewUndercoverViewController.m */; };
 		381791771908159A00A313ED /* ViewFenpeiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 381791761908159A00A313ED /* ViewFenpeiViewController.m */; };
 		38199710191162E3002E644A /* NewPunishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3819970F191162E3002E644A /* NewPunishViewController.m */; };
+		38229F06193798A300974F1A /* UCIFeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38229F05193798A300974F1A /* UCIFeedBackViewController.m */; };
 		384B3E681916762B0027201E /* testViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 384B3E671916762B0027201E /* testViewController.m */; };
 		387172DC190C231B009D649B /* ViewHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 387172DB190C231B009D649B /* ViewHomeViewController.m */; };
 		3873F70519055D26003827E4 /* UCIPublishNet.m in Sources */ = {isa = PBXBuildFile; fileRef = 3873F70219055D26003827E4 /* UCIPublishNet.m */; };
@@ -18,7 +19,6 @@
 		3873F70919055D51003827E4 /* BIDNameAndColorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3873F70819055D51003827E4 /* BIDNameAndColorTableViewCell.m */; };
 		3873F70C1906CC40003827E4 /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3873F70A1906CC40003827E4 /* libMobClickLibrary.a */; };
 		38B55491191946A500E41984 /* words.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38B55490191946A500E41984 /* words.plist */; };
-		38B5549319194C8500E41984 /* net.png in Resources */ = {isa = PBXBuildFile; fileRef = 38B5549219194C8500E41984 /* net.png */; };
 		38B5549719194F4B00E41984 /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B5549619194F4B00E41984 /* EGORefreshTableHeaderView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		38B554A019194F6F00E41984 /* blackArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 38B5549819194F6F00E41984 /* blackArrow.png */; };
 		38B554A119194F6F00E41984 /* blackArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 38B5549919194F6F00E41984 /* blackArrow@2x.png */; };
@@ -53,8 +53,6 @@
 		38ECA851192BD00B007672BA /* UCIRoomHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ECA850192BD00B007672BA /* UCIRoomHomeViewController.m */; };
 		38ECA857192CEE24007672BA /* UCIRomeInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ECA856192CEE24007672BA /* UCIRomeInfoViewController.m */; };
 		38ECA85A192CEE5D007672BA /* UCIRoomSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ECA859192CEE5D007672BA /* UCIRoomSettingViewController.m */; };
-		38ECA85D192D2999007672BA /* cerlightblue01.png in Resources */ = {isa = PBXBuildFile; fileRef = 38ECA85B192D2999007672BA /* cerlightblue01.png */; };
-		38ECA85E192D2999007672BA /* cerlightblue02.png in Resources */ = {isa = PBXBuildFile; fileRef = 38ECA85C192D2999007672BA /* cerlightblue02.png */; };
 		38ECA8611930BC60007672BA /* UCIRoomUndercoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ECA8601930BC60007672BA /* UCIRoomUndercoverViewController.m */; };
 		C3089DC518C778D400A7BAAD /* EAIntroPage.m in Sources */ = {isa = PBXBuildFile; fileRef = C3089DC218C778D400A7BAAD /* EAIntroPage.m */; };
 		C3089DC618C778D400A7BAAD /* EAIntroView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3089DC418C778D400A7BAAD /* EAIntroView.m */; };
@@ -129,6 +127,8 @@
 		381791761908159A00A313ED /* ViewFenpeiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewFenpeiViewController.m; path = UnderCoverIOS/Model/ViewFenpeiViewController.m; sourceTree = "<group>"; };
 		3819970E191162E3002E644A /* NewPunishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewPunishViewController.h; path = Model/NewPunishViewController.h; sourceTree = "<group>"; };
 		3819970F191162E3002E644A /* NewPunishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewPunishViewController.m; path = Model/NewPunishViewController.m; sourceTree = "<group>"; };
+		38229F04193798A300974F1A /* UCIFeedBackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UCIFeedBackViewController.h; path = Model/UCIFeedBackViewController.h; sourceTree = "<group>"; };
+		38229F05193798A300974F1A /* UCIFeedBackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UCIFeedBackViewController.m; path = Model/UCIFeedBackViewController.m; sourceTree = "<group>"; };
 		384B3E661916762B0027201E /* testViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = testViewController.h; path = Model/testViewController.h; sourceTree = "<group>"; };
 		384B3E671916762B0027201E /* testViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = testViewController.m; path = Model/testViewController.m; sourceTree = "<group>"; };
 		387172DA190C231B009D649B /* ViewHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewHomeViewController.h; path = Model/ViewHomeViewController.h; sourceTree = "<group>"; };
@@ -142,7 +142,6 @@
 		3873F70A1906CC40003827E4 /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMobClickLibrary.a; path = UnderCoverIOS/External/umeng/libMobClickLibrary.a; sourceTree = "<group>"; };
 		3873F70B1906CC40003827E4 /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MobClick.h; path = UnderCoverIOS/External/umeng/MobClick.h; sourceTree = "<group>"; };
 		38B55490191946A500E41984 /* words.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = words.plist; sourceTree = "<group>"; };
-		38B5549219194C8500E41984 /* net.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = net.png; sourceTree = "<group>"; };
 		38B5549519194F4B00E41984 /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
 		38B5549619194F4B00E41984 /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
 		38B5549819194F6F00E41984 /* blackArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackArrow.png; sourceTree = "<group>"; };
@@ -193,8 +192,6 @@
 		38ECA856192CEE24007672BA /* UCIRomeInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UCIRomeInfoViewController.m; path = Model/UCIRomeInfoViewController.m; sourceTree = "<group>"; };
 		38ECA858192CEE5D007672BA /* UCIRoomSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UCIRoomSettingViewController.h; path = Model/UCIRoomSettingViewController.h; sourceTree = "<group>"; };
 		38ECA859192CEE5D007672BA /* UCIRoomSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UCIRoomSettingViewController.m; path = Model/UCIRoomSettingViewController.m; sourceTree = "<group>"; };
-		38ECA85B192D2999007672BA /* cerlightblue01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cerlightblue01.png; sourceTree = "<group>"; };
-		38ECA85C192D2999007672BA /* cerlightblue02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cerlightblue02.png; sourceTree = "<group>"; };
 		38ECA85F1930BC60007672BA /* UCIRoomUndercoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UCIRoomUndercoverViewController.h; path = Model/UCIRoomUndercoverViewController.h; sourceTree = "<group>"; };
 		38ECA8601930BC60007672BA /* UCIRoomUndercoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UCIRoomUndercoverViewController.m; path = Model/UCIRoomUndercoverViewController.m; sourceTree = "<group>"; };
 		69C0D4BC55754114AF83A8A1 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -369,15 +366,12 @@
 		C3089DC818C77A9D00A7BAAD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				38ECA85B192D2999007672BA /* cerlightblue01.png */,
-				38ECA85C192D2999007672BA /* cerlightblue02.png */,
 				38ECA848191FCA91007672BA /* shake.png */,
 				38B554B8191BE87000E41984 /* failshout.mp3 */,
 				38B554B9191BE87000E41984 /* hiscore02.mp3 */,
 				38B554BA191BE87000E41984 /* normalscore.mp3 */,
 				38B554BB191BE87000E41984 /* whistle.mp3 */,
 				38B554A819194F7500E41984 /* EGOrefresh */,
-				38B5549219194C8500E41984 /* net.png */,
 				C36F0CD318D74C0E003DAD1E /* book.xml */,
 				C3089DD018C77A9D00A7BAAD /* Icon */,
 				C3089DC918C77A9D00A7BAAD /* 1.png */,
@@ -523,6 +517,8 @@
 				38ECA858192CEE5D007672BA /* UCIRoomSettingViewController.h */,
 				38ECA859192CEE5D007672BA /* UCIRoomSettingViewController.m */,
 				38E53E5D1907FA06004F8F51 /* Main.storyboard */,
+				38229F04193798A300974F1A /* UCIFeedBackViewController.h */,
+				38229F05193798A300974F1A /* UCIFeedBackViewController.m */,
 				38E20ACD193646DB00871388 /* UCIRoomKillerViewController.h */,
 				38E20ACE193646DB00871388 /* UCIRoomKillerViewController.m */,
 				38ECA85F1930BC60007672BA /* UCIRoomUndercoverViewController.h */,
@@ -661,7 +657,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38B5549319194C8500E41984 /* net.png in Resources */,
 				C3089DF318C77A9D00A7BAAD /* Icon-Small-50.png in Resources */,
 				C3089DFB18C77A9D00A7BAAD /* introBg@2x.png in Resources */,
 				38B554A219194F6F00E41984 /* blueArrow.png in Resources */,
@@ -694,9 +689,7 @@
 				38B554A319194F6F00E41984 /* blueArrow@2x.png in Resources */,
 				C3F06C2A18B6432D00F08642 /* InfoPlist.strings in Resources */,
 				38B55491191946A500E41984 /* words.plist in Resources */,
-				38ECA85E192D2999007672BA /* cerlightblue02.png in Resources */,
 				C3089DF218C77A9D00A7BAAD /* Icon-76@2x.png in Resources */,
-				38ECA85D192D2999007672BA /* cerlightblue01.png in Resources */,
 				38B554BC191BE87000E41984 /* failshout.mp3 in Resources */,
 				C3089DF018C77A9D00A7BAAD /* Icon-72@2x.png in Resources */,
 				38E53E5F1907FA06004F8F51 /* Main.storyboard in Resources */,
@@ -782,6 +775,7 @@
 				3873F70519055D26003827E4 /* UCIPublishNet.m in Sources */,
 				38ECA85A192CEE5D007672BA /* UCIRoomSettingViewController.m in Sources */,
 				384B3E681916762B0027201E /* testViewController.m in Sources */,
+				38229F06193798A300974F1A /* UCIFeedBackViewController.m in Sources */,
 				C3F06C3618B6432D00F08642 /* UCIViewController.m in Sources */,
 				C3700D3018BCE6D300B6CBFC /* Card.m in Sources */,
 				3873F70619055D26003827E4 /* UCIPunishViewController.m in Sources */,

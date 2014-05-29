@@ -10,5 +10,6 @@
 
 @interface UCIPunishViewController : UCIBaseViewController
 @property (weak, nonatomic) IBOutlet UILabel *publishWords;
+@property (strong, nonatomic) IBOutlet UIButton *btnNet;
 
 @end

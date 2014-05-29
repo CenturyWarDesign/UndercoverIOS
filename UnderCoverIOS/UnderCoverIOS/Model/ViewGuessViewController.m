@@ -50,11 +50,10 @@
     int width=self.viewGuess.bounds.size.width;
 //    int height=self.viewGuess.bounds.size.height;
     int btnWidth=(width-30)/4;
-    int btnHeight=40;
+    int btnHeight=btnWidth;
     for (int i=0; i<PeopleCount; i++) {
         CGRect frame = CGRectMake((btnWidth+5)*(i%4)+10, (i/4)*(btnHeight+10)+80, btnWidth, btnHeight);
-        UIButton *someAddButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-        someAddButton.backgroundColor = [UIColor clearColor];
+        UIButton *someAddButton =[self getCircleBtn:btnWidth];
         [someAddButton setTitle:[NSString stringWithFormat:@"%d号",i+1] forState:UIControlStateNormal];
         someAddButton.frame = frame;
         [someAddButton setTag:i+1];
