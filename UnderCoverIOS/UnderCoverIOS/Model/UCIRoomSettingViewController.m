@@ -93,12 +93,14 @@
             [self performSegueWithIdentifier:@"gameKiller" sender:self];
         }
         NSLog(@"RoomStartGame 函数的回调");
+        [self setBtnEnable];
     }
     else if([command isEqualToString:@"RoomRemoveSomeone"]){
         [self showAlert:@"" content:@"删除玩家成功"];
         [self reflash];
         NSLog(@"RoomRemoveSomeone 函数的回调");
     }
+
 }
 
 //在这里画出玩家
@@ -113,6 +115,8 @@
             [view_ removeFromSuperview];
         }
     }
+    //这里判断，玩家名字一样的话，特别显示
+    NSMutableArray * usernamearray=[[NSMutableArray alloc] init];
     
     for(int i=0;i<[userarray count];i++){
         CGRect frame = CGRectMake((btnWidth+5)*(i%4)+10, (i/4)*(btnHeight+10), btnWidth, btnHeight);
@@ -121,6 +125,11 @@
         
         NSString * userName=[(NSMutableDictionary *)[userarray objectAtIndex:i] objectForKey:@"username"];
         [someAddButton setTitle:userName forState:UIControlStateNormal];
+        if ([usernamearray containsObject:userName]) {
+            someAddButton.layer.borderColor=[UIColor redColor].CGColor;
+        }
+        [usernamearray addObject:userName];
+        
         someAddButton.frame = frame;
         [someAddButton setTag:i];
         //点击删除某个玩家
@@ -161,6 +170,7 @@
     [classBtest baseHttp:@"RoomStartGame" paramsdata:[NSDictionary dictionaryWithObjectsAndKeys:@"1",@"type",nil]];
     gametype=1;
     [self uMengClick:@"room_undercover"];
+        [self setBtnDisable];
 }
 
 //开始杀人游戏
@@ -170,6 +180,7 @@
     [classBtest baseHttp:@"RoomStartGame" paramsdata:[NSDictionary dictionaryWithObjectsAndKeys:@"2",@"type",nil]];
     gametype=2;
     [self uMengClick:@"room_killer"];
+        [self setBtnDisable];
 }
 
 
@@ -188,7 +199,25 @@
         //界面之间进行传值,把创建游戏的数据发过来
         [theSegue setValue:datatosend forKey:@"gameData"];
     }
+
     
+}
+
+
+-(void) setBtnDisable{
+    [self.btnDouble setEnabled:false];
+    [self.btnKiller setEnabled:false];
+    [self.btnUndercover setEnabled:false];
+    
+}
+-(void) setBtnEnable{
+    [self.btnDouble setEnabled:true];
+    [self.btnKiller setEnabled:true];
+    [self.btnUndercover setEnabled:true];
+}
+//提示房间信息
+- (IBAction)btnInfo:(id)sender {
+    [self showAlert:@"" content:@"玩家输入该房间号即可开启网络模式"];
 }
 
 @end

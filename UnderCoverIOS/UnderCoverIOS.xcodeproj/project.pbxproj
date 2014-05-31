@@ -18,6 +18,7 @@
 		3873F70619055D26003827E4 /* UCIPunishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3873F70419055D26003827E4 /* UCIPunishViewController.m */; };
 		3873F70919055D51003827E4 /* BIDNameAndColorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3873F70819055D51003827E4 /* BIDNameAndColorTableViewCell.m */; };
 		3873F70C1906CC40003827E4 /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3873F70A1906CC40003827E4 /* libMobClickLibrary.a */; };
+		3884010B19397B1500A1904B /* UCIHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3884010A19397B1500A1904B /* UCIHelpViewController.m */; };
 		38B55491191946A500E41984 /* words.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38B55490191946A500E41984 /* words.plist */; };
 		38B5549719194F4B00E41984 /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B5549619194F4B00E41984 /* EGORefreshTableHeaderView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		38B554A019194F6F00E41984 /* blackArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 38B5549819194F6F00E41984 /* blackArrow.png */; };
@@ -141,6 +142,8 @@
 		3873F70819055D51003827E4 /* BIDNameAndColorTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BIDNameAndColorTableViewCell.m; path = UnderCoverIOS/Model/BIDNameAndColorTableViewCell.m; sourceTree = "<group>"; };
 		3873F70A1906CC40003827E4 /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMobClickLibrary.a; path = UnderCoverIOS/External/umeng/libMobClickLibrary.a; sourceTree = "<group>"; };
 		3873F70B1906CC40003827E4 /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MobClick.h; path = UnderCoverIOS/External/umeng/MobClick.h; sourceTree = "<group>"; };
+		3884010919397B1500A1904B /* UCIHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UCIHelpViewController.h; path = Model/UCIHelpViewController.h; sourceTree = "<group>"; };
+		3884010A19397B1500A1904B /* UCIHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UCIHelpViewController.m; path = Model/UCIHelpViewController.m; sourceTree = "<group>"; };
 		38B55490191946A500E41984 /* words.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = words.plist; sourceTree = "<group>"; };
 		38B5549519194F4B00E41984 /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
 		38B5549619194F4B00E41984 /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
@@ -517,6 +520,8 @@
 				38ECA858192CEE5D007672BA /* UCIRoomSettingViewController.h */,
 				38ECA859192CEE5D007672BA /* UCIRoomSettingViewController.m */,
 				38E53E5D1907FA06004F8F51 /* Main.storyboard */,
+				3884010919397B1500A1904B /* UCIHelpViewController.h */,
+				3884010A19397B1500A1904B /* UCIHelpViewController.m */,
 				38229F04193798A300974F1A /* UCIFeedBackViewController.h */,
 				38229F05193798A300974F1A /* UCIFeedBackViewController.m */,
 				38E20ACD193646DB00871388 /* UCIRoomKillerViewController.h */,
@@ -782,6 +787,7 @@
 				381791771908159A00A313ED /* ViewFenpeiViewController.m in Sources */,
 				C3089DC518C778D400A7BAAD /* EAIntroPage.m in Sources */,
 				3873F70919055D51003827E4 /* BIDNameAndColorTableViewCell.m in Sources */,
+				3884010B19397B1500A1904B /* UCIHelpViewController.m in Sources */,
 				C3089DC618C778D400A7BAAD /* EAIntroView.m in Sources */,
 				387172DC190C231B009D649B /* ViewHomeViewController.m in Sources */,
 				38B5549719194F4B00E41984 /* EGORefreshTableHeaderView.m in Sources */,

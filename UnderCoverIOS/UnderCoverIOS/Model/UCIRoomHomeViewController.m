@@ -42,6 +42,7 @@
     }
     //如果已经设置过姓名，则跳过
 
+    [self setEnable];
     // Do any additional setup after loading the view.
 }
 
@@ -69,12 +70,28 @@
     HTTPBase *classBtest = [[HTTPBase alloc] init];
     classBtest.delegate = self;
     [classBtest baseHttp:@"RoomJoin" paramsdata:[NSDictionary dictionaryWithObjectsAndKeys:self.labRoomId.text,@"roomid",nil]];
+    [self setLoading];
+    
 }
 
 - (IBAction)btnCreateRoom:(id)sender {
     HTTPBase *classBtest = [[HTTPBase alloc] init];
     classBtest.delegate = self;
     [classBtest baseHttp:@"RoomNew" paramsdata:[NSDictionary dictionaryWithObjectsAndKeys:nil]];
+    [self setLoading];
+}
+
+-(void) setLoading{
+    [self.loadIng setHidden:false];
+    [self.loadIng startAnimating];
+    [self.btnCreate setEnabled:false];
+    [self.btnJoin setEnabled:false];
+}
+-(void) setEnable{
+    [self.loadIng setHidden:true];
+    [self.loadIng stopAnimating];
+    [self.btnCreate setEnabled:true];
+    [self.btnJoin setEnabled:true];
 }
 
 -(IBAction)textFieldDoneEditing:(id)sender{
@@ -88,6 +105,7 @@
 
 
 -(void)callBack:(NSDictionary *)data commandName:(NSString*) command{
+    [self setEnable];
     if([command isEqualToString:@"RoomNew"]){
         NSLog(@"RoomNew 函数的回调");
 //        NSString * roomid=[data objectForKey:@"roomid"];
@@ -105,6 +123,7 @@
         NSLog(@"RoomJoin 函数的回调");
 
     }
+
 }
 
 @end

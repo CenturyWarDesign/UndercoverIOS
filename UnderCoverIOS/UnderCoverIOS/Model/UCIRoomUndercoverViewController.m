@@ -63,12 +63,18 @@
     //    int height=self.viewGuess.bounds.size.height;
     int btnWidth=(width-30)/4;
     int btnHeight=btnWidth;
+    
+    //这里判断，玩家名字一样的话，特别显示
+    NSMutableArray * usernamearray=[[NSMutableArray alloc] init];
+    
     for (int i=0; i<[initArray count]; i++) {
         CGRect frame = CGRectMake((btnWidth+5)*(i%4)+10, (i/4)*(btnHeight+10)+10, btnWidth, btnHeight);
         UIButton *someAddButton = [self getCircleBtn:btnWidth];
         
         NSString * shenfen=[(NSDictionary *)[initArray objectAtIndex:i] objectForKey:@"content"];
-        [someAddButton setTitle:[(NSDictionary *)[initArray objectAtIndex:i] objectForKey:@"user"] forState:UIControlStateNormal];
+        NSString * userName=[(NSDictionary *)[initArray objectAtIndex:i] objectForKey:@"user"];
+        
+        [someAddButton setTitle:userName forState:UIControlStateNormal];
         if(roomtype==2&&[shenfen isEqualToString:@"法官"])
         {
                 NSString * tem=[NSString stringWithFormat:@"%@:%@",[(NSDictionary *)[initArray objectAtIndex:i] objectForKey:@"user"],@"法官"];
@@ -76,6 +82,13 @@
             [someAddButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
             [someAddButton setEnabled:false];
         }
+        
+ 
+        if ([usernamearray containsObject:userName]) {
+            someAddButton.layer.borderColor=[UIColor redColor].CGColor;
+        }
+         [usernamearray addObject:userName];
+        
         [someAddButton setFrame:frame];
         [someAddButton setTag:i+1];
         [someAddButton addTarget:self action:@selector(tapPeople:) forControlEvents:UIControlEventTouchUpInside];

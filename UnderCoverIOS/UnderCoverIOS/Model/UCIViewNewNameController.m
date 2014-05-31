@@ -50,6 +50,10 @@
 */
 //提交用户昵称
 - (IBAction)updateName:(id)sender {
+    if(self.labName.text.length>4){
+        [self showAlert:@"" content:@"请输入四位以内的昵称"];
+        return;
+    }
     HTTPBase *classBtest = [[HTTPBase alloc] init];
     classBtest.delegate = self;
     [classBtest baseHttp:@"NameChange" paramsdata:[NSDictionary dictionaryWithObjectsAndKeys:self.labName.text,@"username",nil]];
@@ -69,4 +73,6 @@
 - (IBAction)endClickContent:(id)sender {
     [self textFieldDoneEditing:self.labName];
 }
+
+
 @end

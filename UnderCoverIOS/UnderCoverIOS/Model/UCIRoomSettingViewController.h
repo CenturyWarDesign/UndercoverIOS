@@ -18,5 +18,11 @@
 @property (strong, nonatomic) IBOutlet UILabel *labRoomId;
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollUsers;
 
+@property (strong, nonatomic) IBOutlet UIButton *btnUndercover;
+@property (strong, nonatomic) IBOutlet UIButton *btnKiller;
+@property (strong, nonatomic) IBOutlet UIButton *btnDouble;
+
+@property (strong, nonatomic) IBOutlet UIButton *btnInfoRoomId;
+
 
 @end
