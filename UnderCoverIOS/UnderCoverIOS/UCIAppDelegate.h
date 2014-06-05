@@ -17,4 +17,7 @@
 +(int)messageHandler;
 +(void) clearHandler;
 +(void)setRoomPush:(NSString *)tag;
++(BOOL)isdebug;
+//全局配置文件
++(NSString *)getConfig:(NSString *)key;
 @end

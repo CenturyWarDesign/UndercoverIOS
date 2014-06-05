@@ -36,6 +36,7 @@
     SonCount=[soncount intValue];
     MaxSonCount=SonCount;
     [self initGuess];
+    [self.btnPublish setEnabled:false];
     // Do any additional setup after loading the view.
 }
 
@@ -86,11 +87,11 @@
     
     BOOL finish=false;
     if(PeopleCount<=SonCount){
-        [self.btnPublish setTitle:@"卧底胜利" forState:UIControlStateNormal];
+        [self.btnPublish setTitle:@"卧底胜利,接受惩罚" forState:UIControlStateNormal];
         [self disabledAllButton];
         finish=true;
     }else if(SonCount<=0){
-        [self.btnPublish setTitle:@"卧底失败" forState:UIControlStateNormal];
+        [self.btnPublish setTitle:@"卧底失败,接受惩罚" forState:UIControlStateNormal];
         [self disabledAllButton];
         finish=true;
     }
@@ -98,6 +99,7 @@
         //点投票最后一步
         [self uMengClick:@"click_guess_last"];
         [self playHuanhu];
+        [self.btnPublish setEnabled:true];
     }
 
 }

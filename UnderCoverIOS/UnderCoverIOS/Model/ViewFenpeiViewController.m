@@ -25,11 +25,21 @@
     return self;
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [self initWillbegin];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    PeopleCount=[fathercount intValue];
-    SonCount=[soncount intValue];
+//       [self performSegueWithIdentifier:@"segueToGuess" sender:self];
+    // Do any additional setup after loading the view.
+}
+
+-(void) initWillbegin{
+
+    PeopleCount=[[self getObjectFromDefault:@"fathercount"]intValue];
+    SonCount=[[self getObjectFromDefault:@"soncount"]intValue];
     arrContent=[[NSMutableDictionary alloc] init];
     [self initWords];
     showContent=true;
@@ -41,11 +51,9 @@
     //给imageview添加点击事件
     self.imgHide.userInteractionEnabled = YES;
     UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(nextOne:)];
+    [self.imgHide removeGestureRecognizer:singleTap];
     [self.imgHide addGestureRecognizer:singleTap];
-    
-    
-//       [self performSegueWithIdentifier:@"segueToGuess" sender:self];
-    // Do any additional setup after loading the view.
+    [self.imgHide setHidden:false];
 }
 
 - (void)didReceiveMemoryWarning
@@ -84,7 +92,7 @@
     }
     int temSonCount=SonCount;
     while (temSonCount>0) {
-        int tem=(int)lroundf(rand()%PeopleCount);
+        int tem=(int)lroundf(rand()%PeopleCount)+1;
         NSString * temword=[arrContent objectForKey:[NSString stringWithFormat:@"%d",tem]];
         if(![temword isEqualToString:sonWord]){
             [arrContent setValue:sonWord forKey:[NSString stringWithFormat:@"%d",tem]];

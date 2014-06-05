@@ -18,6 +18,7 @@
 		3873F70619055D26003827E4 /* UCIPunishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3873F70419055D26003827E4 /* UCIPunishViewController.m */; };
 		3873F70919055D51003827E4 /* BIDNameAndColorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3873F70819055D51003827E4 /* BIDNameAndColorTableViewCell.m */; };
 		3873F70C1906CC40003827E4 /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3873F70A1906CC40003827E4 /* libMobClickLibrary.a */; };
+		387D703E1940C63400D57408 /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 387D703D1940C63400D57408 /* config.plist */; };
 		3884010B19397B1500A1904B /* UCIHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3884010A19397B1500A1904B /* UCIHelpViewController.m */; };
 		38B55491191946A500E41984 /* words.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38B55490191946A500E41984 /* words.plist */; };
 		38B5549719194F4B00E41984 /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B5549619194F4B00E41984 /* EGORefreshTableHeaderView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -142,6 +143,7 @@
 		3873F70819055D51003827E4 /* BIDNameAndColorTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BIDNameAndColorTableViewCell.m; path = UnderCoverIOS/Model/BIDNameAndColorTableViewCell.m; sourceTree = "<group>"; };
 		3873F70A1906CC40003827E4 /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMobClickLibrary.a; path = UnderCoverIOS/External/umeng/libMobClickLibrary.a; sourceTree = "<group>"; };
 		3873F70B1906CC40003827E4 /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MobClick.h; path = UnderCoverIOS/External/umeng/MobClick.h; sourceTree = "<group>"; };
+		387D703D1940C63400D57408 /* config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
 		3884010919397B1500A1904B /* UCIHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UCIHelpViewController.h; path = Model/UCIHelpViewController.h; sourceTree = "<group>"; };
 		3884010A19397B1500A1904B /* UCIHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UCIHelpViewController.m; path = Model/UCIHelpViewController.m; sourceTree = "<group>"; };
 		38B55490191946A500E41984 /* words.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = words.plist; sourceTree = "<group>"; };
@@ -388,6 +390,7 @@
 				C3089DE218C77A9D00A7BAAD /* original@2x.png */,
 				C3089DE318C77A9D00A7BAAD /* supportcat@2x.png */,
 				38B55490191946A500E41984 /* words.plist */,
+				387D703D1940C63400D57408 /* config.plist */,
 				38ECA84A191FCD4B007672BA /* punish.plist */,
 				38B554B6191BC7D500E41984 /* PushConfig.plist */,
 			);
@@ -706,6 +709,7 @@
 				C3089DEB18C77A9D00A7BAAD /* Icon-40.png in Resources */,
 				C3089DFA18C77A9D00A7BAAD /* iTunesArtwork@2x.png in Resources */,
 				38B554A619194F6F00E41984 /* whiteArrow.png in Resources */,
+				387D703E1940C63400D57408 /* config.plist in Resources */,
 				C3089DF918C77A9D00A7BAAD /* iTunesArtwork.png in Resources */,
 				38B554A719194F6F00E41984 /* whiteArrow@2x.png in Resources */,
 				C3089DF618C77A9D00A7BAAD /* Icon-Small@2x.png in Resources */,

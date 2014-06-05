@@ -9,6 +9,7 @@
 #import "UCIBaseViewController.h"
 #import "MobClick.h"
 #import <AudioToolbox/AudioToolbox.h>
+#import "UCIAppDelegate.h"
 @interface UCIBaseViewController ()
 
 @end
@@ -28,8 +29,14 @@
 {
     [super viewDidLoad];
 
-
+    timerSec= [NSTimer  timerWithTimeInterval:1.0 target:self selector:@selector(reflashOneSec)userInfo:nil repeats:YES];
+    [[NSRunLoop currentRunLoop]addTimer:timerSec forMode:NSDefaultRunLoopMode];
 	// Do any additional setup after loading the view.
+}
+
+//每秒刷新动作
+-(void)reflashOneSec{
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,6 +45,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    //注意，这里添加的定时器必须给清理掉，不然退出的时候会一直运行
+    [timerSec invalidate];
+ 
+}
 
 //友盟打点数据
 -(void)uMengClick:(NSString *) event{
@@ -142,6 +156,8 @@
     return array2;
 }
 
+
+
 //已经玩过的词汇
 -(void)hasPlayed:(NSString *)words{
     NSMutableArray * hasreturn =[[NSMutableArray alloc] initWithArray:[self getObjectFromDefault:@"hasPlayed"]];
@@ -213,7 +229,9 @@
 
 }
 
-
+-(NSString *)getConfig:(NSString *)key{
+ return [UCIAppDelegate getConfig:key];
+}
 
 
 @end

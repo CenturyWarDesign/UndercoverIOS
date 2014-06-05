@@ -14,6 +14,7 @@
     NSDictionary * datatosend;
     int gametype;
     NSMutableArray *userinfo;
+    int addPeopleCount;
 }
 @property (strong, nonatomic) IBOutlet UILabel *labRoomId;
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollUsers;
@@ -24,5 +25,7 @@
 
 @property (strong, nonatomic) IBOutlet UIButton *btnInfoRoomId;
 
+@property (strong, nonatomic) IBOutlet UILabel *labPeople;
+@property (strong, nonatomic) IBOutlet UISlider *peopleCount;
 
 @end

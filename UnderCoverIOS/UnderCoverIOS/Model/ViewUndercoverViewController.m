@@ -80,10 +80,12 @@
 {
     if([segue.identifier isEqualToString:@"segueFenpei"]) //"goView2"是SEGUE连线的标识
     {
-        id theSegue = segue.destinationViewController;
+//        id theSegue = segue.destinationViewController;
         //界面之间进行传值
-        [theSegue setValue:[NSString stringWithFormat:@"%d",PeopleCount] forKey:@"fathercount"];
-        [theSegue setValue:[NSString stringWithFormat:@"%d",UndercoverCount] forKey:@"soncount"];
+//        [theSegue setValue:[NSString stringWithFormat:@"%d",PeopleCount] forKey:@"fathercount"];
+        [self setObjectFromDefault:[NSString stringWithFormat:@"%d",PeopleCount] key:@"fathercount"];
+//        [theSegue setValue:[NSString stringWithFormat:@"%d",UndercoverCount] forKey:@"soncount"];
+        [self setObjectFromDefault:[NSString stringWithFormat:@"%d",UndercoverCount] key:@"soncount"];
         //点击之后开始游戏
         [self uMengClick:@"game_undercover_start"];
     }

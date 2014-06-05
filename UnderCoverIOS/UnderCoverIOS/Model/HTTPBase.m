@@ -9,14 +9,18 @@
 #import "HTTPBase.h"
 #import "AFHTTPRequestOperation.h"
 #import "MobClick.h"
-
+#import "UCIAppDelegate.h"
 @implementation HTTPBase
 
 @synthesize delegate;
 
 
 - (void)baseHttp:(NSString *)command paramsdata:(NSDictionary *)data{
-    NSString * ipaddress=@"http://192.168.1.104/";
+
+//    self g
+
+     NSString * ipaddress=[UCIAppDelegate getConfig:@"ipaddress"] ;
+
 //    NSString * ipaddress=@"http://42.121.123.185/";
     
 //    NSMutableString * temstring=[[NSMutableString alloc] initWithString:@""];
