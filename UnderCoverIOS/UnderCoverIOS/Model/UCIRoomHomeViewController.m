@@ -126,4 +126,16 @@
 
 }
 
+// 输入框失去焦点, 隐藏keyboard
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    UITouch *touch = [[event allTouches] anyObject];
+    
+    if (![[touch view] isKindOfClass:[UITextField class]]) {
+        [self.view endEditing:YES];
+    }
+    [super touchesBegan:touches withEvent:event];
+}
+
 @end
+
