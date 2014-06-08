@@ -34,7 +34,9 @@
     [self.labGameName setText:[gameData objectForKey:@"name"]];
     [self.labRoomID setText:[gameData objectForKey:@"gameuid"]];
     
-    PeopleCount=[(NSArray *)[gameData objectForKey:@"room_user"] count];
+    NSMutableArray * roomuser=(NSMutableArray *)[gameData objectForKey:@"room_user"] ;
+//    PeopleCount=[roomuser count];
+    
     MaxPeopleCount=PeopleCount;
     SonCount=[[[gameData objectForKey:@"room_contente"] objectForKey:@"soncount" ] intValue];
     sonWord=[[gameData objectForKey:@"room_contente"] objectForKey:@"son"];
@@ -212,7 +214,13 @@
         [self.labPunishTitle setHidden:false];
         NSString * punishStr=@"";
         NSArray *dataarr=[data objectForKey:@"punish"];
+        int gameuid=[[self getObjectFromDefault:@"gameuid"] intValue];
         for (int i=0; i<[dataarr count]; i++) {
+            int temgameuid=[[(NSDictionary *)[dataarr objectAtIndex:i] objectForKey:@"gameuid" ] intValue];
+            if(temgameuid==gameuid){
+                NSString *punish=[(NSDictionary *)[dataarr objectAtIndex:i] objectForKey:@"content" ] ;
+                [self showAlert:@"请接受惩罚" content:punish];
+            }
             punishStr=[NSString stringWithFormat:@"%@\n%@\n\t%@",punishStr,[(NSDictionary *)[dataarr objectAtIndex:i] objectForKey:@"username" ],[(NSDictionary *)[dataarr objectAtIndex:i] objectForKey:@"content" ] ];
         }
         [self.labPunishContent setText:punishStr];

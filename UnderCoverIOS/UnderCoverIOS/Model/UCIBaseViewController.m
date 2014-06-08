@@ -188,6 +188,11 @@
 
 
 -(void) initSound:(NSString *)soundName{
+    bool soundon=[[self getObjectFromDefault:@"soundon"] boolValue];
+    if(!soundon)
+    {
+        return;
+    }
     NSString *path = [NSString stringWithFormat: @"%@/%@",
                       [[NSBundle mainBundle] resourcePath], soundName];
     
