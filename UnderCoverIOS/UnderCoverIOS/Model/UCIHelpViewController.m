@@ -7,6 +7,7 @@
 //
 
 #import "UCIHelpViewController.h"
+#import "UCIAppDelegate.h"
 
 @interface UCIHelpViewController ()
 
@@ -27,11 +28,13 @@
 {
     [super viewDidLoad];
     
-    
     // Do any additional setup after loading the view.
 }
 -(void) viewWillAppear:(BOOL)animated{
-    NSURLRequest * request=[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://192.168.1.104/CenturyServer/www/help.html"]];
+    
+    
+    NSString * help=[UCIAppDelegate getConfig:@"help"] ;
+    NSURLRequest * request=[NSURLRequest requestWithURL:[NSURL URLWithString:help]];
     [self.webView loadRequest:request];
 }
 
