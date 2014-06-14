@@ -61,6 +61,11 @@
     // Do any additional setup after loading the view.
 
     [self.imgHide setHidden:false];
+    
+    //隐藏刷新词汇按钮
+    [self.btnRelaodWords setHidden:(true)];
+//       [self performSegueWithIdentifier:@"segueToGuess" sender:self];
+
 }
 
 - (void)didReceiveMemoryWarning
