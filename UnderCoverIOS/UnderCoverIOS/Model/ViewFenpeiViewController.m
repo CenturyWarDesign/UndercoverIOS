@@ -43,7 +43,8 @@
     UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(nextOne:)];
     [self.imgHide addGestureRecognizer:singleTap];
     
-    
+    //隐藏刷新词汇按钮
+    [self.btnRelaodWords setHidden:(true)];
 //       [self performSegueWithIdentifier:@"segueToGuess" sender:self];
     // Do any additional setup after loading the view.
 }
@@ -92,9 +93,20 @@
         }
     }
 }
+- (IBAction)reloadWord:(id)sender {
+    [self initWords];
+    NSString * showtem=[arrContent objectForKey:[NSString stringWithFormat:@"%d",nowIndex]];
+    [self.labContent setText:showtem];
+    [self.btnNext setTitle:@"请交给下一位" forState:UIControlStateNormal];
+    
+}
 
 
 - (IBAction)nextOne:(id)sender {
+    if(nowIndex==1)
+    {
+        [self.btnRelaodWords setHidden:(false)];
+    }
     if(nowIndex>PeopleCount)
     {
         [self performSegueWithIdentifier:@"segueToGuess" sender:self];
@@ -117,6 +129,10 @@
             //点击翻牌第一步
             [self uMengClick:@"click_undercover_pai_first"];
         }
+        if(nowIndex==2){
+            [self.btnRelaodWords setHidden:(true)];
+        }
+
     }
     showContent=!showContent;
     [self.imgHide setHidden:!showContent];

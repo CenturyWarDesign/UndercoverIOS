@@ -20,7 +20,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView *imgHide;
 @property (strong, nonatomic) IBOutlet UILabel *labContent;
 @property (strong, nonatomic) IBOutlet UIButton *btnNext;
-
+@property (strong, nonatomic) IBOutlet UIButton *btnRelaodWords;
 
 
 @property(nonatomic,weak)NSString *fathercount;
