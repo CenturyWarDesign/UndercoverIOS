@@ -114,7 +114,7 @@
 }
 
 //取得所有词汇，包括本地的和网络的
--(NSArray *)getAllWords{
+-(NSArray *)getAllWords:(NSString *)wordkind {
     NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"words" ofType:@"plist"];
     NSMutableArray *array = [[NSMutableArray alloc] initWithContentsOfFile:plistPath];
     
@@ -139,6 +139,22 @@
         [self setObjectFromDefault:NULL key:@"hasPlayed"];
     }
     
+    if([wordkind isEqualToString:@"全部"]){
+        return array2;
+    }
+    
+    //这个步奏就是显示
+    NSMutableArray *array3=[[NSMutableArray alloc] init];
+    for (int tem=0; tem<[array2 count]; tem++) {
+        NSArray * wordDetailArray= [[array2 objectAtIndex:tem] componentsSeparatedByString:@"_"];
+        if([[wordDetailArray objectAtIndex:0] isEqualToString:wordkind]){
+            [array3 addObject:[array2 objectAtIndex:tem]];
+        }
+    }
+    if([array3 count]>0)
+    {
+        return array3;
+    }
     return array2;
 }
 

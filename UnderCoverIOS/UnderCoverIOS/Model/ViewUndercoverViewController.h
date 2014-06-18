@@ -8,14 +8,16 @@
 
 #import "UCIBaseViewController.h"
 
-@interface ViewUndercoverViewController : UCIBaseViewController
+@interface ViewUndercoverViewController : UCIBaseViewController<UIPickerViewDelegate,UIPickerViewDataSource>
 {
     int PeopleCount;
     int UndercoverCount;
+    NSMutableArray * pickerViewsarray;
 }
 @property (strong, nonatomic) IBOutlet UISlider *sliPeople;
 @property (strong, nonatomic) IBOutlet UISlider *sliUndercover;
 @property (strong, nonatomic) IBOutlet UILabel *labPeopleCount;
 @property (strong, nonatomic) IBOutlet UILabel *labUndercoverCount;
+@property (strong, nonatomic) IBOutlet UIPickerView *pickType;
 
 @end

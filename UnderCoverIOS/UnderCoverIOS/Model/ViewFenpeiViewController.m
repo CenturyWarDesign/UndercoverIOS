@@ -40,6 +40,8 @@
 
     PeopleCount=[[self getObjectFromDefault:@"fathercount"]intValue];
     SonCount=[[self getObjectFromDefault:@"soncount"]intValue];
+    wordkind=[self getObjectFromDefault:@"wordkind"];
+    
     arrContent=[[NSMutableDictionary alloc] init];
     [self initWords];
     showContent=true;
@@ -74,7 +76,7 @@
     
 //    NSString * wordstring=[MobClick getConfigParams:@"under_string_version"];
 //    NSString* str = @"here be dragons";
-    NSArray * wordArray=[self getAllWords];
+    NSArray * wordArray=[self getAllWords:wordkind];
     if([wordArray count]>0){
     srand((unsigned)time(0));
     NSString *randWord= [wordArray objectAtIndex:rand()%[wordArray count]];

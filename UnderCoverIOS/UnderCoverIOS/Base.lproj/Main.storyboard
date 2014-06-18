@@ -1202,6 +1202,13 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="词汇分类" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e4H-B2-z3h">
+                                <rect key="frame" x="26" y="246" width="68" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="30" placeholderIntrinsicHeight="21" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CI6-dU-56y">
                                 <rect key="frame" x="285" y="89" width="30" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1239,6 +1246,13 @@
                                     <segue destination="3ho-0x-a8w" kind="push" identifier="segueFenpei" id="BI6-rl-BTu"/>
                                 </connections>
                             </button>
+                            <pickerView contentMode="left" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PK0-Lf-Y8T">
+                                <rect key="frame" x="105" y="176" width="188" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="188" id="Fcf-kh-axt"/>
+                                </constraints>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -1251,12 +1265,16 @@
                             <constraint firstItem="mTU-pd-6bd" firstAttribute="top" secondItem="Pny-gO-pfi" secondAttribute="bottom" constant="20" id="Had-25-V4W"/>
                             <constraint firstItem="mTU-pd-6bd" firstAttribute="leading" secondItem="Svc-py-pcr" secondAttribute="leading" constant="20" symbolic="YES" id="IEC-dw-lCt"/>
                             <constraint firstItem="FPP-EQ-NUV" firstAttribute="top" secondItem="2Re-T0-PAe" secondAttribute="bottom" constant="20" id="KWy-nE-fug"/>
+                            <constraint firstItem="e4H-B2-z3h" firstAttribute="centerX" secondItem="mTU-pd-6bd" secondAttribute="centerX" id="KhO-Tn-zXw"/>
                             <constraint firstItem="hHl-mi-pXU" firstAttribute="leading" secondItem="utp-8X-ej5" secondAttribute="leading" id="MRA-kP-QBx"/>
                             <constraint firstItem="utp-8X-ej5" firstAttribute="leading" secondItem="mTU-pd-6bd" secondAttribute="trailing" constant="5" id="N1p-LD-I2f"/>
                             <constraint firstItem="2Re-T0-PAe" firstAttribute="centerX" secondItem="Svc-py-pcr" secondAttribute="centerX" id="RdQ-9r-5gP"/>
+                            <constraint firstItem="e4H-B2-z3h" firstAttribute="top" secondItem="YVb-bK-X9t" secondAttribute="bottom" constant="90" id="S1S-z1-2aX"/>
                             <constraint firstItem="YVb-bK-X9t" firstAttribute="top" secondItem="mTU-pd-6bd" secondAttribute="bottom" constant="20" id="TvW-QV-nhj"/>
                             <constraint firstItem="CI6-dU-56y" firstAttribute="leading" secondItem="utp-8X-ej5" secondAttribute="trailing" constant="5" id="bpb-Vj-y6g"/>
+                            <constraint firstItem="e4H-B2-z3h" firstAttribute="centerY" secondItem="PK0-Lf-Y8T" secondAttribute="centerY" id="g88-FA-1E9"/>
                             <constraint firstAttribute="trailing" secondItem="CI6-dU-56y" secondAttribute="trailing" constant="5" id="mDu-np-Bzt"/>
+                            <constraint firstItem="PK0-Lf-Y8T" firstAttribute="leading" secondItem="hHl-mi-pXU" secondAttribute="leading" id="mdy-qv-2pg"/>
                             <constraint firstItem="hHl-mi-pXU" firstAttribute="centerY" secondItem="YVb-bK-X9t" secondAttribute="centerY" id="qfj-1Z-wxC"/>
                             <constraint firstItem="mTU-pd-6bd" firstAttribute="bottom" secondItem="utp-8X-ej5" secondAttribute="bottom" id="xZS-c5-YG4"/>
                             <constraint firstItem="hHl-mi-pXU" firstAttribute="width" secondItem="utp-8X-ej5" secondAttribute="width" id="zjM-QN-Gun"/>
@@ -1266,6 +1284,7 @@
                     <connections>
                         <outlet property="labPeopleCount" destination="CI6-dU-56y" id="pUL-f3-d5M"/>
                         <outlet property="labUndercoverCount" destination="ked-bS-e6O" id="b3M-ye-3e6"/>
+                        <outlet property="pickType" destination="PK0-Lf-Y8T" id="8SN-99-Psa"/>
                         <outlet property="sliPeople" destination="utp-8X-ej5" id="OKr-zh-wll"/>
                         <outlet property="sliUndercover" destination="hHl-mi-pXU" id="8m6-Ig-9R4"/>
                     </connections>

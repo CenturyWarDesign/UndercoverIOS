@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>help</key>
+	<string>http://42.121.123.185/CenturyServer/www/help.html</string>
+	<key>help_debug</key>
+	<string>http://192.168.1.107/CenturyServer/www/help.html</string>
+	<key>ipaddress_debug</key>
+	<string>http://192.168.1.107/</string>
+	<key>ipaddress</key>
+	<string>http://42.121.123.185/</string>
+	<key>UNDERCOVER_MIN_PEOPLE</key>
+	<string>4</string>
+	<key>UNDERCOVER_MIN_PEOPLE_debug</key>
+	<string>3</string>
+	<key>UNDERCOVER_MAX_PEOPLE</key>
+	<string>10</string>
+	<key>KILLER_MIN_PEOPLE</key>
+	<string>6</string>
+	<key>KILLER_MAN_PEOPLE</key>
+	<string>16</string>
+	<key>SHOW_SHENFEN_SEC</key>
+	<string>3</string>
+</dict>
+</plist>

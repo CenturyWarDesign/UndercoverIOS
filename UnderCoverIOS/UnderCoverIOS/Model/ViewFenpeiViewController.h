@@ -16,6 +16,7 @@
     int nowIndex;
     NSString * fatherWrod;
     NSString * sonWord;
+    NSString * wordkind;
 }
 @property (strong, nonatomic) IBOutlet UIImageView *imgHide;
 @property (strong, nonatomic) IBOutlet UILabel *labContent;
