@@ -20,7 +20,6 @@
 		3873F70C1906CC40003827E4 /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3873F70A1906CC40003827E4 /* libMobClickLibrary.a */; };
 		387D703E1940C63400D57408 /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 387D703D1940C63400D57408 /* config.plist */; };
 		3884010B19397B1500A1904B /* UCIHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3884010A19397B1500A1904B /* UCIHelpViewController.m */; };
-		38B1EF8D194424E900A8759A /* UCIGameSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1EF8C194424E900A8759A /* UCIGameSettingViewController.m */; };
 		38B1EF8F1944563900A8759A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38B1EF8E1944563900A8759A /* StoreKit.framework */; };
 		38B55491191946A500E41984 /* words.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38B55490191946A500E41984 /* words.plist */; };
 		38B5549719194F4B00E41984 /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B5549619194F4B00E41984 /* EGORefreshTableHeaderView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -139,8 +138,6 @@
 		387D703D1940C63400D57408 /* config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
 		3884010919397B1500A1904B /* UCIHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UCIHelpViewController.h; path = Model/UCIHelpViewController.h; sourceTree = "<group>"; };
 		3884010A19397B1500A1904B /* UCIHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UCIHelpViewController.m; path = Model/UCIHelpViewController.m; sourceTree = "<group>"; };
-		38B1EF8B194424E900A8759A /* UCIGameSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UCIGameSettingViewController.h; path = Model/UCIGameSettingViewController.h; sourceTree = "<group>"; };
-		38B1EF8C194424E900A8759A /* UCIGameSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UCIGameSettingViewController.m; path = Model/UCIGameSettingViewController.m; sourceTree = "<group>"; };
 		38B1EF8E1944563900A8759A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		38B55490191946A500E41984 /* words.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = words.plist; sourceTree = "<group>"; };
 		38B5549519194F4B00E41984 /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
@@ -513,8 +510,6 @@
 				38B554C9191BF43900E41984 /* LocatePunishTableViewController.m */,
 				384B3E661916762B0027201E /* testViewController.h */,
 				384B3E671916762B0027201E /* testViewController.m */,
-				38B1EF8B194424E900A8759A /* UCIGameSettingViewController.h */,
-				38B1EF8C194424E900A8759A /* UCIGameSettingViewController.m */,
 				3819970E191162E3002E644A /* NewPunishViewController.h */,
 				3819970F191162E3002E644A /* NewPunishViewController.m */,
 				387172DA190C231B009D649B /* ViewHomeViewController.h */,
@@ -750,7 +745,6 @@
 				38ECA85A192CEE5D007672BA /* UCIRoomSettingViewController.m in Sources */,
 				384B3E681916762B0027201E /* testViewController.m in Sources */,
 				38229F06193798A300974F1A /* UCIFeedBackViewController.m in Sources */,
-				38B1EF8D194424E900A8759A /* UCIGameSettingViewController.m in Sources */,
 				3873F70619055D26003827E4 /* UCIPunishViewController.m in Sources */,
 				381791771908159A00A313ED /* ViewFenpeiViewController.m in Sources */,
 				C3089DC518C778D400A7BAAD /* EAIntroPage.m in Sources */,
