@@ -18,7 +18,10 @@
 		3873F70619055D26003827E4 /* UCIPunishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3873F70419055D26003827E4 /* UCIPunishViewController.m */; };
 		3873F70919055D51003827E4 /* BIDNameAndColorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3873F70819055D51003827E4 /* BIDNameAndColorTableViewCell.m */; };
 		3873F70C1906CC40003827E4 /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3873F70A1906CC40003827E4 /* libMobClickLibrary.a */; };
+		387D703E1940C63400D57408 /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 387D703D1940C63400D57408 /* config.plist */; };
 		3884010B19397B1500A1904B /* UCIHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3884010A19397B1500A1904B /* UCIHelpViewController.m */; };
+		38B1EF8D194424E900A8759A /* UCIGameSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1EF8C194424E900A8759A /* UCIGameSettingViewController.m */; };
+		38B1EF8F1944563900A8759A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38B1EF8E1944563900A8759A /* StoreKit.framework */; };
 		38B55491191946A500E41984 /* words.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38B55490191946A500E41984 /* words.plist */; };
 		38B5549719194F4B00E41984 /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B5549619194F4B00E41984 /* EGORefreshTableHeaderView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		38B554A019194F6F00E41984 /* blackArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 38B5549819194F6F00E41984 /* blackArrow.png */; };
@@ -57,9 +60,6 @@
 		38ECA8611930BC60007672BA /* UCIRoomUndercoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ECA8601930BC60007672BA /* UCIRoomUndercoverViewController.m */; };
 		C3089DC518C778D400A7BAAD /* EAIntroPage.m in Sources */ = {isa = PBXBuildFile; fileRef = C3089DC218C778D400A7BAAD /* EAIntroPage.m */; };
 		C3089DC618C778D400A7BAAD /* EAIntroView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3089DC418C778D400A7BAAD /* EAIntroView.m */; };
-		C3089DE418C77A9D00A7BAAD /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = C3089DC918C77A9D00A7BAAD /* 1.png */; };
-		C3089DE518C77A9D00A7BAAD /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = C3089DCA18C77A9D00A7BAAD /* 2.png */; };
-		C3089DE618C77A9D00A7BAAD /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = C3089DCB18C77A9D00A7BAAD /* 3.png */; };
 		C3089DE718C77A9D00A7BAAD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3089DCC18C77A9D00A7BAAD /* Default-568h@2x.png */; };
 		C3089DE818C77A9D00A7BAAD /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C3089DCD18C77A9D00A7BAAD /* Default.png */; };
 		C3089DE918C77A9D00A7BAAD /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3089DCE18C77A9D00A7BAAD /* Default@2x.png */; };
@@ -80,16 +80,11 @@
 		C3089DF818C77A9D00A7BAAD /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3089DDE18C77A9D00A7BAAD /* Icon@2x.png */; };
 		C3089DF918C77A9D00A7BAAD /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = C3089DDF18C77A9D00A7BAAD /* iTunesArtwork.png */; };
 		C3089DFA18C77A9D00A7BAAD /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3089DE018C77A9D00A7BAAD /* iTunesArtwork@2x.png */; };
-		C3089DFB18C77A9D00A7BAAD /* introBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3089DE118C77A9D00A7BAAD /* introBg@2x.png */; };
 		C3089DFC18C77A9D00A7BAAD /* original@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3089DE218C77A9D00A7BAAD /* original@2x.png */; };
 		C3089DFD18C77A9D00A7BAAD /* supportcat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3089DE318C77A9D00A7BAAD /* supportcat@2x.png */; };
 		C36F0CD418D74C0E003DAD1E /* book.xml in Resources */ = {isa = PBXBuildFile; fileRef = C36F0CD318D74C0E003DAD1E /* book.xml */; };
 		C36F0CDC18D8A2D0003DAD1E /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C36F0CDB18D8A2D0003DAD1E /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C36F0CDE18D8A479003DAD1E /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C36F0CDD18D8A479003DAD1E /* libxml2.dylib */; };
-		C3700D3018BCE6D300B6CBFC /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = C3700D2F18BCE6D300B6CBFC /* Card.m */; };
-		C3700D3418BE33BB00B6CBFC /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = C3700D3318BE33BB00B6CBFC /* Deck.m */; };
-		C3700D3718BE397700B6CBFC /* PlayCard.m in Sources */ = {isa = PBXBuildFile; fileRef = C3700D3618BE397700B6CBFC /* PlayCard.m */; };
-		C3700D3A18BE3F6E00B6CBFC /* PlayCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = C3700D3918BE3F6E00B6CBFC /* PlayCardDeck.m */; };
 		C3700D3D18BF962B00B6CBFC /* UnderCoverGame.m in Sources */ = {isa = PBXBuildFile; fileRef = C3700D3C18BF962B00B6CBFC /* UnderCoverGame.m */; };
 		C3F06C2018B6432C00F08642 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F06C1F18B6432C00F08642 /* Foundation.framework */; };
 		C3F06C2218B6432D00F08642 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F06C2118B6432D00F08642 /* CoreGraphics.framework */; };
@@ -97,7 +92,6 @@
 		C3F06C2A18B6432D00F08642 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3F06C2818B6432D00F08642 /* InfoPlist.strings */; };
 		C3F06C2C18B6432D00F08642 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F06C2B18B6432D00F08642 /* main.m */; };
 		C3F06C3018B6432D00F08642 /* UCIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F06C2F18B6432D00F08642 /* UCIAppDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		C3F06C3618B6432D00F08642 /* UCIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F06C3518B6432D00F08642 /* UCIViewController.m */; };
 		C3F06C3818B6432D00F08642 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3F06C3718B6432D00F08642 /* Images.xcassets */; };
 		C3F06C3F18B6432D00F08642 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F06C3E18B6432D00F08642 /* XCTest.framework */; };
 		C3F06C4018B6432D00F08642 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F06C1F18B6432C00F08642 /* Foundation.framework */; };
@@ -142,8 +136,12 @@
 		3873F70819055D51003827E4 /* BIDNameAndColorTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BIDNameAndColorTableViewCell.m; path = UnderCoverIOS/Model/BIDNameAndColorTableViewCell.m; sourceTree = "<group>"; };
 		3873F70A1906CC40003827E4 /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMobClickLibrary.a; path = UnderCoverIOS/External/umeng/libMobClickLibrary.a; sourceTree = "<group>"; };
 		3873F70B1906CC40003827E4 /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MobClick.h; path = UnderCoverIOS/External/umeng/MobClick.h; sourceTree = "<group>"; };
+		387D703D1940C63400D57408 /* config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
 		3884010919397B1500A1904B /* UCIHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UCIHelpViewController.h; path = Model/UCIHelpViewController.h; sourceTree = "<group>"; };
 		3884010A19397B1500A1904B /* UCIHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UCIHelpViewController.m; path = Model/UCIHelpViewController.m; sourceTree = "<group>"; };
+		38B1EF8B194424E900A8759A /* UCIGameSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UCIGameSettingViewController.h; path = Model/UCIGameSettingViewController.h; sourceTree = "<group>"; };
+		38B1EF8C194424E900A8759A /* UCIGameSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UCIGameSettingViewController.m; path = Model/UCIGameSettingViewController.m; sourceTree = "<group>"; };
+		38B1EF8E1944563900A8759A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		38B55490191946A500E41984 /* words.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = words.plist; sourceTree = "<group>"; };
 		38B5549519194F4B00E41984 /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
 		38B5549619194F4B00E41984 /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
@@ -202,9 +200,6 @@
 		C3089DC218C778D400A7BAAD /* EAIntroPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAIntroPage.m; sourceTree = "<group>"; };
 		C3089DC318C778D400A7BAAD /* EAIntroView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAIntroView.h; sourceTree = "<group>"; };
 		C3089DC418C778D400A7BAAD /* EAIntroView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAIntroView.m; sourceTree = "<group>"; };
-		C3089DC918C77A9D00A7BAAD /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
-		C3089DCA18C77A9D00A7BAAD /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
-		C3089DCB18C77A9D00A7BAAD /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
 		C3089DCC18C77A9D00A7BAAD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		C3089DCD18C77A9D00A7BAAD /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		C3089DCE18C77A9D00A7BAAD /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -225,21 +220,12 @@
 		C3089DDE18C77A9D00A7BAAD /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		C3089DDF18C77A9D00A7BAAD /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		C3089DE018C77A9D00A7BAAD /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
-		C3089DE118C77A9D00A7BAAD /* introBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "introBg@2x.png"; sourceTree = "<group>"; };
 		C3089DE218C77A9D00A7BAAD /* original@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "original@2x.png"; sourceTree = "<group>"; };
 		C3089DE318C77A9D00A7BAAD /* supportcat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "supportcat@2x.png"; sourceTree = "<group>"; };
 		C36F0CD318D74C0E003DAD1E /* book.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = book.xml; sourceTree = "<group>"; };
 		C36F0CDA18D8A2D0003DAD1E /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
 		C36F0CDB18D8A2D0003DAD1E /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
 		C36F0CDD18D8A479003DAD1E /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
-		C3700D2E18BCE6D300B6CBFC /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Card.h; path = ../../UndercoverIOS/UnderCoverIOS/UnderCoverIOS/Model/Card.h; sourceTree = "<group>"; };
-		C3700D2F18BCE6D300B6CBFC /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Card.m; path = ../../UndercoverIOS/UnderCoverIOS/UnderCoverIOS/Model/Card.m; sourceTree = "<group>"; };
-		C3700D3218BE33BB00B6CBFC /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Deck.h; path = ../../UndercoverIOS/UnderCoverIOS/UnderCoverIOS/Model/Deck.h; sourceTree = "<group>"; };
-		C3700D3318BE33BB00B6CBFC /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Deck.m; path = ../../UndercoverIOS/UnderCoverIOS/UnderCoverIOS/Model/Deck.m; sourceTree = "<group>"; };
-		C3700D3518BE397700B6CBFC /* PlayCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayCard.h; path = ../../UndercoverIOS/UnderCoverIOS/UnderCoverIOS/Model/PlayCard.h; sourceTree = "<group>"; };
-		C3700D3618BE397700B6CBFC /* PlayCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayCard.m; path = ../../UndercoverIOS/UnderCoverIOS/UnderCoverIOS/Model/PlayCard.m; sourceTree = "<group>"; };
-		C3700D3818BE3F6E00B6CBFC /* PlayCardDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayCardDeck.h; path = ../../UndercoverIOS/UnderCoverIOS/UnderCoverIOS/Model/PlayCardDeck.h; sourceTree = "<group>"; };
-		C3700D3918BE3F6E00B6CBFC /* PlayCardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayCardDeck.m; path = ../../UndercoverIOS/UnderCoverIOS/UnderCoverIOS/Model/PlayCardDeck.m; sourceTree = "<group>"; };
 		C3700D3B18BF962B00B6CBFC /* UnderCoverGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UnderCoverGame.h; path = UnderCoverIOS/Model/UnderCoverGame.h; sourceTree = "<group>"; };
 		C3700D3C18BF962B00B6CBFC /* UnderCoverGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UnderCoverGame.m; path = UnderCoverIOS/Model/UnderCoverGame.m; sourceTree = "<group>"; };
 		C3F06C1C18B6432C00F08642 /* UnderCoverIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnderCoverIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -252,8 +238,6 @@
 		C3F06C2D18B6432D00F08642 /* UnderCoverIOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UnderCoverIOS-Prefix.pch"; sourceTree = "<group>"; };
 		C3F06C2E18B6432D00F08642 /* UCIAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UCIAppDelegate.h; sourceTree = "<group>"; };
 		C3F06C2F18B6432D00F08642 /* UCIAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UCIAppDelegate.m; sourceTree = "<group>"; };
-		C3F06C3418B6432D00F08642 /* UCIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UCIViewController.h; sourceTree = "<group>"; };
-		C3F06C3518B6432D00F08642 /* UCIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UCIViewController.m; sourceTree = "<group>"; };
 		C3F06C3718B6432D00F08642 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C3F06C3D18B6432D00F08642 /* UnderCoverIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnderCoverIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3F06C3E18B6432D00F08642 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -267,6 +251,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38B1EF8F1944563900A8759A /* StoreKit.framework in Frameworks */,
 				38B554C1191BE99700E41984 /* AudioToolbox.framework in Frameworks */,
 				38BA191B18CF785800F6741E /* libz.dylib in Frameworks */,
 				C3F06C2418B6432D00F08642 /* UIKit.framework in Frameworks */,
@@ -377,17 +362,14 @@
 				38B554A819194F7500E41984 /* EGOrefresh */,
 				C36F0CD318D74C0E003DAD1E /* book.xml */,
 				C3089DD018C77A9D00A7BAAD /* Icon */,
-				C3089DC918C77A9D00A7BAAD /* 1.png */,
-				C3089DCA18C77A9D00A7BAAD /* 2.png */,
-				C3089DCB18C77A9D00A7BAAD /* 3.png */,
 				C3089DCC18C77A9D00A7BAAD /* Default-568h@2x.png */,
 				C3089DCD18C77A9D00A7BAAD /* Default.png */,
 				C3089DCE18C77A9D00A7BAAD /* Default@2x.png */,
 				C3089DCF18C77A9D00A7BAAD /* femalecodertocat@2x.png */,
-				C3089DE118C77A9D00A7BAAD /* introBg@2x.png */,
 				C3089DE218C77A9D00A7BAAD /* original@2x.png */,
 				C3089DE318C77A9D00A7BAAD /* supportcat@2x.png */,
 				38B55490191946A500E41984 /* words.plist */,
+				387D703D1940C63400D57408 /* config.plist */,
 				38ECA84A191FCD4B007672BA /* punish.plist */,
 				38B554B6191BC7D500E41984 /* PushConfig.plist */,
 			);
@@ -448,14 +430,6 @@
 				3807003D18CE25C2007E7C03 /* HTTPBase.h */,
 				3807003E18CE25C2007E7C03 /* HTTPBase.m */,
 				3807003F18CE25C2007E7C03 /* UCIHttpCallback.h */,
-				C3700D2E18BCE6D300B6CBFC /* Card.h */,
-				C3700D2F18BCE6D300B6CBFC /* Card.m */,
-				C3700D3218BE33BB00B6CBFC /* Deck.h */,
-				C3700D3318BE33BB00B6CBFC /* Deck.m */,
-				C3700D3518BE397700B6CBFC /* PlayCard.h */,
-				C3700D3618BE397700B6CBFC /* PlayCard.m */,
-				C3700D3818BE3F6E00B6CBFC /* PlayCardDeck.h */,
-				C3700D3918BE3F6E00B6CBFC /* PlayCardDeck.m */,
 				C3700D3B18BF962B00B6CBFC /* UnderCoverGame.h */,
 				C3700D3C18BF962B00B6CBFC /* UnderCoverGame.m */,
 				38BA191C18CF7BCD00F6741E /* UCIBaseViewController.h */,
@@ -497,6 +471,7 @@
 		C3F06C1E18B6432C00F08642 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				38B1EF8E1944563900A8759A /* StoreKit.framework */,
 				38B554C0191BE99700E41984 /* AudioToolbox.framework */,
 				38B554B4191BC6DB00E41984 /* SystemConfiguration.framework */,
 				38B554B2191BC6CE00E41984 /* CoreTelephony.framework */,
@@ -538,14 +513,14 @@
 				38B554C9191BF43900E41984 /* LocatePunishTableViewController.m */,
 				384B3E661916762B0027201E /* testViewController.h */,
 				384B3E671916762B0027201E /* testViewController.m */,
+				38B1EF8B194424E900A8759A /* UCIGameSettingViewController.h */,
+				38B1EF8C194424E900A8759A /* UCIGameSettingViewController.m */,
 				3819970E191162E3002E644A /* NewPunishViewController.h */,
 				3819970F191162E3002E644A /* NewPunishViewController.m */,
 				387172DA190C231B009D649B /* ViewHomeViewController.h */,
 				387172DB190C231B009D649B /* ViewHomeViewController.m */,
 				38BEA939190978A60017F3D9 /* ViewGuessViewController.h */,
 				38BEA93A190978A60017F3D9 /* ViewGuessViewController.m */,
-				C3F06C3418B6432D00F08642 /* UCIViewController.h */,
-				C3F06C3518B6432D00F08642 /* UCIViewController.m */,
 				C3F06C3718B6432D00F08642 /* Images.xcassets */,
 				C3F06C2618B6432D00F08642 /* Supporting Files */,
 			);
@@ -663,7 +638,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3089DF318C77A9D00A7BAAD /* Icon-Small-50.png in Resources */,
-				C3089DFB18C77A9D00A7BAAD /* introBg@2x.png in Resources */,
 				38B554A219194F6F00E41984 /* blueArrow.png in Resources */,
 				38B554A419194F6F00E41984 /* grayArrow.png in Resources */,
 				C3089DF818C77A9D00A7BAAD /* Icon@2x.png in Resources */,
@@ -672,14 +646,12 @@
 				C3089DF418C77A9D00A7BAAD /* Icon-Small-50@2x.png in Resources */,
 				C36F0CD418D74C0E003DAD1E /* book.xml in Resources */,
 				38B554A119194F6F00E41984 /* blackArrow@2x.png in Resources */,
-				C3089DE418C77A9D00A7BAAD /* 1.png in Resources */,
 				C3089DEA18C77A9D00A7BAAD /* femalecodertocat@2x.png in Resources */,
 				38ECA84B191FCD4B007672BA /* punish.plist in Resources */,
 				C3089DEE18C77A9D00A7BAAD /* Icon-60@2x.png in Resources */,
 				38B554A019194F6F00E41984 /* blackArrow.png in Resources */,
 				38B554A519194F6F00E41984 /* grayArrow@2x.png in Resources */,
 				38B554B7191BC7D500E41984 /* PushConfig.plist in Resources */,
-				C3089DE518C77A9D00A7BAAD /* 2.png in Resources */,
 				C3089DFC18C77A9D00A7BAAD /* original@2x.png in Resources */,
 				38E53E661907FB96004F8F51 /* ColorAndName.xib in Resources */,
 				C3089DE918C77A9D00A7BAAD /* Default@2x.png in Resources */,
@@ -689,7 +661,6 @@
 				38ECA849191FCA91007672BA /* shake.png in Resources */,
 				C3089DF718C77A9D00A7BAAD /* Icon.png in Resources */,
 				C3089DE818C77A9D00A7BAAD /* Default.png in Resources */,
-				C3089DE618C77A9D00A7BAAD /* 3.png in Resources */,
 				C3089DED18C77A9D00A7BAAD /* Icon-60.png in Resources */,
 				38B554A319194F6F00E41984 /* blueArrow@2x.png in Resources */,
 				C3F06C2A18B6432D00F08642 /* InfoPlist.strings in Resources */,
@@ -706,6 +677,7 @@
 				C3089DEB18C77A9D00A7BAAD /* Icon-40.png in Resources */,
 				C3089DFA18C77A9D00A7BAAD /* iTunesArtwork@2x.png in Resources */,
 				38B554A619194F6F00E41984 /* whiteArrow.png in Resources */,
+				387D703E1940C63400D57408 /* config.plist in Resources */,
 				C3089DF918C77A9D00A7BAAD /* iTunesArtwork.png in Resources */,
 				38B554A719194F6F00E41984 /* whiteArrow@2x.png in Resources */,
 				C3089DF618C77A9D00A7BAAD /* Icon-Small@2x.png in Resources */,
@@ -767,22 +739,18 @@
 				3817917119080A5500A313ED /* ViewUndercoverViewController.m in Sources */,
 				C36F0CDC18D8A2D0003DAD1E /* GDataXMLNode.m in Sources */,
 				38ECA857192CEE24007672BA /* UCIRomeInfoViewController.m in Sources */,
-				C3700D3418BE33BB00B6CBFC /* Deck.m in Sources */,
-				C3700D3718BE397700B6CBFC /* PlayCard.m in Sources */,
 				38B554CA191BF43900E41984 /* LocatePunishTableViewController.m in Sources */,
 				C3700D3D18BF962B00B6CBFC /* UnderCoverGame.m in Sources */,
 				C3F06C3018B6432D00F08642 /* UCIAppDelegate.m in Sources */,
 				38BA191E18CF7BCD00F6741E /* UCIBaseViewController.m in Sources */,
 				38ECA8611930BC60007672BA /* UCIRoomUndercoverViewController.m in Sources */,
-				C3700D3A18BE3F6E00B6CBFC /* PlayCardDeck.m in Sources */,
 				38ECA84E192BBE2B007672BA /* UCIViewNewNameController.m in Sources */,
 				C3F06C2C18B6432D00F08642 /* main.m in Sources */,
 				3873F70519055D26003827E4 /* UCIPublishNet.m in Sources */,
 				38ECA85A192CEE5D007672BA /* UCIRoomSettingViewController.m in Sources */,
 				384B3E681916762B0027201E /* testViewController.m in Sources */,
 				38229F06193798A300974F1A /* UCIFeedBackViewController.m in Sources */,
-				C3F06C3618B6432D00F08642 /* UCIViewController.m in Sources */,
-				C3700D3018BCE6D300B6CBFC /* Card.m in Sources */,
+				38B1EF8D194424E900A8759A /* UCIGameSettingViewController.m in Sources */,
 				3873F70619055D26003827E4 /* UCIPunishViewController.m in Sources */,
 				381791771908159A00A313ED /* ViewFenpeiViewController.m in Sources */,
 				C3089DC518C778D400A7BAAD /* EAIntroPage.m in Sources */,
