@@ -19,5 +19,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *labPeopleCount;
 @property (strong, nonatomic) IBOutlet UILabel *labUndercoverCount;
 @property (strong, nonatomic) IBOutlet UIPickerView *pickType;
+@property (strong, nonatomic) IBOutlet UISwitch *switchKong;
 
 @end

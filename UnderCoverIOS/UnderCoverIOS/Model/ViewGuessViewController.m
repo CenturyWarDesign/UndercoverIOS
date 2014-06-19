@@ -70,7 +70,7 @@
     
     int tag=(int)sender.tag;
     NSString * txtShenFen=[arrContent objectForKey:[NSString stringWithFormat:@"%d",tag]];
-    if([txtShenFen isEqualToString:fatherWord])
+    if([txtShenFen isEqualToString:fatherWord]||[txtShenFen isEqualToString:@"空白身份"])
     {
         [self playNahan];
         PeopleCount--;
@@ -85,7 +85,8 @@
     [sender setEnabled:false];
     
     BOOL finish=false;
-    if(PeopleCount<=SonCount){
+    //在这里，卧底大于等于平民的时候，游戏直接结束
+    if(PeopleCount<=SonCount*2){
         [self.btnPublish setTitle:@"卧底胜利" forState:UIControlStateNormal];
         [self disabledAllButton];
         finish=true;

@@ -17,6 +17,7 @@
     NSString * fatherWrod;
     NSString * sonWord;
     NSString * wordkind;
+    BOOL kongbai;
 }
 @property (strong, nonatomic) IBOutlet UIImageView *imgHide;
 @property (strong, nonatomic) IBOutlet UILabel *labContent;

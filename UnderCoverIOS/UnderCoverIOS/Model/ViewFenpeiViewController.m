@@ -41,6 +41,7 @@
     PeopleCount=[[self getObjectFromDefault:@"fathercount"]intValue];
     SonCount=[[self getObjectFromDefault:@"soncount"]intValue];
     wordkind=[self getObjectFromDefault:@"wordkind"];
+    kongbai=[[self getObjectFromDefault:@"kongbai"] boolValue];
     
     arrContent=[[NSMutableDictionary alloc] init];
     [self initWords];
@@ -102,11 +103,18 @@
     for (int i=1;i<=PeopleCount; i++) {
         [arrContent setValue:fatherWrod forKey:[NSString stringWithFormat:@"%d",i]];
     }
+    NSString * kongbaiwords=@"空白身份";
+    //初始化空白词汇
+    if(kongbai){
+        int tem=(int)lroundf(rand()%PeopleCount)+1;
+        [arrContent setValue:kongbaiwords forKey:[NSString stringWithFormat:@"%d",tem]];
+    }
+    
     int temSonCount=SonCount;
     while (temSonCount>0) {
         int tem=(int)lroundf(rand()%PeopleCount)+1;
         NSString * temword=[arrContent objectForKey:[NSString stringWithFormat:@"%d",tem]];
-        if(![temword isEqualToString:sonWord]){
+        if(![temword isEqualToString:sonWord]&&![temword isEqualToString:kongbaiwords]){
             [arrContent setValue:sonWord forKey:[NSString stringWithFormat:@"%d",tem]];
             temSonCount--;
         }

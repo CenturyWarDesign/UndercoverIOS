@@ -116,7 +116,14 @@
         NSString *kind=[pickerViewsarray objectAtIndex:row];
         
         [self setObjectFromDefault:kind key:@"wordkind"];
-
+        
+        if(self.switchKong.isOn){
+            [self setObjectFromDefault:@"YES" key:@"kongbai"];
+        }
+        else{
+            [self setObjectFromDefault:@"NO" key:@"kongbai"];
+        }
+        
         //点击之后开始游戏
         [self uMengClick:@"game_undercover_start"];
     }
