@@ -11,8 +11,12 @@
 @interface ViewGuessViewController : UCIBaseViewController{
     int PeopleCount;
     int SonCount;
+    int fatherSet;
+    int sonSet;
     int MaxPeopleCount;
     int MaxSonCount;
+    int curPeople;
+    NSMutableArray *btnPeople;
 }
 
 
@@ -22,5 +26,5 @@
 @property(nonatomic,weak)NSMutableDictionary *arrContent;
 @property (strong, nonatomic) IBOutlet UIView *viewGuess;
 @property (strong, nonatomic) IBOutlet UIButton *btnPublish;
-
+@property (strong, nonatomic) UIButton *btnNext;
 @end

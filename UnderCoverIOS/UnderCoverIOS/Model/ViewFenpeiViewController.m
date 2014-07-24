@@ -40,9 +40,6 @@
 
     PeopleCount=[[self getObjectFromDefault:@"fathercount"]intValue];
     SonCount=[[self getObjectFromDefault:@"soncount"]intValue];
-    wordkind=[self getObjectFromDefault:@"wordkind"];
-    kongbai=[[self getObjectFromDefault:@"kongbai"] boolValue];
-    
     arrContent=[[NSMutableDictionary alloc] init];
     [self initWords];
     showContent=true;
@@ -56,17 +53,7 @@
     UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(nextOne:)];
     [self.imgHide removeGestureRecognizer:singleTap];
     [self.imgHide addGestureRecognizer:singleTap];
-    //隐藏刷新词汇按钮
-    [self.btnRelaodWords setHidden:(true)];
-//       [self performSegueWithIdentifier:@"segueToGuess" sender:self];
-    // Do any additional setup after loading the view.
-
     [self.imgHide setHidden:false];
-    
-    //隐藏刷新词汇按钮
-    [self.btnRelaodWords setHidden:(true)];
-//       [self performSegueWithIdentifier:@"segueToGuess" sender:self];
-
 }
 
 - (void)didReceiveMemoryWarning
@@ -82,7 +69,7 @@
     
 //    NSString * wordstring=[MobClick getConfigParams:@"under_string_version"];
 //    NSString* str = @"here be dragons";
-    NSArray * wordArray=[self getAllWords:wordkind];
+    NSArray * wordArray=[self getAllWords];
     if([wordArray count]>0){
     srand((unsigned)time(0));
     NSString *randWord= [wordArray objectAtIndex:rand()%[wordArray count]];
@@ -103,37 +90,19 @@
     for (int i=1;i<=PeopleCount; i++) {
         [arrContent setValue:fatherWrod forKey:[NSString stringWithFormat:@"%d",i]];
     }
-    NSString * kongbaiwords=@"空白身份";
-    //初始化空白词汇
-    if(kongbai){
-        int tem=(int)lroundf(rand()%PeopleCount)+1;
-        [arrContent setValue:kongbaiwords forKey:[NSString stringWithFormat:@"%d",tem]];
-    }
-    
     int temSonCount=SonCount;
     while (temSonCount>0) {
         int tem=(int)lroundf(rand()%PeopleCount)+1;
         NSString * temword=[arrContent objectForKey:[NSString stringWithFormat:@"%d",tem]];
-        if(![temword isEqualToString:sonWord]&&![temword isEqualToString:kongbaiwords]){
+        if(![temword isEqualToString:sonWord]){
             [arrContent setValue:sonWord forKey:[NSString stringWithFormat:@"%d",tem]];
             temSonCount--;
         }
     }
 }
-- (IBAction)reloadWord:(id)sender {
-    [self initWords];
-    NSString * showtem=[arrContent objectForKey:[NSString stringWithFormat:@"%d",nowIndex]];
-    [self.labContent setText:showtem];
-    [self.btnNext setTitle:@"请交给下一位" forState:UIControlStateNormal];
-    
-}
 
 
 - (IBAction)nextOne:(id)sender {
-    if(nowIndex==1)
-    {
-        [self.btnRelaodWords setHidden:(false)];
-    }
     if(nowIndex>PeopleCount)
     {
         [self performSegueWithIdentifier:@"segueToGuess" sender:self];
@@ -156,10 +125,6 @@
             //点击翻牌第一步
             [self uMengClick:@"click_undercover_pai_first"];
         }
-        if(nowIndex==2){
-            [self.btnRelaodWords setHidden:(true)];
-        }
-
     }
     showContent=!showContent;
     [self.imgHide setHidden:!showContent];

@@ -9,13 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "HTTPBase.h"
 
-@interface UCIBaseViewController : UIViewController<UCIHttpCallback>
+@interface UCIBaseViewController : UIViewController<UCIHttpCallback>{
+    //每秒的倒计时
+    NSTimer *timerSec;
+}
 -(void)uMengClick:(NSString *) event;
 -(void)callBack:(NSArray *)data commandName:(NSString*) command;
 -(id) getObjectFromDefault:(NSString *)key;
 -(void) setObjectFromDefault:(NSObject *)object key:(NSString *)key;
 -(void)showAlert:(NSString *)title content:(NSString *) content;
--(NSArray *)getAllWords:(NSString *)wordkind;
+-(NSArray *)getAllWords;
 -(void)hasPlayed:(NSString *)words;
 
 
@@ -28,4 +31,6 @@
 -(void)removeliketoDefault:(NSString *)word;
 -(void)addliketoDefault:(NSString *)word;
 -(UIButton *)getCircleBtn:(int) width;
+-(NSString *)getConfig:(NSString *)key;
+-(void)reflashOneSec;
 @end

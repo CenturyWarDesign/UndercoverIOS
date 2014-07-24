@@ -14,6 +14,7 @@
 
 @implementation UCIRoomUndercoverViewController
 @synthesize gameData;
+@synthesize addPeople;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -51,8 +52,32 @@
     
     
     [self initGuess:datagame];
+    [self initaddPeople];
+    showShenfenSec=0;
     // Do any additional setup after loading the view.
 }
+
+
+-(void) initaddPeople{
+    int people=[addPeople intValue];
+    if(people==1)
+    {
+        [self.btnAdd2 setHidden:true];
+    }
+    if(people==0){
+        [self.btnAdd2 setHidden:true];
+        [self.btnAdd1 setHidden:true];
+    }
+}
+
+- (IBAction)btnAddPeopleTap:(UIButton *)sender {
+    int tap=sender.tag;
+    NSArray * room_user=[gameData objectForKey:@"room_user"];
+    int  alterindex=tap-101;
+    NSString * content=[(NSDictionary *)[room_user objectAtIndex:alterindex] objectForKey:@"content"];
+    [self showAlert:@"" content:[NSString stringWithFormat:@"%d号：%@",alterindex+1,content]];
+}
+
 
 /**
  *initArray 里面是字典，名称，user，内容,content
@@ -67,6 +92,8 @@
     //这里判断，玩家名字一样的话，特别显示
     NSMutableArray * usernamearray=[[NSMutableArray alloc] init];
     
+    
+    //这里有两个添加的玩家
     for (int i=0; i<[initArray count]; i++) {
         CGRect frame = CGRectMake((btnWidth+5)*(i%4)+10, (i/4)*(btnHeight+10)+10, btnWidth, btnHeight);
         UIButton *someAddButton = [self getCircleBtn:btnWidth];
@@ -82,6 +109,7 @@
             [someAddButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
             [someAddButton setEnabled:false];
         }
+        
         
  
         if ([usernamearray containsObject:userName]) {
@@ -197,11 +225,25 @@
 - (IBAction)showWord:(id)sender {
     if(self.btnShowWord.isOn){
         [self.labMeWord setHidden:false];
+        showShenfenSec=[[self getConfig:@"SHOW_SHENFEN_SEC"] intValue];
     }
     else{
         [self.labMeWord setHidden:true];
     }
 }
 
+
+
+//每秒刷新
+-(void)reflashOneSec{
+    if(showShenfenSec>0)
+    {
+        showShenfenSec--;
+        if(showShenfenSec==0){
+            self.btnShowWord.on=false;
+            [self.labMeWord setHidden:true];
+        }
+    }
+}
 
 @end

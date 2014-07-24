@@ -40,6 +40,7 @@
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
     //注意，这里添加的定时器必须给清理掉，不然退出的时候会一直运行
     [timerCheck invalidate];
     [timerReflash invalidate];

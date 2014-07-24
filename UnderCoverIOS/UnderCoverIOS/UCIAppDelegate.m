@@ -12,6 +12,8 @@
 #import "HTTPBase.h"
 @implementation UCIAppDelegate
 static bool messageCount;
+static bool GAME_DEBUG;
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -56,7 +58,8 @@ static bool messageCount;
     //清除脚标
     [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
     
-   
+    GAME_DEBUG=false;
+
     return YES;
 }
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
@@ -155,7 +158,7 @@ static bool messageCount;
     // Required
     [APService handleRemoteNotification:userInfo];
     messageCount++;
-    
+
 }
 
 
@@ -168,4 +171,28 @@ static bool messageCount;
         messageCount--;
     }
 }
+
+
+
++(BOOL)isdebug{
+    return GAME_DEBUG;
+}
+
+
+
+//取得全局配置文件，如果有debug的取debug
++(NSString *)getConfig:(NSString *)key{
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"config" ofType:@"plist"];
+    NSDictionary *array = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
+    
+    NSString *valuedefault = [array objectForKey:key];
+    if([UCIAppDelegate isdebug]){
+        NSString *temvalue =[array objectForKey:[NSString stringWithFormat:@"%@_debug",key]];
+        if([temvalue length]>0){
+            valuedefault=temvalue;
+        }
+    }
+    return valuedefault;
+}
+
 @end

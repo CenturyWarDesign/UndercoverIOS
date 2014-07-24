@@ -340,7 +340,7 @@
             </objects>
             <point key="canvasLocation" x="-101" y="174"/>
         </scene>
-        <!--Help View Controller - 帮助-->
+        <!--Help View Controller - 玩法-->
         <scene sceneID="DHa-PW-x6M">
             <objects>
                 <viewController wantsFullScreenLayout="YES" id="wn5-8O-c79" customClass="UCIHelpViewController" sceneMemberID="viewController">
@@ -366,9 +366,7 @@
                             <constraint firstAttribute="trailing" secondItem="P8i-te-k2X" secondAttribute="trailing" id="whT-sq-qAz"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="帮助" id="fgx-Jd-RBq">
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-15"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="玩法" id="fgx-Jd-RBq"/>
                     <connections>
                         <outlet property="webView" destination="P8i-te-k2X" id="XCa-la-mHM"/>
                     </connections>
@@ -523,9 +521,7 @@
         <scene sceneID="iuH-9g-Zpf">
             <objects>
                 <navigationController wantsFullScreenLayout="YES" definesPresentationContext="YES" id="dRm-h4-zRe" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="参与" id="B26-HR-Gt7">
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-15"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="参与" id="B26-HR-Gt7"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DH0-Is-8nu">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -537,10 +533,10 @@
             </objects>
             <point key="canvasLocation" x="-582" y="2260"/>
         </scene>
-        <!--Game Setting View Controller - 设置-->
+        <!--Test View Controller - 设置-->
         <scene sceneID="wQY-6K-Fnn">
             <objects>
-                <viewController wantsFullScreenLayout="YES" id="S85-1U-6Hg" customClass="UCIGameSettingViewController" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" id="S85-1U-6Hg" customClass="testViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="z3U-4q-e4D"/>
                         <viewControllerLayoutGuide type="bottom" id="izR-NR-bXd"/>
@@ -548,32 +544,6 @@
                     <view key="view" contentMode="scaleToFill" id="hNV-aT-AT0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="声音：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G8b-X4-BZl">
-                                <rect key="frame" x="67" y="152" width="51" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VTE-mQ-k1s">
-                                <rect key="frame" x="133" y="149" width="79" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="sound:" destination="S85-1U-6Hg" eventType="valueChanged" id="eVf-nt-hSK"/>
-                                </connections>
-                            </switch>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTk-fw-O6A">
-                                <rect key="frame" x="91" y="279" width="70" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="支付">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="pay:" destination="S85-1U-6Hg" eventType="touchUpInside" id="EqV-qv-P5G"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="设置" id="XmW-nT-KaD"/>
@@ -647,31 +617,11 @@
             </objects>
             <point key="canvasLocation" x="261" y="723"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="ADv-Zj-wlY">
-            <objects>
-                <viewController id="TUw-wZ-fXB" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="cVO-CJ-J1V"/>
-                        <viewControllerLayoutGuide type="bottom" id="USR-ph-d18"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="HYK-o8-RZa">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PEk-oL-YSP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="636" y="415"/>
-        </scene>
         <!--Navigation Controller - 设置-->
         <scene sceneID="2tC-ve-f4J">
             <objects>
                 <navigationController wantsFullScreenLayout="YES" definesPresentationContext="YES" id="Hvv-XP-p2E" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="设置" id="gH8-az-mPd">
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-15"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="设置" id="gH8-az-mPd"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="z5V-ik-hbi">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1202,20 +1152,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="词汇分类" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e4H-B2-z3h">
-                                <rect key="frame" x="26" y="246" width="68" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="空白身份" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTD-4N-kyR">
-                                <rect key="frame" x="26" y="357" width="68" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="30" placeholderIntrinsicHeight="21" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CI6-dU-56y">
                                 <rect key="frame" x="285" y="89" width="30" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1253,23 +1189,11 @@
                                     <segue destination="3ho-0x-a8w" kind="push" identifier="segueFenpei" id="BI6-rl-BTu"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="left" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PK0-Lf-Y8T">
-                                <rect key="frame" x="105" y="176" width="188" height="162"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="188" id="Fcf-kh-axt"/>
-                                </constraints>
-                            </pickerView>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vQK-h2-9bH">
-                                <rect key="frame" x="105" y="354" width="79" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2Re-T0-PAe" firstAttribute="leading" secondItem="Svc-py-pcr" secondAttribute="leading" constant="60" id="3jM-eG-N5N"/>
                             <constraint firstItem="ked-bS-e6O" firstAttribute="centerX" secondItem="CI6-dU-56y" secondAttribute="centerX" id="5fa-yG-xDg"/>
-                            <constraint firstItem="vTD-4N-kyR" firstAttribute="top" secondItem="e4H-B2-z3h" secondAttribute="bottom" constant="90" id="6bf-va-Din"/>
                             <constraint firstItem="ked-bS-e6O" firstAttribute="centerY" secondItem="YVb-bK-X9t" secondAttribute="centerY" id="7pY-v9-q9f"/>
                             <constraint firstItem="utp-8X-ej5" firstAttribute="centerY" secondItem="mTU-pd-6bd" secondAttribute="centerY" id="8NN-pl-HKR"/>
                             <constraint firstItem="CI6-dU-56y" firstAttribute="centerY" secondItem="mTU-pd-6bd" secondAttribute="centerY" id="Buu-f8-UFS"/>
@@ -1277,20 +1201,13 @@
                             <constraint firstItem="mTU-pd-6bd" firstAttribute="top" secondItem="Pny-gO-pfi" secondAttribute="bottom" constant="20" id="Had-25-V4W"/>
                             <constraint firstItem="mTU-pd-6bd" firstAttribute="leading" secondItem="Svc-py-pcr" secondAttribute="leading" constant="20" symbolic="YES" id="IEC-dw-lCt"/>
                             <constraint firstItem="FPP-EQ-NUV" firstAttribute="top" secondItem="2Re-T0-PAe" secondAttribute="bottom" constant="20" id="KWy-nE-fug"/>
-                            <constraint firstItem="e4H-B2-z3h" firstAttribute="centerX" secondItem="mTU-pd-6bd" secondAttribute="centerX" id="KhO-Tn-zXw"/>
                             <constraint firstItem="hHl-mi-pXU" firstAttribute="leading" secondItem="utp-8X-ej5" secondAttribute="leading" id="MRA-kP-QBx"/>
                             <constraint firstItem="utp-8X-ej5" firstAttribute="leading" secondItem="mTU-pd-6bd" secondAttribute="trailing" constant="5" id="N1p-LD-I2f"/>
-                            <constraint firstItem="vTD-4N-kyR" firstAttribute="centerY" secondItem="vQK-h2-9bH" secondAttribute="centerY" id="QgI-5v-oOF"/>
                             <constraint firstItem="2Re-T0-PAe" firstAttribute="centerX" secondItem="Svc-py-pcr" secondAttribute="centerX" id="RdQ-9r-5gP"/>
-                            <constraint firstItem="e4H-B2-z3h" firstAttribute="top" secondItem="YVb-bK-X9t" secondAttribute="bottom" constant="90" id="S1S-z1-2aX"/>
                             <constraint firstItem="YVb-bK-X9t" firstAttribute="top" secondItem="mTU-pd-6bd" secondAttribute="bottom" constant="20" id="TvW-QV-nhj"/>
-                            <constraint firstItem="vTD-4N-kyR" firstAttribute="leading" secondItem="e4H-B2-z3h" secondAttribute="leading" id="bjd-aC-Ui2"/>
                             <constraint firstItem="CI6-dU-56y" firstAttribute="leading" secondItem="utp-8X-ej5" secondAttribute="trailing" constant="5" id="bpb-Vj-y6g"/>
-                            <constraint firstItem="e4H-B2-z3h" firstAttribute="centerY" secondItem="PK0-Lf-Y8T" secondAttribute="centerY" id="g88-FA-1E9"/>
                             <constraint firstAttribute="trailing" secondItem="CI6-dU-56y" secondAttribute="trailing" constant="5" id="mDu-np-Bzt"/>
-                            <constraint firstItem="PK0-Lf-Y8T" firstAttribute="leading" secondItem="hHl-mi-pXU" secondAttribute="leading" id="mdy-qv-2pg"/>
                             <constraint firstItem="hHl-mi-pXU" firstAttribute="centerY" secondItem="YVb-bK-X9t" secondAttribute="centerY" id="qfj-1Z-wxC"/>
-                            <constraint firstItem="vQK-h2-9bH" firstAttribute="leading" secondItem="PK0-Lf-Y8T" secondAttribute="leading" id="wKN-bT-Ixu"/>
                             <constraint firstItem="mTU-pd-6bd" firstAttribute="bottom" secondItem="utp-8X-ej5" secondAttribute="bottom" id="xZS-c5-YG4"/>
                             <constraint firstItem="hHl-mi-pXU" firstAttribute="width" secondItem="utp-8X-ej5" secondAttribute="width" id="zjM-QN-Gun"/>
                         </constraints>
@@ -1299,10 +1216,8 @@
                     <connections>
                         <outlet property="labPeopleCount" destination="CI6-dU-56y" id="pUL-f3-d5M"/>
                         <outlet property="labUndercoverCount" destination="ked-bS-e6O" id="b3M-ye-3e6"/>
-                        <outlet property="pickType" destination="PK0-Lf-Y8T" id="8SN-99-Psa"/>
                         <outlet property="sliPeople" destination="utp-8X-ej5" id="OKr-zh-wll"/>
                         <outlet property="sliUndercover" destination="hHl-mi-pXU" id="8m6-Ig-9R4"/>
-                        <outlet property="switchKong" destination="vQK-h2-9bH" id="GdI-Kb-MmA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Da-MK-kaU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1345,16 +1260,6 @@
                                     <action selector="nextOne:" destination="3ho-0x-a8w" eventType="touchUpInside" id="Fev-63-EcP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RoE-rj-sKp">
-                                <rect key="frame" x="240" y="74" width="70" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="刷新词汇">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="reloadWord:" destination="3ho-0x-a8w" eventType="touchUpInside" id="Wuf-Zk-bzw"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -1369,7 +1274,6 @@
                     <navigationItem key="navigationItem" title="分配身份" id="jD6-Gu-u1f"/>
                     <connections>
                         <outlet property="btnNext" destination="iJh-1U-NIV" id="add-es-dsk"/>
-                        <outlet property="btnRelaodWords" destination="RoE-rj-sKp" id="iwm-Ow-qtl"/>
                         <outlet property="imgHide" destination="K2Q-D2-sH0" id="lc3-bq-qfI"/>
                         <outlet property="labContent" destination="z9V-UN-AsI" id="joD-is-SN6"/>
                         <segue destination="n7B-ON-LDM" kind="push" identifier="segueToGuess" id="wyT-cG-RUe"/>
@@ -1434,13 +1338,200 @@
             </objects>
             <point key="canvasLocation" x="1299" y="-407"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="UCIViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1bK-bO-ab5"/>
+                        <viewControllerLayoutGuide type="bottom" id="n1E-pn-fxU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocP-hf-Xz4">
+                                <rect key="frame" x="35" y="60" width="60" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" backgroundImage="cardBack">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hxP-yh-dvj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="he5-X3-jPi">
+                                <rect key="frame" x="128" y="60" width="60" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" backgroundImage="cardBack">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="UoZ-7c-z01"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKP-cV-Wkg">
+                                <rect key="frame" x="225" y="60" width="60" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" backgroundImage="cardBack">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1Fe-wG-5Yh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IsP-hw-EES">
+                                <rect key="frame" x="35" y="151" width="60" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" backgroundImage="cardBack">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="zI0-45-sDT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ISM-eI-1Ft">
+                                <rect key="frame" x="128" y="151" width="60" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" backgroundImage="cardBack">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="MEO-xk-as2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wEN-0v-KVX">
+                                <rect key="frame" x="225" y="151" width="60" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" backgroundImage="cardBack">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="zE7-jg-PPb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EgV-Da-S3r">
+                                <rect key="frame" x="35" y="242" width="60" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" backgroundImage="cardBack">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="FtH-s9-vGI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmW-SB-Wvv">
+                                <rect key="frame" x="128" y="242" width="60" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" backgroundImage="cardBack">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="http:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="86w-NC-KBl"/>
+                                    <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="mPK-mm-pMj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Npn-hu-Maw">
+                                <rect key="frame" x="225" y="242" width="60" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" backgroundImage="cardBack">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="testHttp:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="HtB-0n-qPe"/>
+                                    <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="7rY-ka-BVm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZuQ-jO-BCG">
+                                <rect key="frame" x="35" y="333" width="60" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" backgroundImage="cardBack">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="fSb-qm-ZKF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oxj-D5-iAX">
+                                <rect key="frame" x="128" y="333" width="60" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" backgroundImage="cardBack">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="sgx-T7-M9k"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bFn-BQ-Kyx">
+                                <rect key="frame" x="225" y="333" width="60" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" backgroundImage="cardBack">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="2g5-1h-Y0d"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score:0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="524-Rf-yd0">
+                                <rect key="frame" x="0.0" y="424" width="325" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="0.25098040699958801" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="scoreLabel" destination="524-Rf-yd0" id="mEf-lh-jWk"/>
+                        <outletCollection property="cardButtons" destination="wEN-0v-KVX" id="9Zp-76-D0G"/>
+                        <outletCollection property="cardButtons" destination="ocP-hf-Xz4" id="tbu-dj-dNZ"/>
+                        <outletCollection property="cardButtons" destination="he5-X3-jPi" id="Fgw-ox-Urh"/>
+                        <outletCollection property="cardButtons" destination="wKP-cV-Wkg" id="gAK-Y5-RA4"/>
+                        <outletCollection property="cardButtons" destination="ISM-eI-1Ft" id="cDJ-P3-aHp"/>
+                        <outletCollection property="cardButtons" destination="IsP-hw-EES" id="wkk-tj-s4S"/>
+                        <outletCollection property="cardButtons" destination="Npn-hu-Maw" id="vOd-GB-dZ4"/>
+                        <outletCollection property="cardButtons" destination="bmW-SB-Wvv" id="M2s-hI-wMJ"/>
+                        <outletCollection property="cardButtons" destination="EgV-Da-S3r" id="Sdp-eI-xpN"/>
+                        <outletCollection property="cardButtons" destination="bFn-BQ-Kyx" id="rln-Ti-BKj"/>
+                        <outletCollection property="cardButtons" destination="Oxj-D5-iAX" id="6Ah-Yq-zwJ"/>
+                        <outletCollection property="cardButtons" destination="ZuQ-jO-BCG" id="UJ5-by-35D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-555" y="-457"/>
+        </scene>
         <!--Navigation Controller - 游戏-->
         <scene sceneID="Jo2-wA-uUV">
             <objects>
                 <navigationController wantsFullScreenLayout="YES" id="3Cw-FO-FmF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="游戏" id="Oks-yz-V5y">
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-15"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="游戏" id="Oks-yz-V5y"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2DB-nT-qWm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1457,6 +1548,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="cardBack" width="185" height="260"/>
         <image name="original.png" width="224" height="224"/>
         <image name="shake.png" width="302" height="241"/>
     </resources>

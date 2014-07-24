@@ -18,12 +18,16 @@
     NSString * sonWord;
     NSString * fatherWord;
     int roomtype;
+    //这个显示用户身份的时间
+    int showShenfenSec;
 }
 @property (strong, nonatomic) IBOutlet UILabel *labRoomID;
 @property (strong, nonatomic) IBOutlet UIScrollView *viewPeople;
 @property (strong, nonatomic) IBOutlet UILabel *labGameName;
 @property (strong, nonatomic) IBOutlet UILabel *labStatus;
 @property(nonatomic,weak)NSDictionary *gameData;
+@property(nonatomic,retain)NSString *addPeople;
+
 @property (strong, nonatomic) IBOutlet UILabel *labPunishTitle;
 @property (strong, nonatomic) IBOutlet UITextView *labPunishContent;
 @property (strong, nonatomic) IBOutlet UILabel *labMeWord;
@@ -34,4 +38,6 @@
 -(void) sendToSendPunish:(NSString *) str;
 -(NSString *) getLoserStr:(NSString *)loser;
 -(void)disabledAllButton;
+@property (strong, nonatomic) IBOutlet UIButton *btnAdd1;
+@property (strong, nonatomic) IBOutlet UIButton *btnAdd2;
 @end

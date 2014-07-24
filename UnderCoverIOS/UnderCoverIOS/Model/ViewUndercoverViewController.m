@@ -42,28 +42,6 @@
     self.sliUndercover.value=UndercoverCount;
     
     // Do any additional setup after loading the view.
-    
-    
-    
-    [self inittypeselect];
-    
-}
-
-
-
-//初始化词汇选择分类
--(void) inittypeselect{
-    NSArray * wordarray=[self getAllWords:@"全部"];
-    pickerViewsarray=[[NSMutableArray alloc] init];
-    [pickerViewsarray addObject:@"全部"];
-    for (int i=0; i<[wordarray count]; i++) {
-        NSArray * wordDetailArray= [[wordarray objectAtIndex:i] componentsSeparatedByString:@"_"];
-        if(![pickerViewsarray containsObject:[wordDetailArray objectAtIndex:0]]){
-            [pickerViewsarray addObject:[wordDetailArray objectAtIndex:0]];
-        }
-    }
-    self.pickType.delegate = self;
-    self.pickType.dataSource = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -102,28 +80,12 @@
 {
     if([segue.identifier isEqualToString:@"segueFenpei"]) //"goView2"是SEGUE连线的标识
     {
-        id theSegue = segue.destinationViewController;
+//        id theSegue = segue.destinationViewController;
         //界面之间进行传值
-        [theSegue setValue:[NSString stringWithFormat:@"%d",PeopleCount] forKey:@"fathercount"];
-        [theSegue setValue:[NSString stringWithFormat:@"%d",UndercoverCount] forKey:@"soncount"];
-
 //        [theSegue setValue:[NSString stringWithFormat:@"%d",PeopleCount] forKey:@"fathercount"];
         [self setObjectFromDefault:[NSString stringWithFormat:@"%d",PeopleCount] key:@"fathercount"];
 //        [theSegue setValue:[NSString stringWithFormat:@"%d",UndercoverCount] forKey:@"soncount"];
         [self setObjectFromDefault:[NSString stringWithFormat:@"%d",UndercoverCount] key:@"soncount"];
-        
-        NSInteger row = [_pickType selectedRowInComponent:0];
-        NSString *kind=[pickerViewsarray objectAtIndex:row];
-        
-        [self setObjectFromDefault:kind key:@"wordkind"];
-        
-        if(self.switchKong.isOn){
-            [self setObjectFromDefault:@"YES" key:@"kongbai"];
-        }
-        else{
-            [self setObjectFromDefault:@"NO" key:@"kongbai"];
-        }
-        
         //点击之后开始游戏
         [self uMengClick:@"game_undercover_start"];
     }
@@ -141,28 +103,5 @@
 */
 
 
-
-//设置列数
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)thePickerView
-{
-    return 1;
-}
-//返回数组总数
-- (NSInteger)pickerView:(UIPickerView *)thePickerView numberOfRowsInComponent:(NSInteger)component
-{
-    return [pickerViewsarray count];//将数据建立一个数组
-}
-- (NSString *)pickerView:(UIPickerView *)thePickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
-{ return [pickerViewsarray objectAtIndex:row];
-    if(row==1)
-    { return [pickerViewsarray objectAtIndex:1];
-    }
-}
-
-//触发事件
-- (void)pickerView:(UIPickerView *)thePickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
-{
-    [pickerViewsarray objectAtIndex:row];
-}
 
 @end

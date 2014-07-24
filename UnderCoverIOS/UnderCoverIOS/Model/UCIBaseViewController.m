@@ -9,6 +9,7 @@
 #import "UCIBaseViewController.h"
 #import "MobClick.h"
 #import <AudioToolbox/AudioToolbox.h>
+#import "UCIAppDelegate.h"
 @interface UCIBaseViewController ()
 
 @end
@@ -28,8 +29,14 @@
 {
     [super viewDidLoad];
 
-
+    timerSec= [NSTimer  timerWithTimeInterval:1.0 target:self selector:@selector(reflashOneSec)userInfo:nil repeats:YES];
+    [[NSRunLoop currentRunLoop]addTimer:timerSec forMode:NSDefaultRunLoopMode];
 	// Do any additional setup after loading the view.
+}
+
+//每秒刷新动作
+-(void)reflashOneSec{
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,6 +45,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    //注意，这里添加的定时器必须给清理掉，不然退出的时候会一直运行
+    [timerSec invalidate];
+ 
+}
 
 //友盟打点数据
 -(void)uMengClick:(NSString *) event{
@@ -114,7 +128,7 @@
 }
 
 //取得所有词汇，包括本地的和网络的
--(NSArray *)getAllWords:(NSString *)wordkind {
+-(NSArray *)getAllWords{
     NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"words" ofType:@"plist"];
     NSMutableArray *array = [[NSMutableArray alloc] initWithContentsOfFile:plistPath];
     
@@ -139,24 +153,10 @@
         [self setObjectFromDefault:NULL key:@"hasPlayed"];
     }
     
-    if([wordkind isEqualToString:@"全部"]){
-        return array2;
-    }
-    
-    //这个步奏就是显示
-    NSMutableArray *array3=[[NSMutableArray alloc] init];
-    for (int tem=0; tem<[array2 count]; tem++) {
-        NSArray * wordDetailArray= [[array2 objectAtIndex:tem] componentsSeparatedByString:@"_"];
-        if([[wordDetailArray objectAtIndex:0] isEqualToString:wordkind]){
-            [array3 addObject:[array2 objectAtIndex:tem]];
-        }
-    }
-    if([array3 count]>0)
-    {
-        return array3;
-    }
     return array2;
 }
+
+
 
 //已经玩过的词汇
 -(void)hasPlayed:(NSString *)words{
@@ -229,7 +229,9 @@
 
 }
 
-
+-(NSString *)getConfig:(NSString *)key{
+ return [UCIAppDelegate getConfig:key];
+}
 
 
 @end

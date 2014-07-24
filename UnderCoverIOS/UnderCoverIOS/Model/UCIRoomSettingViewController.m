@@ -38,10 +38,19 @@
     
     [self reflash];
     
+    addPeopleCount=0;
+    
+    [self.btnUndercover setEnabled:false];
+    [self.btnKiller setEnabled:false];
 //    [UIApplication mess]
     // Do any additional setup after loading the view.
 }
+
+
+
+
 -(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
     //注意，这里添加的定时器必须给清理掉，不然退出的时候会一直运行
     [timerCheck invalidate];
     [timerReflash invalidate];
@@ -76,7 +85,7 @@
             [self.navigationController popViewControllerAnimated:YES];
             return;
         }
-        [self ReflashUsers:userinfo];
+        [self ReflashUsers];
         NSLog(@"RoomGetInfo 函数的回调");
     }else if([command isEqualToString:@"RoomLevel"]){
         [self setObjectFromDefault:@"" key:@"roomtype"];
@@ -104,29 +113,52 @@
 }
 
 //在这里画出玩家
--(void)ReflashUsers:(NSMutableArray *) userarray{
+-(void)ReflashUsers{
+    
+    int progress=(int)self.peopleCount.value;
+    NSMutableArray * userinfotem=[[NSMutableArray alloc] init];
+    for (int i=0; i<progress; i++) {
+        NSDictionary * tem=[NSDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:@"NO.%d",i+1],@"username",@"ddd",@"content",nil];
+        [userinfotem addObject:tem];
+    }
+    
+    for (int i=0; i<[userinfo count]; i++) {
+        [userinfotem addObject:[userinfo objectAtIndex:i]];
+    }
+
+    
+    //显示哪些可以显示，哪些活动不可以显示
+    [self checkifEnable:[userinfotem count]];
+    
     int width=self.scrollUsers.bounds.size.width;
 
     int btnWidth=(width-30)/4;
     int btnHeight=btnWidth;
 
     for (UIView *view_ in _scrollUsers.subviews) {
-        if (view_.tag == 1) {
-            [view_ removeFromSuperview];
-        }
+        [view_ removeFromSuperview];
     }
     //这里判断，玩家名字一样的话，特别显示
     NSMutableArray * usernamearray=[[NSMutableArray alloc] init];
     
-    for(int i=0;i<[userarray count];i++){
+    
+    int gameuid=[[self getObjectFromDefault:@"gameuid"] intValue];
+    for(int i=0;i<[userinfotem count];i++){
         CGRect frame = CGRectMake((btnWidth+5)*(i%4)+10, (i/4)*(btnHeight+10), btnWidth, btnHeight);
         
         UIButton *someAddButton = [self getCircleBtn:btnWidth];
         
-        NSString * userName=[(NSMutableDictionary *)[userarray objectAtIndex:i] objectForKey:@"username"];
+        NSString * userName=[(NSMutableDictionary *)[userinfotem objectAtIndex:i] objectForKey:@"username"];
+        int temgameuid=[[(NSMutableDictionary *)[userinfotem objectAtIndex:i] objectForKey:@"gameuid"] intValue];
         [someAddButton setTitle:userName forState:UIControlStateNormal];
+        
         if ([usernamearray containsObject:userName]) {
             someAddButton.layer.borderColor=[UIColor redColor].CGColor;
+        }
+        
+        //如果某个玩家是房方，那么特殊显示
+        if(temgameuid==gameuid){
+             someAddButton.layer.borderColor=[UIColor blueColor].CGColor;
         }
         [usernamearray addObject:userName];
         
@@ -167,17 +199,17 @@
 - (IBAction)btnStartUndercover:(id)sender {
     HTTPBase *classBtest = [[HTTPBase alloc] init];
     classBtest.delegate = self;
-    [classBtest baseHttp:@"RoomStartGame" paramsdata:[NSDictionary dictionaryWithObjectsAndKeys:@"1",@"type",nil]];
+    [classBtest baseHttp:@"RoomStartGame" paramsdata:[NSDictionary dictionaryWithObjectsAndKeys:@"1",@"type",[NSString stringWithFormat:@"%d",addPeopleCount],@"addPeople",nil]];
     gametype=1;
     [self uMengClick:@"room_undercover"];
-        [self setBtnDisable];
+    [self setBtnDisable];
 }
 
 //开始杀人游戏
 - (IBAction)btnStartKiller:(id)sender {
     HTTPBase *classBtest = [[HTTPBase alloc] init];
     classBtest.delegate = self;
-    [classBtest baseHttp:@"RoomStartGame" paramsdata:[NSDictionary dictionaryWithObjectsAndKeys:@"2",@"type",nil]];
+    [classBtest baseHttp:@"RoomStartGame" paramsdata:[NSDictionary dictionaryWithObjectsAndKeys:@"2",@"type",[NSString stringWithFormat:@"%d",addPeopleCount],@"addPeople",nil]];
     gametype=2;
     [self uMengClick:@"room_killer"];
         [self setBtnDisable];
@@ -187,21 +219,55 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    id theSegue = segue.destinationViewController;
     if([segue.identifier isEqualToString:@"gameundercover"]) //"goView2"是SEGUE连线的标识
     {
-        id theSegue = segue.destinationViewController;
+     
         //界面之间进行传值,把创建游戏的数据发过来
         [theSegue setValue:datatosend forKey:@"gameData"];
     }
     else if([segue.identifier isEqualToString:@"gameKiller"]) //"goView2"是SEGUE连线的标识
     {
-        id theSegue = segue.destinationViewController;
         //界面之间进行传值,把创建游戏的数据发过来
         [theSegue setValue:datatosend forKey:@"gameData"];
     }
-
+    [theSegue setValue:[NSString stringWithFormat:@"%d",addPeopleCount] forKey:@"addPeople"];
     
 }
+
+- (IBAction)peoplechange:(UISlider *)sender {
+     int progress=(int)lroundf(sender.value);
+    addPeopleCount=progress;
+    [self.labPeople setText:[NSString stringWithFormat:@"%d",progress ]];
+
+    [self ReflashUsers];
+    
+}
+
+//这个用户显示未个游戏，是否可以玩，以后每个游戏都要加在这里
+-(void) checkifEnable:(int) peoplecount{
+    //谁是卧底 4-10人
+
+    //到时这里还要加入收费项
+    if(peoplecount>=[[self getConfig:@"UNDERCOVER_MIN_PEOPLE"] intValue]&&peoplecount<=[[self getConfig:@"UNDERCOVER_MAX_PEOPLE"] intValue]){
+        [self.btnUndercover setEnabled:true];
+    }
+    else
+    {
+        [self.btnUndercover setEnabled:false];
+    }
+    
+     //杀人游戏 6-16人
+    if(peoplecount>=[[self getConfig:@"KILLER_MIN_PEOPLE"] intValue]&&peoplecount<=[[self getConfig:@"KILLER_MAX_PEOPLE"] intValue]){
+        [self.btnKiller setEnabled:true];
+    }
+    else
+    {
+        [self.btnKiller setEnabled:false];
+    }
+}
+
+
 
 
 -(void) setBtnDisable{
@@ -218,6 +284,9 @@
 //提示房间信息
 - (IBAction)btnInfo:(id)sender {
     [self showAlert:@"" content:@"玩家输入该房间号即可开启网络模式"];
+}
+- (IBAction)btnPeople:(id)sender {
+    [self showAlert:@"" content:@"可以最多支持两人没有智能设备的玩家参加"];
 }
 
 @end

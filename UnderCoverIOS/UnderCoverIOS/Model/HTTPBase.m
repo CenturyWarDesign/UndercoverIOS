@@ -9,6 +9,7 @@
 #import "HTTPBase.h"
 #import "AFHTTPRequestOperation.h"
 #import "MobClick.h"
+#import "UCIAppDelegate.h"
 
 @implementation HTTPBase
 
@@ -16,8 +17,10 @@
 
 
 - (void)baseHttp:(NSString *)command paramsdata:(NSDictionary *)data{
-    NSString * ipaddress=@"http://192.168.1.104/";
-//    NSString * ipaddress=@"http://42.121.123.185/";
+//    NSString * ipaddress=@"http://uncercover.duapp.com/";
+//    NSString * ipaddress=@"http://127.0.0.1/CenturyServer/";
+    NSString * ipaddress=[UCIAppDelegate getConfig:@"ipaddress"] ;
+
     
 //    NSMutableString * temstring=[[NSMutableString alloc] initWithString:@""];
 //    if([data count]>0){
@@ -36,9 +39,10 @@
 //        }
 ////        NSString ;
 //
+    
     NSString * temjson= [self DataTOjsonString:data];
     NSString * sign=[self DataTOjsonString:[NSDictionary dictionaryWithObjectsAndKeys:[self getUDID],@"uid",@"IOS",@"channel",nil]];
-    NSString *URLTmp = [NSString stringWithFormat:@"%@CenturyServer/Entry.php?cmd=%@&sign=%@&data=%@",ipaddress,command,sign,temjson];
+    NSString *URLTmp = [NSString stringWithFormat:@"%@Entry.php?cmd=%@&sign=%@&data=%@",ipaddress,command,sign,temjson];
     NSString *URLTmp1 = [URLTmp stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];  //转码成UTF-8  否则可能会出现错误
     URLTmp = URLTmp1;
     NSLog(@"调用的报文:%@",URLTmp);
