@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>help</key>
-	<string>http://uncercover.duapp.com/www/help.html</string>
+	<string>http://century.duapp.com/www/index.php</string>
 	<key>help_debug</key>
-	<string>http://192.168.1.107/CenturyServer/www/help.html</string>
+	<string>http://192.168.1.120/CenturyServer/www/index.php</string>
 	<key>ipaddress_debug</key>
-	<string>http://192.168.1.107/</string>
+	<string>http://192.168.1.120/CenturyServer/</string>
 	<key>ipaddress</key>
-	<string>http://uncercover.duapp.com/</string>
+	<string>http://century.duapp.com/</string>
 	<key>UNDERCOVER_MIN_PEOPLE</key>
 	<string>4</string>
 	<key>UNDERCOVER_MIN_PEOPLE_debug</key>

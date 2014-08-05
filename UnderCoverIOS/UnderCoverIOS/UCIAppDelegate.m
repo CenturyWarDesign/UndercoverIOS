@@ -57,7 +57,6 @@ static bool GAME_DEBUG;
     
     //清除脚标
     [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
-    
     GAME_DEBUG=false;
 
     return YES;
