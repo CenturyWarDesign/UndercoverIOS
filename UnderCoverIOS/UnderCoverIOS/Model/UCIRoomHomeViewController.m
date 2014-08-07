@@ -8,6 +8,8 @@
 
 #import "UCIRoomHomeViewController.h"
 #import "UCIAppDelegate.h"
+#import "HTTPBase.h"
+
 
 @interface UCIRoomHomeViewController ()
 
@@ -27,11 +29,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    bool isonline=UCIAppDelegate.isConnectionAvailable;
+   
+    if(!isonline){
+        [self showAlert:@"提示" content:@"网络连接异常，无法进行游戏"];
+        return;
+    }
+    
     NSString *username=[self getObjectFromDefault:@"username"];
+    
     if([username length]==0){
         [self performSegueWithIdentifier:@"changeName" sender:self];
         return;
     }
+
 
     //如果已经在一个房间内，那么直接跳过去
     NSString *roomtype=[self getObjectFromDefault:@"roomtype"];
@@ -41,6 +53,11 @@
         [self performSegueWithIdentifier:@"joinroom" sender:self];
     }
     //如果已经设置过姓名，则跳过
+    
+    
+
+
+    
 
     [self setEnable];
     // Do any additional setup after loading the view.

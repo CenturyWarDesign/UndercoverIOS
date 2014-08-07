@@ -57,6 +57,7 @@
 		38ECA857192CEE24007672BA /* UCIRomeInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ECA856192CEE24007672BA /* UCIRomeInfoViewController.m */; };
 		38ECA85A192CEE5D007672BA /* UCIRoomSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ECA859192CEE5D007672BA /* UCIRoomSettingViewController.m */; };
 		38ECA8611930BC60007672BA /* UCIRoomUndercoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ECA8601930BC60007672BA /* UCIRoomUndercoverViewController.m */; };
+		38FFCC821993DDE40063859B /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FFCC811993DDE40063859B /* Reachability.m */; };
 		C3089DC518C778D400A7BAAD /* EAIntroPage.m in Sources */ = {isa = PBXBuildFile; fileRef = C3089DC218C778D400A7BAAD /* EAIntroPage.m */; };
 		C3089DC618C778D400A7BAAD /* EAIntroView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3089DC418C778D400A7BAAD /* EAIntroView.m */; };
 		C3089DE718C77A9D00A7BAAD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3089DCC18C77A9D00A7BAAD /* Default-568h@2x.png */; };
@@ -192,6 +193,8 @@
 		38ECA859192CEE5D007672BA /* UCIRoomSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UCIRoomSettingViewController.m; path = Model/UCIRoomSettingViewController.m; sourceTree = "<group>"; };
 		38ECA85F1930BC60007672BA /* UCIRoomUndercoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UCIRoomUndercoverViewController.h; path = Model/UCIRoomUndercoverViewController.h; sourceTree = "<group>"; };
 		38ECA8601930BC60007672BA /* UCIRoomUndercoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UCIRoomUndercoverViewController.m; path = Model/UCIRoomUndercoverViewController.m; sourceTree = "<group>"; };
+		38FFCC801993DDE40063859B /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		38FFCC811993DDE40063859B /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		69C0D4BC55754114AF83A8A1 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		C3089DC118C778D400A7BAAD /* EAIntroPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAIntroPage.h; sourceTree = "<group>"; };
 		C3089DC218C778D400A7BAAD /* EAIntroPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAIntroPage.m; sourceTree = "<group>"; };
@@ -525,6 +528,8 @@
 		C3F06C2618B6432D00F08642 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				38FFCC801993DDE40063859B /* Reachability.h */,
+				38FFCC811993DDE40063859B /* Reachability.m */,
 				C3F06C2E18B6432D00F08642 /* UCIAppDelegate.h */,
 				C3F06C2F18B6432D00F08642 /* UCIAppDelegate.m */,
 				C3F06C2718B6432D00F08642 /* UnderCoverIOS-Info.plist */,
@@ -737,6 +742,7 @@
 				38B554CA191BF43900E41984 /* LocatePunishTableViewController.m in Sources */,
 				C3700D3D18BF962B00B6CBFC /* UnderCoverGame.m in Sources */,
 				C3F06C3018B6432D00F08642 /* UCIAppDelegate.m in Sources */,
+				38FFCC821993DDE40063859B /* Reachability.m in Sources */,
 				38BA191E18CF7BCD00F6741E /* UCIBaseViewController.m in Sources */,
 				38ECA8611930BC60007672BA /* UCIRoomUndercoverViewController.m in Sources */,
 				38ECA84E192BBE2B007672BA /* UCIViewNewNameController.m in Sources */,

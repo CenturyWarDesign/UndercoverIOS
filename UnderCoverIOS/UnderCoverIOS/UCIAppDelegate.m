@@ -10,6 +10,7 @@
 #import "MobClick.h"
 #import "APService.h"
 #import "HTTPBase.h"
+#import "Reachability.h"
 @implementation UCIAppDelegate
 static bool messageCount;
 static bool GAME_DEBUG;
@@ -57,7 +58,7 @@ static bool GAME_DEBUG;
     
     //清除脚标
     [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
-    GAME_DEBUG=false;
+    GAME_DEBUG=true;
 
     return YES;
 }
@@ -193,5 +194,41 @@ static bool GAME_DEBUG;
     }
     return valuedefault;
 }
+
+
+
+
++(BOOL) isConnectionAvailable{
+    
+    BOOL isExistenceNetwork = YES;
+    Reachability *reach = [Reachability reachabilityWithHostName:@"www.apple.com"];
+    switch ([reach currentReachabilityStatus]) {
+        case NotReachable:
+            isExistenceNetwork = NO;
+            //NSLog(@"notReachable");
+            break;
+        case ReachableViaWiFi:
+            isExistenceNetwork = YES;
+            //NSLog(@"WIFI");
+            break;
+        case ReachableViaWWAN:
+            isExistenceNetwork = YES;
+            //NSLog(@"3G");
+            break;
+    }
+    
+    //    if (!isExistenceNetwork) {
+    //        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];//<span style="font-family: Arial, Helvetica, sans-serif;">MBProgressHUD为第三方库，不需要可以省略或使用AlertView</span>
+    //        hud.removeFromSuperViewOnHide =YES;
+    //        hud.mode = MBProgressHUDModeText;
+    //        hud.labelText = @"当前网络不可用，请检查网络连接";  //提示的内容
+    //        hud.minSize = CGSizeMake(132.f, 108.0f);
+    //        [hud hide:YES afterDelay:3];
+    //        return NO;
+    //    }
+    return isExistenceNetwork;
+}
+
+
 
 @end

@@ -20,4 +20,5 @@
 +(BOOL)isdebug;
 //全局配置文件
 +(NSString *)getConfig:(NSString *)key;
++(BOOL) isConnectionAvailable;
 @end
