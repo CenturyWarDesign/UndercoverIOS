@@ -125,12 +125,14 @@
 }
 -(void)tapPeople:(UIButton *)sender{
     int tag=(int)sender.tag;
-    NSString * txtShenFen= [[datagame objectAtIndex:tag-1] objectForKey:@"user"];
+    NSString * txtShenFen= [[datagame objectAtIndex:tag-1] objectForKey:@"content"];
     if([txtShenFen isEqualToString:sonWord]){
-       PeopleCount--;
+      // PeopleCount--;
+        SonCount--;
     }
     else{
-         SonCount--;
+         //SonCount--;
+        PeopleCount--;
     }
     txtShenFen=@"出局";
     [sender setTitle:txtShenFen forState:UIControlStateDisabled];
