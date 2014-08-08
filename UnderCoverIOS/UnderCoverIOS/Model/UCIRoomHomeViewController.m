@@ -84,6 +84,11 @@
 }
 */
 - (IBAction)btnJoinRoom:(id)sender {
+    if ([self.labRoomId.text isEqualToString:@""]) {
+        [self showAlert:@"提示" content:@"请输入房间号"];
+        return;
+    }
+    
     HTTPBase *classBtest = [[HTTPBase alloc] init];
     classBtest.delegate = self;
     [classBtest baseHttp:@"RoomJoin" paramsdata:[NSDictionary dictionaryWithObjectsAndKeys:self.labRoomId.text,@"roomid",nil]];
@@ -141,6 +146,13 @@
 
     }
 
+}
+
+-(void)callback:(int)code
+{
+    if (code == 1101) {
+        [self setEnable];
+    }
 }
 
 @end

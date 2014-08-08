@@ -73,6 +73,7 @@
     }
     switch (code) {
         case 1101:
+            [self callback:code];
             [self showAlert:@"" content:@"房间号不正确"];
             break;
             

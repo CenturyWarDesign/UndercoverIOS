@@ -15,6 +15,7 @@
 }
 -(void)uMengClick:(NSString *) event;
 -(void)callBack:(NSArray *)data commandName:(NSString*) command;
+-(void)callback:(int)code;
 -(id) getObjectFromDefault:(NSString *)key;
 -(void) setObjectFromDefault:(NSObject *)object key:(NSString *)key;
 -(void)showAlert:(NSString *)title content:(NSString *) content;
