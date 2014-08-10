@@ -125,6 +125,11 @@
     [self textFieldDoneEditing:self.labRoomId];
 }
 
+-(IBAction)backgroundTap:(id)sender
+{
+    [self.labRoomId resignFirstResponder];
+}
+
 
 -(void)callBack:(NSDictionary *)data commandName:(NSString*) command{
     [self setEnable];
