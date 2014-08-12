@@ -134,6 +134,13 @@
 
     int btnWidth=(width-30)/4;
     int btnHeight=btnWidth;
+    
+    //
+   //self.scrollUsers = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 460)];
+    //self.scrollUsers.contentSize=CGSizeMake(400,800);
+    //self.scrollUsers.showsVerticalScrollIndicator=true;
+   // _scrollUsers.backgroundColor=[UIColororangeColor];
+    //_scrollUsers.pagingEnabled=YES;
 
     for (UIView *view_ in _scrollUsers.subviews) {
         [view_ removeFromSuperview];
