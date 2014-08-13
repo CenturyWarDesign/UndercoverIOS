@@ -130,6 +130,8 @@
     //显示哪些可以显示，哪些活动不可以显示
     [self checkifEnable:[userinfotem count]];
     
+    //scrollUsers = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 460)];
+    
     int width=self.scrollUsers.bounds.size.width;
 
     int btnWidth=(width-30)/4;
@@ -147,7 +149,10 @@
     }
     //这里判断，玩家名字一样的话，特别显示
     NSMutableArray * usernamearray=[[NSMutableArray alloc] init];
-    
+   // UIScrollView * scrollUsers =[[UIScrollView alloc] initWithFrame:CGRectMake(0.0, 0.0,self.view.frame.size.width, 400)];
+//设置scrollusers的大小
+    CGSize newSize = CGSizeMake(width , width * 2);
+    [self.scrollUsers setContentSize:newSize];
     
     int gameuid=[[self getObjectFromDefault:@"gameuid"] intValue];
     for(int i=0;i<[userinfotem count];i++){
