@@ -14,6 +14,9 @@
 
 @implementation UCITouchButtonViewController
 
+int P_count = 5;
+int num_init ;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -27,6 +30,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+    num_init = arc4random() % P_count *3;
+    [self.touchButton setEnabled:true];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,5 +52,19 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (IBAction)touchButton:(id)sender {
+    num_init=num_init-1;
+    if (num_init<=0)
+    {//button disable
+        //set button
+        [self.touchButton setEnabled:false];
+        [self.touchButton setBackgroundColor:[UIColor redColor]];
+        //[self.touchButton setText:@"卧底失败"];
+       // [self.touchButton setTitle:@“bomp” forState:UIControlState normal];
+        
+        
+    }
+    
+}
 
 @end

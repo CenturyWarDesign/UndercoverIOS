@@ -9,5 +9,6 @@
 #import "UCIBaseViewController.h"
 
 @interface UCITouchButtonViewController : UCIBaseViewController
+@property (weak, nonatomic) IBOutlet UIButton *touchButton;
 
 @end
