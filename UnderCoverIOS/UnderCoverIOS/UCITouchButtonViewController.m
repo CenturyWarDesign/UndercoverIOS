@@ -16,6 +16,7 @@
 
 int P_count = 5;
 int num_init ;
+int flag=1;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,6 +34,7 @@ int num_init ;
 
     num_init = arc4random() % P_count *3;
     [self.touchButton setEnabled:true];
+    [self.touchButton setBackgroundColor:[UIColor yellowColor]];
 
 }
 
@@ -54,6 +56,15 @@ int num_init ;
 */
 - (IBAction)touchButton:(id)sender {
     num_init=num_init-1;
+    //int flag=1;
+    if (flag==1) {
+        flag=0;
+        [self.touchButton setBackgroundColor:[UIColor greenColor]];
+        
+    }else if (flag==0){
+        flag=1;
+    [self.touchButton setBackgroundColor:[UIColor yellowColor]];
+    }
     if (num_init<=0)
     {//button disable
         //set button
