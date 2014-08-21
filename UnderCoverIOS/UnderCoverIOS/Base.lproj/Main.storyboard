@@ -366,6 +366,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="punishBtn:" destination="sx7-ov-aWi" eventType="touchUpInside" id="rXy-bB-Qjw"/>
                                     <segue destination="mE6-is-2BY" kind="push" id="fEp-tV-5F3"/>
                                 </connections>
                             </button>

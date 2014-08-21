@@ -35,6 +35,7 @@ int flag=1;
     num_init = arc4random() % P_count *3;
     [self.touchButton setEnabled:true];
     [self.touchButton setBackgroundColor:[UIColor yellowColor]];
+    [self.touchButton setTitle:@"点我呀！！" forState:normal];
     [self.punishButton setHidden:YES];
 
 }
@@ -80,6 +81,9 @@ int flag=1;
         
     }
     
+}
+- (IBAction)punishBtn:(id)sender {
+    [self viewDidLoad];
 }
 
 @end
