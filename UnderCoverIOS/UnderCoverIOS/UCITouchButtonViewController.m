@@ -59,8 +59,11 @@ int num_init ;
         //set button
         [self.touchButton setEnabled:false];
         [self.touchButton setBackgroundColor:[UIColor redColor]];
+        [self.touchButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [self.touchButton setTitle:@"接受惩罚" forState:normal];
         //[self.touchButton setText:@"卧底失败"];
        // [self.touchButton setTitle:@“bomp” forState:UIControlState normal];
+        
         
         
     }
