@@ -359,17 +359,28 @@
                                     <action selector="touchButton:" destination="sx7-ov-aWi" eventType="touchUpInside" id="RiE-0y-8Pc"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NCu-Nz-0cx">
+                                <rect key="frame" x="118" y="382" width="84" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="接受惩罚">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="mE6-is-2BY" kind="push" id="fEp-tV-5F3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="4E4-dz-OHr"/>
                     <connections>
+                        <outlet property="punishButton" destination="NCu-Nz-0cx" id="KSW-jn-cp0"/>
                         <outlet property="touchButton" destination="Rgv-39-vGc" id="7Be-wT-4sU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wv8-fC-gLa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="304" y="208"/>
+            <point key="canvasLocation" x="906" y="588"/>
         </scene>
         <!--Help View Controller - 玩法-->
         <scene sceneID="DHa-PW-x6M">
@@ -1526,6 +1537,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Nkf-oU-wE6"/>
+        <segue reference="fEp-tV-5F3"/>
     </inferredMetricsTieBreakers>
 </document>

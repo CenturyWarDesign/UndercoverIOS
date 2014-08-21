@@ -35,6 +35,7 @@ int flag=1;
     num_init = arc4random() % P_count *3;
     [self.touchButton setEnabled:true];
     [self.touchButton setBackgroundColor:[UIColor yellowColor]];
+    [self.punishButton setHidden:YES];
 
 }
 
@@ -74,7 +75,7 @@ int flag=1;
         [self.touchButton setTitle:@"接受惩罚" forState:normal];
         //[self.touchButton setText:@"卧底失败"];
        // [self.touchButton setTitle:@“bomp” forState:UIControlState normal];
-        
+        [self.punishButton setHidden:NO];
         
         
     }
