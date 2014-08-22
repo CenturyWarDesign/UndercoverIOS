@@ -209,12 +209,16 @@
 }
 
 - (IBAction)btnStartUndercover:(id)sender {
+    //[self ReflashU;
     HTTPBase *classBtest = [[HTTPBase alloc] init];
     classBtest.delegate = self;
     [classBtest baseHttp:@"RoomStartGame" paramsdata:[NSDictionary dictionaryWithObjectsAndKeys:@"1",@"type",[NSString stringWithFormat:@"%d",addPeopleCount],@"addPeople",nil]];
     gametype=1;
     [self uMengClick:@"room_undercover"];
     [self setBtnDisable];
+   // [self ReflashUsers];
+    //[self.btnKiller setEnabled:false];
+    
 }
 
 //开始杀人游戏
@@ -271,7 +275,7 @@
     
      //杀人游戏 6-16人
     if(peoplecount>=[[self getConfig:@"KILLER_MIN_PEOPLE"] intValue]&&peoplecount<=[[self getConfig:@"KILLER_MAX_PEOPLE"] intValue]){
-        [self.btnKiller setEnabled:true];
+       // [self.btnKiller setEnabled:true];
     }
     else
     {
