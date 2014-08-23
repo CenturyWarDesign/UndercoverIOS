@@ -102,7 +102,7 @@
             [self performSegueWithIdentifier:@"gameKiller" sender:self];
         }
         NSLog(@"RoomStartGame 函数的回调");
-        [self setBtnEnable];
+        [self checkifEnable:[userinfo count]+(int)self.peopleCount.value];
     }
     else if([command isEqualToString:@"RoomRemoveSomeone"]){
         [self showAlert:@"" content:@"删除玩家成功"];
@@ -253,7 +253,8 @@
 
 - (IBAction)peoplechange:(UISlider *)sender {
      int progress=(int)lroundf(sender.value);
-    addPeopleCount=progress;
+     addPeopleCount=progress;
+    //addPeopleCount=5;
     [self.labPeople setText:[NSString stringWithFormat:@"%d",progress ]];
 
     [self ReflashUsers];
@@ -275,12 +276,13 @@
     
      //杀人游戏 6-16人
     if(peoplecount>=[[self getConfig:@"KILLER_MIN_PEOPLE"] intValue]&&peoplecount<=[[self getConfig:@"KILLER_MAX_PEOPLE"] intValue]){
-       // [self.btnKiller setEnabled:true];
+        [self.btnKiller setEnabled:true];
     }
     else
     {
         [self.btnKiller setEnabled:false];
     }
+    [self.btnDouble setEnabled:true];
 }
 
 

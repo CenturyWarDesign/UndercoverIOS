@@ -34,7 +34,6 @@
 @property (strong, nonatomic) IBOutlet UISwitch *btnShowWord;
 @property (strong, nonatomic) IBOutlet UIScrollView *viewPop;
 @property (strong, nonatomic) IBOutlet UIButton *btnShowPunish;
-@property (weak, nonatomic) IBOutlet UIButton *restart;
 
 -(void) sendToSendPunish:(NSString *) str;
 -(NSString *) getLoserStr:(NSString *)loser;

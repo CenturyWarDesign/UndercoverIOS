@@ -29,7 +29,7 @@
 {
     [super viewDidLoad];
     //［self.navigationItem setBackButtonHide：YES］;
-    self.navigationItem.hidesBackButton=YES;
+    //self.navigationItem.hidesBackButton=YES;
     
     [self.labStatus setText:@""];
 //    datagame=gameundercover;

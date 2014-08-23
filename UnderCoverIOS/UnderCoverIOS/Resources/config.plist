@@ -18,7 +18,7 @@
 	<string>10</string>
 	<key>KILLER_MIN_PEOPLE</key>
 	<string>6</string>
-	<key>KILLER_MAN_PEOPLE</key>
+	<key>KILLER_MAX_PEOPLE</key>
 	<string>16</string>
 	<key>SHOW_SHENFEN_SEC</key>
 	<string>3</string>

@@ -767,7 +767,7 @@
                                     <action selector="btnPeople:" destination="tcv-I7-KND" eventType="touchUpInside" id="isF-OF-XQf"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="uMd-5L-dZd">
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="uMd-5L-dZd">
                                 <rect key="frame" x="123" y="113" width="104" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="AF4-Zk-aEh"/>
@@ -959,20 +959,7 @@
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" title="谁是卧底" id="pYo-GM-ptv">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="dAW-oX-7hb">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="DRo-Q1-qib">
-                                <rect key="frame" x="5" y="0.0" width="84" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="重新开始">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="tcv-I7-KND" kind="push" id="Way-LT-hBF"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="谁是卧底" id="pYo-GM-ptv"/>
                     <connections>
                         <outlet property="btnAdd1" destination="ndw-wS-vO3" id="DaM-Fq-jp4"/>
                         <outlet property="btnAdd2" destination="srO-Qg-ysK" id="YtW-oa-ugg"/>
@@ -981,13 +968,12 @@
                         <outlet property="labPunishContent" destination="e7p-Jh-GUm" id="0T8-Zm-dB3"/>
                         <outlet property="labPunishTitle" destination="wep-dn-tSh" id="pkp-4K-26m"/>
                         <outlet property="labStatus" destination="mM1-h8-wSs" id="jF6-Jf-iks"/>
-                        <outlet property="restart" destination="DRo-Q1-qib" id="CUv-hJ-gmc"/>
                         <outlet property="viewPop" destination="QJP-YF-ezB" id="57i-bF-TGo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JRQ-Fd-EfJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1470" y="2277"/>
+            <point key="canvasLocation" x="1242" y="2317"/>
         </scene>
         <!--Room Killer View Controller - 杀人游戏-->
         <scene sceneID="bFF-Ig-ERz">
@@ -1553,6 +1539,5 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="fEp-tV-5F3"/>
-        <segue reference="Way-LT-hBF"/>
     </inferredMetricsTieBreakers>
 </document>
