@@ -45,9 +45,11 @@
     fatherWord=[[gameData objectForKey:@"room_contente"] objectForKey:@"father"];
     NSArray * room_user=[gameData objectForKey:@"room_user"];
     datagame =[[NSMutableArray alloc] init];
+    //主持人的gameuid
+    int zhuchigameuid=[[gameData objectForKey:@"gameuid"] intValue];
     for (int i=0; i<[room_user count]; i++) {
         [datagame addObject:[NSDictionary dictionaryWithObjectsAndKeys:[(NSDictionary *)[room_user objectAtIndex:i] objectForKey:@"username"],@"user",[(NSDictionary *)[room_user objectAtIndex:i] objectForKey:@"content"],@"content",[(NSDictionary *)[room_user objectAtIndex:i] objectForKey:@"gameuid"],@"gameuid",nil]];
-        if([[gameData objectForKey:@"gameuid"]isEqualToString:[(NSDictionary *)[room_user objectAtIndex:i] objectForKey:@"gameuid"]]){
+        if(zhuchigameuid==[[(NSDictionary *)[room_user objectAtIndex:i] objectForKey:@"gameuid"] intValue]){
             [self.labMeWord setText:[(NSDictionary *)[room_user objectAtIndex:i] objectForKey:@"content"]];
         }
     }

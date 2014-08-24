@@ -44,19 +44,17 @@
         return;
     }
 
+    
 
+    int roomid=[[self getObjectFromDefault:@"roomid"] intValue];
     //如果已经在一个房间内，那么直接跳过去
-    NSString *roomtype=[self getObjectFromDefault:@"roomtype"];
-    if([roomtype isEqualToString:@"create"]){
+    NSString *roomtype= [self getObjectFromDefault:@"roomtype"];
+    if([roomtype isEqualToString:@"create"]&&roomid>0){
         [self performSegueWithIdentifier:@"createroom" sender:self];
-    }else if([roomtype isEqualToString:@"join"]){
+    }else if([roomtype isEqualToString:@"join"]&&roomid>0){
         [self performSegueWithIdentifier:@"joinroom" sender:self];
     }
     //如果已经设置过姓名，则跳过
-    
-    
-
-
     
 
     [self setEnable];
@@ -138,6 +136,9 @@
 //        NSString * roomid=[data objectForKey:@"roomid"];
 //        [UCIAppDelegate setRoomPush:[NSString stringWithFormat:@"ROOM_%@",roomid]];
         [self setObjectFromDefault:@"create" key:@"roomtype"];
+        
+        [self setObjectFromDefault:[data objectForKey:@"roomid"] key:@"roomid"];
+        
         [self uMengClick:@"room_create"];
         [self performSegueWithIdentifier:@"createroom" sender:self];
     }

@@ -90,16 +90,16 @@
 
 -(void)callBack:(NSDictionary *)data commandName:(NSString*) command{
     if([command isEqualToString:@"RoomGetContent"]){
-        NSString *roomid=[data objectForKey:@"roomid"];
+        int roomid=[[data objectForKey:@"roomid"] intValue];
         NSString *content=[data objectForKey:@"content"];
-        NSString *gamename=[data objectForKey:@"gamename"];
+        NSString *gamename=[[data objectForKey:@"roominfo"]objectForKey:@"name"];
 //        NSString *createtime=[data objectForKey:@"createtime"];
-        if(roomid==nil){
+        if(roomid==0){
             [self showAlert:@"" content:@"房间已经不存在,或已经被踢出房间"];
             [self.navigationController popViewControllerAnimated:YES];
             [UCIAppDelegate setRoomPush:@""];
         }
-        [self.labRoomId setText:roomid];
+        [self.labRoomId setText:[NSString stringWithFormat:@"%d",roomid]];
         [self.labContent setText:content];
         [self.labGameName setText:gamename];
         NSLog(@"RoomGetContent 函数的回调");
