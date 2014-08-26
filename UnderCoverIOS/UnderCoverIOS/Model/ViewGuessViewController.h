@@ -11,8 +11,8 @@
 @interface ViewGuessViewController : UCIBaseViewController{
     int PeopleCount;
     int SonCount;
-    int fatherSet;
-    int sonSet;
+    long long fatherSet;
+    long long sonSet;
     int MaxPeopleCount;
     int MaxSonCount;
     int curPeople;

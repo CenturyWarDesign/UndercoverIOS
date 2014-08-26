@@ -106,9 +106,15 @@
                         }];
 }
 
-// set max capacity is 15
+/*
+ * 
+ * sonSet/fatherSet格式: p1,p2,p3...
+ * pn对应的是任务编号, 最大编号是15(4位偏移)
+ * 所以使用long long来存储最多15个人, 应该是够的
+ *
+ */
 -(void)splitSonFather {
-    int sw = 1, fw = 1;
+    long long sw = 1, fw = 1;
     fatherSet = sonSet = 0;
     for (int i = 1; i <= [arrContent count]; ++i) {
         NSString * txtShenFen=[arrContent objectForKey:[NSString stringWithFormat:@"%d",i]];
@@ -124,20 +130,23 @@
     }
 }
 
+/*
+ * see splitSonFather()
+ */
 -(NSString *)getSonSetString {
-    int s = sonSet;
-    NSString *ret = [NSString stringWithFormat:@"%d", (s % 16)];
+    long long s = sonSet;
+    NSString *ret = [NSString stringWithFormat:@"%d", (int)(s % 16)];
     while (s >>= 4) {
-        ret = [NSString stringWithFormat:@"%@, %d", ret, (s % 16)];
+        ret = [NSString stringWithFormat:@"%@, %d", ret, (int)(s % 16)];
     }
     return ret;
 }
 
 -(NSString *)getFatherSetString {
-    int s = fatherSet;
-    NSString *ret = [NSString stringWithFormat:@"%d", (s % 16)];
+    long long s = fatherSet;
+    NSString *ret = [NSString stringWithFormat:@"%d", (int)(s % 16)];
     while (s >>= 4) {
-        ret = [NSString stringWithFormat:@"%@, %d", ret, (s % 16)];
+        ret = [NSString stringWithFormat:@"%@, %d", ret, (int)(s % 16)];
     }
     return ret;
 }
