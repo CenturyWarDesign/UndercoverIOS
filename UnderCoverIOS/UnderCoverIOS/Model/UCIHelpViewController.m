@@ -27,14 +27,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    NSString * ipaddress=[NSString stringWithFormat:@"%@?showpage=help", [UCIAppDelegate getConfig:@"homepage"]];
+    NSURLRequest * request=[NSURLRequest requestWithURL:[NSURL URLWithString:ipaddress]];
+    [self.webView loadRequest:request];
     
     // Do any additional setup after loading the view.
 }
 -(void) viewWillAppear:(BOOL)animated{
-    NSString * ipaddress=[UCIAppDelegate getConfig:@"help"];
-    NSURLRequest * request=[NSURLRequest requestWithURL:[NSURL URLWithString:ipaddress]];
-    [self.webView loadRequest:request];
+  
 }
 
 - (void)didReceiveMemoryWarning
