@@ -56,7 +56,7 @@
     }
     //如果已经设置过姓名，则跳过
     
-
+    [self.loadIng setHidden:true];
     [self setEnable];
     // Do any additional setup after loading the view.
 }
