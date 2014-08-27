@@ -37,15 +37,15 @@
         return;
     }
     
+    [self.loadIng setHidden:true];
+    
     NSString *username=[self getObjectFromDefault:@"username"];
     
     if([username length]==0){
         [self performSegueWithIdentifier:@"changeName" sender:self];
         return;
     }
-
     
-
     int roomid=[[self getObjectFromDefault:@"roomid"] intValue];
     //如果已经在一个房间内，那么直接跳过去
     NSString *roomtype= [self getObjectFromDefault:@"roomtype"];
@@ -56,7 +56,6 @@
     }
     //如果已经设置过姓名，则跳过
     
-    [self.loadIng setHidden:true];
     [self setEnable];
     // Do any additional setup after loading the view.
 }
