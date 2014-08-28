@@ -14,6 +14,7 @@
 
 @implementation UCIRoomKillerViewController
 
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -29,7 +30,7 @@
     KillerCount=[[[[self gameData] objectForKey:@"room_contente"] objectForKey:@"killer" ] intValue];
     PoliceCount=[[[[self gameData] objectForKey:@"room_contente"] objectForKey:@"police" ] intValue];
     
-    Pingmin=PeopleCount-KillerCount-PoliceCount-1;
+    Pinmin=PeopleCount-KillerCount-PoliceCount-1;
     // Do any additional setup after loading the view.
 }
 
@@ -43,7 +44,7 @@
         PoliceCount--;
     }
     else{
-        Pingmin--;
+        Pinmin--;
     }
     BOOL finish=false;
     if(KillerCount<=0){
@@ -54,7 +55,7 @@
         
         [self disabledAllButton];
         finish=true;
-    }else if(PoliceCount<=0||Pingmin<=0){
+    }else if(PoliceCount<=0||Pinmin<=0){
         [self.labStatus setText:@"杀手胜利"];
         NSString *loserStr=[NSString stringWithFormat:@"%@%@", [self getLoserStr:@"平民"], [self getLoserStr:@"警察"]] ;
         [self sendToSendPunish:loserStr];

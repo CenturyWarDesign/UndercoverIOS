@@ -11,7 +11,7 @@
 @interface UCIRoomKillerViewController : UCIRoomUndercoverViewController{
     int KillerCount;
     int PoliceCount;
-    int Pingmin;
+    int Pinmin;
 }
 
 @end

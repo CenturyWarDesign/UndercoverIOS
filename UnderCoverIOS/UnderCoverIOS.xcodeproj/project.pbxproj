@@ -58,6 +58,8 @@
 		38ECA85A192CEE5D007672BA /* UCIRoomSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ECA859192CEE5D007672BA /* UCIRoomSettingViewController.m */; };
 		38ECA8611930BC60007672BA /* UCIRoomUndercoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ECA8601930BC60007672BA /* UCIRoomUndercoverViewController.m */; };
 		38FFCC821993DDE40063859B /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FFCC811993DDE40063859B /* Reachability.m */; };
+		800E508619A976FE0056F981 /* UCIkillSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 800E508519A976FE0056F981 /* UCIkillSettingViewController.m */; };
+		800E508919ACE2A20056F981 /* UCIallocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 800E508819ACE2A20056F981 /* UCIallocationViewController.m */; };
 		8013309A19A3A2C8009AC1A3 /* UCITouchButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8013309919A3A2C8009AC1A3 /* UCITouchButtonViewController.m */; };
 		C3089DC518C778D400A7BAAD /* EAIntroPage.m in Sources */ = {isa = PBXBuildFile; fileRef = C3089DC218C778D400A7BAAD /* EAIntroPage.m */; };
 		C3089DC618C778D400A7BAAD /* EAIntroView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3089DC418C778D400A7BAAD /* EAIntroView.m */; };
@@ -197,6 +199,10 @@
 		38FFCC801993DDE40063859B /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		38FFCC811993DDE40063859B /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		69C0D4BC55754114AF83A8A1 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		800E508419A976FE0056F981 /* UCIkillSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCIkillSettingViewController.h; sourceTree = "<group>"; };
+		800E508519A976FE0056F981 /* UCIkillSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCIkillSettingViewController.m; sourceTree = "<group>"; };
+		800E508719ACE2A20056F981 /* UCIallocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCIallocationViewController.h; sourceTree = "<group>"; };
+		800E508819ACE2A20056F981 /* UCIallocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCIallocationViewController.m; sourceTree = "<group>"; };
 		8013309819A3A2C8009AC1A3 /* UCITouchButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCITouchButtonViewController.h; sourceTree = "<group>"; };
 		8013309919A3A2C8009AC1A3 /* UCITouchButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCITouchButtonViewController.m; sourceTree = "<group>"; };
 		C3089DC118C778D400A7BAAD /* EAIntroPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAIntroPage.h; sourceTree = "<group>"; };
@@ -526,6 +532,10 @@
 				C3F06C2618B6432D00F08642 /* Supporting Files */,
 				8013309819A3A2C8009AC1A3 /* UCITouchButtonViewController.h */,
 				8013309919A3A2C8009AC1A3 /* UCITouchButtonViewController.m */,
+				800E508419A976FE0056F981 /* UCIkillSettingViewController.h */,
+				800E508519A976FE0056F981 /* UCIkillSettingViewController.m */,
+				800E508719ACE2A20056F981 /* UCIallocationViewController.h */,
+				800E508819ACE2A20056F981 /* UCIallocationViewController.m */,
 			);
 			path = UnderCoverIOS;
 			sourceTree = "<group>";
@@ -744,6 +754,7 @@
 				3817917119080A5500A313ED /* ViewUndercoverViewController.m in Sources */,
 				C36F0CDC18D8A2D0003DAD1E /* GDataXMLNode.m in Sources */,
 				38ECA857192CEE24007672BA /* UCIRomeInfoViewController.m in Sources */,
+				800E508619A976FE0056F981 /* UCIkillSettingViewController.m in Sources */,
 				38B554CA191BF43900E41984 /* LocatePunishTableViewController.m in Sources */,
 				C3700D3D18BF962B00B6CBFC /* UnderCoverGame.m in Sources */,
 				C3F06C3018B6432D00F08642 /* UCIAppDelegate.m in Sources */,
@@ -756,6 +767,7 @@
 				3873F70519055D26003827E4 /* UCIPublishNet.m in Sources */,
 				38ECA85A192CEE5D007672BA /* UCIRoomSettingViewController.m in Sources */,
 				384B3E681916762B0027201E /* testViewController.m in Sources */,
+				800E508919ACE2A20056F981 /* UCIallocationViewController.m in Sources */,
 				38229F06193798A300974F1A /* UCIFeedBackViewController.m in Sources */,
 				3873F70619055D26003827E4 /* UCIPunishViewController.m in Sources */,
 				381791771908159A00A313ED /* ViewFenpeiViewController.m in Sources */,

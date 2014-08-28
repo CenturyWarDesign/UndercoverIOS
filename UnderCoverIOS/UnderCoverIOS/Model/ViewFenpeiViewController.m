@@ -105,7 +105,7 @@
 - (IBAction)nextOne:(id)sender {
     if(nowIndex>PeopleCount)
     {
-        [self performSegueWithIdentifier:@"segueToGuess" sender:self];
+        [self performSegueWithIdentifier:@"segueToKiller" sender:self];
         return;
     }
     if(showContent){
@@ -136,7 +136,7 @@
 //向猜卧底里面传值
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if([segue.identifier isEqualToString:@"segueToGuess"]) //"goView2"是SEGUE连线的标识
+    if([segue.identifier isEqualToString:@"segueToKiller"]) //"goView2"是SEGUE连线的标识
     {
         id theSegue = segue.destinationViewController;
         //界面之间进行传值
