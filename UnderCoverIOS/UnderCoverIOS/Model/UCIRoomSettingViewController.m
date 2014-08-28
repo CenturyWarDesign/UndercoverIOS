@@ -27,7 +27,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.labRoomId setText:[self getObjectFromDefault:@"gameuid"]];
+    int roomid=[[self getObjectFromDefault:@"roomid"] intValue];
+    if(roomid>0){
+        [self.labRoomId setText:[NSString  stringWithFormat:@"%d",roomid]];
+    }
+
     
     
     timerCheck= [NSTimer  timerWithTimeInterval:1.0 target:self selector:@selector(checkFlash)userInfo:nil repeats:YES];
