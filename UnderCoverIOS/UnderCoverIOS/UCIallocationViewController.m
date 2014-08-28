@@ -125,34 +125,33 @@
     
 }
 - (IBAction)nextButton:(id)sender {
-    [self performSegueWithIdentifier:@"segueToKiller" sender:self];
-
-//    if(nowIndex>totalCount)
-//    {
-//        [self performSegueWithIdentifier:@"segueToKiller" sender:self];
-//        return;
-//    }
-//    if(showContent){
-//        NSString * showtem=[arrContent objectForKey:[NSString stringWithFormat:@"%d",nowIndex]];
-//        [self.labContent setText:showtem];
-//        [self.nextButton setTitle:@"请交给下一位" forState:UIControlStateNormal];
-//        if(nowIndex==totalCount){
-//            [self.nextButton setTitle:@"开始竞猜" forState:UIControlStateNormal];
-//            nowIndex++;
-//        }
-//    }
-//    else{
-//        nowIndex++;
-//        [self.labContent setText:@""];
-//        [self.nextButton setTitle:[NSString stringWithFormat:@"第%d号",nowIndex] forState:UIControlStateNormal];
-//        if(nowIndex==1){
-//            //点击翻牌第一步
-//            //[self uMengClick:@"click_undercover_pai_first"];
-//        }
-//    }
-//    showContent=!showContent;
-//    [self.imageView setHidden:!showContent];
-//    [self.labContent setHidden:showContent];
+    
+    if(nowIndex>totalCount)
+    {
+        [self performSegueWithIdentifier:@"segueToKiller" sender:self];
+        return;
+    }
+    if(showContent){
+        NSString * showtem=[arrContent objectForKey:[NSString stringWithFormat:@"%d",nowIndex]];
+        [self.labContent setText:showtem];
+        [self.nextButton setTitle:@"请交给下一位" forState:UIControlStateNormal];
+        if(nowIndex==totalCount){
+            [self.nextButton setTitle:@"开始竞猜" forState:UIControlStateNormal];
+            nowIndex++;
+        }
+    }
+    else{
+        nowIndex++;
+        [self.labContent setText:@""];
+        [self.nextButton setTitle:[NSString stringWithFormat:@"第%d号",nowIndex] forState:UIControlStateNormal];
+        if(nowIndex==1){
+            //点击翻牌第一步
+            //[self uMengClick:@"click_undercover_pai_first"];
+        }
+    }
+    showContent=!showContent;
+    [self.imageView setHidden:!showContent];
+    [self.labContent setHidden:showContent];
 }
 //-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 //{
