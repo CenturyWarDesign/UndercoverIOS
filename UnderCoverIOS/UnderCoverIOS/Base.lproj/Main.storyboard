@@ -488,7 +488,7 @@
                         <outlet property="imageView" destination="2Xf-Qz-B55" id="jbw-Td-BuE"/>
                         <outlet property="labContent" destination="Voq-M2-Kuv" id="h6F-sY-oAt"/>
                         <outlet property="nextButton" destination="Awd-5c-rXv" id="fWT-3F-YlE"/>
-                        <segue destination="15x-TO-u5R" kind="push" id="60M-M9-zsB"/>
+                        <segue destination="15x-TO-u5R" kind="push" identifier="segueToKiller" id="60M-M9-zsB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P12-nZ-6Fm" userLabel="First Responder" sceneMemberID="firstResponder"/>
