@@ -182,7 +182,7 @@
         [someAddButton setTag:i];
         //点击删除某个玩家
         
-        [someAddButton addTarget:self action:@selector(tapPeople:) forControlEvents:UIControlEventTouchUpInside];
+        //[someAddButton addTarget:self action:@selector(tapPeople:) forControlEvents:UIControlEventTouchUpInside];
         [self.scrollUsers addSubview:someAddButton];
     }
 }
