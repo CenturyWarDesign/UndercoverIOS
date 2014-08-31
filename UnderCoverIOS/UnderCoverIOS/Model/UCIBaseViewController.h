@@ -23,7 +23,7 @@
 -(void)hasPlayed:(NSString *)words;
 
 
--(void)playChuishsao;
+-(void)playChuishao;
 -(void)playNahan;
 -(void)playHuanhu;
 -(void)playGuzhang;

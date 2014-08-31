@@ -171,7 +171,7 @@
 }
 
 
--(void)playChuishsao{
+-(void)playChuishao{
     [self initSound:@"whistle.mp3"];
 }
 
