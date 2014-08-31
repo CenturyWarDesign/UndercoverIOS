@@ -460,7 +460,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Awd-5c-rXv">
-                                <rect key="frame" x="52" y="304" width="217" height="44"/>
+                                <rect key="frame" x="52" y="344" width="217" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="下一位">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -469,8 +469,8 @@
                                     <action selector="nextButton:" destination="He0-16-Hji" eventType="touchUpInside" id="gbg-yL-L4z"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="224" placeholderIntrinsicHeight="224" image="original.png" translatesAutoresizingMaskIntoConstraints="NO" id="2Xf-Qz-B55">
-                                <rect key="frame" x="48" y="65" width="224" height="224"/>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="224" placeholderIntrinsicHeight="224" image="original.png" translatesAutoresizingMaskIntoConstraints="NO" id="2Xf-Qz-B55">
+                                <rect key="frame" x="49" y="90" width="224" height="224"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Voq-M2-Kuv" propertyAccessControl="none">
@@ -2155,6 +2155,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Gsj-MW-MSA"/>
+        <segue reference="hSa-lq-HVx"/>
     </inferredMetricsTieBreakers>
 </document>

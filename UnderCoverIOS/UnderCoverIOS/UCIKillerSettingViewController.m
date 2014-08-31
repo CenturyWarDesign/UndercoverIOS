@@ -125,11 +125,11 @@
     BOOL finish=false;
    // [self splitSonFather];
     if(curKiller<=0){
-        [self.BtnPunish setTitle:[NSString stringWithFormat:@"杀手失败！！"] forState:UIControlStateNormal];
+        [self.BtnPunish setTitle:[NSString stringWithFormat:@"杀手失败，杀手接受惩罚！"] forState:UIControlStateNormal];
 //        [self disabledAllButton];
         finish=true;
     }else if(curKiller>=curpp){
-        [self.BtnPunish setTitle:[NSString stringWithFormat:@"杀手胜利！！"] forState:UIControlStateNormal];
+        [self.BtnPunish setTitle:[NSString stringWithFormat:@"杀手胜利，警察和平民接受惩罚！"] forState:UIControlStateNormal];
 //        [self disabledAllButton];
         finish=true;
     }else{
