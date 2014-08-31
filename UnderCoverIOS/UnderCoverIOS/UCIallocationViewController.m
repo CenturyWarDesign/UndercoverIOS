@@ -22,11 +22,17 @@
     }
     return self;
 }
-
+-(void)viewWillAppear:(BOOL)animated{
+    [self initWillbegin];
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+}
+-(void)initWillbegin
+{
     totalCount=[[self getObjectFromDefault:@"totalcount"]intValue];
     //SonCount=[[self getObjectFromDefault:@"soncount"]intValue];
     arrContent=[[NSMutableDictionary alloc] init];
@@ -43,9 +49,7 @@
     [self.imageView removeGestureRecognizer:singleTap];
     [self.imageView addGestureRecognizer:singleTap];
     [self.imageView setHidden:false];
-
 }
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
