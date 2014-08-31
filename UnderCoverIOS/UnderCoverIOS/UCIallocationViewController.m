@@ -78,14 +78,26 @@
     if (6<=totalCount<=7) {
         //
         [self allocateWord:(int)2:(int)0];
+        
+        Killer=2;
+        Police=0;
+        
+
     }else if (8<=totalCount<=10){
         //
-        [self allocateWord:(int)2:(int)2];    }else if (11<=totalCount<=14){
+        [self allocateWord:(int)2:(int)2];
+        Killer=2;
+        Police=2;
+    }else if (11<=totalCount<=14){
             //
             [self allocateWord:(int)3:(int)3];
+        Killer=3;
+        Police=3;
         }else if (15<=totalCount<=17){
             //
             [self allocateWord:(int)4:(int)4];
+            Killer=4;
+            Police=4;
         }else{
             //空值
         }
@@ -94,23 +106,24 @@
     for (int i=1;i<=totalCount; i++) {
         [arrContent setValue:@"平民" forKey:[NSString stringWithFormat:@"%d",i]];
     }
-   int killer=killercount;
-    while (killer>0) {
+   
+    while (killercount>0) {
         int tem=(int)lroundf(rand()%totalCount)+1;
         NSString * temword=[arrContent objectForKey:[NSString stringWithFormat:@"%d",tem]];
         if(![temword isEqualToString:@"杀手"]){
             [arrContent setValue:@"杀手" forKey:[NSString stringWithFormat:@"%d",tem]];
-            killer--;
+            killercount--;
         }
-        int police=policecount;
-        while (police>0) {
+    }
+        while (policecount>0) {
             int tem=(int)lroundf(rand()%totalCount)+1;
             NSString * temword=[arrContent objectForKey:[NSString stringWithFormat:@"%d",tem]];
             if(![temword isEqualToString:@"杀手"]){
                 [arrContent setValue:@"警察" forKey:[NSString stringWithFormat:@"%d",tem]];
-                police--;
+                policecount--;
             }
-            
+                 }
+    
             int judge=1;
             while (judge>0) {
                 int tem=(int)lroundf(rand()%totalCount)+1;
@@ -121,9 +134,9 @@
                 }
             }
         }
-    }
+
     
-}
+
 - (IBAction)nextButton:(id)sender {
     
     if(nowIndex>totalCount)
@@ -153,21 +166,21 @@
     [self.imageView setHidden:!showContent];
     [self.labContent setHidden:showContent];
 }
-//-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-//{
-//    if([segue.identifier isEqualToString:@"segueToKiller"]) //"goView2"是SEGUE连线的标识
-//    {
-//        //id theSegue = segue.destinationViewController;
-//        //界面之间进行传值
-//        //[theSegue setValue:[NSString stringWithFormat:@"%d",totalCount] forKey:@"totalcount"];
-//        //[theSegue setValue:[NSString stringWithFormat:@"%d",killer] forKey:@"killer"];
-//       // [theSegue setValue:[NSString stringWithFormat:@"%d",police] forKey:@"police"];
-//       // [theSegue setValue:arrContent forKey:@"arrContent"];
-//        //[theSegue setValue:fatherWrod forKey:@"fatherWord"];
-//        //点击翻牌最后一步
-//       // [self uMengClick:@"click_undercover_pai_last"];
-//    }
-//}
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"segueToKiller"]) //"goView2"是SEGUE连线的标识
+    {
+        id theSegue = segue.destinationViewController;
+        //界面之间进行传值
+        [theSegue setValue:[NSString stringWithFormat:@"%d",totalCount] forKey:@"totalcount"];
+        [theSegue setValue:[NSString stringWithFormat:@"%d",Killer] forKey:@"killer"];
+        [theSegue setValue:[NSString stringWithFormat:@"%d",Police] forKey:@"police"];
+        [theSegue setValue:arrContent forKey:@"arrContent"];
+        //[theSegue setValue:fatherWrod forKey:@"fatherWord"];
+        //点击翻牌最后一步
+       // [self uMengClick:@"click_undercover_pai_last"];
+    }
+}
 
 
 /*

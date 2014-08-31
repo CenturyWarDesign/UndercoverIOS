@@ -11,6 +11,8 @@
 @interface UCIallocationViewController : UCIBaseViewController
 {
     int totalCount;
+    int Killer;
+    int Police;
     NSMutableDictionary *arrContent;
     BOOL showContent;
     int nowIndex;
@@ -18,5 +20,10 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *labContent;
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
+
+@property(nonatomic,weak)NSString *totalcount;
+@property(nonatomic,weak)NSString *police;
+@property(nonatomic,weak)NSString *killer;
+
 
 @end

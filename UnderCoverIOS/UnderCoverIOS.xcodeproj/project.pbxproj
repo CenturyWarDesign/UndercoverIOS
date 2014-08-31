@@ -61,6 +61,7 @@
 		800E508619A976FE0056F981 /* UCIkillSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 800E508519A976FE0056F981 /* UCIkillSettingViewController.m */; };
 		800E508919ACE2A20056F981 /* UCIallocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 800E508819ACE2A20056F981 /* UCIallocationViewController.m */; };
 		8013309A19A3A2C8009AC1A3 /* UCITouchButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8013309919A3A2C8009AC1A3 /* UCITouchButtonViewController.m */; };
+		8074BC5619AF85D200E7FE62 /* UCIKillerSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8074BC5519AF85D200E7FE62 /* UCIKillerSettingViewController.m */; };
 		C3089DC518C778D400A7BAAD /* EAIntroPage.m in Sources */ = {isa = PBXBuildFile; fileRef = C3089DC218C778D400A7BAAD /* EAIntroPage.m */; };
 		C3089DC618C778D400A7BAAD /* EAIntroView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3089DC418C778D400A7BAAD /* EAIntroView.m */; };
 		C3089DE718C77A9D00A7BAAD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3089DCC18C77A9D00A7BAAD /* Default-568h@2x.png */; };
@@ -205,6 +206,8 @@
 		800E508819ACE2A20056F981 /* UCIallocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCIallocationViewController.m; sourceTree = "<group>"; };
 		8013309819A3A2C8009AC1A3 /* UCITouchButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCITouchButtonViewController.h; sourceTree = "<group>"; };
 		8013309919A3A2C8009AC1A3 /* UCITouchButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCITouchButtonViewController.m; sourceTree = "<group>"; };
+		8074BC5419AF85D200E7FE62 /* UCIKillerSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCIKillerSettingViewController.h; sourceTree = "<group>"; };
+		8074BC5519AF85D200E7FE62 /* UCIKillerSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCIKillerSettingViewController.m; sourceTree = "<group>"; };
 		C3089DC118C778D400A7BAAD /* EAIntroPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAIntroPage.h; sourceTree = "<group>"; };
 		C3089DC218C778D400A7BAAD /* EAIntroPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAIntroPage.m; sourceTree = "<group>"; };
 		C3089DC318C778D400A7BAAD /* EAIntroView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAIntroView.h; sourceTree = "<group>"; };
@@ -536,6 +539,8 @@
 				800E508519A976FE0056F981 /* UCIkillSettingViewController.m */,
 				800E508719ACE2A20056F981 /* UCIallocationViewController.h */,
 				800E508819ACE2A20056F981 /* UCIallocationViewController.m */,
+				8074BC5419AF85D200E7FE62 /* UCIKillerSettingViewController.h */,
+				8074BC5519AF85D200E7FE62 /* UCIKillerSettingViewController.m */,
 			);
 			path = UnderCoverIOS;
 			sourceTree = "<group>";
@@ -771,6 +776,7 @@
 				38229F06193798A300974F1A /* UCIFeedBackViewController.m in Sources */,
 				3873F70619055D26003827E4 /* UCIPunishViewController.m in Sources */,
 				381791771908159A00A313ED /* ViewFenpeiViewController.m in Sources */,
+				8074BC5619AF85D200E7FE62 /* UCIKillerSettingViewController.m in Sources */,
 				C3089DC518C778D400A7BAAD /* EAIntroPage.m in Sources */,
 				3873F70919055D51003827E4 /* BIDNameAndColorTableViewCell.m in Sources */,
 				3884010B19397B1500A1904B /* UCIHelpViewController.m in Sources */,

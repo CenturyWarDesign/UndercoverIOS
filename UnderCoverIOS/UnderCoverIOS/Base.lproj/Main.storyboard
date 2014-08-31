@@ -495,10 +495,10 @@
             </objects>
             <point key="canvasLocation" x="766" y="-368"/>
         </scene>
-        <!--View Controller-->
+        <!--Killer Setting View Controller-->
         <scene sceneID="RNB-Pq-jMW">
             <objects>
-                <viewController id="15x-TO-u5R" sceneMemberID="viewController">
+                <viewController id="15x-TO-u5R" customClass="UCIKillerSettingViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lFA-0f-ymv"/>
                         <viewControllerLayoutGuide type="bottom" id="xPo-fS-Ihf"/>
@@ -508,16 +508,25 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pzp-ld-8qZ">
-                                <rect key="frame" x="118" y="309" width="84" height="44"/>
+                                <rect key="frame" x="14" y="346" width="293" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="接受惩罚">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GJi-Ue-EjQ">
+                                <rect key="frame" x="0.0" y="49" width="320" height="262"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Uw3-O1-Wxt"/>
+                    <connections>
+                        <outlet property="BtnPunish" destination="pzp-ld-8qZ" id="Qaw-dU-6N4"/>
+                        <outlet property="BtnView" destination="GJi-Ue-EjQ" id="5hl-BC-3PE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yGJ-Sa-Ii5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
