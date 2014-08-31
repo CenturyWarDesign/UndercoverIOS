@@ -169,7 +169,7 @@
         PeopleCount--;
     }
     else{
-        [self playChuishsao];
+        [self playChuishao];
         SonCount--;
     }
     

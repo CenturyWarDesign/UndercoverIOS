@@ -111,7 +111,7 @@
         curKiller--;
     }
     else if ([txtShenFen isEqualToString:@"警察"]){
-        [self playChuishsao];
+        [self playChuishao];
         curPolice--;
     }else if ([txtShenFen isEqualToString:@"平民"]){
         curPinmin--;
