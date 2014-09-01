@@ -22,5 +22,7 @@
 	<string>16</string>
 	<key>SHOW_SHENFEN_SEC</key>
 	<string>3</string>
+	<key>ISOPENSOUND</key>
+	<string>0</string>
 </dict>
 </plist>

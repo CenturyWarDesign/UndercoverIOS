@@ -26,7 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    [self.soundSwitch setOn:[self getSoundStatus]];    
     // Do any additional setup after loading the view.
 }
 
@@ -48,4 +48,9 @@
     sender.backgroundColor=[UIColor redColor];
 }
 
+- (IBAction)changeSoundSetting:(id)sender {
+    BOOL isOpen = [self.soundSwitch isOn];
+    NSString *value = isOpen ? @"1" : @"0";
+    [self setConfig:@"ISOPENSOUND" newvalue:value];
+}
 @end

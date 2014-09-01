@@ -10,5 +10,7 @@
 
 @interface testViewController : UCIBaseViewController
 @property (strong, nonatomic) IBOutlet UILabel *labTest;
+@property (weak, nonatomic) IBOutlet UISwitch *soundSwitch;
 
+- (IBAction)changeSoundSetting:(id)sender;
 @end

@@ -172,19 +172,42 @@
 
 
 -(void)playChuishao{
+    BOOL s = [self getSoundStatus];
+    if (![self getSoundStatus]) {
+        return;
+    }
+    
     [self initSound:@"whistle.mp3"];
 }
 
 -(void)playNahan{
+    if (![self getSoundStatus]) {
+        return;
+    }
+    
     [self initSound:@"failshout.mp3"];
 }
 
 -(void)playHuanhu{
+    if (![self getSoundStatus]) {
+        return;
+    }
+    
     [self initSound:@"hiscore02.mp3"];
 }
 
 -(void)playGuzhang{
+    if (![self getSoundStatus]) {
+        return;
+    }
+    
     [self initSound:@"normalscore.mp3"];
+}
+
+-(BOOL)getSoundStatus
+{
+    NSString* s = [self getConfig:@"ISOPENSOUND"];
+    return [s isEqualToString:@"1"];
 }
 
 
@@ -232,6 +255,11 @@
 
 -(NSString *)getConfig:(NSString *)key{
  return [UCIAppDelegate getConfig:key];
+}
+
+
+-(void)setConfig:(NSString*) key newvalue:(NSString*) newvalue{
+    [UCIAppDelegate setConfig:key newvalue:newvalue];
 }
 
 
