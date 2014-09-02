@@ -128,7 +128,9 @@
     if(cell==nil){
         cell=[[BIDNameAndColorTableViewCell alloc] init];
     }
+     [cell.btnLike setEnabled:true];
     
+    [cell.btnUnlike setEnabled:true];
     
     
 //    cell.txtName.text=@"wanbin";
@@ -140,7 +142,7 @@
     NSString * distxtLike=[NSString stringWithFormat:@"不喜欢 %@",[self.dowarves[indexPath.row] objectForKey:@"dislike"] ];
 
     [cell.btnLike  setTitle:txtLike forState:UIControlStateNormal];
-    [cell.btnLike setEnabled:(BOOL)[self.dowarves[indexPath.row] objectForKey:@"liked"]];
+    
     
     [cell.btnLike setTag:[[self.dowarves[indexPath.row] objectForKey:@"id"] intValue]];
     [cell.btnUnlike setTag:[[self.dowarves[indexPath.row] objectForKey:@"id"] intValue]];
@@ -157,7 +159,16 @@
     [cell.btnUnlike addTarget:self  action:@selector(unlikeit:) forControlEvents:UIControlEventTouchUpInside];
     
     [cell.btnUnlike  setTitle:distxtLike forState:UIControlStateNormal];
-    [cell.btnUnlike setEnabled:(BOOL)[self.dowarves[indexPath.row] objectForKey:@"disliked"]];
+//    int row=indexPath.row;
+    bool liked=[[self.dowarves[indexPath.row] objectForKey:@"liked"] boolValue];
+    bool disliked=[[self.dowarves[indexPath.row] objectForKey:@"disliked"] boolValue];
+//    NSDictionary *tem=(NSDictionary *)self.dowarves[indexPath.row];
+    
+//    bool liked=(BOOL)[tem objectForKey:@"liked"];
+//    bool disliked=(BOOL)[self.dowarves[indexPath.row] objectForKey:@"disliked"];
+
+    [cell.btnLike setEnabled:!liked];
+    [cell.btnUnlike setEnabled:!disliked];
     
     return cell;
 }
