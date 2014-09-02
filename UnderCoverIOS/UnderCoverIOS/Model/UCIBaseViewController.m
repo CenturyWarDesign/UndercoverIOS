@@ -172,7 +172,6 @@
 
 
 -(void)playChuishao{
-    BOOL s = [self getSoundStatus];
     if (![self getSoundStatus]) {
         return;
     }
@@ -206,8 +205,9 @@
 
 -(BOOL)getSoundStatus
 {
-    NSString* s = [self getConfig:@"ISOPENSOUND"];
-    return [s isEqualToString:@"1"];
+    id value = [self getObjectFromDefault:@"ISOPENSOUND"];
+    
+    return [value boolValue];
 }
 
 
@@ -256,11 +256,5 @@
 -(NSString *)getConfig:(NSString *)key{
  return [UCIAppDelegate getConfig:key];
 }
-
-
--(void)setConfig:(NSString*) key newvalue:(NSString*) newvalue{
-    [UCIAppDelegate setConfig:key newvalue:newvalue];
-}
-
 
 @end

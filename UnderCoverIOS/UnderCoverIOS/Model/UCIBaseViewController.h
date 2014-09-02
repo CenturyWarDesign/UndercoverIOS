@@ -27,13 +27,11 @@
 -(void)playNahan;
 -(void)playHuanhu;
 -(void)playGuzhang;
--(BOOL)getSoundStatus;
 
 
 -(void)removeliketoDefault:(NSString *)word;
 -(void)addliketoDefault:(NSString *)word;
 -(UIButton *)getCircleBtn:(int) width;
 -(NSString *)getConfig:(NSString *)key;
--(void)setConfig:(NSString*) key newvalue:(NSString*) newvalue;
 -(void)reflashOneSec;
 @end

@@ -195,19 +195,6 @@ static bool GAME_DEBUG;
     return valuedefault;
 }
 
-//修改全局配置文件
-+(void)setConfig:(NSString*) key  newvalue:(NSString*) newvalue{
-    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"config" ofType:@"plist"];
-    NSMutableDictionary *infoList = [[[NSMutableDictionary alloc]initWithContentsOfFile:plistPath]mutableCopy];
-    
-    NSString *originalvalue = [infoList objectForKey:key];
-    originalvalue = newvalue;
-    [infoList setObject:originalvalue forKey:key];
-    [infoList writeToFile:plistPath atomically:YES];
-}
-
-
-
 
 +(BOOL) isConnectionAvailable{
     

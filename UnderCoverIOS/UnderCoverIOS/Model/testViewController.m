@@ -26,7 +26,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.soundSwitch setOn:[self getSoundStatus]];    
+    
+    
+    [self.soundSwitch setOn:[[self getObjectFromDefault:@"ISOPENSOUND"] boolValue]];
     // Do any additional setup after loading the view.
 }
 
@@ -51,6 +53,6 @@
 - (IBAction)changeSoundSetting:(id)sender {
     BOOL isOpen = [self.soundSwitch isOn];
     NSString *value = isOpen ? @"1" : @"0";
-    [self setConfig:@"ISOPENSOUND" newvalue:value];
+    [self setObjectFromDefault:value key:@"ISOPENSOUND"];
 }
 @end
