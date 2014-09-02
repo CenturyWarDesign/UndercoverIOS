@@ -42,6 +42,7 @@
     [[self btnNext] setFrame:CGRectMake(60, 240, 200, 30)];
     [[self btnNext] setTitle:@"请下一位开始描述" forState:UIControlStateNormal];
     [self.view addSubview:[self btnNext]];
+    [self.btnNext setEnabled:false];
     [[self btnNext] addTarget:self action:@selector(tapNext:) forControlEvents:UIControlEventTouchUpInside];
 }
 
@@ -71,6 +72,7 @@
         [btnPeople addObject:someAddButton];
     }
     [[self btnPublish] setTitle:@"1号描述中" forState:UIControlStateNormal];
+    
     [self selectPeople:[btnPeople objectAtIndex:curPeople]];
 }
 
@@ -86,6 +88,7 @@
 }
 
 -(void)selectPeople:(UIButton *)p {
+    [self.btnNext setEnabled:false];
     [UIView animateWithDuration:0.5
                           delay:0
                         options:UIViewAnimationOptionCurveEaseOut animations:^(void){
@@ -99,11 +102,13 @@
                                                  [UIView setAnimationRepeatCount:5];
                                                  p.alpha = 1.0;
                                                  [p setBackgroundColor:[UIColor whiteColor]];
-                                             }completion:^(BOOL finished){  
+                                             }completion:^(BOOL finished){
+                                                     [self.btnNext setEnabled:true];
                                                  
                                              }];  
                             
                         }];
+
 }
 
 /*
