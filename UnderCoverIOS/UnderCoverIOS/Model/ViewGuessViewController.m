@@ -177,7 +177,9 @@
         [self playChuishao];
         SonCount--;
     }
-    
+   // curpeople=rand();
+    srand((unsigned)time(0));
+    curPeople=rand()%[btnPeople count];
     txtShenFen=@"出局";
     [sender setTitle:txtShenFen forState:UIControlStateDisabled];
     [sender setEnabled:false];
