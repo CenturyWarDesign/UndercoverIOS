@@ -17,6 +17,7 @@
 int P_count = 5;
 int num_init ;
 int flag=1;
+int index_n=0;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,12 +32,14 @@ int flag=1;
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
+    index_n=0;
     num_init = arc4random() % P_count *3;
     [self.touchButton setEnabled:true];
     [self.touchButton setBackgroundColor:[UIColor yellowColor]];
     [self.touchButton setTitle:@"点我呀！！" forState:normal];
     [self.punishButton setHidden:YES];
+    [self.touchTimesContent setText:[NSString stringWithFormat:@"%d",index_n]];
+    [self.gailvContent setText:[NSString stringWithFormat:@"%d%@",index_n*7+7,@"%"]];
 
 }
 
@@ -67,6 +70,13 @@ int flag=1;
         flag=1;
     [self.touchButton setBackgroundColor:[UIColor yellowColor]];
     }
+    index_n++;
+//    [self.touchButton setTitle:@"点我呀！！" forState:normal];
+        [self.touchButton setTitle:[NSString stringWithFormat:@"第%d次！",index_n] forState:UIControlStateNormal];
+    [self.touchTimesContent setText:[NSString stringWithFormat:@"%d",index_n]];
+    [self.gailvContent setText:[NSString stringWithFormat:@"%d%@",index_n*7+7,@"%"]];
+    
+  
     if (num_init<=0)
     {//button disable
         //set button

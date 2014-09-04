@@ -11,5 +11,9 @@
 @interface UCITouchButtonViewController : UCIBaseViewController
 @property (weak, nonatomic) IBOutlet UIButton *touchButton;
 @property (strong, nonatomic) IBOutlet UIView *punishButton;
+@property (weak, nonatomic) IBOutlet UILabel *touchTimes;
+@property (weak, nonatomic) IBOutlet UILabel *gailv;
+@property (weak, nonatomic) IBOutlet UILabel *touchTimesContent;
+@property (weak, nonatomic) IBOutlet UILabel *gailvContent;
 
 @end
