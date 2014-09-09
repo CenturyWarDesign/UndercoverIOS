@@ -29,6 +29,15 @@
 {
     [super viewDidLoad];
 
+    NSString * httpurl=[MobClick getConfigParams:@"httpurl"];
+    //从友盟取到网络地址
+    [self setObjectFromDefault:httpurl key:@"httpurl"];
+    
+    
+    NSString * homepage=[MobClick getConfigParams:@"homepage"];
+    //从友盟取到网络地址
+    [self setObjectFromDefault:homepage key:@"homepage"];
+    
     timerSec= [NSTimer  timerWithTimeInterval:1.0 target:self selector:@selector(reflashOneSec)userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop]addTimer:timerSec forMode:NSDefaultRunLoopMode];
 	// Do any additional setup after loading the view.
@@ -134,6 +143,8 @@
     NSMutableArray *array = [[NSMutableArray alloc] initWithContentsOfFile:plistPath];
     
     NSString * wordstring=[MobClick getConfigParams:@"under_string_version"];
+    
+
     //    NSString* str = @"here be dragons";
     NSArray * wordArray= [wordstring componentsSeparatedByString:@"\n"];
     for (int i=0; i<[wordArray count]; i++) {

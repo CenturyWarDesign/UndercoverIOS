@@ -16,10 +16,27 @@
 @synthesize delegate;
 
 
+//取持久化对象
+-(id) getObjectFromDefault:(NSString *)key{
+    NSUserDefaults *persistentDefaults=[NSUserDefaults standardUserDefaults];
+    return [persistentDefaults objectForKey:key];
+}
+//设置持久化对象
+-(void) setObjectFromDefault:(NSObject *)object key:(NSString *)key{
+    NSUserDefaults *persistentDefaults=[NSUserDefaults standardUserDefaults];
+    [persistentDefaults setObject:object forKey:key];
+}
+
 - (void)baseHttp:(NSString *)command paramsdata:(NSDictionary *)data{
 //    NSString * ipaddress=@"http://uncercover.duapp.com/";
 //    NSString * ipaddress=@"http://127.0.0.1/CenturyServer/";
-    NSString * ipaddress=[UCIAppDelegate getConfig:@"ipaddress"] ;
+    
+    
+    
+    NSString *ipaddress=[self getObjectFromDefault:@"httpurl"];
+    if(ipaddress.length==0){
+        ipaddress=[UCIAppDelegate getConfig:@"ipaddress"] ;
+    }
 
     
 //    NSMutableString * temstring=[[NSMutableString alloc] initWithString:@""];

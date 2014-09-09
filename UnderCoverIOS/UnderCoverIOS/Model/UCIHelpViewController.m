@@ -8,6 +8,7 @@
 
 #import "UCIHelpViewController.h"
 #import "UCIAppDelegate.h"
+#import "HTTPBase.h"
 
 @interface UCIHelpViewController ()
 
@@ -27,7 +28,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSString * ipaddress=[NSString stringWithFormat:@"%@?showpage=help", [UCIAppDelegate getConfig:@"homepage"]];
+    
+    HTTPBase *ht=[[HTTPBase alloc] init];;
+    
+    NSString * homepage=[self getObjectFromDefault:@"homepage"];
+    if(homepage.length==0){
+        homepage=[UCIAppDelegate getConfig:@"homepage"];
+    }
+    NSString * ipaddress=[NSString stringWithFormat:@"%@?showpage=help&username=%@", homepage,[ht getUDID]];
     NSURLRequest * request=[NSURLRequest requestWithURL:[NSURL URLWithString:ipaddress]];
     [self.webView loadRequest:request];
     
