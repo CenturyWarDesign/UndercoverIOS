@@ -48,6 +48,14 @@
     [self.btnKiller setEnabled:false];
 //    [UIApplication mess]
     // Do any additional setup after loading the view.
+    
+    //如果是测试的，就把最大值调大点
+    if([UCIAppDelegate isdebug]){
+        [self.peopleCount setMaximumValue:5];
+    }
+    else{
+        [self.peopleCount setMaximumValue:2];
+    }
 }
 
 
