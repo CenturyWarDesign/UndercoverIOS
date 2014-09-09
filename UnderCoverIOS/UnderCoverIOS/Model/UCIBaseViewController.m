@@ -268,4 +268,15 @@
  return [UCIAppDelegate getConfig:key];
 }
 
+-(void)setBadgeValue:(int)val
+{
+    if(val>0){
+        self.tabBarItem.badgeValue=[NSString stringWithFormat:@"%d",val];
+    }else{
+        self.tabBarItem.badgeValue=nil;
+    }
+
+
+}
+
 @end

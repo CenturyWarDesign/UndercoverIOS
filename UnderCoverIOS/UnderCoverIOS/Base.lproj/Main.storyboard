@@ -248,7 +248,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="LMq-iY-C5p">
             <objects>
-                <tabBarController definesPresentationContext="YES" id="vWh-ec-t9B" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="baseStoryBoard" definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vWh-ec-t9B" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="61w-Xe-XFY">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
@@ -554,7 +554,7 @@
         <!--Help View Controller - 玩法-->
         <scene sceneID="DHa-PW-x6M">
             <objects>
-                <viewController wantsFullScreenLayout="YES" id="wn5-8O-c79" customClass="UCIHelpViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="viewHelpId" wantsFullScreenLayout="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wn5-8O-c79" customClass="UCIHelpViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="B6e-Bi-Lcf"/>
                         <viewControllerLayoutGuide type="bottom" id="ifW-xJ-6bu"/>
@@ -2179,10 +2179,10 @@
     <resources>
         <image name="cardBack" width="185" height="260"/>
         <image name="game.png" width="30" height="30"/>
-        <image name="help.png" width="50" height="50"/>
-        <image name="join.png" width="50" height="50"/>
+        <image name="help.png" width="30" height="30"/>
+        <image name="join.png" width="30" height="30"/>
         <image name="original.png" width="224" height="224"/>
-        <image name="setting.png" width="50" height="50"/>
+        <image name="setting.png" width="30" height="30"/>
         <image name="shake.png" width="302" height="241"/>
     </resources>
     <color key="tintColor" red="0.37399760466176168" green="0.80554339169236644" blue="1" alpha="1" colorSpace="calibratedRGB"/>

@@ -65,6 +65,15 @@
             [self setObjectFromDefault:[data objectForKey:@"gameuid"] key:@"gameuid"];
             [self setObjectFromDefault:[data objectForKey:@"username"] key:@"username"];
             [self setObjectFromDefault:[data objectForKey:@"newgame"] key:@"newgame"];
+            
+            
+            UCIBaseViewController * tem= [self.tabBarController.childViewControllers objectAtIndex:2];
+          
+            [tem setBadgeValue:[[data objectForKey:@"newgame"] intValue]];
+//         UITabBarItem * tem=   (UITabBarItem *)[self.tabBarController.toolbarItems objectAtIndex:[@"2" intValue]];
+//            tem.badgeValue=@"3";
+
+//            [self setBadgeValue:[data objectForKey:@"newgame"] atTabIndex:3 tap:(UITabBar *)self.tabBarItem];
         }
         
         NSLog(@"UserGetInfo 函数的回调");

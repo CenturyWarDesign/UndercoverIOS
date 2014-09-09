@@ -34,4 +34,5 @@
 -(UIButton *)getCircleBtn:(int) width;
 -(NSString *)getConfig:(NSString *)key;
 -(void)reflashOneSec;
+-(void)setBadgeValue:(int)val;
 @end

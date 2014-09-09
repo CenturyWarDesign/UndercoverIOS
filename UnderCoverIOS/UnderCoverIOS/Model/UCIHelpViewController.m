@@ -21,14 +21,19 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+//        self setObjectFromDefault:[data objectForKey:@"newgame"] key:@"newgame"];
+//        int a=self.getAllWords;
+//        self.
+//        self.tabBarItem.badgeValue=@"1";
     }
+   
     return self;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    [self setBadgeValue:0];
     HTTPBase *ht=[[HTTPBase alloc] init];;
     
     NSString * homepage=[self getObjectFromDefault:@"homepage"];
@@ -42,7 +47,7 @@
     // Do any additional setup after loading the view.
 }
 -(void) viewWillAppear:(BOOL)animated{
-  
+
 }
 
 - (void)didReceiveMemoryWarning
