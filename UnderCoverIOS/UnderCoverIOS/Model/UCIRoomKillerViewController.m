@@ -46,6 +46,7 @@
     else{
         Pinmin--;
     }
+    [sender setEnabled:false];
     BOOL finish=false;
     if(KillerCount<=0){
         [self.labStatus setText:@"平民和警察胜利"];

@@ -31,11 +31,11 @@
 //    NSString * ipaddress=@"http://uncercover.duapp.com/";
 //    NSString * ipaddress=@"http://127.0.0.1/CenturyServer/";
     
-    
-    
+
+
     NSString *ipaddress=[self getObjectFromDefault:@"httpurl"];
-    if(ipaddress.length==0){
-        ipaddress=[UCIAppDelegate getConfig:@"ipaddress"] ;
+    if(ipaddress.length==0||[UCIAppDelegate isdebug]){
+        ipaddress=[UCIAppDelegate getConfig:@"ipaddress"];
     }
 
     
