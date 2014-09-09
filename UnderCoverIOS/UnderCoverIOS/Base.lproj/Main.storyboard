@@ -576,7 +576,7 @@
                             <constraint firstAttribute="trailing" secondItem="P8i-te-k2X" secondAttribute="trailing" id="whT-sq-qAz"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="玩法" id="fgx-Jd-RBq"/>
+                    <tabBarItem key="tabBarItem" title="玩法" image="help.png" id="fgx-Jd-RBq"/>
                     <connections>
                         <outlet property="webView" destination="P8i-te-k2X" id="XCa-la-mHM"/>
                     </connections>
@@ -727,7 +727,7 @@
         <scene sceneID="iuH-9g-Zpf">
             <objects>
                 <navigationController wantsFullScreenLayout="YES" definesPresentationContext="YES" id="dRm-h4-zRe" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="参与" id="B26-HR-Gt7"/>
+                    <tabBarItem key="tabBarItem" title="参与" image="join.png" id="B26-HR-Gt7"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DH0-Is-8nu">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -842,7 +842,7 @@
         <scene sceneID="2tC-ve-f4J">
             <objects>
                 <navigationController wantsFullScreenLayout="YES" definesPresentationContext="YES" id="Hvv-XP-p2E" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="设置" id="gH8-az-mPd"/>
+                    <tabBarItem key="tabBarItem" title="设置" image="setting.png" id="gH8-az-mPd"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="z5V-ik-hbi">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1695,7 +1695,7 @@
         <scene sceneID="Jo2-wA-uUV">
             <objects>
                 <navigationController wantsFullScreenLayout="YES" id="3Cw-FO-FmF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="游戏" id="Oks-yz-V5y"/>
+                    <tabBarItem key="tabBarItem" title="游戏" image="game.png" id="Oks-yz-V5y"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2DB-nT-qWm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -2178,7 +2178,11 @@
     </scenes>
     <resources>
         <image name="cardBack" width="185" height="260"/>
+        <image name="game.png" width="30" height="30"/>
+        <image name="help.png" width="50" height="50"/>
+        <image name="join.png" width="50" height="50"/>
         <image name="original.png" width="224" height="224"/>
+        <image name="setting.png" width="50" height="50"/>
         <image name="shake.png" width="302" height="241"/>
     </resources>
     <color key="tintColor" red="0.37399760466176168" green="0.80554339169236644" blue="1" alpha="1" colorSpace="calibratedRGB"/>

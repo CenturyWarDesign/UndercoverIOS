@@ -64,6 +64,7 @@
             }
             [self setObjectFromDefault:[data objectForKey:@"gameuid"] key:@"gameuid"];
             [self setObjectFromDefault:[data objectForKey:@"username"] key:@"username"];
+            [self setObjectFromDefault:[data objectForKey:@"newgame"] key:@"newgame"];
         }
         
         NSLog(@"UserGetInfo 函数的回调");

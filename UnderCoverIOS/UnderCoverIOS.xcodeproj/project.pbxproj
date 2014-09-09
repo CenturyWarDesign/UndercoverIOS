@@ -18,6 +18,10 @@
 		3873F70619055D26003827E4 /* UCIPunishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3873F70419055D26003827E4 /* UCIPunishViewController.m */; };
 		3873F70919055D51003827E4 /* BIDNameAndColorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3873F70819055D51003827E4 /* BIDNameAndColorTableViewCell.m */; };
 		3873F70C1906CC40003827E4 /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3873F70A1906CC40003827E4 /* libMobClickLibrary.a */; };
+		3878393A19BF4C58008D552C /* game.png in Resources */ = {isa = PBXBuildFile; fileRef = 3878393919BF4C58008D552C /* game.png */; };
+		3878393E19BF4CE4008D552C /* help.png in Resources */ = {isa = PBXBuildFile; fileRef = 3878393B19BF4CE4008D552C /* help.png */; };
+		3878393F19BF4CE4008D552C /* join.png in Resources */ = {isa = PBXBuildFile; fileRef = 3878393C19BF4CE4008D552C /* join.png */; };
+		3878394019BF4CE4008D552C /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = 3878393D19BF4CE4008D552C /* setting.png */; };
 		387D703E1940C63400D57408 /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 387D703D1940C63400D57408 /* config.plist */; };
 		3884010B19397B1500A1904B /* UCIHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3884010A19397B1500A1904B /* UCIHelpViewController.m */; };
 		38B1EF8F1944563900A8759A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38B1EF8E1944563900A8759A /* StoreKit.framework */; };
@@ -140,6 +144,10 @@
 		3873F70819055D51003827E4 /* BIDNameAndColorTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BIDNameAndColorTableViewCell.m; path = UnderCoverIOS/Model/BIDNameAndColorTableViewCell.m; sourceTree = "<group>"; };
 		3873F70A1906CC40003827E4 /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMobClickLibrary.a; path = UnderCoverIOS/External/umeng/libMobClickLibrary.a; sourceTree = "<group>"; };
 		3873F70B1906CC40003827E4 /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MobClick.h; path = UnderCoverIOS/External/umeng/MobClick.h; sourceTree = "<group>"; };
+		3878393919BF4C58008D552C /* game.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = game.png; sourceTree = "<group>"; };
+		3878393B19BF4CE4008D552C /* help.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help.png; sourceTree = "<group>"; };
+		3878393C19BF4CE4008D552C /* join.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = join.png; sourceTree = "<group>"; };
+		3878393D19BF4CE4008D552C /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting.png; sourceTree = "<group>"; };
 		387D703D1940C63400D57408 /* config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
 		3884010919397B1500A1904B /* UCIHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UCIHelpViewController.h; path = Model/UCIHelpViewController.h; sourceTree = "<group>"; };
 		3884010A19397B1500A1904B /* UCIHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UCIHelpViewController.m; path = Model/UCIHelpViewController.m; sourceTree = "<group>"; };
@@ -366,6 +374,10 @@
 		C3089DC818C77A9D00A7BAAD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3878393B19BF4CE4008D552C /* help.png */,
+				3878393C19BF4CE4008D552C /* join.png */,
+				3878393D19BF4CE4008D552C /* setting.png */,
+				3878393919BF4C58008D552C /* game.png */,
 				38ECA848191FCA91007672BA /* shake.png */,
 				38B554B8191BE87000E41984 /* failshout.mp3 */,
 				38B554B9191BE87000E41984 /* hiscore02.mp3 */,
@@ -658,6 +670,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3089DF318C77A9D00A7BAAD /* Icon-Small-50.png in Resources */,
+				3878393A19BF4C58008D552C /* game.png in Resources */,
 				38B554A219194F6F00E41984 /* blueArrow.png in Resources */,
 				38B554A419194F6F00E41984 /* grayArrow.png in Resources */,
 				C3089DF818C77A9D00A7BAAD /* Icon@2x.png in Resources */,
@@ -671,6 +684,7 @@
 				C3089DEE18C77A9D00A7BAAD /* Icon-60@2x.png in Resources */,
 				38B554A019194F6F00E41984 /* blackArrow.png in Resources */,
 				38B554A519194F6F00E41984 /* grayArrow@2x.png in Resources */,
+				3878393F19BF4CE4008D552C /* join.png in Resources */,
 				38B554B7191BC7D500E41984 /* PushConfig.plist in Resources */,
 				C3089DFC18C77A9D00A7BAAD /* original@2x.png in Resources */,
 				38E53E661907FB96004F8F51 /* ColorAndName.xib in Resources */,
@@ -686,6 +700,7 @@
 				C3F06C2A18B6432D00F08642 /* InfoPlist.strings in Resources */,
 				38B55491191946A500E41984 /* words.plist in Resources */,
 				C3089DF218C77A9D00A7BAAD /* Icon-76@2x.png in Resources */,
+				3878393E19BF4CE4008D552C /* help.png in Resources */,
 				38B554BC191BE87000E41984 /* failshout.mp3 in Resources */,
 				C3089DF018C77A9D00A7BAAD /* Icon-72@2x.png in Resources */,
 				38E53E5F1907FA06004F8F51 /* Main.storyboard in Resources */,
@@ -698,6 +713,7 @@
 				C3089DFA18C77A9D00A7BAAD /* iTunesArtwork@2x.png in Resources */,
 				38B554A619194F6F00E41984 /* whiteArrow.png in Resources */,
 				387D703E1940C63400D57408 /* config.plist in Resources */,
+				3878394019BF4CE4008D552C /* setting.png in Resources */,
 				C3089DF918C77A9D00A7BAAD /* iTunesArtwork.png in Resources */,
 				38B554A719194F6F00E41984 /* whiteArrow@2x.png in Resources */,
 				C3089DF618C77A9D00A7BAAD /* Icon-Small@2x.png in Resources */,
