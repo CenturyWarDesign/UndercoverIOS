@@ -29,7 +29,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    [self uMengClick:@"game_net"];
     bool isonline=UCIAppDelegate.isConnectionAvailable;
    
     if(!isonline){

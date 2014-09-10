@@ -145,6 +145,7 @@
     
     if(nowIndex>totalCount)
     {
+        [self uMengClick:@"game_kill_pailast"];
         [self performSegueWithIdentifier:@"segueToKiller" sender:self];
         return;
     }
@@ -163,9 +164,11 @@
         [self.nextButton setTitle:[NSString stringWithFormat:@"第%d号",nowIndex] forState:UIControlStateNormal];
         if(nowIndex==1){
             //点击翻牌第一步
-            //[self uMengClick:@"click_undercover_pai_first"];
+            [self uMengClick:@"click_undercover_pai_first"];
         }
     }
+    
+    
     showContent=!showContent;
     [self.imageView setHidden:!showContent];
     [self.labContent setHidden:showContent];

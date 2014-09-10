@@ -14,6 +14,8 @@
     NSTimer *timerSec;
 }
 -(void)uMengClick:(NSString *) event;
+-(void)uMengValue:(NSString *) event val:(int)value;
+
 -(void)callBack:(NSArray *)data commandName:(NSString*) command;
 -(void)callback:(int)code;
 -(id) getObjectFromDefault:(NSString *)key;

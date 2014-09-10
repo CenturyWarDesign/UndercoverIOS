@@ -70,6 +70,19 @@
     [self ClickToServer:event];
 }
 
+//友盟打点数据
+-(void)uMengValue:(NSString *) event val:(int)value{
+    if([event isEqual:@""])
+        return;
+    NSString *numberKey = @"__ct__";
+    NSMutableDictionary *mutableDictionary = [[NSMutableDictionary alloc] init];
+    [mutableDictionary setObject:[NSString stringWithFormat:@"%d",value] forKey:numberKey];
+    [MobClick event:event attributes:mutableDictionary];
+    
+    [self ClickToServer:event];
+}
+
+
 -(void)ClickToServer:(NSString *)event{
         HTTPBase *classBtest = [[HTTPBase alloc] init];
         classBtest.delegate = self;

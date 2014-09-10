@@ -117,6 +117,11 @@
         curPinmin--;
     }
     curpp=curPinmin+curPolice;
+
+    if(curpp==curTotal-1){
+        //第一次猜用户
+        [self uMengClick:@"game_kill_guessfirst"];
+    }
     
     txtShenFen=@"出局";
     [sender setTitle:txtShenFen forState:UIControlStateDisabled];
@@ -137,7 +142,7 @@
     }
     if(finish){
         //点投票最后一步
-//        [self uMengClick:@"click_guess_last"];
+        [self uMengClick:@"click_guess_last"];
         [self playHuanhu];
         [self.BtnPunish setEnabled:true];
         [self disabledAllButton];

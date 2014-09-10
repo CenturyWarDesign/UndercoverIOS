@@ -28,6 +28,7 @@
     [super viewDidLoad];
      NSString *username=[self getObjectFromDefault:@"username"];
     [self.labName setText:username];
+    [self uMengClick:@"room_changename_open"];
     // Do any additional setup after loading the view.
 }
 
@@ -63,6 +64,8 @@
     if([command isEqualToString:@"NameChange"]){
         NSLog(@"NameChange 函数的回调");
         [self setObjectFromDefault:self.labName.text key:@"username"];
+        //成功修改昵称
+        [self uMengClick:@"room_changename"];
         [self.navigationController popViewControllerAnimated:YES];
     }
 }

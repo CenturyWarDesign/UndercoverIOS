@@ -60,6 +60,8 @@ static bool GAME_DEBUG;
     [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
     GAME_DEBUG=true;
 
+
+    
     return YES;
 }
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {

@@ -33,6 +33,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self uMengClick:@"game_help"];
     [self setBadgeValue:0];
     HTTPBase *ht=[[HTTPBase alloc] init];;
     

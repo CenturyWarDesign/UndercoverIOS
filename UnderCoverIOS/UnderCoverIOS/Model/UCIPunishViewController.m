@@ -42,6 +42,7 @@
 //一个新词汇
 - (IBAction)clickNew:(id)sender {
     [self initnewword];
+    [self uMengClick:@"click_reflash"];
 }
 
 -(void) reflashWords:(NSString *)words{

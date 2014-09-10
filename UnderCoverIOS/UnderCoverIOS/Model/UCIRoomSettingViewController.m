@@ -227,6 +227,7 @@
     [classBtest baseHttp:@"RoomStartGame" paramsdata:[NSDictionary dictionaryWithObjectsAndKeys:@"1",@"type",[NSString stringWithFormat:@"%d",addPeopleCount],@"addPeople",nil]];
     gametype=1;
     [self uMengClick:@"room_undercover"];
+    [self uMengValue:@"room_add_people_count" val:addPeopleCount];
     [self setBtnDisable];
    // [self ReflashUsers];
     //[self.btnKiller setEnabled:false];
@@ -239,6 +240,7 @@
     classBtest.delegate = self;
     [classBtest baseHttp:@"RoomStartGame" paramsdata:[NSDictionary dictionaryWithObjectsAndKeys:@"2",@"type",[NSString stringWithFormat:@"%d",addPeopleCount],@"addPeople",nil]];
     gametype=2;
+    [self uMengValue:@"room_add_people_count" val:addPeopleCount];
     [self uMengClick:@"room_killer"];
         [self setBtnDisable];
 }

@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "GDataXMLNode.h"
 
-@interface UCIAppDelegate : UIResponder <UIApplicationDelegate>
+@interface UCIAppDelegate : UIResponder <UIApplicationDelegate>{
+
+}
 
 @property (strong, nonatomic) UIWindow *window;
 

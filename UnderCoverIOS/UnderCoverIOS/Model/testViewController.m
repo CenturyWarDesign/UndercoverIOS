@@ -27,7 +27,7 @@
 {
     [super viewDidLoad];
     
-    
+    [self uMengClick:@"game_setting"];
     [self.soundSwitch setOn:[[self getObjectFromDefault:@"ISOPENSOUND"] boolValue]];
     // Do any additional setup after loading the view.
 }

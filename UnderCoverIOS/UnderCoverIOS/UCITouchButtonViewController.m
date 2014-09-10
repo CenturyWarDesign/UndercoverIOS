@@ -41,6 +41,8 @@ int index_n=0;
     [self.touchTimesContent setText:[NSString stringWithFormat:@"%d",index_n]];
     [self.gailvContent setText:[NSString stringWithFormat:@"%d%@",index_n*7+7,@"%"]];
 
+    [self uMengClick:@"game_click"];
+
 }
 
 - (void)didReceiveMemoryWarning
