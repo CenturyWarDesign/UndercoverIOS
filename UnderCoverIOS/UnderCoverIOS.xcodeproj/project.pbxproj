@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A9A8A5C19C1FDA60079A676 /* bottle.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A9A8A5B19C1FDA60079A676 /* bottle.png */; };
+		0AE2270D19BF5776009BC819 /* UCITurnBottleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE2270C19BF5776009BC819 /* UCITurnBottleViewController.m */; };
 		3807004018CE25C2007E7C03 /* HTTPBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3807003E18CE25C2007E7C03 /* HTTPBase.m */; };
 		3817917119080A5500A313ED /* ViewUndercoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3817917019080A5500A313ED /* ViewUndercoverViewController.m */; };
 		381791771908159A00A313ED /* ViewFenpeiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 381791761908159A00A313ED /* ViewFenpeiViewController.m */; };
@@ -121,6 +123,9 @@
 
 /* Begin PBXFileReference section */
 		07BE7E3E78284ADCB3BDD953 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A9A8A5B19C1FDA60079A676 /* bottle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottle.png; sourceTree = "<group>"; };
+		0AE2270B19BF5776009BC819 /* UCITurnBottleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCITurnBottleViewController.h; sourceTree = "<group>"; };
+		0AE2270C19BF5776009BC819 /* UCITurnBottleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCITurnBottleViewController.m; sourceTree = "<group>"; };
 		3807003D18CE25C2007E7C03 /* HTTPBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HTTPBase.h; path = UnderCoverIOS/Model/HTTPBase.h; sourceTree = "<group>"; };
 		3807003E18CE25C2007E7C03 /* HTTPBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HTTPBase.m; path = UnderCoverIOS/Model/HTTPBase.m; sourceTree = "<group>"; };
 		3807003F18CE25C2007E7C03 /* UCIHttpCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UCIHttpCallback.h; path = UnderCoverIOS/Model/UCIHttpCallback.h; sourceTree = "<group>"; };
@@ -389,6 +394,7 @@
 				C3089DCC18C77A9D00A7BAAD /* Default-568h@2x.png */,
 				C3089DCD18C77A9D00A7BAAD /* Default.png */,
 				C3089DCE18C77A9D00A7BAAD /* Default@2x.png */,
+				0A9A8A5B19C1FDA60079A676 /* bottle.png */,
 				C3089DCF18C77A9D00A7BAAD /* femalecodertocat@2x.png */,
 				C3089DE218C77A9D00A7BAAD /* original@2x.png */,
 				C3089DE318C77A9D00A7BAAD /* supportcat@2x.png */,
@@ -553,6 +559,8 @@
 				800E508819ACE2A20056F981 /* UCIallocationViewController.m */,
 				8074BC5419AF85D200E7FE62 /* UCIKillerSettingViewController.h */,
 				8074BC5519AF85D200E7FE62 /* UCIKillerSettingViewController.m */,
+				0AE2270B19BF5776009BC819 /* UCITurnBottleViewController.h */,
+				0AE2270C19BF5776009BC819 /* UCITurnBottleViewController.m */,
 			);
 			path = UnderCoverIOS;
 			sourceTree = "<group>";
@@ -681,6 +689,7 @@
 				38B554A119194F6F00E41984 /* blackArrow@2x.png in Resources */,
 				C3089DEA18C77A9D00A7BAAD /* femalecodertocat@2x.png in Resources */,
 				38ECA84B191FCD4B007672BA /* punish.plist in Resources */,
+				0A9A8A5C19C1FDA60079A676 /* bottle.png in Resources */,
 				C3089DEE18C77A9D00A7BAAD /* Icon-60@2x.png in Resources */,
 				38B554A019194F6F00E41984 /* blackArrow.png in Resources */,
 				38B554A519194F6F00E41984 /* grayArrow@2x.png in Resources */,
@@ -798,6 +807,7 @@
 				3884010B19397B1500A1904B /* UCIHelpViewController.m in Sources */,
 				C3089DC618C778D400A7BAAD /* EAIntroView.m in Sources */,
 				387172DC190C231B009D649B /* ViewHomeViewController.m in Sources */,
+				0AE2270D19BF5776009BC819 /* UCITurnBottleViewController.m in Sources */,
 				38B5549719194F4B00E41984 /* EGORefreshTableHeaderView.m in Sources */,
 				38BEA93B190978A60017F3D9 /* ViewGuessViewController.m in Sources */,
 			);
