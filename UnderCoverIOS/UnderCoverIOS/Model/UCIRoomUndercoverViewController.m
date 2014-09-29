@@ -7,7 +7,7 @@
 //
 
 #import "UCIRoomUndercoverViewController.h"
-
+#import "UIButton+WebCache.h"
 @interface UCIRoomUndercoverViewController ()
 
 @end
@@ -48,7 +48,7 @@
     //主持人的gameuid
     int zhuchigameuid=[[gameData objectForKey:@"gameuid"] intValue];
     for (int i=0; i<[room_user count]; i++) {
-        [datagame addObject:[NSDictionary dictionaryWithObjectsAndKeys:[(NSDictionary *)[room_user objectAtIndex:i] objectForKey:@"username"],@"user",[(NSDictionary *)[room_user objectAtIndex:i] objectForKey:@"content"],@"content",[(NSDictionary *)[room_user objectAtIndex:i] objectForKey:@"gameuid"],@"gameuid",nil]];
+        [datagame addObject:[NSDictionary dictionaryWithObjectsAndKeys:[(NSDictionary *)[room_user objectAtIndex:i] objectForKey:@"username"],@"user",[(NSDictionary *)[room_user objectAtIndex:i] objectForKey:@"content"],@"content",[(NSDictionary *)[room_user objectAtIndex:i] objectForKey:@"photo"],@"photo",[(NSDictionary *)[room_user objectAtIndex:i] objectForKey:@"gameuid"],@"gameuid",nil]];
         if(zhuchigameuid==[[(NSDictionary *)[room_user objectAtIndex:i] objectForKey:@"gameuid"] intValue]){
             [self.labMeWord setText:[(NSDictionary *)[room_user objectAtIndex:i] objectForKey:@"content"]];
         }
@@ -104,8 +104,9 @@
         
         NSString * shenfen=[(NSDictionary *)[initArray objectAtIndex:i] objectForKey:@"content"];
         NSString * userName=[(NSDictionary *)[initArray objectAtIndex:i] objectForKey:@"user"];
-        
+         NSString * photo=[(NSDictionary *)[initArray objectAtIndex:i] objectForKey:@"photo"];
         [someAddButton setTitle:userName forState:UIControlStateNormal];
+        [someAddButton  sd_setBackgroundImageWithURL:[NSURL URLWithString: photo] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"default_photo.png"]];
         if(roomtype==2&&[shenfen isEqualToString:@"法官"])
         {
                 NSString * tem=[NSString stringWithFormat:@"%@:%@",[(NSDictionary *)[initArray objectAtIndex:i] objectForKey:@"user"],@"法官"];
