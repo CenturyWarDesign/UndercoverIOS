@@ -11,6 +11,7 @@
 #import "APService.h"
 #import "HTTPBase.h"
 #import "Reachability.h"
+#import "UMSocial.h"
 @implementation UCIAppDelegate
 static bool messageCount;
 static bool GAME_DEBUG;
@@ -28,6 +29,7 @@ static bool GAME_DEBUG;
     [MobClick setLogEnabled:YES];
     [MobClick updateOnlineConfig];
     
+    [UMSocialData setAppKey:@"531f3fcd56240b7b2a0415ac"];
     
     Class cls = NSClassFromString(@"UMANUtil");
     SEL deviceIDSelector = @selector(openUDIDString);

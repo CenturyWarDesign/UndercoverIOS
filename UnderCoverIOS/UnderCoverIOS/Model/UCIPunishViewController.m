@@ -5,7 +5,7 @@
 //  Created by 斌万 on 14-3-12.
 //  Copyright (c) 2014年 CenturyGame. All rights reserved.
 //
-
+#import "UMSocial.h"
 #import "UCIPunishViewController.h"
 
 @interface UCIPunishViewController ()
@@ -43,6 +43,7 @@
 - (IBAction)clickNew:(id)sender {
     [self initnewword];
     [self uMengClick:@"click_reflash"];
+    [self shareSomeThine];
 }
 
 -(void) reflashWords:(NSString *)words{
@@ -98,6 +99,7 @@
 - (IBAction)netPunish:(id)sender {
     //点击网络版
     [self uMengClick:@"click_intenet"];
+    
 }
 
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
@@ -111,6 +113,14 @@
 }
 ////以上为摇啊摇代码
 
+-(void)shareSomeThine{
+    [UMSocialSnsService presentSnsIconSheetView:self
+                                         appKey:@"531f3fcd56240b7b2a0415ac"
+                                      shareText:@"你要分享的文字"
+                                     shareImage:[UIImage imageNamed:@"icon.png"]
+                                shareToSnsNames:[NSArray arrayWithObjects:UMShareToSina,UMShareToTencent,UMShareToWechatSession,UMShareToWechatTimeline,UMShareToQzone,UMShareToQQ,UMShareToRenren,UMShareToDouban,nil]
+                                       delegate:nil];
+}
 
 
 -(void)callBack:(NSDictionary *)data commandName:(NSString*) command{

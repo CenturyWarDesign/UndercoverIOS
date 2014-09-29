@@ -7,6 +7,7 @@
 //
 
 #import "testViewController.h"
+#import "UMSocial.h"
 
 @interface testViewController ()
 
@@ -54,5 +55,32 @@
     BOOL isOpen = [self.soundSwitch isOn];
     NSString *value = isOpen ? @"1" : @"0";
     [self setObjectFromDefault:value key:@"ISOPENSOUND"];
+}
+- (IBAction)showLogin:(id)sender {
+
+//    UMSocialSnsPlatform *snsPlatform = [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToSina];
+//    snsPlatform.loginClickHandler(self,[UMSocialControllerService defaultControllerService],YES,^(UMSocialResponseEntity *response){
+//        NSLog(@"response is %@",response);
+//    });
+    
+//    
+//    UINavigationController *accountViewController =[[UMSocialControllerServiceComment defaultControllerService] getSnsAccountController];
+//    
+//    [self presentModalViewController:accountViewController animated:YES];
+
+    
+    BOOL isOauth = [UMSocialAccountManager isOauthWithPlatform:UMShareToQQ];
+    if(!isOauth){
+    UMSocialSnsPlatform *snsPlatform = [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToTencent];
+    snsPlatform.loginClickHandler(self,[UMSocialControllerService defaultControllerService],YES,^(UMSocialResponseEntity *response)
+                                  {
+                                      NSLog(@"response is %@",response);
+                                  });
+    }
+    else{
+        [[UMSocialDataService defaultDataService] requestSocialAccountWithCompletion:^(UMSocialResponseEntity *accountResponse){
+            NSLog(@"SinaWeibo's user name is %@",[[[accountResponse.data objectForKey:@"accounts"] objectForKey:UMShareToTencent] objectForKey:@"username"]);
+        }];
+    }
 }
 @end
