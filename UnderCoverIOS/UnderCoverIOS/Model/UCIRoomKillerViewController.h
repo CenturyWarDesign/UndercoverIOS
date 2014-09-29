@@ -13,5 +13,6 @@
     int PoliceCount;
     int Pinmin;
 }
+@property (strong, nonatomic) IBOutlet UITextView *labPunish;
 
 @end

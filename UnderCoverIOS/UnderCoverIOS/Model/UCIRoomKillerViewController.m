@@ -73,6 +73,19 @@
     
 }
 
+-(void)callBack:(NSDictionary *)data commandName:(NSString*) command{
+    if([command isEqualToString:@"RoomPunish"]){
+        [self.labPunishTitle setHidden:false];
+        NSString * punishStr=@"";
+        NSArray *dataarr=[data objectForKey:@"punish"];
+        for (int i=0; i<[dataarr count]; i++) {
+            punishStr=[NSString stringWithFormat:@"%@\n%@\n\t%@",punishStr,[(NSDictionary *)[dataarr objectAtIndex:i] objectForKey:@"username" ],[(NSDictionary *)[dataarr objectAtIndex:i] objectForKey:@"content" ] ];
+        }
+        [self.labPunish setText:punishStr];
+        NSLog(@"RoomPunish 函数的回调");
+    }
+}
+
 
 - (void)didReceiveMemoryWarning
 {

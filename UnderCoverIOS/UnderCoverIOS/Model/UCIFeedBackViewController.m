@@ -28,6 +28,11 @@
     [super viewDidLoad];
     [self.textFeedBack.layer setBorderWidth:1];
     [self.textFeedBack.layer setBorderColor:[UIColor grayColor].CGColor];
+    NSRange range;
+    range.location = 0;
+    range.length = 0;
+    self.textFeedBack.selectedRange=range;
+    
 //    [self.textFeedBack.layer setb:1];
     
 //    someAddButton.layer.borderWidth=1;
