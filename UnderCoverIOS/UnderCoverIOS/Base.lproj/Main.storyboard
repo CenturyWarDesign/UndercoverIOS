@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" initialViewController="vWh-ec-t9B">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" initialViewController="vWh-ec-t9B">
     <dependencies>
         <deployment version="1536" defaultVersion="1552" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
-        <!--Locate Punish Table View Controller - 本地词汇-->
+        <!--本地词汇-->
         <scene sceneID="H6s-3c-0gw">
             <objects>
                 <tableViewController id="w71-dL-Psr" customClass="LocatePunishTableViewController" sceneMemberID="viewController">
@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" ambiguous="YES" restorationIdentifier="reuseIdentifier" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="DYU-M5-Umh">
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="reuseIdentifier" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="DYU-M5-Umh">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DYU-M5-Umh" id="AKZ-vg-fYz">
@@ -34,7 +34,7 @@
             </objects>
             <point key="canvasLocation" x="2236" y="-207"/>
         </scene>
-        <!--Publish Net - 真心话大冒险-->
+        <!--真心话大冒险-->
         <scene sceneID="3wD-gr-c7l">
             <objects>
                 <viewController wantsFullScreenLayout="YES" id="qbm-nY-QCr" customClass="UCIPublishNet" sceneMemberID="viewController">
@@ -78,7 +78,7 @@
             </objects>
             <point key="canvasLocation" x="2250" y="500"/>
         </scene>
-        <!--New Punish View Controller - 新词汇-->
+        <!--新词汇-->
         <scene sceneID="3dC-D5-dRf">
             <objects>
                 <viewController wantsFullScreenLayout="YES" id="62g-0L-c1o" customClass="NewPunishViewController" sceneMemberID="viewController">
@@ -160,7 +160,7 @@
             </objects>
             <point key="canvasLocation" x="2634" y="500"/>
         </scene>
-        <!--Punish View Controller - 开始惩罚-->
+        <!--开始惩罚-->
         <scene sceneID="0mk-5d-dsp">
             <objects>
                 <viewController wantsFullScreenLayout="YES" id="mE6-is-2BY" customClass="UCIPunishViewController" sceneMemberID="viewController">
@@ -266,7 +266,7 @@
             </objects>
             <point key="canvasLocation" x="-1179" y="744"/>
         </scene>
-        <!--View Home View Controller - 爱上聚会-->
+        <!--爱上聚会-->
         <scene sceneID="6pO-dm-WvA">
             <objects>
                 <viewController wantsFullScreenLayout="YES" id="NCY-t9-dYo" customClass="ViewHomeViewController" sceneMemberID="viewController">
@@ -460,7 +460,7 @@
             </objects>
             <point key="canvasLocation" x="666" y="258"/>
         </scene>
-        <!--Ikill Setting View Controller - 杀人游戏-->
+        <!--杀人游戏-->
         <scene sceneID="mRI-Gr-fE5">
             <objects>
                 <viewController id="cNA-po-uPg" customClass="UCIkillSettingViewController" sceneMemberID="viewController">
@@ -510,7 +510,7 @@
             </objects>
             <point key="canvasLocation" x="403" y="-509"/>
         </scene>
-        <!--Iallocation View Controller - 分配身份-->
+        <!--分配身份-->
         <scene sceneID="0Oj-ju-QQc">
             <objects>
                 <viewController id="He0-16-Hji" customClass="UCIallocationViewController" sceneMemberID="viewController">
@@ -593,7 +593,7 @@
             </objects>
             <point key="canvasLocation" x="1137" y="-375"/>
         </scene>
-        <!--Help View Controller - 玩法-->
+        <!--玩法-->
         <scene sceneID="DHa-PW-x6M">
             <objects>
                 <viewController storyboardIdentifier="viewHelpId" wantsFullScreenLayout="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wn5-8O-c79" customClass="UCIHelpViewController" sceneMemberID="viewController">
@@ -627,7 +627,7 @@
             </objects>
             <point key="canvasLocation" x="-608" y="1541"/>
         </scene>
-        <!--View New Name Controller - 设置昵称-->
+        <!--设置昵称-->
         <scene sceneID="RNN-ZD-1S2">
             <objects>
                 <viewController id="Yz6-45-Sro" customClass="UCIViewNewNameController" sceneMemberID="viewController">
@@ -675,7 +675,7 @@
             </objects>
             <point key="canvasLocation" x="369" y="1470"/>
         </scene>
-        <!--Room Home View Controller - 参与游戏-->
+        <!--参与游戏-->
         <scene sceneID="ZSM-DZ-RqK">
             <objects>
                 <viewController wantsFullScreenLayout="YES" id="IJr-yc-3ge" customClass="UCIRoomHomeViewController" sceneMemberID="viewController">
@@ -765,7 +765,7 @@
             </objects>
             <point key="canvasLocation" x="17" y="2260"/>
         </scene>
-        <!--Navigation Controller - 参与-->
+        <!--参与-->
         <scene sceneID="iuH-9g-Zpf">
             <objects>
                 <navigationController wantsFullScreenLayout="YES" definesPresentationContext="YES" id="dRm-h4-zRe" sceneMemberID="viewController">
@@ -781,7 +781,7 @@
             </objects>
             <point key="canvasLocation" x="-588" y="2268"/>
         </scene>
-        <!--Test View Controller - 设置-->
+        <!--设置-->
         <scene sceneID="wQY-6K-Fnn">
             <objects>
                 <viewController wantsFullScreenLayout="YES" id="S85-1U-6Hg" customClass="testViewController" sceneMemberID="viewController">
@@ -824,7 +824,7 @@
             </objects>
             <point key="canvasLocation" x="-182" y="872"/>
         </scene>
-        <!--Feed Back View Controller - 反馈-->
+        <!--反馈-->
         <scene sceneID="Kft-Jx-cVj">
             <objects>
                 <viewController wantsFullScreenLayout="YES" id="Bbq-nn-NZd" customClass="UCIFeedBackViewController" sceneMemberID="viewController">
@@ -880,7 +880,7 @@
             </objects>
             <point key="canvasLocation" x="145" y="851"/>
         </scene>
-        <!--Navigation Controller - 设置-->
+        <!--设置-->
         <scene sceneID="2tC-ve-f4J">
             <objects>
                 <navigationController wantsFullScreenLayout="YES" definesPresentationContext="YES" id="Hvv-XP-p2E" sceneMemberID="viewController">
@@ -896,7 +896,7 @@
             </objects>
             <point key="canvasLocation" x="-608" y="866"/>
         </scene>
-        <!--Room Setting View Controller - 房间-->
+        <!--房间-->
         <scene sceneID="GOg-S3-Nb7">
             <objects>
                 <viewController wantsFullScreenLayout="YES" id="tcv-I7-KND" customClass="UCIRoomSettingViewController" sceneMemberID="viewController">
@@ -1071,7 +1071,7 @@
             </objects>
             <point key="canvasLocation" x="803" y="2691"/>
         </scene>
-        <!--Room Undercover View Controller - 谁是卧底-->
+        <!--谁是卧底-->
         <scene sceneID="mKW-3W-I7f">
             <objects>
                 <viewController title="谁是卧底" wantsFullScreenLayout="YES" id="udg-th-tbP" customClass="UCIRoomUndercoverViewController" sceneMemberID="viewController">
@@ -1202,7 +1202,7 @@
             </objects>
             <point key="canvasLocation" x="1242" y="2317"/>
         </scene>
-        <!--Room Killer View Controller - 杀人游戏-->
+        <!--杀人游戏-->
         <scene sceneID="bFF-Ig-ERz">
             <objects>
                 <viewController wantsFullScreenLayout="YES" id="dYA-1v-WKa" customClass="UCIRoomKillerViewController" sceneMemberID="viewController">
@@ -1214,12 +1214,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="游戏状态" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dM3-r2-Tw8">
-                                <rect key="frame" x="126" y="434" width="68" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="我的身份：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSx-E8-bkW">
                                 <rect key="frame" x="15" y="82" width="85" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1240,7 +1234,7 @@
                                 </connections>
                             </switch>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dhA-s5-PHn">
-                                <rect key="frame" x="10" y="165" width="300" height="237"/>
+                                <rect key="frame" x="10" y="165" width="300" height="157"/>
                             </scrollView>
                             <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="接受惩罚" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rG6-Dc-33Q">
                                 <rect key="frame" x="6" y="337" width="52" height="21"/>
@@ -1249,10 +1243,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVd-qb-Rkm">
-                                <rect key="frame" x="5" y="366" width="300" height="100"/>
+                                <rect key="frame" x="4" y="366" width="300" height="100"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="游戏状态" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dM3-r2-Tw8">
+                                <rect key="frame" x="126" y="482" width="68" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -1260,6 +1260,7 @@
                     <connections>
                         <outlet property="btnShowWord" destination="mbP-9c-cKN" id="NKo-65-Cfn"/>
                         <outlet property="labMeWord" destination="Cus-MR-OzQ" id="Cod-7T-zFm"/>
+                        <outlet property="labPunish" destination="zVd-qb-Rkm" id="AeA-R8-CHw"/>
                         <outlet property="viewPop" destination="dhA-s5-PHn" id="Um5-tK-X8f"/>
                     </connections>
                 </viewController>
@@ -1267,7 +1268,7 @@
             </objects>
             <point key="canvasLocation" x="1225" y="3043"/>
         </scene>
-        <!--Rome Info View Controller - 游戏信息-->
+        <!--游戏信息-->
         <scene sceneID="JLe-d1-92B">
             <objects>
                 <viewController wantsFullScreenLayout="YES" id="PvZ-nO-PGH" customClass="UCIRomeInfoViewController" sceneMemberID="viewController">
@@ -1354,7 +1355,7 @@
             </objects>
             <point key="canvasLocation" x="736" y="1953"/>
         </scene>
-        <!--View Undercover View Controller - 谁是卧底-->
+        <!--谁是卧底-->
         <scene sceneID="hQE-GW-FuC">
             <objects>
                 <viewController wantsFullScreenLayout="YES" id="dXO-cT-2Iv" customClass="ViewUndercoverViewController" sceneMemberID="viewController">
@@ -1448,7 +1449,7 @@
             </objects>
             <point key="canvasLocation" x="328" y="-993"/>
         </scene>
-        <!--View Fenpei View Controller - 分配身份-->
+        <!--分配身份-->
         <scene sceneID="3y1-ri-h5W">
             <objects>
                 <viewController wantsFullScreenLayout="YES" id="3ho-0x-a8w" customClass="ViewFenpeiViewController" sceneMemberID="viewController">
@@ -1504,7 +1505,7 @@
             </objects>
             <point key="canvasLocation" x="691" y="-993"/>
         </scene>
-        <!--View Guess View Controller - 猜卧底-->
+        <!--猜卧底-->
         <scene sceneID="6mT-1H-gE2">
             <objects>
                 <viewController wantsFullScreenLayout="YES" id="n7B-ON-LDM" customClass="ViewGuessViewController" sceneMemberID="viewController">
@@ -1733,7 +1734,7 @@
             </objects>
             <point key="canvasLocation" x="-588" y="-767"/>
         </scene>
-        <!--Navigation Controller - 游戏-->
+        <!--游戏-->
         <scene sceneID="Jo2-wA-uUV">
             <objects>
                 <navigationController wantsFullScreenLayout="YES" id="3Cw-FO-FmF" sceneMemberID="viewController">
@@ -1752,7 +1753,7 @@
             </objects>
             <point key="canvasLocation" x="-644" y="-192"/>
         </scene>
-        <!--View Undercover View Controller - 谁是卧底-->
+        <!--谁是卧底-->
         <scene sceneID="i41-Ti-AWt">
             <objects>
                 <viewController wantsFullScreenLayout="YES" id="CVE-1v-oVm" customClass="ViewUndercoverViewController" sceneMemberID="viewController">
@@ -1845,7 +1846,7 @@
             </objects>
             <point key="canvasLocation" x="328" y="-993"/>
         </scene>
-        <!--View Undercover View Controller - 谁是卧底-->
+        <!--谁是卧底-->
         <scene sceneID="rLY-z6-6t3">
             <objects>
                 <viewController wantsFullScreenLayout="YES" id="v9H-E3-VzU" customClass="ViewUndercoverViewController" sceneMemberID="viewController">
@@ -1938,7 +1939,7 @@
             </objects>
             <point key="canvasLocation" x="328" y="-993"/>
         </scene>
-        <!--View Undercover View Controller - 谁是卧底-->
+        <!--谁是卧底-->
         <scene sceneID="GUF-sS-Cko">
             <objects>
                 <viewController wantsFullScreenLayout="YES" id="dYC-V0-qKD" customClass="ViewUndercoverViewController" sceneMemberID="viewController">
@@ -2031,7 +2032,7 @@
             </objects>
             <point key="canvasLocation" x="328" y="-993"/>
         </scene>
-        <!--View Undercover View Controller - 谁是卧底-->
+        <!--谁是卧底-->
         <scene sceneID="3dY-aN-HiA">
             <objects>
                 <viewController wantsFullScreenLayout="YES" id="tKc-IV-LPw" customClass="ViewUndercoverViewController" sceneMemberID="viewController">
@@ -2124,7 +2125,7 @@
             </objects>
             <point key="canvasLocation" x="328" y="-993"/>
         </scene>
-        <!--View Undercover View Controller - 谁是卧底-->
+        <!--谁是卧底-->
         <scene sceneID="h3r-AO-lsx">
             <objects>
                 <viewController wantsFullScreenLayout="YES" id="04s-nQ-1Xw" customClass="ViewUndercoverViewController" sceneMemberID="viewController">
@@ -2234,7 +2235,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Gsj-MW-MSA"/>
         <segue reference="Nkf-oU-wE6"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.37399760466176168" green="0.80554339169236644" blue="1" alpha="1" colorSpace="calibratedRGB"/>
