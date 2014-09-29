@@ -37,4 +37,5 @@
 -(NSString *)getConfig:(NSString *)key;
 -(void)reflashOneSec;
 -(void)setBadgeValue:(int)val;
+- (void)sessionDownload:(NSString *)urlString;
 @end

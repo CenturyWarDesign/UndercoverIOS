@@ -8,6 +8,7 @@
 
 #import "UCIRoomSettingViewController.h"
 #import "UCIAppDelegate.h"
+#import "UIButton+WebCache.h"
 
 @interface UCIRoomSettingViewController ()
 
@@ -173,9 +174,11 @@
         UIButton *someAddButton = [self getCircleBtn:btnWidth];
         
         NSString * userName=[(NSMutableDictionary *)[userinfotem objectAtIndex:i] objectForKey:@"username"];
+        NSString * photo=[(NSMutableDictionary *)[userinfotem objectAtIndex:i] objectForKey:@"photo"];
         int temgameuid=[[(NSMutableDictionary *)[userinfotem objectAtIndex:i] objectForKey:@"gameuid"] intValue];
         [someAddButton setTitle:userName forState:UIControlStateNormal];
         
+        [someAddButton  sd_setBackgroundImageWithURL:[NSURL URLWithString: photo] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"default_photo.png"]];
         if ([usernamearray containsObject:userName]) {
             someAddButton.layer.borderColor=[UIColor redColor].CGColor;
         }

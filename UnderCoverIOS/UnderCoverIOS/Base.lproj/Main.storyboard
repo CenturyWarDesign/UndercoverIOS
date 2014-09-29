@@ -794,26 +794,44 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="音效：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbo-g1-otW">
-                                <rect key="frame" x="48" y="123" width="51" height="21"/>
+                                <rect key="frame" x="52" y="234" width="51" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="default_photo.png" translatesAutoresizingMaskIntoConstraints="NO" id="AYU-uj-Sn1">
+                                <rect key="frame" x="23" y="97" width="80" height="80"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="未绑定社交账号" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzZ-j9-r5T">
+                                <rect key="frame" x="124" y="104" width="119" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NEj-6t-pVe">
+                                <rect key="frame" x="124" y="140" width="32" height="32"/>
+                                <state key="normal" title="Button" image="sina32x32.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sinaLogin:" destination="S85-1U-6Hg" eventType="touchUpInside" id="cOr-95-sqe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="End-M7-438">
+                                <rect key="frame" x="176" y="140" width="32" height="32"/>
+                                <state key="normal" title="Button" image="qq32x32.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="qqLogin:" destination="S85-1U-6Hg" eventType="touchUpInside" id="k6p-QE-fnr"/>
+                                </connections>
+                            </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2wc-b6-Mhb">
-                                <rect key="frame" x="112" y="123" width="79" height="27"/>
+                                <rect key="frame" x="124" y="231" width="79" height="27"/>
                                 <connections>
                                     <action selector="changeSoundSetting:" destination="S85-1U-6Hg" eventType="valueChanged" id="Tdq-tg-dSb"/>
                                 </connections>
                             </switch>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMf-2a-420">
-                                <rect key="frame" x="112" y="250" width="84" height="45"/>
-                                <state key="normal" title="社交登录">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="showLogin:" destination="S85-1U-6Hg" eventType="touchUpInside" id="DlH-18-RFo"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -826,6 +844,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="btnQQ" destination="End-M7-438" id="3g2-3Y-8r4"/>
+                        <outlet property="btnSina" destination="NEj-6t-pVe" id="u7j-h4-Onj"/>
+                        <outlet property="imgPhoto" destination="AYU-uj-Sn1" id="EzA-hY-V9D"/>
+                        <outlet property="labName" destination="kzZ-j9-r5T" id="KhA-vc-UQy"/>
                         <outlet property="soundSwitch" destination="2wc-b6-Mhb" id="RJQ-zs-g3X"/>
                     </connections>
                 </viewController>
@@ -2231,12 +2253,15 @@
     <resources>
         <image name="bottle.png" width="500" height="130"/>
         <image name="cardBack" width="185" height="260"/>
+        <image name="default_photo.png" width="105" height="105"/>
         <image name="game.png" width="30" height="30"/>
         <image name="help.png" width="30" height="30"/>
         <image name="join.png" width="30" height="30"/>
         <image name="original.png" width="224" height="224"/>
+        <image name="qq32x32.png" width="32" height="32"/>
         <image name="setting.png" width="30" height="30"/>
         <image name="shake.png" width="302" height="241"/>
+        <image name="sina32x32.png" width="32" height="32"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
