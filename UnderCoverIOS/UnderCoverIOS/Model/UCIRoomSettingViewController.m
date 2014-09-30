@@ -29,9 +29,7 @@
 {
     [super viewDidLoad];
     int roomid=[[self getObjectFromDefault:@"roomid"] intValue];
-    if(roomid>0){
-        [self.labRoomId setText:[NSString  stringWithFormat:@"%d",roomid]];
-    }
+    self.navigationItem.title=[NSString  stringWithFormat:@"房间%d",roomid];
 
     
     
@@ -258,13 +256,15 @@
      
         //界面之间进行传值,把创建游戏的数据发过来
         [theSegue setValue:datatosend forKey:@"gameData"];
+            [theSegue setValue:[NSString stringWithFormat:@"%d",addPeopleCount] forKey:@"addPeople"];
     }
     else if([segue.identifier isEqualToString:@"gameKiller"]) //"goView2"是SEGUE连线的标识
     {
         //界面之间进行传值,把创建游戏的数据发过来
         [theSegue setValue:datatosend forKey:@"gameData"];
+            [theSegue setValue:[NSString stringWithFormat:@"%d",addPeopleCount] forKey:@"addPeople"];
     }
-    [theSegue setValue:[NSString stringWithFormat:@"%d",addPeopleCount] forKey:@"addPeople"];
+    
     
 }
 

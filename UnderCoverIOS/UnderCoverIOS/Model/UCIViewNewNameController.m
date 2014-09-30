@@ -66,7 +66,7 @@
         [self setObjectFromDefault:self.labName.text key:@"username"];
         //成功修改昵称
         [self uMengClick:@"room_changename"];
-        [self.navigationController popViewControllerAnimated:YES];
+[self.navigationController popViewControllerAnimated:YES];
     }
 }
 -(IBAction)textFieldDoneEditing:(id)sender{

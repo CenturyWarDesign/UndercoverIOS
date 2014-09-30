@@ -99,6 +99,7 @@
             NSString * photoPath=[[[accountResponse.data objectForKey:@"accounts"] objectForKey:UMShareToSina] objectForKey:@"icon"];
             [self.labName setText:username];
             [self.imgPhoto sd_setImageWithURL:[NSURL URLWithString: photoPath] placeholderImage:nil];
+            [self setObjectFromDefault:username key:@"username"];
             [self updateUserNameImage:username photo:photoPath];
         }];
         [self hideLiginBtn];
@@ -111,6 +112,7 @@
             NSString * photoPath=[[[accountResponse.data objectForKey:@"accounts"] objectForKey:UMShareToSina] objectForKey:@"icon"];
             [self.labName setText:username];
             [self.imgPhoto sd_setImageWithURL:[NSURL URLWithString: photoPath] placeholderImage:nil];
+            [self setObjectFromDefault:username key:@"username"];
             [self updateUserNameImage:username photo:photoPath];
         }];
         [self hideLiginBtn];
