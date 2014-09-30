@@ -965,7 +965,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bh-on-Ml8">
-                                <rect key="frame" x="118" y="465" width="84" height="44"/>
+                                <rect key="frame" x="118" y="460" width="84" height="44"/>
                                 <state key="normal" title="杀人游戏">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1018,7 +1018,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="peoplecount.png" translatesAutoresizingMaskIntoConstraints="NO" id="f6x-4y-hZh">
-                                <rect key="frame" x="231" y="119" width="156" height="29"/>
+                                <rect key="frame" x="231" y="119" width="162" height="35"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -2254,7 +2254,7 @@
         <image name="icon32_wx_logo.png" width="32" height="32"/>
         <image name="join.png" width="30" height="30"/>
         <image name="original.png" width="224" height="224"/>
-        <image name="peoplecount.png" width="156" height="29"/>
+        <image name="peoplecount.png" width="162" height="35"/>
         <image name="qq32x32.png" width="32" height="32"/>
         <image name="setting.png" width="30" height="30"/>
         <image name="shake.png" width="302" height="241"/>
