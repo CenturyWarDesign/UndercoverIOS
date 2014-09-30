@@ -88,6 +88,7 @@
     [classBtest baseHttp:@"RoomLevel"];
 }
 
+
 -(void)callBack:(NSDictionary *)data commandName:(NSString*) command{
     if([command isEqualToString:@"RoomGetContent"]){
         int roomid=[[data objectForKey:@"roomid"] intValue];
@@ -110,6 +111,15 @@
         [self.navigationController popViewControllerAnimated:YES];
         [UCIAppDelegate setRoomPush:@""];
         NSLog(@"RoomLevel 函数的回调");
+    }
+}
+
+
+//退出的时候回调函数
+-(void)callback:(int)code
+{
+    if (code == 1101) {
+//        [self setEnable];
     }
 }
 @end
