@@ -940,19 +940,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wua-ZY-QI7">
-                                <rect key="frame" x="0.0" y="174" width="320" height="271"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FDb-QN-v6x">
+                                <rect key="frame" x="9" y="72" width="32" height="32"/>
+                                <state key="normal" image="icon32_wx_logo.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="5gi-RS-ZJs" kind="push" id="09H-Nj-G3g"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIe-wa-3U1">
+                                <rect key="frame" x="191" y="72" width="270" height="35"/>
+                                <state key="normal" backgroundImage="peoplecount.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="doClick:" destination="tcv-I7-KND" eventType="touchUpInside" id="DiF-Om-5tD"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ox0-jT-08E">
+                                <rect key="frame" x="0.0" y="115" width="326" height="342"/>
                             </scrollView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="本机人数：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFD-Yc-Ivq">
-                                <rect key="frame" x="17" y="77" width="85" height="23"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="85" id="OgN-vx-OsD"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFU-Th-gWV">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bh-on-Ml8">
+                                <rect key="frame" x="117" y="465" width="84" height="44"/>
+                                <state key="normal" title="杀人游戏">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnJoinRoom:" destination="IJr-yc-3ge" eventType="touchUpInside" id="Fzs-dR-zxe"/>
+                                    <action selector="btnStartKiller:" destination="tcv-I7-KND" eventType="touchUpInside" id="7no-3N-z7g"/>
+                                    <action selector="btnTest:" destination="S85-1U-6Hg" eventType="touchUpInside" id="riW-3G-bFN"/>
+                                    <action selector="updateName:" destination="Yz6-45-Sro" eventType="touchUpInside" id="dFp-AL-SUo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFU-Th-gWV">
                                 <rect key="frame" x="20" y="465" width="80" height="44"/>
                                 <state key="normal" title="谁是卧底">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -964,81 +985,14 @@
                                     <action selector="updateName:" destination="Yz6-45-Sro" eventType="touchUpInside" id="HjZ-5T-ZgV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bh-on-Ml8">
-                                <rect key="frame" x="118" y="460" width="84" height="44"/>
-                                <state key="normal" title="杀人游戏">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnJoinRoom:" destination="IJr-yc-3ge" eventType="touchUpInside" id="Fzs-dR-zxe"/>
-                                    <action selector="btnStartKiller:" destination="tcv-I7-KND" eventType="touchUpInside" id="7no-3N-z7g"/>
-                                    <action selector="btnTest:" destination="S85-1U-6Hg" eventType="touchUpInside" id="riW-3G-bFN"/>
-                                    <action selector="updateName:" destination="Yz6-45-Sro" eventType="touchUpInside" id="dFp-AL-SUo"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZn-3Q-UHU">
-                                <rect key="frame" x="255" y="77" width="18" height="19"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="18" id="iL9-ie-5Pl"/>
-                                    <constraint firstAttribute="height" constant="18" id="yb2-gO-EeR"/>
-                                </constraints>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnPeople:" destination="tcv-I7-KND" eventType="touchUpInside" id="isF-OF-XQf"/>
-                                </connections>
-                            </button>
-                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="uMd-5L-dZd">
-                                <rect key="frame" x="120" y="72" width="104" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="AF4-Zk-aEh"/>
-                                </constraints>
-                                <connections>
-                                    <action selector="peoplechange:" destination="tcv-I7-KND" eventType="valueChanged" id="fF1-UE-HeM"/>
-                                </connections>
-                            </slider>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Dd-oB-cbw">
-                                <rect key="frame" x="225" y="78" width="20" height="19"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="NPy-X9-l5i"/>
-                                    <constraint firstAttribute="width" constant="20" id="hvD-6J-S5D"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FDb-QN-v6x">
-                                <rect key="frame" x="281" y="70" width="32" height="32"/>
-                                <state key="normal" image="icon32_wx_logo.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="5gi-RS-ZJs" kind="push" id="09H-Nj-G3g"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="peoplecount.png" translatesAutoresizingMaskIntoConstraints="NO" id="f6x-4y-hZh">
-                                <rect key="frame" x="247" y="110" width="207" height="35"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2Dd-oB-cbw" firstAttribute="centerY" secondItem="uMd-5L-dZd" secondAttribute="centerY" id="67Y-Dz-f0I"/>
-                            <constraint firstItem="fFD-Yc-Ivq" firstAttribute="centerY" secondItem="uMd-5L-dZd" secondAttribute="centerY" id="7eB-ma-EMd"/>
-                            <constraint firstItem="6bh-on-Ml8" firstAttribute="leading" secondItem="HFU-Th-gWV" secondAttribute="trailing" constant="18" id="95O-x1-XYB"/>
-                            <constraint firstItem="OZn-3Q-UHU" firstAttribute="leading" secondItem="2Dd-oB-cbw" secondAttribute="trailing" constant="10" id="D6o-jQ-O69"/>
-                            <constraint firstItem="6bh-on-Ml8" firstAttribute="top" secondItem="Wua-ZY-QI7" secondAttribute="bottom" constant="20" id="DqI-1B-k5y"/>
-                            <constraint firstItem="HFU-Th-gWV" firstAttribute="width" secondItem="6bh-on-Ml8" secondAttribute="width" constant="-4" id="H8l-fn-3IE"/>
-                            <constraint firstAttribute="trailing" secondItem="Wua-ZY-QI7" secondAttribute="trailing" id="KPN-be-XuR"/>
-                            <constraint firstItem="Wua-ZY-QI7" firstAttribute="leading" secondItem="3og-7S-wQs" secondAttribute="leading" id="KqB-T6-cpi"/>
-                            <constraint firstItem="0Kb-j9-lei" firstAttribute="top" secondItem="HFU-Th-gWV" secondAttribute="bottom" constant="11" id="Sih-4J-jbl"/>
-                            <constraint firstItem="Wua-ZY-QI7" firstAttribute="top" secondItem="fFD-Yc-Ivq" secondAttribute="bottom" constant="8" symbolic="YES" id="T1J-mG-7pc"/>
-                            <constraint firstItem="2Dd-oB-cbw" firstAttribute="leading" secondItem="uMd-5L-dZd" secondAttribute="trailing" constant="3" id="XDH-DI-Pr0"/>
-                            <constraint firstItem="fFD-Yc-Ivq" firstAttribute="centerY" secondItem="OZn-3Q-UHU" secondAttribute="centerY" id="Xvh-ii-peR"/>
-                            <constraint firstItem="fFD-Yc-Ivq" firstAttribute="baseline" secondItem="2Dd-oB-cbw" secondAttribute="baseline" id="c7H-69-x70"/>
-                            <constraint firstItem="6bh-on-Ml8" firstAttribute="baseline" secondItem="HFU-Th-gWV" secondAttribute="baseline" id="eHu-tn-B9X"/>
-                            <constraint firstAttribute="centerX" secondItem="6bh-on-Ml8" secondAttribute="centerX" id="xPa-QC-spl"/>
-                            <constraint firstItem="uMd-5L-dZd" firstAttribute="leading" secondItem="fFD-Yc-Ivq" secondAttribute="trailing" constant="20" id="zdW-np-u9f"/>
+                            <constraint firstItem="6bh-on-Ml8" firstAttribute="leading" secondItem="HFU-Th-gWV" secondAttribute="trailing" constant="17" id="7HQ-lS-cmL"/>
+                            <constraint firstItem="0Kb-j9-lei" firstAttribute="top" secondItem="HFU-Th-gWV" secondAttribute="bottom" constant="11" id="Ayf-Qb-kpv"/>
+                            <constraint firstItem="HFU-Th-gWV" firstAttribute="baseline" secondItem="6bh-on-Ml8" secondAttribute="baseline" id="R3x-WR-JM6"/>
+                            <constraint firstItem="6bh-on-Ml8" firstAttribute="leading" secondItem="3og-7S-wQs" secondAttribute="leading" constant="117" id="bch-D2-P24"/>
+                            <constraint firstItem="HFU-Th-gWV" firstAttribute="leading" secondItem="3og-7S-wQs" secondAttribute="leading" constant="20" symbolic="YES" id="oCU-5a-JVF"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="房间" id="WPn-Ch-3xQ">
@@ -1050,11 +1004,9 @@
                     </navigationItem>
                     <connections>
                         <outlet property="btnKiller" destination="6bh-on-Ml8" id="6aU-VO-R5u"/>
+                        <outlet property="btnPeople" destination="JIe-wa-3U1" id="yir-cQ-iTS"/>
                         <outlet property="btnUndercover" destination="HFU-Th-gWV" id="mg0-Y9-IPz"/>
-                        <outlet property="imgPeopleSetting" destination="f6x-4y-hZh" id="2LE-jn-siC"/>
-                        <outlet property="labPeople" destination="2Dd-oB-cbw" id="lNH-40-tvG"/>
-                        <outlet property="peopleCount" destination="uMd-5L-dZd" id="u3g-RC-Rsd"/>
-                        <outlet property="scrollUsers" destination="Wua-ZY-QI7" id="Kc6-lC-pYD"/>
+                        <outlet property="scrollUsers" destination="Ox0-jT-08E" id="iy1-eP-AfV"/>
                         <segue destination="udg-th-tbP" kind="push" identifier="gameundercover" id="Vpd-qK-9bA"/>
                         <segue destination="dYA-1v-WKa" kind="push" identifier="gameKiller" id="v1c-b7-bWH"/>
                     </connections>

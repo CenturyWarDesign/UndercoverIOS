@@ -31,20 +31,27 @@
     [super viewDidLoad];
     int roomid=[[self getObjectFromDefault:@"roomid"] intValue];
     self.navigationItem.title=[NSString  stringWithFormat:@"房间%d",roomid];
-
-    
-    //设置条可以拖动
-    self.imgPeopleSetting.userInteractionEnabled=YES;
     
     timerCheck= [NSTimer  timerWithTimeInterval:1.0 target:self selector:@selector(checkFlash)userInfo:nil repeats:YES];
     timerReflash= [NSTimer  timerWithTimeInterval:20.0 target:self selector:@selector(reflash)userInfo:nil repeats:YES];
     
+     //设置条可以拖动
+    istouch=0;
+     [self.btnPeople addTarget:self action:@selector(dragMoving:withEvent: )forControlEvents: UIControlEventTouchDragInside];
+    
+    [self.btnPeople addTarget:self action:@selector(dragStart:withEvent: )forControlEvents: UIControlEventTouchDown];
+    
+    [self.btnPeople addTarget:self action:@selector(dragEnd:withEvent: )forControlEvents: UIControlEventTouchUpInside];
+    
+    
+    startPoint=self.btnPeople.center;
     [[NSRunLoop currentRunLoop]addTimer:timerCheck forMode:NSDefaultRunLoopMode];
     [[NSRunLoop currentRunLoop]addTimer:timerReflash forMode:NSDefaultRunLoopMode];
     
     [self reflash];
     
     addPeopleCount=0;
+    thistotalpeople=1;
     
     [self.btnUndercover setEnabled:false];
     [self.btnKiller setEnabled:false];
@@ -60,44 +67,89 @@
     }
 }
 
+- (void) dragMoving: (UIButton *) c withEvent:ev
+{
+    istouch=true;
+    CGPoint point = [[[ev allTouches] anyObject] locationInView:self.view];
+    float dx = point.x - startPoint.x;
+    CGPoint newcenter = CGPointMake(c.center.x + dx,startPoint.y);
+    newcenter.x =MAX(c.superview.bounds.size.width-c.bounds.size.width/2,newcenter.x);
+    newcenter.x =MIN(c.superview.bounds.size.width+10,newcenter.x);
+    c.center = newcenter;
+    startPoint.x=point.x;
+}
 
 
-//- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-//{
-//    //保存触摸起始点位置
-//    CGPoint point = [[touches anyObject] locationInView:self];
-//    startPoint = point;
-//    
-//    //该view置于最前
-//    [[self superview] bringSubviewToFront:self];
-//}
-//
-//-(void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
-//{
-//    //计算位移=当前位置-起始位置
-//    CGPoint point = [[touches anyObject] locationInView:self];
-//    float dx = point.x - startPoint.x;
-//    float dy = point.y - startPoint.y;
-//    
-//    //计算移动后的view中心点
-//    CGPoint newcenter = CGPointMake(self.center.x + dx, self.center.y + dy);
-//    
-//    
-//    /* 限制用户不可将视图托出屏幕 */
-//    float halfx = CGRectGetMidX(self.bounds);
-//    //x坐标左边界
-//    newcenter.x = MAX(halfx, newcenter.x);
-//    //x坐标右边界
-//    newcenter.x = MIN(self.superview.bounds.size.width - halfx, newcenter.x);
-//    
-//    //y坐标同理
-//    float halfy = CGRectGetMidY(self.bounds);
-//    newcenter.y = MAX(halfy, newcenter.y);
-//    newcenter.y = MIN(self.superview.bounds.size.height - halfy, newcenter.y);
-//    
-//    //移动view
-//    self.center = newcenter;
-//}
+-(void) dragEnd: (UIButton *) c withEvent:ev{
+//    NSLog(@"end");
+    //判断一下停在第几个格那里
+//        self.view.bounds.size.width;
+    float btnRight=c.center.x+c.bounds.size.width/2;
+    int count=5-floorf((btnRight-self.view.bounds.size.width)/36);
+    [self moveToCount:count];
+    thistotalpeople=count;
+    [self setObjectFromDefault:[NSString stringWithFormat:@"%d",thistotalpeople] key:@"addOtherPeople"];
+//    NSLog(@"%d",count);
+}
+
+//把选择条移到相应位置上
+-(void) moveToCount:(int)count{
+//    float btnRight=self.btnPeople.center.x+self.btnPeople.bounds.size.width/2;
+    int right=(5-count)*36;
+//    self.btnPeople.center.x=(float)right+self.view.bounds.size.width-self.btnPeople.bounds.size.width/2;
+    
+    CGPoint newcenter = CGPointMake((float)right+self.view.bounds.size.width-self.btnPeople.bounds.size.width/2, self.btnPeople.center.y);
+    self.btnPeople.center=newcenter;
+    nowPoint=newcenter;
+    addPeopleCount=count-1;
+    //addPeopleCount=5;
+//    [self.labPeople setText:[NSString stringWithFormat:@"%d",progress ]];
+    
+    [self ReflashUsers];
+//    self.btnPeople.center.x
+
+}
+
+
+
+
+
+- (void) dragStart: (UIButton *) c withEvent:ev
+{
+    CGPoint point= [[[ev allTouches] anyObject] locationInView:self.view];
+    startPoint.x=point.x;
+    [[c superview] bringSubviewToFront:self.view];
+}
+
+
+
+-(IBAction)doClick:(UIButton*)sender
+{
+    if (!istouch)
+    {
+        thistotalpeople++;
+        if(thistotalpeople>5){
+            thistotalpeople=1;
+        }
+        [self moveToCount:thistotalpeople];
+    }
+    istouch=false;
+}
+
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    int peoplecount=[[self getObjectFromDefault:@"addOtherPeople"] integerValue];
+    if(peoplecount<=0){
+        peoplecount=1;
+    }
+    thistotalpeople=peoplecount;
+    int totalcount=[userinfo count]+peoplecount-1;
+    [self checkifEnable:totalcount];
+//    self.btnPeople.center=nowPoint;
+//    [self moveToCount:peoplecount];
+}
+
 
 
 
@@ -167,7 +219,7 @@
 //在这里画出玩家
 -(void)ReflashUsers{
     
-    int progress=(int)self.peopleCount.value;
+    int progress=addPeopleCount;
     NSMutableArray * userinfotem=[[NSMutableArray alloc] init];
     for (int i=0; i<progress; i++) {
         NSDictionary * tem=[NSDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:@"NO.%d",i+1],@"username",@"ddd",@"content",nil];
@@ -186,7 +238,7 @@
     
     int width=self.scrollUsers.bounds.size.width;
 
-    int btnWidth=(width-30)/4;
+    int btnWidth=(width-40)/4;
     int btnHeight=btnWidth;
     
     //
@@ -284,7 +336,7 @@
     gametype=2;
     [self uMengValue:@"room_add_people_count" val:addPeopleCount];
     [self uMengClick:@"room_killer"];
-        [self setBtnDisable];
+    [self setBtnDisable];
 }
 
 
@@ -309,15 +361,7 @@
     
 }
 
-- (IBAction)peoplechange:(UISlider *)sender {
-     int progress=(int)lroundf(sender.value);
-     addPeopleCount=progress;
-    //addPeopleCount=5;
-    [self.labPeople setText:[NSString stringWithFormat:@"%d",progress ]];
 
-    [self ReflashUsers];
-    
-}
 
 //这个用户显示未个游戏，是否可以玩，以后每个游戏都要加在这里
 -(void) checkifEnable:(int) peoplecount{
