@@ -98,7 +98,7 @@
 		38FD7D1219DA27D400691EA8 /* UMSShareListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38FD7D0619DA27D400691EA8 /* UMSShareListController.xib */; };
 		38FD7D1319DA27D400691EA8 /* UMSocialSDKResourcesNew.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 38FD7D0719DA27D400691EA8 /* UMSocialSDKResourcesNew.bundle */; };
 		38FD7D1719DA391200691EA8 /* remove.png in Resources */ = {isa = PBXBuildFile; fileRef = 38FD7D1619DA391200691EA8 /* remove.png */; };
-		38FD7D1919DA3BC400691EA8 /* peoplecount.png in Resources */ = {isa = PBXBuildFile; fileRef = 38FD7D1819DA3BC400691EA8 /* peoplecount.png */; };
+		38FD7D1B19DA3DEF00691EA8 /* peoplecount.png in Resources */ = {isa = PBXBuildFile; fileRef = 38FD7D1A19DA3DEF00691EA8 /* peoplecount.png */; };
 		38FFCC821993DDE40063859B /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FFCC811993DDE40063859B /* Reachability.m */; };
 		800E508619A976FE0056F981 /* UCIkillSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 800E508519A976FE0056F981 /* UCIkillSettingViewController.m */; };
 		800E508919ACE2A20056F981 /* UCIallocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 800E508819ACE2A20056F981 /* UCIallocationViewController.m */; };
@@ -311,7 +311,7 @@
 		38FD7D0719DA27D400691EA8 /* UMSocialSDKResourcesNew.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = UMSocialSDKResourcesNew.bundle; sourceTree = "<group>"; };
 		38FD7D0819DA27D400691EA8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/UMSocialLocalizable.strings"; sourceTree = "<group>"; };
 		38FD7D1619DA391200691EA8 /* remove.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = remove.png; sourceTree = "<group>"; };
-		38FD7D1819DA3BC400691EA8 /* peoplecount.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = peoplecount.png; sourceTree = "<group>"; };
+		38FD7D1A19DA3DEF00691EA8 /* peoplecount.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = peoplecount.png; sourceTree = "<group>"; };
 		38FFCC801993DDE40063859B /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		38FFCC811993DDE40063859B /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		69C0D4BC55754114AF83A8A1 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -568,7 +568,7 @@
 		C3089DC818C77A9D00A7BAAD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				38FD7D1819DA3BC400691EA8 /* peoplecount.png */,
+				38FD7D1A19DA3DEF00691EA8 /* peoplecount.png */,
 				38FD7D1619DA391200691EA8 /* remove.png */,
 				38FD7CE919D9596F00691EA8 /* wx_qcode.jpg */,
 				38FD7CE719D9584000691EA8 /* icon32_wx_logo.png */,
@@ -915,7 +915,7 @@
 				38ECA849191FCA91007672BA /* shake.png in Resources */,
 				C3089DF718C77A9D00A7BAAD /* Icon.png in Resources */,
 				C3089DE818C77A9D00A7BAAD /* Default.png in Resources */,
-				38FD7D1919DA3BC400691EA8 /* peoplecount.png in Resources */,
+				38FD7D1B19DA3DEF00691EA8 /* peoplecount.png in Resources */,
 				38FD7D0B19DA27D400691EA8 /* UMSCommentDetailController.xib in Resources */,
 				38FD7CE819D9584000691EA8 /* icon32_wx_logo.png in Resources */,
 				C3089DED18C77A9D00A7BAAD /* Icon-60.png in Resources */,

@@ -1018,7 +1018,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="peoplecount.png" translatesAutoresizingMaskIntoConstraints="NO" id="f6x-4y-hZh">
-                                <rect key="frame" x="231" y="119" width="162" height="35"/>
+                                <rect key="frame" x="247" y="110" width="207" height="35"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -1051,6 +1051,7 @@
                     <connections>
                         <outlet property="btnKiller" destination="6bh-on-Ml8" id="6aU-VO-R5u"/>
                         <outlet property="btnUndercover" destination="HFU-Th-gWV" id="mg0-Y9-IPz"/>
+                        <outlet property="imgPeopleSetting" destination="f6x-4y-hZh" id="2LE-jn-siC"/>
                         <outlet property="labPeople" destination="2Dd-oB-cbw" id="lNH-40-tvG"/>
                         <outlet property="peopleCount" destination="uMd-5L-dZd" id="u3g-RC-Rsd"/>
                         <outlet property="scrollUsers" destination="Wua-ZY-QI7" id="Kc6-lC-pYD"/>
@@ -2254,7 +2255,7 @@
         <image name="icon32_wx_logo.png" width="32" height="32"/>
         <image name="join.png" width="30" height="30"/>
         <image name="original.png" width="224" height="224"/>
-        <image name="peoplecount.png" width="162" height="35"/>
+        <image name="peoplecount.png" width="270" height="35"/>
         <image name="qq32x32.png" width="32" height="32"/>
         <image name="setting.png" width="30" height="30"/>
         <image name="shake.png" width="302" height="241"/>

@@ -15,6 +15,8 @@
     int gametype;
     NSMutableArray *userinfo;
     int addPeopleCount;
+    
+    CGPoint startPoint;
 }
 @property (strong, nonatomic) IBOutlet UILabel *labRoomId;
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollUsers;
@@ -27,5 +29,6 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *labPeople;
 @property (strong, nonatomic) IBOutlet UISlider *peopleCount;
+@property (strong, nonatomic) IBOutlet UIImageView *imgPeopleSetting;
 
 @end
