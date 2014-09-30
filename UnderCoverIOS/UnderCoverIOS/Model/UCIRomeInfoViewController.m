@@ -99,7 +99,8 @@
             [self.navigationController popViewControllerAnimated:YES];
             [UCIAppDelegate setRoomPush:@""];
         }
-        [self.labRoomId setText:[NSString stringWithFormat:@"%d",roomid]];
+        self.navigationItem.title=[NSString stringWithFormat:@"房间%d",roomid];
+//        [self.labRoomId setText:[NSString stringWithFormat:@"%d",roomid]];
         [self.labContent setText:content];
         [self.labGameName setText:gamename];
         NSLog(@"RoomGetContent 函数的回调");

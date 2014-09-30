@@ -12,7 +12,7 @@
     NSTimer *timerCheck;
     NSTimer *timerReflash;
 }
-@property (strong, nonatomic) IBOutlet UILabel *labRoomId;
+
 @property (strong, nonatomic) IBOutlet UILabel *labContent;
 @property (strong, nonatomic) IBOutlet UILabel *labGameName;
 
