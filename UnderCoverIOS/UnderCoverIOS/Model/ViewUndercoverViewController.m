@@ -19,8 +19,15 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+//        self.hidesBottomBarWhenPushed = YES;
+    
     }
     return self;
+}
+
+-(void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+//    [self.tabBarController.tabBar setHidden:TRUE];
 }
 
 - (void)viewDidLoad
@@ -29,9 +36,6 @@
     [super viewDidLoad];
     PeopleCount=4;
     UndercoverCount=1;
-    
-
-    
     self.labPeopleCount.text=[NSString stringWithFormat:@"%d",PeopleCount];
     self.labUndercoverCount.text=[NSString stringWithFormat:@"%d",UndercoverCount];
     self.sliPeople.maximumValue=12;
