@@ -38,4 +38,5 @@
 -(void)reflashOneSec;
 -(void)setBadgeValue:(int)val;
 - (void)sessionDownload:(NSString *)urlString;
+-(NSString *)intToString:(int) input;
 @end

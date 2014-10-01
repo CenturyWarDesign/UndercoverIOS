@@ -24,7 +24,6 @@
     }
     return self;
 }
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -33,8 +32,8 @@
     
     [self.labStatus setText:@""];
 //    datagame=gameundercover;
-    [self.labGameName setText:[gameData objectForKey:@"name"]];
-    [self.labRoomID setText:[gameData objectForKey:@"gameuid"]];
+//    [self.labGameName setText:[gameData objectForKey:@"name"]];
+//    [self.labRoomID setText:[gameData objectForKey:@"gameuid"]];
     
     PeopleCount=[(NSArray *)[gameData objectForKey:@"room_user"] count];
     MaxPeopleCount=PeopleCount;
@@ -54,6 +53,7 @@
         }
     }
     
+    showShenfen=[[NSMutableDictionary alloc] init];
     
     [self initGuess:datagame];
     [self initaddPeople];
@@ -66,11 +66,11 @@
     int people=[addPeople intValue];
     if(people==1)
     {
-        [self.btnAdd2 setHidden:true];
+//        [self.btnAdd2 setHidden:true];
     }
     if(people==0){
-        [self.btnAdd2 setHidden:true];
-        [self.btnAdd1 setHidden:true];
+//        [self.btnAdd2 setHidden:true];
+//        [self.btnAdd1 setHidden:true];
     }
 }
 
@@ -243,6 +243,24 @@
 
 //每秒刷新
 -(void)reflashOneSec{
+    NSString * needRemove=@"";
+    for(NSString *compKey in showShenfen) {    // 正确的字典遍历方
+        int listTime=[[showShenfen objectForKey:compKey] intValue];
+        if(listTime>0){
+            listTime--;
+            [showShenfen setObject:[self intToString:listTime] forKey:compKey];
+        }
+        else if(listTime==0){
+            [self hideTag:[compKey intValue]];
+            needRemove=compKey;
+            break;
+        }
+             
+    }
+//    if(![needRemove isEqual:@""]){
+//       
+//    }
+    
     if(showShenfenSec>0)
     {
         showShenfenSec--;
@@ -252,5 +270,41 @@
         }
     }
 }
+-(void)hideTag:(int)btnTag{
+    UIButton * tembutton=(UIButton *)[self.view viewWithTag:btnTag];
+    float left=self.view.bounds.size.width+tembutton.bounds.size.width/2-20;
+    CGPoint pointnew=CGPointMake(left,tembutton.center.y);
+    tembutton.center=pointnew;
+    [showShenfen removeObjectForKey:[self intToString:btnTag]];
+    [self otherSetDisabble:true];
+}
+
+
+
+//以下是点击查看身份事件
+- (IBAction)clickTagAction:(UIButton *)sender {
+    //如果没有弹出的时候
+    if([showShenfen objectForKey:[self intToString:sender.tag]]>0){
+        [self hideTag:sender.tag];
+    }
+    else{
+        [self otherSetDisabble:false];
+        float left=sender.superview.bounds.size.width-sender.bounds.size.width/2;
+        CGPoint pointnew=CGPointMake(left,sender.center.y);
+        sender.center=pointnew;
+        //记时，进行回退
+        [showShenfen setObject:[self intToString:3] forKey:[self intToString:sender.tag]];
+        [sender setEnabled:true];
+    }
+}
+
+-(void)otherSetDisabble:(BOOL) isenable{
+    [self.btn_self setEnabled:isenable];
+    [self.btn_no1 setEnabled:isenable];
+    [self.btn_no2 setEnabled:isenable];
+    [self.btn_no3 setEnabled:isenable];
+    [self.btn_no4 setEnabled:isenable];
+}
+
 
 @end

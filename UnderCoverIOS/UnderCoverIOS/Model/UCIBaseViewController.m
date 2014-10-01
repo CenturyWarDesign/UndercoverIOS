@@ -331,4 +331,8 @@
     [task resume];
 }
 
+-(NSString *)intToString:(int) input{
+    return [NSString stringWithFormat:@"%d",input];
+}
+
 @end

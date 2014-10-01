@@ -20,10 +20,8 @@
     int roomtype;
     //这个显示用户身份的时间
     int showShenfenSec;
+    NSMutableDictionary * showShenfen;
 }
-@property (strong, nonatomic) IBOutlet UILabel *labRoomID;
-@property (strong, nonatomic) IBOutlet UIScrollView *viewPeople;
-@property (strong, nonatomic) IBOutlet UILabel *labGameName;
 @property (strong, nonatomic) IBOutlet UILabel *labStatus;
 @property(nonatomic,weak)NSDictionary *gameData;
 @property(nonatomic,retain)NSString *addPeople;
@@ -33,11 +31,20 @@
 @property (strong, nonatomic) IBOutlet UILabel *labMeWord;
 @property (strong, nonatomic) IBOutlet UISwitch *btnShowWord;
 @property (strong, nonatomic) IBOutlet UIScrollView *viewPop;
-@property (strong, nonatomic) IBOutlet UIButton *btnShowPunish;
+
 
 -(void) sendToSendPunish:(NSString *) str;
 -(NSString *) getLoserStr:(NSString *)loser;
 -(void)disabledAllButton;
-@property (strong, nonatomic) IBOutlet UIButton *btnAdd1;
-@property (strong, nonatomic) IBOutlet UIButton *btnAdd2;
+
+
+@property (strong, nonatomic) IBOutlet UIButton *btn_self;
+@property (strong, nonatomic) IBOutlet UIButton *btn_no1;
+@property (strong, nonatomic) IBOutlet UIButton *btn_no2;
+@property (strong, nonatomic) IBOutlet UIButton *btn_no3;
+@property (strong, nonatomic) IBOutlet UIButton *btn_no4;
+
+
+
+
 @end
