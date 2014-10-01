@@ -48,8 +48,26 @@
     int zhuchigameuid=[[gameData objectForKey:@"gameuid"] intValue];
     for (int i=0; i<[room_user count]; i++) {
         [datagame addObject:[NSDictionary dictionaryWithObjectsAndKeys:[(NSDictionary *)[room_user objectAtIndex:i] objectForKey:@"username"],@"user",[(NSDictionary *)[room_user objectAtIndex:i] objectForKey:@"content"],@"content",[(NSDictionary *)[room_user objectAtIndex:i] objectForKey:@"photo"],@"photo",[(NSDictionary *)[room_user objectAtIndex:i] objectForKey:@"gameuid"],@"gameuid",nil]];
-        if(zhuchigameuid==[[(NSDictionary *)[room_user objectAtIndex:i] objectForKey:@"gameuid"] intValue]){
-            [self.labMeWord setText:[(NSDictionary *)[room_user objectAtIndex:i] objectForKey:@"content"]];
+        
+        int temgameuid=[[(NSDictionary *)[room_user objectAtIndex:i] objectForKey:@"gameuid"] intValue];
+        NSString * temcontent=[(NSDictionary *)[room_user objectAtIndex:i] objectForKey:@"content"];
+        if(temgameuid==-1){
+            NSString * content=[NSString stringWithFormat:@"NO1:%@",temcontent];
+            [self.btn_no1 setTitle:content forState:UIControlStateNormal];
+        }else if(temgameuid==-2){
+            NSString * content=[NSString stringWithFormat:@"NO2:%@",temcontent];
+            [self.btn_no2 setTitle:content forState:UIControlStateNormal];
+        }else if(temgameuid==-3){
+            NSString * content=[NSString stringWithFormat:@"NO3:%@",temcontent];
+            [self.btn_no3 setTitle:content forState:UIControlStateNormal];
+        }
+        else if(temgameuid==-4){
+            NSString * content=[NSString stringWithFormat:@"NO4:%@",temcontent];
+            [self.btn_no4 setTitle:content forState:UIControlStateNormal];
+        }
+        else if(zhuchigameuid==temgameuid){
+            NSString * content=[NSString stringWithFormat:@"自己:%@",temcontent];
+            [self.btn_self setTitle:content forState:UIControlStateNormal];
         }
     }
     
@@ -59,18 +77,34 @@
     [self initaddPeople];
     showShenfenSec=0;
     // Do any additional setup after loading the view.
+
+}
+
+- (IBAction)showAllTag:(id)sender {
+    NSLog(@"will show");
 }
 
 
 -(void) initaddPeople{
     int people=[addPeople intValue];
-    if(people==1)
+    if(people==0)
     {
-//        [self.btnAdd2 setHidden:true];
-    }
-    if(people==0){
-//        [self.btnAdd2 setHidden:true];
-//        [self.btnAdd1 setHidden:true];
+        [self.btn_no4 setHidden:true];
+        [self.btn_no3 setHidden:true];
+        [self.btn_no2 setHidden:true];
+        [self.btn_no1 setHidden:true];
+    }else if(people==1)
+    {
+        [self.btn_no4 setHidden:true];
+        [self.btn_no3 setHidden:true];
+        [self.btn_no2 setHidden:true];
+    }else if(people==2)
+    {
+        [self.btn_no4 setHidden:true];
+        [self.btn_no3 setHidden:true];
+    }else if(people==3)
+    {
+        [self.btn_no4 setHidden:true];
     }
 }
 
@@ -96,12 +130,12 @@
     //这里判断，玩家名字一样的话，特别显示
     NSMutableArray * usernamearray=[[NSMutableArray alloc] init];
     
-    
+     
     //这里有两个添加的玩家
     for (int i=0; i<[initArray count]; i++) {
         CGRect frame = CGRectMake((btnWidth+5)*(i%4)+10, (i/4)*(btnHeight+10)+10, btnWidth, btnHeight);
         UIButton *someAddButton = [self getCircleBtn:btnWidth];
-        
+     
         NSString * shenfen=[(NSDictionary *)[initArray objectAtIndex:i] objectForKey:@"content"];
         NSString * userName=[(NSDictionary *)[initArray objectAtIndex:i] objectForKey:@"user"];
          NSString * photo=[(NSDictionary *)[initArray objectAtIndex:i] objectForKey:@"photo"];
@@ -243,7 +277,7 @@
 
 //每秒刷新
 -(void)reflashOneSec{
-    NSString * needRemove=@"";
+//    NSString * needRemove=@"";
     for(NSString *compKey in showShenfen) {    // 正确的字典遍历方
         int listTime=[[showShenfen objectForKey:compKey] intValue];
         if(listTime>0){
@@ -252,7 +286,7 @@
         }
         else if(listTime==0){
             [self hideTag:[compKey intValue]];
-            needRemove=compKey;
+//            needRemove=compKey;
             break;
         }
              
@@ -275,6 +309,7 @@
     float left=self.view.bounds.size.width+tembutton.bounds.size.width/2-20;
     CGPoint pointnew=CGPointMake(left,tembutton.center.y);
     tembutton.center=pointnew;
+    [tembutton setAlpha:0.3];
     [showShenfen removeObjectForKey:[self intToString:btnTag]];
     [self otherSetDisabble:true];
 }
@@ -295,6 +330,7 @@
         //记时，进行回退
         [showShenfen setObject:[self intToString:3] forKey:[self intToString:sender.tag]];
         [sender setEnabled:true];
+        [sender setAlpha:1];
     }
 }
 

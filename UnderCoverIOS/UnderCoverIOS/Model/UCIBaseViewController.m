@@ -277,7 +277,9 @@
     //        [someAddButton setBackgroundImage:[UIImage imageNamed:@"cerlightblue01.png"] forState:UIControlStateNormal];
     someAddButton.layer.borderWidth=1;
     someAddButton.layer.borderColor=[UIColor greenColor].CGColor;
-    someAddButton.layer.cornerRadius=width/2;
+//    someAddButton.layer.cornerRadius=width/2;
+    UIEdgeInsets insets = {width-20, 0 , 0, 0};
+    someAddButton.titleEdgeInsets=insets;
     someAddButton.layer.masksToBounds=YES;
     return someAddButton;
 

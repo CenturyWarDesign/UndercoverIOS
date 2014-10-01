@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" initialViewController="vWh-ec-t9B">
     <dependencies>
-        <deployment version="1536" identifier="iOS"/>
+        <deployment version="1536" defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
@@ -1163,40 +1163,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="游戏状态" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mM1-h8-wSs">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="游戏状态" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mM1-h8-wSs">
                                 <rect key="frame" x="126" y="478" width="68" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QJP-YF-ezB">
-                                <rect key="frame" x="10" y="145" width="116" height="65"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QJP-YF-ezB">
+                                <rect key="frame" x="0.0" y="70" width="320" height="498"/>
                             </scrollView>
-                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="接受惩罚" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wep-dn-tSh">
-                                <rect key="frame" x="11" y="338" width="52" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="bZf-5a-JSL"/>
-                                </constraints>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="接受惩罚" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wep-dn-tSh">
+                                <rect key="frame" x="10" y="391" width="52" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e7p-Jh-GUm">
-                                <rect key="frame" x="10" y="368" width="300" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="TD1-vr-Yf5"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a1b-37-BwR">
-                                <rect key="frame" x="250" y="70" width="200" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="gBR-Kl-chs"/>
-                                    <constraint firstAttribute="height" constant="50" id="kBM-h8-wgu"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <button opaque="NO" tag="100" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a1b-37-BwR">
+                                <rect key="frame" x="265" y="70" width="200" height="50"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="身份:机械战士" backgroundImage="tag_puple.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
@@ -1205,14 +1190,10 @@
                                     <action selector="clickTagAction:" destination="udg-th-tbP" eventType="touchUpInside" id="DPd-Br-mlw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NCx-Wk-Ns6">
-                                <rect key="frame" x="250" y="280" width="200" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="flz-vk-sXL"/>
-                                    <constraint firstAttribute="width" constant="200" id="mcS-rS-QBY"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <button opaque="NO" tag="103" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NCx-Wk-Ns6">
+                                <rect key="frame" x="265" y="280" width="200" height="50"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="NO3:机械战士" backgroundImage="tag_blue.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
@@ -1221,14 +1202,10 @@
                                     <action selector="clickTagAction:" destination="udg-th-tbP" eventType="touchUpInside" id="R9i-ha-y64"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8u-EE-4YG">
-                                <rect key="frame" x="250" y="350" width="200" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="h9C-4d-lvW"/>
-                                    <constraint firstAttribute="width" constant="200" id="tvc-rY-OJK"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <button opaque="NO" tag="104" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8u-EE-4YG">
+                                <rect key="frame" x="265" y="350" width="200" height="50"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="NO4:机械战士" backgroundImage="tag_yellow.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
@@ -1237,14 +1214,10 @@
                                     <action selector="clickTagAction:" destination="udg-th-tbP" eventType="touchUpInside" id="c3h-Uf-gRu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WTk-La-xE8">
-                                <rect key="frame" x="250" y="140" width="200" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Zgp-7x-3HK"/>
-                                    <constraint firstAttribute="width" constant="200" id="fVE-Cv-Bqm"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <button opaque="NO" tag="101" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WTk-La-xE8">
+                                <rect key="frame" x="265" y="140" width="200" height="50"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="NO1:机械战士" backgroundImage="tag_green.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
@@ -1253,14 +1226,10 @@
                                     <action selector="clickTagAction:" destination="udg-th-tbP" eventType="touchUpInside" id="3GR-uf-jd9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JkN-kM-0kF">
-                                <rect key="frame" x="250" y="210" width="200" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="4ne-cH-t1R"/>
-                                    <constraint firstAttribute="width" constant="200" id="ymj-MC-bIN"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <button opaque="NO" tag="102" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JkN-kM-0kF">
+                                <rect key="frame" x="265" y="210" width="200" height="50"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="NO2:机械战士" backgroundImage="tag_pink.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
@@ -1269,30 +1238,19 @@
                                     <action selector="clickTagAction:" destination="udg-th-tbP" eventType="touchUpInside" id="KHV-eE-JXY"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e7p-Jh-GUm">
+                                <rect key="frame" x="10" y="429" width="300" height="100"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="WTk-La-xE8" firstAttribute="top" secondItem="a1b-37-BwR" secondAttribute="bottom" constant="20" id="2cA-HT-A7R"/>
-                            <constraint firstAttribute="trailing" secondItem="JkN-kM-0kF" secondAttribute="trailing" constant="-130" id="49g-aA-FSC"/>
-                            <constraint firstItem="e7p-Jh-GUm" firstAttribute="top" secondItem="QJP-YF-ezB" secondAttribute="bottom" constant="10" id="4CC-F2-Q3O"/>
-                            <constraint firstItem="e7p-Jh-GUm" firstAttribute="leading" secondItem="QJP-YF-ezB" secondAttribute="leading" id="5Jd-yj-V6T"/>
-                            <constraint firstAttribute="trailing" secondItem="e7p-Jh-GUm" secondAttribute="trailing" constant="10" id="5pH-4m-Hup"/>
-                            <constraint firstItem="NCx-Wk-Ns6" firstAttribute="top" secondItem="JkN-kM-0kF" secondAttribute="bottom" constant="20" id="8OQ-l1-pBL"/>
-                            <constraint firstItem="u8u-EE-4YG" firstAttribute="top" secondItem="NCx-Wk-Ns6" secondAttribute="bottom" constant="20" id="EEj-n0-DBw"/>
-                            <constraint firstItem="a1b-37-BwR" firstAttribute="top" secondItem="DjM-HY-lLa" secondAttribute="top" constant="70" id="I5z-U7-aeT"/>
-                            <constraint firstItem="e7p-Jh-GUm" firstAttribute="top" secondItem="wep-dn-tSh" secondAttribute="bottom" constant="8" id="Pdm-kS-Zj4"/>
-                            <constraint firstItem="mM1-h8-wSs" firstAttribute="top" secondItem="e7p-Jh-GUm" secondAttribute="bottom" constant="10" id="R4I-Ve-EZg"/>
-                            <constraint firstItem="e7p-Jh-GUm" firstAttribute="trailing" secondItem="QJP-YF-ezB" secondAttribute="trailing" id="T1R-vm-WfN"/>
-                            <constraint firstItem="e7p-Jh-GUm" firstAttribute="centerX" secondItem="mM1-h8-wSs" secondAttribute="centerX" id="c3g-3N-6cH"/>
-                            <constraint firstAttribute="trailing" secondItem="WTk-La-xE8" secondAttribute="trailing" constant="-130" id="eMj-a7-lG3"/>
-                            <constraint firstAttribute="centerX" secondItem="mM1-h8-wSs" secondAttribute="centerX" id="fes-6H-wuG"/>
-                            <constraint firstAttribute="trailing" secondItem="a1b-37-BwR" secondAttribute="trailing" constant="-130" id="lIW-li-D2R"/>
-                            <constraint firstItem="e7p-Jh-GUm" firstAttribute="leading" secondItem="wep-dn-tSh" secondAttribute="leading" constant="-1" id="mIT-fV-All"/>
-                            <constraint firstItem="CuW-Vj-pMT" firstAttribute="top" secondItem="mM1-h8-wSs" secondAttribute="bottom" constant="20" id="n6o-mx-BDf"/>
-                            <constraint firstItem="e7p-Jh-GUm" firstAttribute="leading" secondItem="DjM-HY-lLa" secondAttribute="leading" constant="10" id="prE-gY-Wrk"/>
-                            <constraint firstItem="JkN-kM-0kF" firstAttribute="top" secondItem="WTk-La-xE8" secondAttribute="bottom" constant="20" id="ypA-zj-srH"/>
-                            <constraint firstAttribute="trailing" secondItem="u8u-EE-4YG" secondAttribute="trailing" constant="-130" id="z9r-Vm-ZOa"/>
-                            <constraint firstAttribute="trailing" secondItem="NCx-Wk-Ns6" secondAttribute="trailing" constant="-130" id="zKO-j1-TRi"/>
+                            <constraint firstAttribute="trailing" secondItem="QJP-YF-ezB" secondAttribute="trailing" id="MlT-5T-XU2"/>
+                            <constraint firstItem="QJP-YF-ezB" firstAttribute="top" secondItem="DjM-HY-lLa" secondAttribute="top" constant="70" id="Mx9-0Y-XgZ"/>
+                            <constraint firstAttribute="bottom" secondItem="QJP-YF-ezB" secondAttribute="bottom" id="W1Q-rA-FUk"/>
+                            <constraint firstItem="QJP-YF-ezB" firstAttribute="leading" secondItem="DjM-HY-lLa" secondAttribute="leading" id="zhI-U6-YnA"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
