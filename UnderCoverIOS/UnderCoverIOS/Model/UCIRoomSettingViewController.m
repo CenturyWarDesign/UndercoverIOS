@@ -405,5 +405,13 @@
 - (IBAction)btnPeople:(id)sender {
     [self showAlert:@"" content:@"可以最多支持两人没有智能设备的玩家参加"];
 }
+- (IBAction)clickShowAllGame:(id)sender {
+    [self.viewAllGamel setHidden:NO];
+}
+- (IBAction)clickHideAllGame:(id)sender {
+    [self.viewAllGamel setHidden:YES];
+}
+
+
 
 @end

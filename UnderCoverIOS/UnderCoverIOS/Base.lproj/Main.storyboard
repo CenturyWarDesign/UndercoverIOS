@@ -1093,41 +1093,95 @@
                                     <action selector="doClick:" destination="tcv-I7-KND" eventType="touchUpInside" id="DiF-Om-5tD"/>
                                 </connections>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ox0-jT-08E">
-                                <rect key="frame" x="0.0" y="115" width="326" height="342"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ox0-jT-08E">
+                                <rect key="frame" x="0.0" y="111" width="320" height="407"/>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bh-on-Ml8">
-                                <rect key="frame" x="117" y="514" width="84" height="44"/>
-                                <state key="normal" title="杀人游戏">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHK-Yr-OhU">
+                                <rect key="frame" x="0.0" y="518" width="320" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Dt9-fS-W1n"/>
+                                </constraints>
+                                <color key="tintColor" red="0.64365423437969693" green="0.97169419352709274" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="开始游戏" backgroundImage="btn_fang_purple.png">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="btnJoinRoom:" destination="IJr-yc-3ge" eventType="touchUpInside" id="Fzs-dR-zxe"/>
-                                    <action selector="btnStartKiller:" destination="tcv-I7-KND" eventType="touchUpInside" id="7no-3N-z7g"/>
-                                    <action selector="btnTest:" destination="S85-1U-6Hg" eventType="touchUpInside" id="riW-3G-bFN"/>
-                                    <action selector="updateName:" destination="Yz6-45-Sro" eventType="touchUpInside" id="dFp-AL-SUo"/>
+                                    <action selector="clickShowAllGame:" destination="tcv-I7-KND" eventType="touchUpInside" id="qcQ-6q-y7c"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFU-Th-gWV">
-                                <rect key="frame" x="20" y="514" width="80" height="44"/>
-                                <state key="normal" title="谁是卧底">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnJoinRoom:" destination="IJr-yc-3ge" eventType="touchUpInside" id="WhD-d7-02f"/>
-                                    <action selector="btnStartUndercover:" destination="tcv-I7-KND" eventType="touchUpInside" id="waj-fE-57X"/>
-                                    <action selector="btnTest:" destination="S85-1U-6Hg" eventType="touchUpInside" id="Jma-zA-uw5"/>
-                                    <action selector="updateName:" destination="Yz6-45-Sro" eventType="touchUpInside" id="HjZ-5T-ZgV"/>
-                                </connections>
-                            </button>
+                            <view hidden="YES" alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Oe-Cm-DhI">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wi2-0B-Jts">
+                                        <rect key="frame" x="8" y="144" width="80" height="80"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                        <state key="normal" title="卧" backgroundImage="start_undercover.png">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnStartUndercover:" destination="tcv-I7-KND" eventType="touchUpInside" id="DG9-nO-lbU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sqx-fT-HTH">
+                                        <rect key="frame" x="0.0" y="518" width="320" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="UXJ-Gh-bHd"/>
+                                        </constraints>
+                                        <state key="normal" title="返回" backgroundImage="btn_fang_write.png">
+                                            <color key="titleColor" red="0.0" green="0.5" blue="0.2132627312330948" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="clickHideAllGame:" destination="tcv-I7-KND" eventType="touchUpInside" id="DUM-tR-YAW"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="谁是卧底" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMT-t8-1Hu">
+                                        <rect key="frame" x="14" y="232" width="68" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCh-WM-NVZ">
+                                        <rect key="frame" x="120" y="144" width="80" height="80"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                        <state key="normal" title="杀" backgroundImage="start_killer.png">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnStartKiller:" destination="tcv-I7-KND" eventType="touchUpInside" id="AZH-cU-YRq"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="杀人游戏" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lda-Ze-NFC">
+                                        <rect key="frame" x="126" y="232" width="68" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.89915497448979598" green="0.89915497448979598" blue="0.89915497448979598" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="sqx-fT-HTH" secondAttribute="trailing" id="5Ov-uq-I7e"/>
+                                    <constraint firstItem="sqx-fT-HTH" firstAttribute="leading" secondItem="5Oe-Cm-DhI" secondAttribute="leading" id="VfM-l6-5nr"/>
+                                    <constraint firstAttribute="bottom" secondItem="sqx-fT-HTH" secondAttribute="bottom" id="Yvu-4J-vbf"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="6bh-on-Ml8" firstAttribute="leading" secondItem="HFU-Th-gWV" secondAttribute="trailing" constant="17" id="7HQ-lS-cmL"/>
-                            <constraint firstItem="0Kb-j9-lei" firstAttribute="top" secondItem="HFU-Th-gWV" secondAttribute="bottom" constant="11" id="Ayf-Qb-kpv"/>
-                            <constraint firstItem="HFU-Th-gWV" firstAttribute="baseline" secondItem="6bh-on-Ml8" secondAttribute="baseline" id="R3x-WR-JM6"/>
-                            <constraint firstItem="6bh-on-Ml8" firstAttribute="leading" secondItem="3og-7S-wQs" secondAttribute="leading" constant="117" id="bch-D2-P24"/>
-                            <constraint firstItem="HFU-Th-gWV" firstAttribute="leading" secondItem="3og-7S-wQs" secondAttribute="leading" constant="20" symbolic="YES" id="oCU-5a-JVF"/>
+                            <constraint firstItem="Ox0-jT-08E" firstAttribute="leading" secondItem="3og-7S-wQs" secondAttribute="leading" id="81D-ig-Soe"/>
+                            <constraint firstItem="Ox0-jT-08E" firstAttribute="top" secondItem="3og-7S-wQs" secondAttribute="top" constant="111" id="AyM-PM-dQ5"/>
+                            <constraint firstAttribute="bottom" secondItem="5Oe-Cm-DhI" secondAttribute="bottom" id="BOQ-6q-aKH"/>
+                            <constraint firstItem="5Oe-Cm-DhI" firstAttribute="top" secondItem="3og-7S-wQs" secondAttribute="top" id="FNz-8g-LOe"/>
+                            <constraint firstAttribute="trailing" secondItem="Ox0-jT-08E" secondAttribute="trailing" id="PC2-cb-2Bd"/>
+                            <constraint firstAttribute="bottom" secondItem="uHK-Yr-OhU" secondAttribute="bottom" id="ZVF-3V-7Rm"/>
+                            <constraint firstItem="5Oe-Cm-DhI" firstAttribute="leading" secondItem="3og-7S-wQs" secondAttribute="leading" id="aVE-lP-y0l"/>
+                            <constraint firstItem="uHK-Yr-OhU" firstAttribute="leading" secondItem="3og-7S-wQs" secondAttribute="leading" id="dAp-MX-hhU"/>
+                            <constraint firstAttribute="bottom" secondItem="Ox0-jT-08E" secondAttribute="bottom" constant="50" id="g6t-bs-rin"/>
+                            <constraint firstAttribute="trailing" secondItem="5Oe-Cm-DhI" secondAttribute="trailing" id="qOd-Sj-NYw"/>
+                            <constraint firstAttribute="trailing" secondItem="uHK-Yr-OhU" secondAttribute="trailing" id="u06-2h-nF1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="房间" id="WPn-Ch-3xQ">
@@ -1139,10 +1193,11 @@
                     </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="btnKiller" destination="6bh-on-Ml8" id="6aU-VO-R5u"/>
+                        <outlet property="btnKiller" destination="eCh-WM-NVZ" id="J71-Y5-LgC"/>
                         <outlet property="btnPeople" destination="JIe-wa-3U1" id="yir-cQ-iTS"/>
-                        <outlet property="btnUndercover" destination="HFU-Th-gWV" id="mg0-Y9-IPz"/>
+                        <outlet property="btnUndercover" destination="wi2-0B-Jts" id="Cjp-in-XPj"/>
                         <outlet property="scrollUsers" destination="Ox0-jT-08E" id="iy1-eP-AfV"/>
+                        <outlet property="viewAllGamel" destination="5Oe-Cm-DhI" id="EIu-ND-GPM"/>
                         <segue destination="udg-th-tbP" kind="push" identifier="gamestart" id="Vpd-qK-9bA"/>
                     </connections>
                 </viewController>
@@ -2264,6 +2319,8 @@
         <image name="bottle.png" width="500" height="130"/>
         <image name="btn_ purple.png" width="193" height="49"/>
         <image name="btn_blue.png" width="193" height="49"/>
+        <image name="btn_fang_purple.png" width="35" height="29"/>
+        <image name="btn_fang_write.png" width="35" height="29"/>
         <image name="btn_green.png" width="193" height="49"/>
         <image name="btn_pink.png" width="193" height="49"/>
         <image name="cardBack" width="185" height="260"/>
@@ -2278,6 +2335,8 @@
         <image name="setting.png" width="30" height="30"/>
         <image name="shake.png" width="302" height="241"/>
         <image name="sina32x32.png" width="32" height="32"/>
+        <image name="start_killer.png" width="80" height="80"/>
+        <image name="start_undercover.png" width="80" height="80"/>
         <image name="tag_blue.png" width="200" height="51"/>
         <image name="tag_green.png" width="200" height="50"/>
         <image name="tag_pink.png" width="200" height="51"/>

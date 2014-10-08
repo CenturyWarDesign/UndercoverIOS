@@ -33,5 +33,6 @@
 @property (strong, nonatomic) IBOutlet UISlider *peopleCount;
 
 @property (strong, nonatomic) IBOutlet UIButton *btnPeople;
+@property (strong, nonatomic) IBOutlet UIView *viewAllGamel;
 
 @end
