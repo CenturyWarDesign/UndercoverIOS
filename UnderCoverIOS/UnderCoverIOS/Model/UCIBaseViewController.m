@@ -282,7 +282,6 @@
     someAddButton.titleEdgeInsets=insets;
     someAddButton.layer.masksToBounds=YES;
     return someAddButton;
-
 }
 
 -(NSString *)getConfig:(NSString *)key{

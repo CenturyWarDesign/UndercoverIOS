@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" initialViewController="vWh-ec-t9B">
     <dependencies>
-        <deployment version="1536" identifier="iOS"/>
+        <deployment version="1536" defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
@@ -101,7 +101,7 @@
                                     <action selector="updateTextView:" destination="62g-0L-c1o" eventType="editingChanged" id="z0H-Ub-ybs"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="43" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DSj-4N-erD">
+                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="43" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DSj-4N-erD">
                                 <rect key="frame" x="60" y="505" width="200" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="19g-Ct-6Up"/>
@@ -174,7 +174,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="43" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SEr-dc-mga">
+                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="43" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SEr-dc-mga">
                                 <rect key="frame" x="60" y="505" width="200" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="nV4-4R-Yb1"/>
@@ -546,18 +546,25 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="参与人数" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3GQ-H7-V2A">
-                                <rect key="frame" x="20" y="129" width="68" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="参与人数" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3GQ-H7-V2A">
+                                <rect key="frame" x="20" y="70" width="80" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="erV-Jg-7pL"/>
+                                    <constraint firstAttribute="height" constant="31" id="wVb-q8-Bd2"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="6" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yxX-D2-WBk">
-                                <rect key="frame" x="256" y="129" width="36" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yxX-D2-WBk">
+                                <rect key="frame" x="285" y="74" width="30" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="9WF-gi-uGD"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="6" minValue="6" maxValue="16" translatesAutoresizingMaskIntoConstraints="NO" id="R9m-N3-C8j">
-                                <rect key="frame" x="116" y="125" width="118" height="31"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="6" minValue="6" maxValue="16" translatesAutoresizingMaskIntoConstraints="NO" id="R9m-N3-C8j">
+                                <rect key="frame" x="103" y="70" width="179" height="31"/>
                                 <connections>
                                     <action selector="slidTotalCount:" destination="cNA-po-uPg" eventType="valueChanged" id="6Zu-oC-L0O"/>
                                 </connections>
@@ -581,7 +588,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="Phu-0E-k7h" secondAttribute="bottom" constant="20" id="4GY-fA-pyw"/>
+                            <constraint firstItem="yxX-D2-WBk" firstAttribute="leading" secondItem="R9m-N3-C8j" secondAttribute="trailing" constant="5" id="Iye-US-lPq"/>
+                            <constraint firstItem="3GQ-H7-V2A" firstAttribute="leading" secondItem="5Vj-T4-QUe" secondAttribute="leading" constant="20" id="JtY-Bv-2BX"/>
+                            <constraint firstItem="3GQ-H7-V2A" firstAttribute="top" secondItem="R9m-N3-C8j" secondAttribute="top" id="Tz3-QG-tqe"/>
+                            <constraint firstAttribute="trailing" secondItem="yxX-D2-WBk" secondAttribute="trailing" constant="5" id="U57-Ki-byC"/>
                             <constraint firstAttribute="centerX" secondItem="Phu-0E-k7h" secondAttribute="centerX" id="Us4-ZT-tKh"/>
+                            <constraint firstItem="R9m-N3-C8j" firstAttribute="leading" secondItem="3GQ-H7-V2A" secondAttribute="trailing" constant="5" id="iJt-YT-s3E"/>
+                            <constraint firstItem="yxX-D2-WBk" firstAttribute="centerY" secondItem="R9m-N3-C8j" secondAttribute="centerY" id="pgS-nA-A3L"/>
+                            <constraint firstItem="3GQ-H7-V2A" firstAttribute="top" secondItem="5Vj-T4-QUe" secondAttribute="top" constant="70" id="xh1-lM-lIj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="杀人游戏" id="SIS-mz-FFb"/>
@@ -1459,8 +1473,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="参与人数" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTU-pd-6bd">
-                                <rect key="frame" x="20" y="64" width="80" height="31"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="参与人数" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTU-pd-6bd">
+                                <rect key="frame" x="20" y="40" width="80" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="Ofv-5E-hU5"/>
                                 </constraints>
@@ -1468,30 +1482,30 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="卧底人数" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YVb-bK-X9t">
-                                <rect key="frame" x="23" y="115" width="68" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="卧底人数" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YVb-bK-X9t">
+                                <rect key="frame" x="23" y="91" width="68" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" placeholderIntrinsicWidth="30" placeholderIntrinsicHeight="21" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CI6-dU-56y">
-                                <rect key="frame" x="285" y="69" width="30" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="30" placeholderIntrinsicHeight="21" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CI6-dU-56y">
+                                <rect key="frame" x="285" y="45" width="30" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" placeholderIntrinsicWidth="30" placeholderIntrinsicHeight="21" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ked-bS-e6O">
-                                <rect key="frame" x="285" y="115" width="30" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="30" placeholderIntrinsicHeight="21" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ked-bS-e6O">
+                                <rect key="frame" x="285" y="91" width="30" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="utp-8X-ej5">
-                                <rect key="frame" x="103" y="65" width="179" height="31"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="utp-8X-ej5">
+                                <rect key="frame" x="103" y="41" width="179" height="31"/>
                                 <connections>
                                     <action selector="sliPeoplechange:" destination="dXO-cT-2Iv" eventType="valueChanged" id="1MI-cX-Kbh"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="hHl-mi-pXU">
-                                <rect key="frame" x="103" y="111" width="179" height="31"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="hHl-mi-pXU">
+                                <rect key="frame" x="103" y="87" width="179" height="31"/>
                                 <connections>
                                     <action selector="sliUndercoverChange:" destination="dXO-cT-2Iv" eventType="valueChanged" id="N9g-Rv-YyT"/>
                                 </connections>
@@ -1520,7 +1534,7 @@
                             <constraint firstItem="CI6-dU-56y" firstAttribute="centerY" secondItem="mTU-pd-6bd" secondAttribute="centerY" id="Buu-f8-UFS"/>
                             <constraint firstItem="YVb-bK-X9t" firstAttribute="leading" secondItem="mTU-pd-6bd" secondAttribute="leading" constant="3" id="EMZ-nC-bNs"/>
                             <constraint firstItem="mTU-pd-6bd" firstAttribute="top" secondItem="Pny-gO-pfi" secondAttribute="bottom" constant="20" id="Had-25-V4W"/>
-                            <constraint firstItem="mTU-pd-6bd" firstAttribute="leading" secondItem="Svc-py-pcr" secondAttribute="leading" constant="20" symbolic="YES" id="IEC-dw-lCt"/>
+                            <constraint firstItem="mTU-pd-6bd" firstAttribute="leading" secondItem="Svc-py-pcr" secondAttribute="leading" constant="20" id="IEC-dw-lCt"/>
                             <constraint firstItem="FPP-EQ-NUV" firstAttribute="top" secondItem="2Re-T0-PAe" secondAttribute="bottom" constant="20" id="KWy-nE-fug"/>
                             <constraint firstItem="hHl-mi-pXU" firstAttribute="leading" secondItem="utp-8X-ej5" secondAttribute="leading" id="MRA-kP-QBx"/>
                             <constraint firstItem="utp-8X-ej5" firstAttribute="leading" secondItem="mTU-pd-6bd" secondAttribute="trailing" constant="5" id="N1p-LD-I2f"/>

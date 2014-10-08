@@ -260,7 +260,10 @@
     
     int gameuid=[[self getObjectFromDefault:@"gameuid"] intValue];
     for(int i=0;i<[userinfotem count];i++){
-        CGRect frame = CGRectMake((btnWidth+5)*(i%4)+10, (i/4)*(btnHeight+10), btnWidth, btnHeight);
+        CGRect frame = CGRectMake((btnWidth+5)*(i%4)+10, (i/4)*(btnHeight+10)+10, btnWidth, btnHeight);
+        
+       
+        
         
         UIButton *someAddButton = [self getCircleBtn:btnWidth];
         
@@ -274,10 +277,14 @@
             someAddButton.layer.borderColor=[UIColor redColor].CGColor;
         }
         
+        bool showdel=false;
         //如果某个玩家是房方，那么特殊显示
-        if(temgameuid==gameuid){
+        if(temgameuid==gameuid||temgameuid<=0){
              someAddButton.layer.borderColor=[UIColor blueColor].CGColor;
         }
+        else{
+            showdel=true;
+                   }
         [usernamearray addObject:userName];
         
         someAddButton.frame = frame;
@@ -286,15 +293,27 @@
         
         //[someAddButton addTarget:self action:@selector(tapPeople:) forControlEvents:UIControlEventTouchUpInside];
         [self.scrollUsers addSubview:someAddButton];
+        if(showdel){
+            //这里是删除按键
+            UIButton *delBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+            delBtn.backgroundColor = [UIColor clearColor];
+            CGRect frameDel = CGRectMake((btnWidth+5)*(i%4)+10+btnWidth-22, (i/4)*(btnHeight+10)+2, 30, 30);
+            delBtn.frame = frameDel;
+            [delBtn setTag:temgameuid];
+            [delBtn setBackgroundImage:[UIImage imageNamed:@"remove.png"] forState:UIControlStateNormal];
+            [delBtn addTarget:self action:@selector(tapPeopleToRemove:) forControlEvents:UIControlEventTouchUpInside];
+            [self.scrollUsers addSubview:delBtn];
+
+        }
+        
     }
 }
 
--(void)tapPeople:(UIButton *)sender{
+-(void)tapPeopleToRemove:(UIButton *)sender{
     int tag=(int)sender.tag;
     HTTPBase *classBtest = [[HTTPBase alloc] init];
-    NSString * gameuid= [[userinfo objectAtIndex:tag]objectForKey:@"gameuid"];
     classBtest.delegate = self;
-    [classBtest baseHttp:@"RoomRemoveSomeone" paramsdata:[NSDictionary dictionaryWithObjectsAndKeys:gameuid,@"gameuid",nil]];
+    [classBtest baseHttp:@"RoomRemoveSomeone" paramsdata:[NSDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:@"%d",tag],@"gameuid",nil]];
     gametype=1;
 }
 
