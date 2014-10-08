@@ -14,7 +14,6 @@
 
 @implementation UCITurnBottleViewController
 
-int angel = 10;
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,47 +27,54 @@ int angel = 10;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning
+
+
+- (IBAction)beginTurnBottle:(id)sender
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    srand((unsigned)time(0));
+    int randnum=rand();
+    NSLog(@"%d",randnum);
+    float needRotate=10*M_PI+(randnum % 628)/100.0f;
+    NSLog(@"%d",randnum % 628);
+    NSLog(@"%f",needRotate);
+    CABasicAnimation* animation=[self rotation:3 degree:needRotate direction:2 repeatCount:0];
+    [self.btnBottle.layer addAnimation:animation forKey:nil];
 }
 
--(void)startAnimation
-{
-    [UIView beginAnimations:nil context:nil];
-    [UIView setAnimationDuration:7];
-    [UIView setAnimationDelegate:self];
-    self.testImage.transform = CGAffineTransformMakeRotation(angel * (M_PI / 180.0f));
-    NSLog(@"angel%d",angel);
-    [UIView commitAnimations];
-}
 
-- (IBAction)beginTurnBottle:(id)sender {
+
+
+
+
+
+
+-(CABasicAnimation *)rotation:(float)dur degree:(float)degree direction:(int)direction repeatCount:(int)repeatCount
+
+{
+    CABasicAnimation* animation;
     
-//    angel = 400;
-//    [self startAnimation];
-
+    animation =  [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+    animation.toValue = [NSNumber numberWithFloat:degree];
+    animation.duration= dur;
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    animation.autoreverses= NO;
     
-    int rand = arc4random() % 360;
-    NSLog(@"rand,%d",rand);
-    for (int i = 0; i<20; i++) {
-        int addAngle = i*10;
-        angel += addAngle;
-        if (i==19) {
-            angel += rand;
-        }
-        
-        [self startAnimation];
-    }
-}
-
--(void)addAngel
-{
+    animation.cumulative= YES;
+    
+    animation.removedOnCompletion=NO;
+    
+    animation.fillMode=kCAFillModeForwards;
+    
+    animation.repeatCount= repeatCount;
+    
+    animation.delegate= self;
+    
+    
+    
+    return animation;
     
 }
 @end

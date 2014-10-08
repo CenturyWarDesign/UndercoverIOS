@@ -156,10 +156,11 @@
          NSString * photo=[(NSDictionary *)[initArray objectAtIndex:i] objectForKey:@"photo"];
         [someAddButton setTitle:userName forState:UIControlStateNormal];
         [someAddButton  sd_setBackgroundImageWithURL:[NSURL URLWithString: photo] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"default_photo.png"]];
+        
         if(roomtype==2&&[shenfen isEqualToString:@"法官"])
         {
-                NSString * tem=[NSString stringWithFormat:@"%@:%@",[(NSDictionary *)[initArray objectAtIndex:i] objectForKey:@"user"],@"法官"];
-            [someAddButton setTitle:tem forState:UIControlStateNormal];
+//                NSString * tem=[NSString stringWithFormat:@"%@:%@",[(NSDictionary *)[initArray objectAtIndex:i] objectForKey:@"user"],@"法官"];
+            [someAddButton setTitle:@"法官" forState:UIControlStateNormal];
             [someAddButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
             [someAddButton setEnabled:false];
         }

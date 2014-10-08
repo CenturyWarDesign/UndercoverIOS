@@ -48,6 +48,7 @@
 
 -(void) reflashWords:(NSString *)words{
     self.publishWords.text=words;
+    punishText=words;
 }
 
 
@@ -116,9 +117,9 @@
 -(void)shareSomeThine{
     [UMSocialSnsService presentSnsIconSheetView:self
                                          appKey:@"531f3fcd56240b7b2a0415ac"
-                                      shareText:@"你要分享的文字"
+                                      shareText:punishText
                                      shareImage:[UIImage imageNamed:@"icon.png"]
-                                shareToSnsNames:[NSArray arrayWithObjects:UMShareToSina,UMShareToTencent,UMShareToWechatSession,UMShareToWechatTimeline,UMShareToQzone,UMShareToQQ,UMShareToRenren,UMShareToDouban,nil]
+                                shareToSnsNames:[NSArray arrayWithObjects:UMShareToSina,UMShareToTencent,UMShareToQzone,UMShareToRenren,nil]
                                        delegate:nil];
 }
 

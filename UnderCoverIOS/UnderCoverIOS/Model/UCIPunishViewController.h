@@ -8,7 +8,9 @@
 
 #import "UCIBaseViewController.h"
 
-@interface UCIPunishViewController : UCIBaseViewController
+@interface UCIPunishViewController : UCIBaseViewController{
+    NSString * punishText;
+}
 @property (weak, nonatomic) IBOutlet UILabel *publishWords;
 @property (strong, nonatomic) IBOutlet UIButton *btnNet;
 

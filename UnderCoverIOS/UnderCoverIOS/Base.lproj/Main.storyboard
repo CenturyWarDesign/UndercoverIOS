@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" initialViewController="vWh-ec-t9B">
     <dependencies>
-        <deployment version="1536" defaultVersion="1536" identifier="iOS"/>
+        <deployment version="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
@@ -10,7 +10,7 @@
             <objects>
                 <tableViewController id="w71-dL-Psr" customClass="LocatePunishTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="mHn-mO-gsA">
-                        <rect key="frame" x="0.0" y="44" width="320" height="475"/>
+                        <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -394,7 +394,7 @@
             </objects>
             <point key="canvasLocation" x="-117" y="-346"/>
         </scene>
-        <!--Turn Bottle View Controller-->
+        <!--有胆量就转-->
         <scene sceneID="bkw-lh-Vvm">
             <objects>
                 <viewController wantsFullScreenLayout="YES" hidesBottomBarWhenPushed="YES" id="XOE-DT-NjP" customClass="UCITurnBottleViewController" sceneMemberID="viewController">
@@ -413,17 +413,23 @@
                                     <constraint firstAttribute="height" constant="49" id="R2L-yQ-HtM"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                <state key="normal" title="转动酒瓶" backgroundImage="btn_blue.png">
+                                <state key="normal" title="接受惩罚" backgroundImage="btn_ purple.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="beginTurnBottle:" destination="XOE-DT-NjP" eventType="touchUpInside" id="W8H-2T-KHR"/>
+                                    <segue destination="mE6-is-2BY" kind="push" id="xaB-IZ-cCv"/>
                                 </connections>
                             </button>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bottle.png" translatesAutoresizingMaskIntoConstraints="NO" id="rJd-dY-gC1">
-                                <rect key="frame" x="40" y="200" width="240" height="66"/>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1h-g2-QSt">
+                                <rect key="frame" x="40" y="251" width="240" height="66"/>
+                                <state key="normal" backgroundImage="bottle.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="beginTurnBottle:" destination="XOE-DT-NjP" eventType="touchUpInside" id="QR6-Mr-e1W"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -431,18 +437,17 @@
                             <constraint firstAttribute="bottom" secondItem="Cp9-KD-Yef" secondAttribute="bottom" constant="20" id="m4e-jT-jQZ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="zup-cm-qPh"/>
+                    <navigationItem key="navigationItem" title="有胆量就转" id="zup-cm-qPh"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="beginTurnBottleButton" destination="Cp9-KD-Yef" id="v84-pg-Q1Q"/>
-                        <outlet property="testImage" destination="rJd-dY-gC1" id="wdT-kx-oA4"/>
+                        <outlet property="btnBottle" destination="Z1h-g2-QSt" id="3IP-0Q-NnN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j8v-ug-qHs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-35" y="333"/>
+            <point key="canvasLocation" x="969" y="453"/>
         </scene>
-        <!--Touch Button View Controller-->
+        <!--有胆量就点-->
         <scene sceneID="EV0-b6-Ll6">
             <objects>
                 <viewController wantsFullScreenLayout="YES" hidesBottomBarWhenPushed="YES" id="sx7-ov-aWi" customClass="UCITouchButtonViewController" sceneMemberID="viewController">
@@ -515,7 +520,7 @@
                             <constraint firstAttribute="centerX" secondItem="FfR-za-hZj" secondAttribute="centerX" id="g7m-QB-9bi"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="4E4-dz-OHr"/>
+                    <navigationItem key="navigationItem" title="有胆量就点" id="4E4-dz-OHr"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="gailv" destination="6Ia-eC-iZ5" id="rgk-0k-phG"/>
@@ -2350,7 +2355,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Nkf-oU-wE6"/>
+        <segue reference="xaB-IZ-cCv"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.37399760466176168" green="0.80554339169236644" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>

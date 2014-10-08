@@ -9,8 +9,8 @@
 #import "UCIBaseViewController.h"
 
 @interface UCITurnBottleViewController : UCIBaseViewController
-@property (weak, nonatomic) IBOutlet UIImageView *testImage;
-@property (weak, nonatomic) IBOutlet UIButton *beginTurnBottleButton;
-- (IBAction)beginTurnBottle:(id)sender;
+
+@property (strong, nonatomic) IBOutlet UIButton *btnBottle;
+
 
 @end
