@@ -17,7 +17,7 @@
 	<key>UNDERCOVER_MAX_PEOPLE</key>
 	<string>10</string>
 	<key>KILLER_MIN_PEOPLE</key>
-	<string>6</string>
+	<string>5</string>
 	<key>KILLER_MAX_PEOPLE</key>
 	<string>16</string>
 	<key>SHOW_SHENFEN_SEC</key>

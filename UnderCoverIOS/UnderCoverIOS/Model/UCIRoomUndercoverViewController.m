@@ -15,6 +15,8 @@
 @implementation UCIRoomUndercoverViewController
 @synthesize gameData;
 @synthesize addPeople;
+//1.谁是卧底2.杀人游戏
+@synthesize gameType;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -76,6 +78,19 @@
     [self initGuess:datagame];
     [self initaddPeople];
     showShenfenSec=0;
+    
+    if([gameType isEqual:@"1"]){
+        self.navigationItem.title=@"谁是卧底";
+    }
+    else if([gameType isEqual:@"2"]){
+        self.navigationItem.title=@"杀人游戏";
+        KillerCount=[[[[self gameData] objectForKey:@"room_contente"] objectForKey:@"killer" ] intValue];
+        PoliceCount=[[[[self gameData] objectForKey:@"room_contente"] objectForKey:@"police" ] intValue];
+        
+        Pinmin=PeopleCount-KillerCount-PoliceCount-1;
+        
+    }
+    
     // Do any additional setup after loading the view.
 
 }
@@ -163,6 +178,10 @@
     }
 }
 -(void)tapPeople:(UIButton *)sender{
+    if([gameType isEqual:@"2"]){
+        [self tapPeopleKiller:sender];
+        return;
+    }
     int tag=(int)sender.tag;
     NSString * txtShenFen= [[datagame objectAtIndex:tag-1] objectForKey:@"content"];
     if([txtShenFen isEqualToString:sonWord]){
@@ -199,6 +218,46 @@
         [self playHuanhu];
     }
 }
+//杀人游戏点击
+-(void)tapPeopleKiller:(UIButton *)sender{
+    int tag=(int)sender.tag;
+    NSString * txtShenFen= [[datagame objectAtIndex:tag-1] objectForKey:@"user"];
+    if([txtShenFen isEqualToString:@"杀手"]){
+        KillerCount--;
+    }
+    else if([txtShenFen isEqualToString:@"警察"]){
+        PoliceCount--;
+    }
+    else{
+        Pinmin--;
+    }
+    [sender setEnabled:false];
+    BOOL finish=false;
+    if(KillerCount<=0){
+        [self.labStatus setText:@"平民和警察胜利"];
+        //取得失败都gameuid,发送到服务器去发推送；
+        NSString *loserStr= [self getLoserStr:@"杀手"];
+        [self sendToSendPunish:loserStr];
+        
+        [self disabledAllButton];
+        finish=true;
+    }else if(PoliceCount<=0||Pinmin<=0){
+        [self.labStatus setText:@"杀手胜利"];
+        NSString *loserStr=[NSString stringWithFormat:@"%@%@", [self getLoserStr:@"平民"], [self getLoserStr:@"警察"]] ;
+        [self sendToSendPunish:loserStr];
+        //        [self.btnPublish setTitle:@"卧底失败" forState:UIControlStateNormal];
+        [self disabledAllButton];
+        finish=true;
+    }
+    if(finish){
+        //点投票最后一步
+        [self uMengClick:@"click_guess_last"];
+        [self playHuanhu];
+    }
+}
+
+
+
 
 -(void) sendToSendPunish:(NSString *) str{
     HTTPBase *classBtest = [[HTTPBase alloc] init];

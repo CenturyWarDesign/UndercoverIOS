@@ -21,10 +21,20 @@
     //这个显示用户身份的时间
     int showShenfenSec;
     NSMutableDictionary * showShenfen;
+    
+    //杀人游戏点击
+    int KillerCount;
+    int PoliceCount;
+    int Pinmin;
+    
+    //1.谁是卧底2.杀人游戏
+//    int gameType;
+    
 }
 @property (strong, nonatomic) IBOutlet UILabel *labStatus;
 @property(nonatomic,weak)NSDictionary *gameData;
 @property(nonatomic,retain)NSString *addPeople;
+@property(nonatomic,retain)NSString *gameType;
 
 @property (strong, nonatomic) IBOutlet UILabel *labPunishTitle;
 @property (strong, nonatomic) IBOutlet UITextView *labPunishContent;

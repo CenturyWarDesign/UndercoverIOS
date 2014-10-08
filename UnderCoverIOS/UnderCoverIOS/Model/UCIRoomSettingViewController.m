@@ -200,11 +200,11 @@
     }
     else if([command isEqualToString:@"RoomStartGame"]){
         datatosend=data;
-        if(gametype==1){
-            [self performSegueWithIdentifier:@"gameundercover" sender:self];
-        }else if(gametype==2){
-            [self performSegueWithIdentifier:@"gameKiller" sender:self];
-        }
+//        if(gametype==1){
+            [self performSegueWithIdentifier:@"gamestart" sender:self];
+//        }else if(gametype==2){
+//            [self performSegueWithIdentifier:@"gameKiller" sender:self];
+//        }
         NSLog(@"RoomStartGame 函数的回调");
         [self checkifEnable:[userinfo count]+(int)self.peopleCount.value];
     }
@@ -344,19 +344,16 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     id theSegue = segue.destinationViewController;
-    if([segue.identifier isEqualToString:@"gameundercover"]) //"goView2"是SEGUE连线的标识
-    {
-     
-        //界面之间进行传值,把创建游戏的数据发过来
-        [theSegue setValue:datatosend forKey:@"gameData"];
-            [theSegue setValue:[NSString stringWithFormat:@"%d",addPeopleCount] forKey:@"addPeople"];
-    }
-    else if([segue.identifier isEqualToString:@"gameKiller"]) //"goView2"是SEGUE连线的标识
+    
+    //谁是卧底，杀人游戏，都走这个逻辑
+    if([segue.identifier isEqualToString:@"gamestart"]) //"goView2"是SEGUE连线的标识
     {
         //界面之间进行传值,把创建游戏的数据发过来
         [theSegue setValue:datatosend forKey:@"gameData"];
-            [theSegue setValue:[NSString stringWithFormat:@"%d",addPeopleCount] forKey:@"addPeople"];
+        [theSegue setValue:[NSString stringWithFormat:@"%d",gametype] forKey:@"gameType"];
+        [theSegue setValue:[NSString stringWithFormat:@"%d",addPeopleCount] forKey:@"addPeople"];
     }
+
     
     
 }
