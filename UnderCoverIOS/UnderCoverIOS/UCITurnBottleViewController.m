@@ -28,53 +28,48 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self initGame];
 }
 
 
-
+-(void)initGame{
+    [self.btnPunish setHidden:YES];
+    [self.btnBottle setEnabled:true];
+}
 - (IBAction)beginTurnBottle:(id)sender
 {
     srand((unsigned)time(0));
     int randnum=rand();
-    NSLog(@"%d",randnum);
-    float needRotate=10*M_PI+(randnum % 628)/100.0f;
-    NSLog(@"%d",randnum % 628);
-    NSLog(@"%f",needRotate);
-    CABasicAnimation* animation=[self rotation:3 degree:needRotate direction:2 repeatCount:0];
+    float needRotate=14*M_PI+(randnum % 628)/100.0f;
+    CABasicAnimation* animation=[self rotation:5 degree:needRotate  repeatCount:0];
     [self.btnBottle.layer addAnimation:animation forKey:nil];
+    [self.btnBottle setEnabled:false];
 }
 
-
-
-
-
-
-
-
--(CABasicAnimation *)rotation:(float)dur degree:(float)degree direction:(int)direction repeatCount:(int)repeatCount
-
+-(CABasicAnimation *)rotation:(float)dur degree:(float)degree repeatCount:(int)repeatCount
 {
     CABasicAnimation* animation;
-    
     animation =  [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
     animation.toValue = [NSNumber numberWithFloat:degree];
     animation.duration= dur;
     animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     animation.autoreverses= NO;
-    
     animation.cumulative= YES;
-    
     animation.removedOnCompletion=NO;
-    
     animation.fillMode=kCAFillModeForwards;
-    
     animation.repeatCount= repeatCount;
-    
     animation.delegate= self;
-    
-    
-    
     return animation;
-    
 }
+
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
+{
+//    [self.btnBottle setEnabled:YES];
+    [self.btnPunish setHidden:false];
+    [self playHuanhu];
+}
+- (IBAction)chengfa:(id)sender {
+    [self initGame];
+}
+
 @end

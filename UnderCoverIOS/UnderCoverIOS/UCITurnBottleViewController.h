@@ -11,6 +11,7 @@
 @interface UCITurnBottleViewController : UCIBaseViewController
 
 @property (strong, nonatomic) IBOutlet UIButton *btnBottle;
+@property (strong, nonatomic) IBOutlet UIButton *btnPunish;
 
 
 @end

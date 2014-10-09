@@ -247,7 +247,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="maQ-9T-zzx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1682" y="-24"/>
+            <point key="canvasLocation" x="1687" y="559"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="LMq-iY-C5p">
@@ -418,6 +418,7 @@
                                     <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
                                 </state>
                                 <connections>
+                                    <action selector="chengfa:" destination="XOE-DT-NjP" eventType="touchUpInside" id="4nV-MA-sko"/>
                                     <segue destination="mE6-is-2BY" kind="push" id="xaB-IZ-cCv"/>
                                 </connections>
                             </button>
@@ -441,6 +442,7 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="btnBottle" destination="Z1h-g2-QSt" id="3IP-0Q-NnN"/>
+                        <outlet property="btnPunish" destination="Cp9-KD-Yef" id="3fu-Vn-AIt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j8v-ug-qHs" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -459,51 +461,37 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="点击次数：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Vp-SG-QTq">
-                                <rect key="frame" x="5" y="80" width="85" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qp2-C1-bQz">
-                                <rect key="frame" x="87" y="80" width="88" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="概率：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ia-eC-iZ5">
-                                <rect key="frame" x="200" y="80" width="51" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6n5-WG-LWy">
-                                <rect key="frame" x="250" y="80" width="49" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FfR-za-hZj">
                                 <rect key="frame" x="64" y="499" width="193" height="49"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="BAv-XF-dHS"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="49" id="c3u-Hk-xYS"/>
                                     <constraint firstAttribute="width" constant="193" id="nB2-m5-dqQ"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="193" id="qXO-S9-g8A"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                <state key="normal" title="接受惩罚" backgroundImage="btn_blue.png">
+                                <state key="normal" title="接受惩罚" backgroundImage="btn_ purple.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="punishBtn:" destination="sx7-ov-aWi" eventType="touchUpInside" id="moz-I8-Ung"/>
+                                    <action selector="btnPunish:" destination="sx7-ov-aWi" eventType="touchUpInside" id="oy7-PZ-W1b"/>
+                                    <segue destination="mE6-is-2BY" kind="push" id="CR9-Rg-yob"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rgv-39-vGc">
-                                <rect key="frame" x="64" y="260" width="193" height="49"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btn_quan.png" translatesAutoresizingMaskIntoConstraints="NO" id="okF-Ob-UhK">
+                                <rect key="frame" x="35" y="159" width="250" height="250"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="193" id="gux-fu-yXu"/>
-                                    <constraint firstAttribute="height" constant="49" id="tWl-n5-Fvi"/>
+                                    <constraint firstAttribute="height" constant="250" id="BHB-9x-s7Z"/>
+                                    <constraint firstAttribute="width" constant="250" id="ZZz-LI-iKS"/>
                                 </constraints>
-                                <state key="normal" title="点" backgroundImage="btn_green.png">
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rgv-39-vGc">
+                                <rect key="frame" x="60" y="184" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="gux-fu-yXu"/>
+                                    <constraint firstAttribute="height" constant="200" id="tWl-n5-Fvi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="100"/>
+                                <state key="normal" title="1" backgroundImage="btn_yuan_red.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
                                 </state>
@@ -515,24 +503,25 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="FfR-za-hZj" secondAttribute="bottom" constant="20" id="2ed-Me-AdT"/>
+                            <constraint firstAttribute="centerY" secondItem="Rgv-39-vGc" secondAttribute="centerY" id="8Yr-41-ZZg"/>
                             <constraint firstAttribute="centerX" secondItem="Rgv-39-vGc" secondAttribute="centerX" id="CF2-95-8Tz"/>
+                            <constraint firstAttribute="centerX" secondItem="Rgv-39-vGc" secondAttribute="centerX" id="K6Z-HX-X2x"/>
                             <constraint firstAttribute="centerY" secondItem="Rgv-39-vGc" secondAttribute="centerY" id="Pis-iE-3uW"/>
+                            <constraint firstAttribute="centerX" secondItem="okF-Ob-UhK" secondAttribute="centerX" id="g0N-bc-s79"/>
                             <constraint firstAttribute="centerX" secondItem="FfR-za-hZj" secondAttribute="centerX" id="g7m-QB-9bi"/>
+                            <constraint firstAttribute="centerY" secondItem="okF-Ob-UhK" secondAttribute="centerY" id="oV7-Ni-muy"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="有胆量就点" id="4E4-dz-OHr"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="gailv" destination="6Ia-eC-iZ5" id="rgk-0k-phG"/>
-                        <outlet property="gailvContent" destination="6n5-WG-LWy" id="asj-mC-x8a"/>
+                        <outlet property="punishButton" destination="FfR-za-hZj" id="pit-ae-Vjj"/>
                         <outlet property="touchButton" destination="Rgv-39-vGc" id="7Be-wT-4sU"/>
-                        <outlet property="touchTimes" destination="4Vp-SG-QTq" id="IND-XP-6NZ"/>
-                        <outlet property="touchTimesContent" destination="Qp2-C1-bQz" id="piY-X3-Pkr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wv8-fC-gLa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="389" y="368"/>
+            <point key="canvasLocation" x="969" y="1080"/>
         </scene>
         <!--杀人游戏-->
         <scene sceneID="mRI-Gr-fE5">
@@ -2342,6 +2331,8 @@
         <image name="btn_fang_write.png" width="35" height="29"/>
         <image name="btn_green.png" width="193" height="49"/>
         <image name="btn_pink.png" width="193" height="49"/>
+        <image name="btn_quan.png" width="250" height="250"/>
+        <image name="btn_yuan_red.png" width="200" height="200"/>
         <image name="cardBack" width="185" height="260"/>
         <image name="default_photo.png" width="105" height="105"/>
         <image name="game.png" width="30" height="30"/>
