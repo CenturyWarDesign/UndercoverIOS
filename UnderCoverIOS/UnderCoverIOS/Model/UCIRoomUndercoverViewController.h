@@ -26,20 +26,17 @@
     int KillerCount;
     int PoliceCount;
     int Pinmin;
-    
+    NSMutableArray *punishinfo;
     //1.谁是卧底2.杀人游戏
 //    int gameType;
     
 }
-@property (strong, nonatomic) IBOutlet UILabel *labStatus;
+
 @property(nonatomic,weak)NSDictionary *gameData;
 @property(nonatomic,retain)NSString *addPeople;
 @property(nonatomic,retain)NSString *gameType;
 
-@property (strong, nonatomic) IBOutlet UILabel *labPunishTitle;
-@property (strong, nonatomic) IBOutlet UITextView *labPunishContent;
-@property (strong, nonatomic) IBOutlet UILabel *labMeWord;
-@property (strong, nonatomic) IBOutlet UISwitch *btnShowWord;
+
 @property (strong, nonatomic) IBOutlet UIScrollView *viewPop;
 
 
@@ -54,6 +51,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *btn_no3;
 @property (strong, nonatomic) IBOutlet UIButton *btn_no4;
 
+@property (strong, nonatomic) IBOutlet UIButton *btnPunish;
 
 
 

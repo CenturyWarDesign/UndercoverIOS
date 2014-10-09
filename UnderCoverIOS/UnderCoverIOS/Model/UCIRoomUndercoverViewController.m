@@ -32,7 +32,7 @@
     //［self.navigationItem setBackButtonHide：YES］;
     //self.navigationItem.hidesBackButton=YES;
     
-    [self.labStatus setText:@""];
+//    [self.labStatus setText:@""];
 //    datagame=gameundercover;
 //    [self.labGameName setText:[gameData objectForKey:@"name"]];
 //    [self.labRoomID setText:[gameData objectForKey:@"gameuid"]];
@@ -49,10 +49,14 @@
     //主持人的gameuid
     int zhuchigameuid=[[gameData objectForKey:@"gameuid"] intValue];
     for (int i=0; i<[room_user count]; i++) {
-        [datagame addObject:[NSDictionary dictionaryWithObjectsAndKeys:[(NSDictionary *)[room_user objectAtIndex:i] objectForKey:@"username"],@"user",[(NSDictionary *)[room_user objectAtIndex:i] objectForKey:@"content"],@"content",[(NSDictionary *)[room_user objectAtIndex:i] objectForKey:@"photo"],@"photo",[(NSDictionary *)[room_user objectAtIndex:i] objectForKey:@"gameuid"],@"gameuid",nil]];
-        
         int temgameuid=[[(NSDictionary *)[room_user objectAtIndex:i] objectForKey:@"gameuid"] intValue];
         NSString * temcontent=[(NSDictionary *)[room_user objectAtIndex:i] objectForKey:@"content"];
+        NSString * temusername=[(NSDictionary *)[room_user objectAtIndex:i] objectForKey:@"username"];
+        NSString * temphoto=[(NSDictionary *)[room_user objectAtIndex:i] objectForKey:@"photo"];
+        NSString * temgameuidStr=[NSString stringWithFormat:@"%d",temgameuid];
+        [datagame addObject:[NSDictionary dictionaryWithObjectsAndKeys:temusername,@"user",temcontent,@"content",temgameuidStr,@"gameuid",temphoto,@"photo",nil]];
+        
+        
         if(temgameuid==-1){
             NSString * content=[NSString stringWithFormat:@"NO1:%@",temcontent];
             [self.btn_no1 setTitle:content forState:UIControlStateNormal];
@@ -91,12 +95,10 @@
         
     }
     
+    
+    [self setGameStatus:@"游戏开始，不知道该说什么好"];
     // Do any additional setup after loading the view.
 
-}
-
-- (IBAction)showAllTag:(id)sender {
-    NSLog(@"will show");
 }
 
 
@@ -198,7 +200,8 @@
     [sender setEnabled:false];
     BOOL finish=false;
     if(PeopleCount<=SonCount){
-        [self.labStatus setText:@"卧底胜利"];
+//        [self.labStatus setText:@"卧底胜利"];
+         [self showChengfa:@"卧底胜利,开始惩罚"];
         //取得失败都gameuid,发送到服务器去发推送；
         NSString *loserStr= [self getLoserStr:fatherWord];
         [self sendToSendPunish:loserStr];
@@ -206,7 +209,8 @@
         [self disabledAllButton];
         finish=true;
     }else if(SonCount<=0){
-        [self.labStatus setText:@"卧底失败"];
+//        [self.labStatus setText:@"卧底失败"];
+        [self showChengfa:@"卧底失败,开始惩罚"];
         NSString *loserStr= [self getLoserStr:sonWord];
         [self sendToSendPunish:loserStr];
 //        [self.btnPublish setTitle:@"卧底失败" forState:UIControlStateNormal];
@@ -235,7 +239,8 @@
     [sender setEnabled:false];
     BOOL finish=false;
     if(KillerCount<=0){
-        [self.labStatus setText:@"平民和警察胜利"];
+//        [self.labStatus setText:@"平民和警察胜利"];
+        [self showChengfa:@"平民和警察胜利,开始惩罚"];
         //取得失败都gameuid,发送到服务器去发推送；
         NSString *loserStr= [self getLoserStr:@"杀手"];
         [self sendToSendPunish:loserStr];
@@ -243,7 +248,8 @@
         [self disabledAllButton];
         finish=true;
     }else if(PoliceCount<=0||Pinmin<=0){
-        [self.labStatus setText:@"杀手胜利"];
+//        [self.labStatus setText:@"杀手胜利"];
+        [self showChengfa:@"杀手胜利,开始惩罚"];
         NSString *loserStr=[NSString stringWithFormat:@"%@%@", [self getLoserStr:@"平民"], [self getLoserStr:@"警察"]] ;
         [self sendToSendPunish:loserStr];
         //        [self.btnPublish setTitle:@"卧底失败" forState:UIControlStateNormal];
@@ -257,7 +263,18 @@
     }
 }
 
+-(void)showChengfa:(NSString*)chengfa{
+    [self.btnPunish setEnabled:true];
+    [self.btnPunish setTitle:chengfa forState:UIControlStateNormal];
+//    [self.btnPunish ]
+}
 
+-(void)setGameStatus:(NSString *)status{
+    [self.btnPunish setEnabled:false];
+    [self.btnPunish setTitle:status forState:UIControlStateDisabled];
+    [self.btnPunish setTitleColor:[UIColor greenColor] forState:UIControlStateDisabled];
+//        [self.btnPunish setTitle:status forState:UIControlStateDisabled];
+}
 
 
 -(void) sendToSendPunish:(NSString *) str{
@@ -310,27 +327,24 @@
 
 -(void)callBack:(NSDictionary *)data commandName:(NSString*) command{
     if([command isEqualToString:@"RoomPunish"]){
-        [self.labPunishTitle setHidden:false];
-        NSString * punishStr=@"";
-        NSArray *dataarr=[data objectForKey:@"punish"];
-        for (int i=0; i<[dataarr count]; i++) {
-            punishStr=[NSString stringWithFormat:@"%@\n%@\n\t%@",punishStr,[(NSDictionary *)[dataarr objectAtIndex:i] objectForKey:@"username" ],[(NSDictionary *)[dataarr objectAtIndex:i] objectForKey:@"content" ] ];
-        }
-        [self.labPunishContent setText:punishStr];
+        punishinfo=[data objectForKey:@"punish"];
         NSLog(@"RoomPunish 函数的回调");
     }
 }
+
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    id theSegue = segue.destinationViewController;
+    if([segue.identifier isEqualToString:@"gamepunish"])
+    {
+        //界面之间进行传值,把创建游戏的数据发过来
+        [theSegue setValue:punishinfo forKey:@"punishinfo"];
+    }
+}
+
 - (IBAction)restert:(id)sender {
         [self.navigationController popViewControllerAnimated:YES];
-}
-- (IBAction)showWord:(id)sender {
-    if(self.btnShowWord.isOn){
-        [self.labMeWord setHidden:false];
-        showShenfenSec=[[self getConfig:@"SHOW_SHENFEN_SEC"] intValue];
-    }
-    else{
-        [self.labMeWord setHidden:true];
-    }
 }
 
 
@@ -359,8 +373,7 @@
     {
         showShenfenSec--;
         if(showShenfenSec==0){
-            self.btnShowWord.on=false;
-            [self.labMeWord setHidden:true];
+//            [self.labMeWord setHidden:true];
         }
     }
 }

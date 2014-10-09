@@ -40,6 +40,9 @@
 		382E3F8119DBF7DE006F9740 /* tag_pink.png in Resources */ = {isa = PBXBuildFile; fileRef = 382E3F7B19DBF7DE006F9740 /* tag_pink.png */; };
 		382E3F8219DBF7DE006F9740 /* tag_puple.png in Resources */ = {isa = PBXBuildFile; fileRef = 382E3F7C19DBF7DE006F9740 /* tag_puple.png */; };
 		382E3F8319DBF7DE006F9740 /* tag_yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 382E3F7D19DBF7DE006F9740 /* tag_yellow.png */; };
+		383D2CA119E684F100079C21 /* UCIViewNetPunishController.m in Sources */ = {isa = PBXBuildFile; fileRef = 383D2CA019E684F100079C21 /* UCIViewNetPunishController.m */; };
+		383D2CAD19E68B7A00079C21 /* CellPunish.m in Sources */ = {isa = PBXBuildFile; fileRef = 383D2CAB19E68B7A00079C21 /* CellPunish.m */; };
+		383D2CAE19E68B7A00079C21 /* CellPunish.xib in Resources */ = {isa = PBXBuildFile; fileRef = 383D2CAC19E68B7A00079C21 /* CellPunish.xib */; };
 		384B3E681916762B0027201E /* testViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 384B3E671916762B0027201E /* testViewController.m */; };
 		387172DC190C231B009D649B /* ViewHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 387172DB190C231B009D649B /* ViewHomeViewController.m */; };
 		3873F70519055D26003827E4 /* UCIPublishNet.m in Sources */ = {isa = PBXBuildFile; fileRef = 3873F70219055D26003827E4 /* UCIPublishNet.m */; };
@@ -231,6 +234,11 @@
 		382E3F7B19DBF7DE006F9740 /* tag_pink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tag_pink.png; sourceTree = "<group>"; };
 		382E3F7C19DBF7DE006F9740 /* tag_puple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tag_puple.png; sourceTree = "<group>"; };
 		382E3F7D19DBF7DE006F9740 /* tag_yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tag_yellow.png; sourceTree = "<group>"; };
+		383D2C9F19E684F100079C21 /* UCIViewNetPunishController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UCIViewNetPunishController.h; path = Model/UCIViewNetPunishController.h; sourceTree = "<group>"; };
+		383D2CA019E684F100079C21 /* UCIViewNetPunishController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UCIViewNetPunishController.m; path = Model/UCIViewNetPunishController.m; sourceTree = "<group>"; };
+		383D2CAA19E68B7A00079C21 /* CellPunish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellPunish.h; path = UnderCoverIOS/Model/CellPunish.h; sourceTree = "<group>"; };
+		383D2CAB19E68B7A00079C21 /* CellPunish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellPunish.m; path = UnderCoverIOS/Model/CellPunish.m; sourceTree = "<group>"; };
+		383D2CAC19E68B7A00079C21 /* CellPunish.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CellPunish.xib; path = UnderCoverIOS/Model/CellPunish.xib; sourceTree = "<group>"; };
 		384B3E661916762B0027201E /* testViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = testViewController.h; path = Model/testViewController.h; sourceTree = "<group>"; };
 		384B3E671916762B0027201E /* testViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = testViewController.m; path = Model/testViewController.m; sourceTree = "<group>"; };
 		387172DA190C231B009D649B /* ViewHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewHomeViewController.h; path = Model/ViewHomeViewController.h; sourceTree = "<group>"; };
@@ -692,6 +700,9 @@
 		C3700D3118BCED5900B6CBFC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				383D2CAA19E68B7A00079C21 /* CellPunish.h */,
+				383D2CAB19E68B7A00079C21 /* CellPunish.m */,
+				383D2CAC19E68B7A00079C21 /* CellPunish.xib */,
 				3873F70719055D51003827E4 /* BIDNameAndColorTableViewCell.h */,
 				3873F70819055D51003827E4 /* BIDNameAndColorTableViewCell.m */,
 				3873F70119055D26003827E4 /* UCIPublishNet.h */,
@@ -769,6 +780,8 @@
 				38ECA858192CEE5D007672BA /* UCIRoomSettingViewController.h */,
 				38ECA859192CEE5D007672BA /* UCIRoomSettingViewController.m */,
 				38E53E5D1907FA06004F8F51 /* Main.storyboard */,
+				383D2C9F19E684F100079C21 /* UCIViewNetPunishController.h */,
+				383D2CA019E684F100079C21 /* UCIViewNetPunishController.m */,
 				38FD7CEB19D95B8600691EA8 /* UCIViewWenxin.h */,
 				38FD7CEC19D95B8600691EA8 /* UCIViewWenxin.m */,
 				3884010919397B1500A1904B /* UCIHelpViewController.h */,
@@ -1004,6 +1017,7 @@
 				38B554A719194F6F00E41984 /* whiteArrow@2x.png in Resources */,
 				38BA262A19E61C3B00A3D2C6 /* btn_quan.png in Resources */,
 				C3089DF618C77A9D00A7BAAD /* Icon-Small@2x.png in Resources */,
+				383D2CAE19E68B7A00079C21 /* CellPunish.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1084,6 +1098,7 @@
 				3827471119D93E380055977D /* UIImageView+WebCache.m in Sources */,
 				38ECA85A192CEE5D007672BA /* UCIRoomSettingViewController.m in Sources */,
 				3827470519D93E380055977D /* SDImageCache.m in Sources */,
+				383D2CA119E684F100079C21 /* UCIViewNetPunishController.m in Sources */,
 				384B3E681916762B0027201E /* testViewController.m in Sources */,
 				800E508919ACE2A20056F981 /* UCIallocationViewController.m in Sources */,
 				38229F06193798A300974F1A /* UCIFeedBackViewController.m in Sources */,
@@ -1099,6 +1114,7 @@
 				3827470C19D93E380055977D /* UIButton+WebCache.m in Sources */,
 				C3089DC618C778D400A7BAAD /* EAIntroView.m in Sources */,
 				387172DC190C231B009D649B /* ViewHomeViewController.m in Sources */,
+				383D2CAD19E68B7A00079C21 /* CellPunish.m in Sources */,
 				0AE2270D19BF5776009BC819 /* UCITurnBottleViewController.m in Sources */,
 				3827471219D93E380055977D /* UIView+WebCacheOperation.m in Sources */,
 				3827470319D93E380055977D /* MKAnnotationView+WebCache.m in Sources */,

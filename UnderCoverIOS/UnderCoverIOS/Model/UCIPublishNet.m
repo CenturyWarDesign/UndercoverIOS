@@ -270,9 +270,7 @@
 }
 
 
-//点击添加新的词汇
-- (IBAction)btnAdddPunish:(id)sender {
-}
+
 
 //点击回调
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

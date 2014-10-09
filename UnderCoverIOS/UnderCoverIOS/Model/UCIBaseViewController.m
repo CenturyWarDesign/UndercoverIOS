@@ -279,8 +279,11 @@
     someAddButton.layer.borderColor=[UIColor greenColor].CGColor;
 //    someAddButton.layer.cornerRadius=width/2;
     UIEdgeInsets insets = {width-20, 0 , 0, 0};
+    [someAddButton setTitleColor:[UIColor blackColor] forState:UIControlStateDisabled];
     someAddButton.titleEdgeInsets=insets;
     someAddButton.layer.masksToBounds=YES;
+    [someAddButton setBackgroundImage:[UIImage imageNamed:@"default_photo.png"] forState:UIControlStateNormal];
+//    [someAddButton  sd_setBackgroundImageWithURL:[NSURL URLWithString: photo] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"default_photo.png"]];
     return someAddButton;
 }
 
