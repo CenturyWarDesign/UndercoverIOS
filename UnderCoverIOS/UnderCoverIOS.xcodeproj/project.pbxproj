@@ -47,6 +47,11 @@
 		383D2CAE19E68B7A00079C21 /* CellPunish.xib in Resources */ = {isa = PBXBuildFile; fileRef = 383D2CAC19E68B7A00079C21 /* CellPunish.xib */; };
 		383D2CB119E76E4B00079C21 /* SettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 383D2CB019E76E4B00079C21 /* SettingView.m */; };
 		384B3E681916762B0027201E /* testViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 384B3E671916762B0027201E /* testViewController.m */; };
+		385A5EDE19E8405100C4A974 /* logo_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 385A5ED919E8405100C4A974 /* logo_circle.png */; };
+		385A5EDF19E8405100C4A974 /* logo_click.png in Resources */ = {isa = PBXBuildFile; fileRef = 385A5EDA19E8405100C4A974 /* logo_click.png */; };
+		385A5EE019E8405100C4A974 /* logo_heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 385A5EDB19E8405100C4A974 /* logo_heart.png */; };
+		385A5EE119E8405100C4A974 /* logo_killer.png in Resources */ = {isa = PBXBuildFile; fileRef = 385A5EDC19E8405100C4A974 /* logo_killer.png */; };
+		385A5EE219E8405100C4A974 /* logo_under.png in Resources */ = {isa = PBXBuildFile; fileRef = 385A5EDD19E8405100C4A974 /* logo_under.png */; };
 		387172DC190C231B009D649B /* ViewHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 387172DB190C231B009D649B /* ViewHomeViewController.m */; };
 		3873F70519055D26003827E4 /* UCIPublishNet.m in Sources */ = {isa = PBXBuildFile; fileRef = 3873F70219055D26003827E4 /* UCIPublishNet.m */; };
 		3873F70619055D26003827E4 /* UCIPunishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3873F70419055D26003827E4 /* UCIPunishViewController.m */; };
@@ -249,6 +254,11 @@
 		383D2CB019E76E4B00079C21 /* SettingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingView.m; path = UnderCoverIOS/Model/SettingView.m; sourceTree = "<group>"; };
 		384B3E661916762B0027201E /* testViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = testViewController.h; path = Model/testViewController.h; sourceTree = "<group>"; };
 		384B3E671916762B0027201E /* testViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = testViewController.m; path = Model/testViewController.m; sourceTree = "<group>"; };
+		385A5ED919E8405100C4A974 /* logo_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_circle.png; sourceTree = "<group>"; };
+		385A5EDA19E8405100C4A974 /* logo_click.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_click.png; sourceTree = "<group>"; };
+		385A5EDB19E8405100C4A974 /* logo_heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_heart.png; sourceTree = "<group>"; };
+		385A5EDC19E8405100C4A974 /* logo_killer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_killer.png; sourceTree = "<group>"; };
+		385A5EDD19E8405100C4A974 /* logo_under.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_under.png; sourceTree = "<group>"; };
 		387172DA190C231B009D649B /* ViewHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewHomeViewController.h; path = Model/ViewHomeViewController.h; sourceTree = "<group>"; };
 		387172DB190C231B009D649B /* ViewHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewHomeViewController.m; path = Model/ViewHomeViewController.m; sourceTree = "<group>"; };
 		3873F70119055D26003827E4 /* UCIPublishNet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UCIPublishNet.h; path = UnderCoverIOS/Model/UCIPublishNet.h; sourceTree = "<group>"; };
@@ -639,6 +649,11 @@
 				3878393B19BF4CE4008D552C /* help.png */,
 				3878393C19BF4CE4008D552C /* join.png */,
 				38FD7D1C19DA928300691EA8 /* btn_ purple.png */,
+				385A5ED919E8405100C4A974 /* logo_circle.png */,
+				385A5EDA19E8405100C4A974 /* logo_click.png */,
+				385A5EDB19E8405100C4A974 /* logo_heart.png */,
+				385A5EDC19E8405100C4A974 /* logo_killer.png */,
+				385A5EDD19E8405100C4A974 /* logo_under.png */,
 				38FD7D1D19DA928300691EA8 /* btn_blue.png */,
 				38FD7D1E19DA928300691EA8 /* btn_green.png */,
 				38FD7D1F19DA928300691EA8 /* btn_pink.png */,
@@ -951,6 +966,7 @@
 			files = (
 				C3089DF318C77A9D00A7BAAD /* Icon-Small-50.png in Resources */,
 				38FD7D2319DA928300691EA8 /* btn_green.png in Resources */,
+				385A5EDE19E8405100C4A974 /* logo_circle.png in Resources */,
 				3878393A19BF4C58008D552C /* game.png in Resources */,
 				382E3F8019DBF7DE006F9740 /* tag_green.png in Resources */,
 				38B554A219194F6F00E41984 /* blueArrow.png in Resources */,
@@ -970,6 +986,7 @@
 				0A9A8A5C19C1FDA60079A676 /* bottle.png in Resources */,
 				C3089DEE18C77A9D00A7BAAD /* Icon-60@2x.png in Resources */,
 				38B554A019194F6F00E41984 /* blackArrow.png in Resources */,
+				385A5EE219E8405100C4A974 /* logo_under.png in Resources */,
 				38FD7D1019DA27D400691EA8 /* UMSLoginViewController.xib in Resources */,
 				38FD7D2219DA928300691EA8 /* btn_blue.png in Resources */,
 				38FD7D1219DA27D400691EA8 /* UMSShareListController.xib in Resources */,
@@ -1017,6 +1034,7 @@
 				C3089DEF18C77A9D00A7BAAD /* Icon-72.png in Resources */,
 				C3089DEC18C77A9D00A7BAAD /* Icon-40@2x.png in Resources */,
 				38B554BE191BE87000E41984 /* normalscore.mp3 in Resources */,
+				385A5EE119E8405100C4A974 /* logo_killer.png in Resources */,
 				38FD7D0F19DA27D400691EA8 /* UMShareEditViewControlleriPad.xib in Resources */,
 				38FD7D2419DA928300691EA8 /* btn_pink.png in Resources */,
 				C3089DEB18C77A9D00A7BAAD /* Icon-40.png in Resources */,
@@ -1027,6 +1045,7 @@
 				38B554A619194F6F00E41984 /* whiteArrow.png in Resources */,
 				382E3F7E19DBF7DE006F9740 /* btn_yellow.png in Resources */,
 				382E3F7F19DBF7DE006F9740 /* tag_blue.png in Resources */,
+				385A5EDF19E8405100C4A974 /* logo_click.png in Resources */,
 				387D703E1940C63400D57408 /* config.plist in Resources */,
 				3878394019BF4CE4008D552C /* setting.png in Resources */,
 				382E3F8319DBF7DE006F9740 /* tag_yellow.png in Resources */,
@@ -1034,6 +1053,7 @@
 				38B554A719194F6F00E41984 /* whiteArrow@2x.png in Resources */,
 				38BA262A19E61C3B00A3D2C6 /* btn_quan.png in Resources */,
 				C3089DF618C77A9D00A7BAAD /* Icon-Small@2x.png in Resources */,
+				385A5EE019E8405100C4A974 /* logo_heart.png in Resources */,
 				383D2CAE19E68B7A00079C21 /* CellPunish.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
