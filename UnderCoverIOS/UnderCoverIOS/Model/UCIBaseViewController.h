@@ -12,6 +12,9 @@
 @interface UCIBaseViewController : UIViewController<UCIHttpCallback>{
     //每秒的倒计时
     NSTimer *timerSec;
+    
+    
+     NSMutableArray *allPeopleSay;
 }
 -(void)uMengClick:(NSString *) event;
 -(void)uMengValue:(NSString *) event val:(int)value;
@@ -39,4 +42,10 @@
 -(void)setBadgeValue:(int)val;
 - (void)sessionDownload:(NSString *)urlString;
 -(NSString *)intToString:(int) input;
+
+
+
+-(void)initSay:(int)count;//点过的用户排除掉
+-(void)disableSay:(int)removeid;//下一个发言人的编号
+-(int)nextSay;
 @end

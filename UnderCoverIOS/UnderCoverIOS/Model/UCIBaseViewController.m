@@ -339,4 +339,26 @@
     return [NSString stringWithFormat:@"%d",input];
 }
 
+
+
+
+-(void)initSay:(int)count{
+    allPeopleSay=[[NSMutableArray alloc]init];
+    for(int i=0;i<count;i++){
+        [allPeopleSay addObject:[self intToString:i]];
+    }
+}
+
+//点过的用户排除掉
+-(void)disableSay:(int)removeid{
+    [allPeopleSay removeObject:[self intToString:removeid]];
+}
+
+//下一个发言人的编号
+-(int)nextSay{
+    srand((unsigned)time(0));
+    int sayindex=rand()%[allPeopleSay count];
+    return [[allPeopleSay objectAtIndex:sayindex] intValue]+1;
+}
+
 @end

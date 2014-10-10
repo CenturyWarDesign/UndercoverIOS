@@ -30,6 +30,9 @@
     //1.谁是卧底2.杀人游戏
 //    int gameType;
     
+    
+    int  needSeeShenfen;
+    
 }
 
 @property(nonatomic,weak)NSDictionary *gameData;

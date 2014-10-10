@@ -39,6 +39,10 @@
     
     PeopleCount=[(NSArray *)[gameData objectForKey:@"room_user"] count];
     MaxPeopleCount=PeopleCount;
+    
+    //初始化用户发言表
+    [self initSay:PeopleCount];
+    
     SonCount=[[[gameData objectForKey:@"room_contente"] objectForKey:@"soncount" ] intValue];
     sonWord=[[gameData objectForKey:@"room_contente"] objectForKey:@"son"];
     roomtype=[[gameData objectForKey:@"roomtype"] intValue];
@@ -95,10 +99,24 @@
         
     }
     
-    
-    [self setGameStatus:@"游戏开始，不知道该说什么好"];
+    needSeeShenfen=[addPeople intValue]+1;
+    if(addPeople>0){
+        [self setGameStatus:@"请本地玩家依次查看自己的身份"];
+    }
+    else{
+        [self nextSayTextChange];
+    }
+        [self nextSayTextChange];
     // Do any additional setup after loading the view.
 
+}
+
+
+//下一位用户发言并且修改状态
+-(void)nextSayTextChange{
+    int sayindex=[self nextSay];
+    NSString * username=[(NSDictionary *)[datagame objectAtIndex:sayindex-1] objectForKey:@"user"];
+    [self setGameStatus:[NSString stringWithFormat:@"『%@』开始描述",username]];
 }
 
 
@@ -162,6 +180,8 @@
         if(roomtype==2&&[shenfen isEqualToString:@"法官"])
         {
 //                NSString * tem=[NSString stringWithFormat:@"%@:%@",[(NSDictionary *)[initArray objectAtIndex:i] objectForKey:@"user"],@"法官"];
+            
+            [self disableSay:i];
             [someAddButton setTitle:@"法官" forState:UIControlStateNormal];
             [someAddButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
             [someAddButton setEnabled:false];
@@ -217,6 +237,11 @@
         [self disabledAllButton];
         finish=true;
     }
+    else{
+        [self disableSay:tag-1];
+        [self nextSayTextChange];
+
+    }
     if(finish){
         //点投票最后一步
         [self uMengClick:@"click_guess_last"];
@@ -255,6 +280,9 @@
         //        [self.btnPublish setTitle:@"卧底失败" forState:UIControlStateNormal];
         [self disabledAllButton];
         finish=true;
+    }else{
+        [self disableSay:tag-1];
+        [self nextSayTextChange];
     }
     if(finish){
         //点投票最后一步
@@ -272,7 +300,7 @@
 -(void)setGameStatus:(NSString *)status{
     [self.btnPunish setEnabled:false];
     [self.btnPunish setTitle:status forState:UIControlStateDisabled];
-    [self.btnPunish setTitleColor:[UIColor greenColor] forState:UIControlStateDisabled];
+//    [self.btnPunish setTitleColor:[UIColor greenColor] forState:UIControlStateDisabled];
 //        [self.btnPunish setTitle:status forState:UIControlStateDisabled];
 }
 
@@ -379,10 +407,10 @@
 }
 -(void)hideTag:(int)btnTag{
     UIButton * tembutton=(UIButton *)[self.view viewWithTag:btnTag];
-    float left=self.view.bounds.size.width+tembutton.bounds.size.width/2-20;
+    float left=self.view.bounds.size.width+tembutton.bounds.size.width/2-10;
     CGPoint pointnew=CGPointMake(left,tembutton.center.y);
     tembutton.center=pointnew;
-    [tembutton setAlpha:0.3];
+//    [tembutton setAlpha:0.3];
     [showShenfen removeObjectForKey:[self intToString:btnTag]];
     [self otherSetDisabble:true];
 }
@@ -394,6 +422,7 @@
     //如果没有弹出的时候
     if([showShenfen objectForKey:[self intToString:sender.tag]]>0){
         [self hideTag:sender.tag];
+        needSeeShenfen--;
     }
     else{
         [self otherSetDisabble:false];
@@ -403,7 +432,7 @@
         //记时，进行回退
         [showShenfen setObject:[self intToString:3] forKey:[self intToString:sender.tag]];
         [sender setEnabled:true];
-        [sender setAlpha:1];
+//        [sender setAlpha:1];
     }
 }
 

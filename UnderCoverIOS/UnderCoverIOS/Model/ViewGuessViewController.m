@@ -17,7 +17,6 @@
 @synthesize soncount;
 @synthesize fatherWord;
 @synthesize arrContent;
-@synthesize btnNext;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -37,14 +36,15 @@
     MaxSonCount=SonCount;
     [self initGuess];
     [self.btnPublish setEnabled:false];
-    // Do any additional setup after loading the view.
-    [self setBtnNext:[UIButton buttonWithType:UIButtonTypeRoundedRect]];
-    [[self btnNext] setFrame:CGRectMake(60, 240, 200, 30)];
-    [[self btnNext] setTitle:@"请下一位开始描述" forState:UIControlStateNormal];
-    [self.view addSubview:[self btnNext]];
-    [self.btnNext setEnabled:false];
-    [[self btnNext] addTarget:self action:@selector(tapNext:) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    //初始化用户发言表
+    [self initSay:MaxPeopleCount];
+    
 }
+
+
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -53,12 +53,10 @@
 }
 
 -(void)initGuess{
-    
     int width=self.viewGuess.bounds.size.width;
 //    int height=self.viewGuess.bounds.size.height;
     int btnWidth=(width-30)/4;
     int btnHeight=btnWidth;
-    
     curPeople = 0;
     btnPeople = [[NSMutableArray alloc] init];
     for (int i=0; i<PeopleCount; i++) {
@@ -72,8 +70,10 @@
         [btnPeople addObject:someAddButton];
     }
     [[self btnPublish] setTitle:@"1号描述中" forState:UIControlStateNormal];
-    
     [self selectPeople:[btnPeople objectAtIndex:curPeople]];
+    
+    int sayindex=[self nextSay];
+    [self.btnPublish setTitle:[NSString stringWithFormat:@"%d号用户开始描述", [[allPeopleSay objectAtIndex:sayindex] integerValue]+1] forState:UIControlStateDisabled];
 }
 
 -(void)tapNext:(UIView *)sender{
@@ -88,7 +88,6 @@
 }
 
 -(void)selectPeople:(UIButton *)p {
-    [self.btnNext setEnabled:false];
     [UIView animateWithDuration:0.5
                           delay:0
                         options:UIViewAnimationOptionCurveEaseOut animations:^(void){
@@ -103,7 +102,7 @@
                                                  p.alpha = 1.0;
                                                  [p setBackgroundColor:[UIColor whiteColor]];
                                              }completion:^(BOOL finished){
-                                                     [self.btnNext setEnabled:true];
+//                                                     [self.btnNext setEnabled:true];
                                                  
                                              }];  
                             
@@ -194,6 +193,11 @@
         [self.btnPublish setTitle:[NSString stringWithFormat:@"卧底失败,%@号接受惩罚", [self getSonSetString]] forState:UIControlStateNormal];
         [self disabledAllButton];
         finish=true;
+    }else{
+        //还没有结束，要下一个用户发言
+        [self disableSay:sender.tag-1];
+        int sayindex=[self nextSay];
+        [self.btnPublish setTitle:[NSString stringWithFormat:@"%d号用户开始描述", [[allPeopleSay objectAtIndex:sayindex] integerValue]+1] forState:UIControlStateDisabled];
     }
     if(finish){
         //点投票最后一步
@@ -211,9 +215,8 @@
         NSString * txtShenFen=[arrContent objectForKey:[NSString stringWithFormat:@"%d",i+1]];
         [tembtn setEnabled:false];
         [tembtn setTitle:txtShenFen forState:UIControlStateDisabled];
-        
     }
-    [[self btnNext] setEnabled:NO];
+//    [[self btnNext] setEnabled:NO];
 }
 
 

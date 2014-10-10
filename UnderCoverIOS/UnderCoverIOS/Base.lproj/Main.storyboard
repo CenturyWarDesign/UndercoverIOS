@@ -247,7 +247,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="maQ-9T-zzx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1687" y="559"/>
+            <point key="canvasLocation" x="1586" y="306"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="LMq-iY-C5p">
@@ -714,7 +714,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yGJ-Sa-Ii5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1137" y="-375"/>
+            <point key="canvasLocation" x="1586" y="-521"/>
         </scene>
         <!--玩法-->
         <scene sceneID="DHa-PW-x6M">
@@ -1230,7 +1230,7 @@
                                             <constraint firstAttribute="height" constant="50" id="UXJ-Gh-bHd"/>
                                         </constraints>
                                         <state key="normal" title="返回" backgroundImage="btn_fang_write.png">
-                                            <color key="titleColor" red="0.0" green="0.5" blue="0.2132627312330948" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.049585682040000002" green="0.45956234060000001" blue="0.29183846720000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
                                         </state>
                                         <connections>
@@ -1389,7 +1389,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
                                 </state>
-                                <state key="disabled" backgroundImage="btn_fang_write.png"/>
+                                <state key="disabled" backgroundImage="btn_fang_write.png">
+                                    <color key="titleColor" red="0.0" green="0.5" blue="0.2132627312" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="clickHideAllGame:" destination="tcv-I7-KND" eventType="touchUpInside" id="I84-Js-Qa4"/>
                                     <segue destination="QOR-3R-S3p" kind="push" identifier="gamepunish" id="sQS-UH-pLx"/>
@@ -1741,27 +1743,30 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" restorationIdentifier="viewGuess" translatesAutoresizingMaskIntoConstraints="NO" id="ouL-ln-wfd">
-                                <rect key="frame" x="0.0" y="84" width="320" height="344"/>
+                            <view contentMode="scaleToFill" restorationIdentifier="viewGuess" translatesAutoresizingMaskIntoConstraints="NO" id="ouL-ln-wfd">
+                                <rect key="frame" x="0.0" y="64" width="320" height="454"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="43" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="faO-SV-KoQ">
-                                <rect key="frame" x="64" y="499" width="193" height="49"/>
+                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="43" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="faO-SV-KoQ">
+                                <rect key="frame" x="0.0" y="518" width="320" height="50"/>
                                 <rect key="contentStretch" x="1.3877787807814457e-17" y="0.0" width="1" height="1"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="WfX-e1-hoz"/>
-                                    <constraint firstAttribute="width" constant="193" id="kLu-CF-c9y"/>
+                                    <constraint firstAttribute="height" constant="50" id="WfX-e1-hoz"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <size key="titleShadowOffset" width="1" height="0.0"/>
-                                <state key="normal" title="接受惩罚" backgroundImage="btn_blue.png">
+                                <state key="normal" title="接受惩罚" backgroundImage="btn_fang_purple.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
+                                </state>
+                                <state key="disabled" title="下一位描述" backgroundImage="btn_fang_write.png">
+                                    <color key="titleColor" red="0.0" green="0.5" blue="0.2132627312" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
                                 </state>
                                 <connections>
                                     <action selector="nextOne:" destination="3ho-0x-a8w" eventType="touchUpInside" id="Ch7-oy-sUy"/>
                                     <action selector="punish:" destination="n7B-ON-LDM" eventType="touchUpInside" id="1EI-Mx-KHV"/>
-                                    <segue destination="mE6-is-2BY" kind="push" id="hSa-lq-HVx"/>
+                                    <segue destination="mE6-is-2BY" kind="push" id="nbQ-26-hyQ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1769,9 +1774,10 @@
                         <constraints>
                             <constraint firstItem="ouL-ln-wfd" firstAttribute="top" secondItem="9IN-5b-hRn" secondAttribute="bottom" constant="20" id="2Gu-dq-QS0"/>
                             <constraint firstAttribute="centerX" secondItem="ouL-ln-wfd" secondAttribute="centerX" id="9cq-uQ-i7F"/>
-                            <constraint firstAttribute="centerX" secondItem="faO-SV-KoQ" secondAttribute="centerX" id="LdY-dg-Nkz"/>
-                            <constraint firstAttribute="bottom" secondItem="ouL-ln-wfd" secondAttribute="bottom" constant="140" id="SjJ-Du-18d"/>
-                            <constraint firstAttribute="bottom" secondItem="faO-SV-KoQ" secondAttribute="bottom" constant="20" id="dQB-VY-Z6f"/>
+                            <constraint firstItem="faO-SV-KoQ" firstAttribute="leading" secondItem="O3V-v4-t18" secondAttribute="leading" id="JGa-6y-fjF"/>
+                            <constraint firstAttribute="trailing" secondItem="faO-SV-KoQ" secondAttribute="trailing" id="Kxl-Zw-HfH"/>
+                            <constraint firstAttribute="bottom" secondItem="ouL-ln-wfd" secondAttribute="bottom" constant="50" id="SjJ-Du-18d"/>
+                            <constraint firstAttribute="bottom" secondItem="faO-SV-KoQ" secondAttribute="bottom" id="dQB-VY-Z6f"/>
                             <constraint firstAttribute="width" secondItem="ouL-ln-wfd" secondAttribute="width" id="nN0-PS-Fda"/>
                         </constraints>
                     </view>
@@ -2479,7 +2485,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="xaB-IZ-cCv"/>
+        <segue reference="nbQ-26-hyQ"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.37399760466176168" green="0.80554339169236644" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>

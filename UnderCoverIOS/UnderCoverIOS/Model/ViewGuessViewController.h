@@ -17,6 +17,8 @@
     int MaxSonCount;
     int curPeople;
     NSMutableArray *btnPeople;
+    //这一块是发言人顺序进行发言
+   
 }
 
 
@@ -26,5 +28,4 @@
 @property(nonatomic,weak)NSMutableDictionary *arrContent;
 @property (strong, nonatomic) IBOutlet UIView *viewGuess;
 @property (strong, nonatomic) IBOutlet UIButton *btnPublish;
-@property (strong, nonatomic) UIButton *btnNext;
 @end
