@@ -47,20 +47,52 @@
     imageScrollView.showsHorizontalScrollIndicator= NO;
     imageScrollView.delegate=self;
     
+    NSArray *array = [[NSArray alloc] initWithObjects:@"谁是卧底", @"杀人游戏",
+                      @"真心话大冒险", @"有胆量就点", @"有胆量就转", nil];
+    
     //这里为滚动视图添加了子视图，为了能添加后续操作，我这里定义的子视图是按键UIButton
     for(int i = 0; i < PAGENUM; i++) {
-            NSString  * fileName =@"logo_game.png";
+            NSString  * fileName =[NSString stringWithFormat:@"logo_%d.png",i+1];
             UIButton *imageButton = [[UIButton alloc] initWithFrame:CGRectMake(i * 320.0f+50,  0.0f, 220.0f, 300.0f)];
             [imageButton setBackgroundImage:[UIImage imageNamed:fileName] forState:UIControlStateNormal];
-            [imageButton setTitle:[self intToString:i] forState:UIControlStateNormal];
+            [imageButton setTitle:[array objectAtIndex:i] forState:UIControlStateNormal];
             [imageScrollView addSubview:imageButton];
-            
+            imageButton.titleLabel.font= [UIFont systemFontOfSize: 24.0];
+             UIEdgeInsets insets = {270, 0 , 0, 0};
+            imageButton.titleEdgeInsets=insets;
+        [imageButton setTag:i];
+            [imageButton addTarget:self action:@selector(jumpTuGame:) forControlEvents:UIControlEventTouchUpInside];
+
         }
+    
     //定义PageController 设定总页数，当前页，定义当控件被用户操作时,要触发的动作。
    self.page.numberOfPages= PAGENUM;
     self.page.currentPage= 0;
 }
 
+
+-(void)jumpTuGame:(UIButton *)sender{
+    int tag=sender.tag;
+    switch (tag) {
+  case 0:
+     [self performSegueWithIdentifier:@"game_undercover" sender:self];
+    break;
+        case 1:
+            [self performSegueWithIdentifier:@"game_killer" sender:self];
+            break;
+        case 2:
+            [self performSegueWithIdentifier:@"game_tures" sender:self];
+            break;
+        case 3:
+            [self performSegueWithIdentifier:@"game_click" sender:self];
+            break;
+        case 4:
+            [self performSegueWithIdentifier:@"game_circle" sender:self];
+            break;
+  default:
+    break;
+}
+}
 
 //这里变动下面圆点
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
