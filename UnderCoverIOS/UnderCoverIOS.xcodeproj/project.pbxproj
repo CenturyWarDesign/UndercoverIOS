@@ -52,6 +52,7 @@
 		385A5EE019E8405100C4A974 /* logo_heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 385A5EDB19E8405100C4A974 /* logo_heart.png */; };
 		385A5EE119E8405100C4A974 /* logo_killer.png in Resources */ = {isa = PBXBuildFile; fileRef = 385A5EDC19E8405100C4A974 /* logo_killer.png */; };
 		385A5EE219E8405100C4A974 /* logo_under.png in Resources */ = {isa = PBXBuildFile; fileRef = 385A5EDD19E8405100C4A974 /* logo_under.png */; };
+		385A5EE419E8B5A600C4A974 /* logo_game.png in Resources */ = {isa = PBXBuildFile; fileRef = 385A5EE319E8B5A600C4A974 /* logo_game.png */; };
 		387172DC190C231B009D649B /* ViewHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 387172DB190C231B009D649B /* ViewHomeViewController.m */; };
 		3873F70519055D26003827E4 /* UCIPublishNet.m in Sources */ = {isa = PBXBuildFile; fileRef = 3873F70219055D26003827E4 /* UCIPublishNet.m */; };
 		3873F70619055D26003827E4 /* UCIPunishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3873F70419055D26003827E4 /* UCIPunishViewController.m */; };
@@ -259,6 +260,7 @@
 		385A5EDB19E8405100C4A974 /* logo_heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_heart.png; sourceTree = "<group>"; };
 		385A5EDC19E8405100C4A974 /* logo_killer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_killer.png; sourceTree = "<group>"; };
 		385A5EDD19E8405100C4A974 /* logo_under.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_under.png; sourceTree = "<group>"; };
+		385A5EE319E8B5A600C4A974 /* logo_game.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_game.png; sourceTree = "<group>"; };
 		387172DA190C231B009D649B /* ViewHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewHomeViewController.h; path = Model/ViewHomeViewController.h; sourceTree = "<group>"; };
 		387172DB190C231B009D649B /* ViewHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewHomeViewController.m; path = Model/ViewHomeViewController.m; sourceTree = "<group>"; };
 		3873F70119055D26003827E4 /* UCIPublishNet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UCIPublishNet.h; path = UnderCoverIOS/Model/UCIPublishNet.h; sourceTree = "<group>"; };
@@ -644,6 +646,7 @@
 				38FD7CE919D9596F00691EA8 /* wx_qcode.jpg */,
 				38FD7CE719D9584000691EA8 /* icon32_wx_logo.png */,
 				382746DF19D92AED0055977D /* sina32x32.png */,
+				385A5EE319E8B5A600C4A974 /* logo_game.png */,
 				382746DB19D92A840055977D /* qq32x32.png */,
 				382746D919D927C20055977D /* default_photo.png */,
 				3878393B19BF4CE4008D552C /* help.png */,
@@ -1022,6 +1025,7 @@
 				C3089DF218C77A9D00A7BAAD /* Icon-76@2x.png in Resources */,
 				382746DA19D927C20055977D /* default_photo.png in Resources */,
 				3878393E19BF4CE4008D552C /* help.png in Resources */,
+				385A5EE419E8B5A600C4A974 /* logo_game.png in Resources */,
 				38B554BC191BE87000E41984 /* failshout.mp3 in Resources */,
 				C3089DF018C77A9D00A7BAAD /* Icon-72@2x.png in Resources */,
 				38FD7D0D19DA27D400691EA8 /* UMSCommentInputControlleriPad.xib in Resources */,

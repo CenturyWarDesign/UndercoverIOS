@@ -7,8 +7,14 @@
 //
 
 #import "UCIBaseViewController.h"
+#define PAGENUM 5
 
-@interface ViewHomeViewController : UCIBaseViewController
+@interface ViewHomeViewController : UCIBaseViewController<UIScrollViewDelegate>{
+}
 @property (strong, nonatomic) IBOutlet UILabel *labMessage;
+
+@property (strong, nonatomic) IBOutlet UIPageControl *page;
+
+@property (strong, nonatomic) IBOutlet UIScrollView *imageScrollView;
 
 @end
