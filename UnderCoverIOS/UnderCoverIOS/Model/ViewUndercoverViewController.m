@@ -20,7 +20,6 @@
     if (self) {
         // Custom initialization
 //        self.hidesBottomBarWhenPushed = YES;
-    
     }
     return self;
 }
@@ -34,6 +33,26 @@
 {
 
     [super viewDidLoad];
+    self.gameType=[self getObjectFromDefault:@"localGameType"];
+    
+    //判断游戏类别
+    if([self.gameType isEqualToString:@"1"]){
+        [self initUndercover];
+        self.title=@"谁是卧底";
+    }else if([self.gameType isEqualToString:@"2"]){
+        [self initKiller];
+        self.title=@"杀人游戏";
+    }
+    
+    
+    // Do any additional setup after loading the view.
+}
+
+-(void)initUndercover{
+    self.labUnderDes.hidden=NO;
+    self.sliUndercover.hidden=NO;
+    self.labUndercoverCount.hidden=NO;
+    
     PeopleCount=4;
     UndercoverCount=1;
     self.labPeopleCount.text=[NSString stringWithFormat:@"%d",PeopleCount];
@@ -45,8 +64,17 @@
     self.sliPeople.value=PeopleCount;
     self.sliUndercover.value=UndercoverCount;
     
-    // Do any additional setup after loading the view.
 }
+-(void)initKiller{
+     PeopleCount=6;
+    self.sliPeople.maximumValue=16;
+    self.sliPeople.minimumValue=6;
+    self.labUnderDes.hidden=YES;
+    self.sliUndercover.hidden=YES;
+    self.labUndercoverCount.hidden=YES;
+    
+}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -54,9 +82,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)btnStart:(id)sender {
-//    [self performSegueWithIdentifier:@"segueFenpei" sender:self];
-}
+
 
 - (IBAction)sliPeoplechange:(UISlider *)sender {
     int progress=(int)lroundf(sender.value);
@@ -85,26 +111,15 @@
     if([segue.identifier isEqualToString:@"segueFenpei"]) //"goView2"是SEGUE连线的标识
     {
 //        id theSegue = segue.destinationViewController;
-        //界面之间进行传值
-//        [theSegue setValue:[NSString stringWithFormat:@"%d",PeopleCount] forKey:@"fathercount"];
         [self setObjectFromDefault:[NSString stringWithFormat:@"%d",PeopleCount] key:@"fathercount"];
-//        [theSegue setValue:[NSString stringWithFormat:@"%d",UndercoverCount] forKey:@"soncount"];
-        [self setObjectFromDefault:[NSString stringWithFormat:@"%d",UndercoverCount] key:@"soncount"];
+        if([self.gameType isEqualToString:@"1"]){
+            [self setObjectFromDefault:[NSString stringWithFormat:@"%d",UndercoverCount] key:@"soncount"];
+        }
         //点击之后开始游戏
-        [self uMengClick:@"game_undercover_start"];
+//        [self uMengClick:@"game_undercover_start"];
     }
-
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 
 

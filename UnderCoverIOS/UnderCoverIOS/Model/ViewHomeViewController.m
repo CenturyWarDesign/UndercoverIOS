@@ -72,13 +72,16 @@
 
 
 -(void)jumpTuGame:(UIButton *)sender{
-    int tag=sender.tag;
+    int tag=(int)sender.tag;
     switch (tag) {
   case 0:
-     [self performSegueWithIdentifier:@"game_undercover" sender:self];
+            [self setObjectFromDefault:@"1" key:@"localGameType"];
+            [self performSegueWithIdentifier:@"game_undercover" sender:self];
+            
     break;
         case 1:
-            [self performSegueWithIdentifier:@"game_killer" sender:self];
+            [self setObjectFromDefault:@"2" key:@"localGameType"];
+            [self performSegueWithIdentifier:@"game_undercover" sender:self];
             break;
         case 2:
             [self performSegueWithIdentifier:@"game_tures" sender:self];
@@ -137,6 +140,10 @@
         NSLog(@"UserGetInfo 函数的回调");
     }
 }
+
+
+
+
 
 
 

@@ -18,6 +18,9 @@
     NSString * sonWord;
     NSString * wordkind;
     BOOL kongbai;
+    NSString * gameType;
+    int Killer;
+    int Police;
 }
 @property (strong, nonatomic) IBOutlet UIImageView *imgHide;
 @property (strong, nonatomic) IBOutlet UILabel *labContent;
@@ -27,5 +30,8 @@
 
 @property(nonatomic,weak)NSString *fathercount;
 @property(nonatomic,weak)NSString *soncount;
+@property(nonatomic,weak)NSString *police;
+@property(nonatomic,weak)NSString *killer;
+
 
 @end

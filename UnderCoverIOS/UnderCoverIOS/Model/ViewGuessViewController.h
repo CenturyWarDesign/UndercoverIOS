@@ -18,6 +18,14 @@
     int curPeople;
     NSMutableArray *btnPeople;
     //这一块是发言人顺序进行发言
+    
+    int curPolice;
+    int curKiller;
+    int curTotal;
+    int curPinmin;
+    int curpp;
+    
+    NSString * gameType;
    
 }
 
@@ -28,4 +36,7 @@
 @property(nonatomic,weak)NSMutableDictionary *arrContent;
 @property (strong, nonatomic) IBOutlet UIView *viewGuess;
 @property (strong, nonatomic) IBOutlet UIButton *btnPublish;
+
+@property(nonatomic,weak)NSString *killer;
+@property(nonatomic,weak)NSString *police;
 @end

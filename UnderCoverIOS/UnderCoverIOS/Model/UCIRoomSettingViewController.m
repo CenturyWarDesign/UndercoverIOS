@@ -372,9 +372,6 @@
         [theSegue setValue:[NSString stringWithFormat:@"%d",gametype] forKey:@"gameType"];
         [theSegue setValue:[NSString stringWithFormat:@"%d",addPeopleCount] forKey:@"addPeople"];
     }
-
-    
-    
 }
 
 

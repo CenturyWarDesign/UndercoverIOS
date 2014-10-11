@@ -27,21 +27,27 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [self initWillbegin];
+    
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    gameType=[self getObjectFromDefault:@"localGameType"];
 //       [self performSegueWithIdentifier:@"segueToGuess" sender:self];
     // Do any additional setup after loading the view.
 }
 
 -(void) initWillbegin{
-
     PeopleCount=[[self getObjectFromDefault:@"fathercount"]intValue];
-    SonCount=[[self getObjectFromDefault:@"soncount"]intValue];
     arrContent=[[NSMutableDictionary alloc] init];
-    [self initWords];
+    if([gameType isEqualToString:@"1"]){
+        SonCount=[[self getObjectFromDefault:@"soncount"]intValue];
+        [self initWords];
+    }else{
+        [self initWordsKiller];
+    }
+    
     showContent=true;
     nowIndex=1;
     [self.labContent setText:@""];
@@ -55,6 +61,68 @@
     [self.imgHide addGestureRecognizer:singleTap];
     [self.imgHide setHidden:false];
 }
+
+
+
+-(void)initWordsKiller{
+    
+    if (6<=PeopleCount<=7) {
+        //
+        [self allocateWord:(int)2:(int)0];
+        Killer=2;
+        Police=0;
+    }else if (8<=PeopleCount<=10){
+        //
+        [self allocateWord:(int)2:(int)2];
+        Killer=2;
+        Police=2;
+    }else if (11<=PeopleCount<=14){
+        //
+        [self allocateWord:(int)3:(int)3];
+        Killer=3;
+        Police=3;
+    }else if (15<=PeopleCount<=17){
+        //
+        [self allocateWord:(int)4:(int)4];
+        Killer=4;
+        Police=4;
+    }else{
+        //空值
+    }
+}
+-(void)allocateWord:(int)killercount :(int)policecount{
+    for (int i=1;i<=PeopleCount; i++) {
+        [arrContent setValue:@"平民" forKey:[NSString stringWithFormat:@"%d",i]];
+    }
+    
+    while (killercount>0) {
+        int tem=(int)lroundf(rand()%PeopleCount)+1;
+        NSString * temword=[arrContent objectForKey:[NSString stringWithFormat:@"%d",tem]];
+        if(![temword isEqualToString:@"杀手"]){
+            [arrContent setValue:@"杀手" forKey:[NSString stringWithFormat:@"%d",tem]];
+            killercount--;
+        }
+    }
+    while (policecount>0) {
+        int tem=(int)lroundf(rand()%PeopleCount)+1;
+        NSString * temword=[arrContent objectForKey:[NSString stringWithFormat:@"%d",tem]];
+        if(![temword isEqualToString:@"杀手"]){
+            [arrContent setValue:@"警察" forKey:[NSString stringWithFormat:@"%d",tem]];
+            policecount--;
+        }
+    }
+    
+    int judge=1;
+    while (judge>0) {
+        int tem=(int)lroundf(rand()%PeopleCount)+1;
+        NSString * temword=[arrContent objectForKey:[NSString stringWithFormat:@"%d",tem]];
+        if(![temword isEqualToString:@"杀手"]&&![temword isEqualToString:@"警察"]){
+            [arrContent setValue:@"法官" forKey:[NSString stringWithFormat:@"%d",tem]];
+            judge--;
+        }
+    }
+}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -141,9 +209,17 @@
         id theSegue = segue.destinationViewController;
         //界面之间进行传值
         [theSegue setValue:[NSString stringWithFormat:@"%d",PeopleCount] forKey:@"fathercount"];
-        [theSegue setValue:[NSString stringWithFormat:@"%d",SonCount] forKey:@"soncount"];
+
         [theSegue setValue:arrContent forKey:@"arrContent"];
-        [theSegue setValue:fatherWrod forKey:@"fatherWord"];
+        
+        if([gameType isEqualToString:@"1"]){
+            [theSegue setValue:[NSString stringWithFormat:@"%d",SonCount] forKey:@"soncount"];
+            [theSegue setValue:fatherWrod forKey:@"fatherWord"];
+            }
+        else{
+            [theSegue setValue:[NSString stringWithFormat:@"%d",Killer] forKey:@"killer"];
+            [theSegue setValue:[NSString stringWithFormat:@"%d",Police] forKey:@"police"];
+        }
         //点击翻牌最后一步
         [self uMengClick:@"click_undercover_pai_last"];
     }

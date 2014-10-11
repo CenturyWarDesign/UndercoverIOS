@@ -18,7 +18,10 @@
 @property (strong, nonatomic) IBOutlet UISlider *sliUndercover;
 @property (strong, nonatomic) IBOutlet UILabel *labPeopleCount;
 @property (strong, nonatomic) IBOutlet UILabel *labUndercoverCount;
-@property (strong, nonatomic) IBOutlet UIPickerView *pickType;
-@property (strong, nonatomic) IBOutlet UISwitch *switchKong;
+
+@property (strong, nonatomic) IBOutlet UILabel *labUnderDes;
+
+//1谁是卧底  2.杀人游戏
+@property(nonatomic,retain)NSString *gameType;
 
 @end

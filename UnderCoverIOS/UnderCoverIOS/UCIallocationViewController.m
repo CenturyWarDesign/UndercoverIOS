@@ -56,29 +56,7 @@
     // Dispose of any resources that can be recreated.
 }
 -(void)initWords{
-    /* fatherWrod=@"父亲";
-     sonWord=@"孩子";
-     
-     //    NSString * wordstring=[MobClick getConfigParams:@"under_string_version"];
-     //    NSString* str = @"here be dragons";
-     NSArray * wordArray=[self getAllWords];
-     if([wordArray count]>0){
-     srand((unsigned)time(0));
-     NSString *randWord= [wordArray objectAtIndex:rand()%[wordArray count]];
-     [self hasPlayed:randWord];
-     //数组包括3项 类别  词汇一、二
-     NSArray * wordDetailArray= [randWord componentsSeparatedByString:@"_"];
-     srand((unsigned)time(0));
-     int randWitchfather=rand()%2;
-     if(randWitchfather==0){
-     fatherWrod=[wordDetailArray objectAtIndex:1];
-     sonWord=[wordDetailArray objectAtIndex:2];
-     }else{
-     sonWord=[wordDetailArray objectAtIndex:1];
-     fatherWrod=[wordDetailArray objectAtIndex:2];
-     }
-     }*/
-    
+
     if (6<=totalCount<=7) {
         //
         [self allocateWord:(int)2:(int)0];

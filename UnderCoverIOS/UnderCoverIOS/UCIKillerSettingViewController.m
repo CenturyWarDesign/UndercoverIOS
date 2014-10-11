@@ -67,31 +67,10 @@
         [self.view addSubview:someAddButton];
         [btnPeople addObject:someAddButton];
     }
-    [[self BtnPunish] setTitle:@"1号描述中" forState:UIControlStateNormal];
-    [self selectPeople:[btnPeople objectAtIndex:curPeople]];
-        [self displayJudge];
+    [self displayJudge];
 }
 
--(void)selectPeople:(UIButton *)p {
-    [UIView animateWithDuration:0.5
-                          delay:0
-                        options:UIViewAnimationOptionCurveEaseOut animations:^(void){
-                            p.alpha = 0.5;
-                            [p setBackgroundColor:[UIColor redColor]];
-                        }completion:^(BOOL finished){
-                            [UIView animateWithDuration:0.5
-                                                  delay:1.0
-                                                options:UIViewAnimationOptionAutoreverse | UIViewAnimationOptionRepeat
-                                             animations:^(void){
-                                                 [UIView setAnimationRepeatCount:5];
-                                                 p.alpha = 1.0;
-                                                 [p setBackgroundColor:[UIColor whiteColor]];
-                                             }completion:^(BOOL finished){
-                                                 
-                                             }];
-                            
-                        }];
-}
+
 
 -(void)tapPeople:(UIButton *)sender{
     
