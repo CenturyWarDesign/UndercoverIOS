@@ -16,4 +16,6 @@
 @property (strong, nonatomic) IBOutlet UIButton *btnJoin;
 @property (strong, nonatomic) IBOutlet UIButton *btnCreate;
 
+@property (strong, nonatomic) IBOutlet UIButton *his_join;
+@property (strong, nonatomic) IBOutlet UIButton *his_create;
 @end

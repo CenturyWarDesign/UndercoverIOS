@@ -46,18 +46,26 @@
         return;
     }
     
+    [self checkIsInRoom];
+    //如果已经设置过姓名，则跳过
+    
+    [self setEnable];
+    // Do any additional setup after loading the view.
+}
+
+-(IBAction) checkIsInRoom{
     int roomid=[[self getObjectFromDefault:@"roomid"] intValue];
     //如果已经在一个房间内，那么直接跳过去
     NSString *roomtype= [self getObjectFromDefault:@"roomtype"];
     if([roomtype isEqualToString:@"create"]&&roomid>0){
         [self performSegueWithIdentifier:@"createroom" sender:self];
+        [self.his_join setHidden:true];
+        [self.his_create setHidden:false];
     }else if([roomtype isEqualToString:@"join"]&&roomid>0){
         [self performSegueWithIdentifier:@"joinroom" sender:self];
+        [self.his_join setHidden:false];
+        [self.his_create setHidden:true];
     }
-    //如果已经设置过姓名，则跳过
-    
-    [self setEnable];
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning
@@ -135,18 +143,25 @@
 //        NSString * roomid=[data objectForKey:@"roomid"];
 //        [UCIAppDelegate setRoomPush:[NSString stringWithFormat:@"ROOM_%@",roomid]];
         [self setObjectFromDefault:@"create" key:@"roomtype"];
-        
         [self setObjectFromDefault:[data objectForKey:@"roomid"] key:@"roomid"];
-        
+//        [self setObjectFromDefault:@"create" key:@"historyroomtype"];
         [self uMengClick:@"room_create"];
+        //这时候加入房间成功，房间历史记录显示出来，然后点击可以直接这历史房间
+        [self.his_join setHidden:true];
+        [self.his_create setHidden:false];
         [self performSegueWithIdentifier:@"createroom" sender:self];
     }
     else if([command isEqualToString:@"RoomJoin"]){
-        [self performSegueWithIdentifier:@"joinroom" sender:self];
 //             [self showAlert:@"提示" content:@"当前房间号不存在或已超期"];
 //        NSString * roomid=[data objectForKey:@"roomid"];
         [self uMengClick:@"room_join"];
         [self setObjectFromDefault:@"join" key:@"roomtype"];
+         [self setObjectFromDefault:[data objectForKey:@"roomid"] key:@"roomid"];
+//         [self setObjectFromDefault:@"join" key:@"historyroomtype"];
+        //这时候加入房间成功，房间历史记录显示出来，然后点击可以直接这历史房间
+        [self.his_join setHidden:false];
+        [self.his_create setHidden:true];
+        [self performSegueWithIdentifier:@"joinroom" sender:self];
         NSLog(@"RoomJoin 函数的回调");
 
     }

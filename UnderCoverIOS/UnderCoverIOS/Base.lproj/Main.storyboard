@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" initialViewController="vWh-ec-t9B">
     <dependencies>
-        <deployment version="1536" defaultVersion="1536" identifier="iOS"/>
+        <deployment version="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
@@ -872,14 +872,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="欢迎您：先生/女士" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7A-2x-72V">
-                                <rect key="frame" x="30" y="72" width="259" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="欢迎您：先生/女士" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7A-2x-72V">
+                                <rect key="frame" x="30" y="52" width="259" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BK6-if-UO4">
-                                <rect key="frame" x="64" y="163" width="193" height="49"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BK6-if-UO4">
+                                <rect key="frame" x="64" y="143" width="193" height="49"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="MNF-eb-JvX"/>
                                     <constraint firstAttribute="width" constant="193" id="cVQ-zs-N0u"/>
@@ -895,8 +895,8 @@
                                     <action selector="updateName:" destination="Yz6-45-Sro" eventType="touchUpInside" id="dyt-XR-7cL"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wW4-6r-6ot">
-                                <rect key="frame" x="64" y="232" width="193" height="49"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wW4-6r-6ot">
+                                <rect key="frame" x="64" y="212" width="193" height="49"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="193" id="Dum-wr-AVq"/>
                                     <constraint firstAttribute="height" constant="49" id="Zjz-Gm-geX"/>
@@ -912,8 +912,8 @@
                                     <action selector="updateName:" destination="Yz6-45-Sro" eventType="touchUpInside" id="krp-cL-zlW"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入房间号" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="vSy-2B-ZsE">
-                                <rect key="frame" x="30" y="108" width="259" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入房间号" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="vSy-2B-ZsE">
+                                <rect key="frame" x="30" y="88" width="259" height="30"/>
                                 <color key="textColor" red="1" green="0.030171554529999998" blue="0.055692702410000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
@@ -921,16 +921,46 @@
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="fie-gm-3WH">
                                 <rect key="frame" x="149" y="274" width="20" height="20"/>
                             </activityIndicatorView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9JW-uZ-4wM">
+                                <rect key="frame" x="262" y="151" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="3tx-xr-Q6r"/>
+                                    <constraint firstAttribute="height" constant="35" id="Pnp-qb-pxe"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="btn_history.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkIsInRoom" destination="IJr-yc-3ge" eventType="touchUpInside" id="ZCH-nI-sX3"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBC-UG-mhR">
+                                <rect key="frame" x="262" y="220" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="nEk-oJ-O2j"/>
+                                    <constraint firstAttribute="height" constant="35" id="uPv-Wu-ONH"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="btn_history.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkIsInRoom" destination="IJr-yc-3ge" eventType="touchUpInside" id="Olw-do-aNk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="BBC-UG-mhR" firstAttribute="bottom" secondItem="wW4-6r-6ot" secondAttribute="bottom" constant="-6" id="6SF-6I-rhL"/>
+                            <constraint firstItem="9JW-uZ-4wM" firstAttribute="leading" secondItem="BK6-if-UO4" secondAttribute="trailing" constant="5" id="7fn-uI-FKt"/>
                             <constraint firstItem="N7A-2x-72V" firstAttribute="trailing" secondItem="vSy-2B-ZsE" secondAttribute="trailing" id="G7y-TY-F8B"/>
+                            <constraint firstItem="BBC-UG-mhR" firstAttribute="leading" secondItem="wW4-6r-6ot" secondAttribute="trailing" constant="5" id="GDw-cl-98d"/>
                             <constraint firstItem="wW4-6r-6ot" firstAttribute="top" secondItem="BK6-if-UO4" secondAttribute="bottom" constant="20" id="Prm-Jh-kKq"/>
+                            <constraint firstItem="9JW-uZ-4wM" firstAttribute="bottom" secondItem="BK6-if-UO4" secondAttribute="bottom" constant="-6" id="RTx-dm-Coh"/>
                             <constraint firstAttribute="trailing" secondItem="N7A-2x-72V" secondAttribute="trailing" constant="31" id="VT3-PY-jEk"/>
                             <constraint firstItem="N7A-2x-72V" firstAttribute="leading" secondItem="vSy-2B-ZsE" secondAttribute="leading" id="WJi-Hm-SXz"/>
                             <constraint firstAttribute="centerX" secondItem="BK6-if-UO4" secondAttribute="centerX" id="Ygj-iw-yIv"/>
                             <constraint firstItem="BK6-if-UO4" firstAttribute="centerX" secondItem="T6f-rx-6tu" secondAttribute="centerX" id="ab4-P9-gbQ"/>
-                            <constraint firstItem="N7A-2x-72V" firstAttribute="top" secondItem="b56-8d-FdK" secondAttribute="bottom" constant="20" symbolic="YES" id="fwG-Lp-d4N"/>
+                            <constraint firstItem="N7A-2x-72V" firstAttribute="top" secondItem="b56-8d-FdK" secondAttribute="bottom" constant="8" symbolic="YES" id="fwG-Lp-d4N"/>
                             <constraint firstItem="BK6-if-UO4" firstAttribute="top" secondItem="vSy-2B-ZsE" secondAttribute="bottom" constant="25" id="isq-dM-ymz"/>
                             <constraint firstItem="vSy-2B-ZsE" firstAttribute="top" secondItem="N7A-2x-72V" secondAttribute="bottom" constant="15" id="rQp-pN-stM"/>
                             <constraint firstItem="N7A-2x-72V" firstAttribute="leading" secondItem="T6f-rx-6tu" secondAttribute="leading" constant="30" id="xYR-01-Qj3"/>
@@ -950,6 +980,8 @@
                     <connections>
                         <outlet property="btnCreate" destination="wW4-6r-6ot" id="RcB-yg-hbR"/>
                         <outlet property="btnJoin" destination="BK6-if-UO4" id="Opv-Qf-Oul"/>
+                        <outlet property="his_create" destination="BBC-UG-mhR" id="zeI-Kc-lfi"/>
+                        <outlet property="his_join" destination="9JW-uZ-4wM" id="cp6-IO-XS5"/>
                         <outlet property="labName" destination="N7A-2x-72V" id="rpk-nx-iqG"/>
                         <outlet property="labRoomId" destination="vSy-2B-ZsE" id="5bw-2P-myf"/>
                         <outlet property="loadIng" destination="fie-gm-3WH" id="aGw-rO-fnk"/>
@@ -1939,6 +1971,7 @@
         <image name="btn_fang_purple.png" width="35" height="29"/>
         <image name="btn_fang_write.png" width="35" height="29"/>
         <image name="btn_green.png" width="193" height="49"/>
+        <image name="btn_history.png" width="35" height="35"/>
         <image name="btn_pink.png" width="193" height="49"/>
         <image name="btn_quan.png" width="250" height="250"/>
         <image name="btn_yuan_red.png" width="200" height="200"/>

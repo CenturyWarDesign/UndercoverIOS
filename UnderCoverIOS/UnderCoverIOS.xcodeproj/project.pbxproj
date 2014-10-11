@@ -53,6 +53,7 @@
 		385A5EEE19E8F98E00C4A974 /* logo_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 385A5EE919E8F98E00C4A974 /* logo_3.png */; };
 		385A5EEF19E8F98E00C4A974 /* logo_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 385A5EEA19E8F98E00C4A974 /* logo_4.png */; };
 		385A5EF019E8F98E00C4A974 /* logo_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 385A5EEB19E8F98E00C4A974 /* logo_5.png */; };
+		385A5EF419E9183C00C4A974 /* btn_history.png in Resources */ = {isa = PBXBuildFile; fileRef = 385A5EF319E9183B00C4A974 /* btn_history.png */; };
 		387172DC190C231B009D649B /* ViewHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 387172DB190C231B009D649B /* ViewHomeViewController.m */; };
 		3873F70519055D26003827E4 /* UCIPublishNet.m in Sources */ = {isa = PBXBuildFile; fileRef = 3873F70219055D26003827E4 /* UCIPublishNet.m */; };
 		3873F70619055D26003827E4 /* UCIPunishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3873F70419055D26003827E4 /* UCIPunishViewController.m */; };
@@ -261,6 +262,7 @@
 		385A5EE919E8F98E00C4A974 /* logo_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_3.png; sourceTree = "<group>"; };
 		385A5EEA19E8F98E00C4A974 /* logo_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_4.png; sourceTree = "<group>"; };
 		385A5EEB19E8F98E00C4A974 /* logo_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_5.png; sourceTree = "<group>"; };
+		385A5EF319E9183B00C4A974 /* btn_history.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_history.png; sourceTree = "<group>"; };
 		387172DA190C231B009D649B /* ViewHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewHomeViewController.h; path = Model/ViewHomeViewController.h; sourceTree = "<group>"; };
 		387172DB190C231B009D649B /* ViewHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewHomeViewController.m; path = Model/ViewHomeViewController.m; sourceTree = "<group>"; };
 		3873F70119055D26003827E4 /* UCIPublishNet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UCIPublishNet.h; path = UnderCoverIOS/Model/UCIPublishNet.h; sourceTree = "<group>"; };
@@ -645,6 +647,7 @@
 				382E3F7A19DBF7DE006F9740 /* tag_green.png */,
 				382E3F7B19DBF7DE006F9740 /* tag_pink.png */,
 				382E3F7C19DBF7DE006F9740 /* tag_puple.png */,
+				385A5EF319E9183B00C4A974 /* btn_history.png */,
 				382E3F7D19DBF7DE006F9740 /* tag_yellow.png */,
 				38FD7D1A19DA3DEF00691EA8 /* peoplecount.png */,
 				38FD7D1619DA391200691EA8 /* remove.png */,
@@ -988,6 +991,7 @@
 				0A9A8A5C19C1FDA60079A676 /* bottle.png in Resources */,
 				C3089DEE18C77A9D00A7BAAD /* Icon-60@2x.png in Resources */,
 				38B554A019194F6F00E41984 /* blackArrow.png in Resources */,
+				385A5EF419E9183C00C4A974 /* btn_history.png in Resources */,
 				38FD7D1019DA27D400691EA8 /* UMSLoginViewController.xib in Resources */,
 				38FD7D2219DA928300691EA8 /* btn_blue.png in Resources */,
 				38FD7D1219DA27D400691EA8 /* UMSShareListController.xib in Resources */,

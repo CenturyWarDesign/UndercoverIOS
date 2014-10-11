@@ -104,7 +104,7 @@
         [self setGameStatus:@"请本地玩家依次查看自己的身份"];
     }
     else{
-        [self nextSayTextChange];
+//        [self nextSayTextChange];
     }
         [self nextSayTextChange];
     // Do any additional setup after loading the view.
@@ -115,7 +115,7 @@
 //下一位用户发言并且修改状态
 -(void)nextSayTextChange{
     int sayindex=[self nextSay];
-    NSString * username=[(NSDictionary *)[datagame objectAtIndex:sayindex-1] objectForKey:@"user"];
+    NSString * username=[(NSDictionary *)[datagame objectAtIndex:sayindex] objectForKey:@"user"];
     [self setGameStatus:[NSString stringWithFormat:@"『%@』开始描述",username]];
 }
 
