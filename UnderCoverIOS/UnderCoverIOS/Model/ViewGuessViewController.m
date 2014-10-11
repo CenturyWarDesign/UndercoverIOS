@@ -38,8 +38,7 @@
     [self.btnPublish setEnabled:false];
     
     
-    //初始化用户发言表
-    [self initSay:MaxPeopleCount];
+   
     
 }
 
@@ -69,46 +68,13 @@
         [self.view addSubview:someAddButton];
         [btnPeople addObject:someAddButton];
     }
-    [[self btnPublish] setTitle:@"1号描述中" forState:UIControlStateNormal];
-    [self selectPeople:[btnPeople objectAtIndex:curPeople]];
-    
+    //初始化用户发言表
+    [self initSay:MaxPeopleCount];
     int sayindex=[self nextSay];
-    [self.btnPublish setTitle:[NSString stringWithFormat:@"%d号用户开始描述", [[allPeopleSay objectAtIndex:sayindex] integerValue]+1] forState:UIControlStateDisabled];
+    [self.btnPublish setTitle:[NSString stringWithFormat:@"%d号用户开始描述", sayindex+1] forState:UIControlStateDisabled];
 }
 
--(void)tapNext:(UIView *)sender{
-    int cur = (++curPeople % [btnPeople count]);
-    UIButton *b = [btnPeople objectAtIndex:cur];
-    while (![b isEnabled]) {
-        cur = (++curPeople % [btnPeople count]);
-        b = [btnPeople objectAtIndex:cur];
-    }
-    [[self btnPublish] setTitle:[NSString stringWithFormat:@"%d号描述中", (cur+1)] forState:UIControlStateDisabled];
-    [self selectPeople:[btnPeople objectAtIndex:cur]];
-}
 
--(void)selectPeople:(UIButton *)p {
-    [UIView animateWithDuration:0.5
-                          delay:0
-                        options:UIViewAnimationOptionCurveEaseOut animations:^(void){
-                            p.alpha = 0.5;
-                            [p setBackgroundColor:[UIColor redColor]];
-                        }completion:^(BOOL finished){
-                            [UIView animateWithDuration:0.5
-                                                  delay:1.0
-                                                options:UIViewAnimationOptionAutoreverse | UIViewAnimationOptionRepeat
-                                             animations:^(void){
-                                                 [UIView setAnimationRepeatCount:5];
-                                                 p.alpha = 1.0;
-                                                 [p setBackgroundColor:[UIColor whiteColor]];
-                                             }completion:^(BOOL finished){
-//                                                     [self.btnNext setEnabled:true];
-                                                 
-                                             }];  
-                            
-                        }];
-
-}
 
 /*
  * 
@@ -197,7 +163,7 @@
         //还没有结束，要下一个用户发言
         [self disableSay:sender.tag-1];
         int sayindex=[self nextSay];
-        [self.btnPublish setTitle:[NSString stringWithFormat:@"%d号用户开始描述", [[allPeopleSay objectAtIndex:sayindex] integerValue]+1] forState:UIControlStateDisabled];
+        [self.btnPublish setTitle:[NSString stringWithFormat:@"%d号用户开始描述",sayindex+1] forState:UIControlStateDisabled];
     }
     if(finish){
         //点投票最后一步

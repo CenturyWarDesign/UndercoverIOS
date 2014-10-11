@@ -55,7 +55,7 @@
 }
 
 - (IBAction)btnStart:(id)sender {
-//    [self performSegueWithIdentifier:@"fanpaigueid" sender:self];
+//    [self performSegueWithIdentifier:@"segueFenpei" sender:self];
 }
 
 - (IBAction)sliPeoplechange:(UISlider *)sender {

@@ -358,7 +358,7 @@
 -(int)nextSay{
     srand((unsigned)time(0));
     int sayindex=rand()%[allPeopleSay count];
-    return [[allPeopleSay objectAtIndex:sayindex] intValue]+1;
+    return [[allPeopleSay objectAtIndex:sayindex] intValue];
 }
 
 @end

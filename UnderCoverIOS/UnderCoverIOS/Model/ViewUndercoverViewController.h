@@ -8,7 +8,7 @@
 
 #import "UCIBaseViewController.h"
 
-@interface ViewUndercoverViewController : UCIBaseViewController<UIPickerViewDelegate,UIPickerViewDataSource>
+@interface ViewUndercoverViewController : UCIBaseViewController
 {
     int PeopleCount;
     int UndercoverCount;

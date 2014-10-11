@@ -34,5 +34,7 @@
 
 @property (strong, nonatomic) IBOutlet UIButton *btnPeople;
 @property (strong, nonatomic) IBOutlet UIView *viewAllGamel;
+@property (strong, nonatomic) IBOutlet UILabel *lab_under_error;
+@property (strong, nonatomic) IBOutlet UILabel *lab_killer_error;
 
 @end

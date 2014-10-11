@@ -384,21 +384,36 @@
     //谁是卧底 4-10人
 
     //到时这里还要加入收费项
-    if(peoplecount>=[[self getConfig:@"UNDERCOVER_MIN_PEOPLE"] intValue]&&peoplecount<=[[self getConfig:@"UNDERCOVER_MAX_PEOPLE"] intValue]){
-        [self.btnUndercover setEnabled:true];
+    if(peoplecount<[[self getConfig:@"UNDERCOVER_MIN_PEOPLE"] intValue]){
+        [self.btnUndercover setEnabled:false];
+        self.lab_under_error.hidden=false;
+        self.lab_under_error.text=[NSString stringWithFormat:@"还差%d人",[[self getConfig:@"UNDERCOVER_MIN_PEOPLE"] intValue]-peoplecount];
+    }else if(peoplecount>[[self getConfig:@"UNDERCOVER_MAX_PEOPLE"] intValue]){
+        [self.btnUndercover setEnabled:false];
+        self.lab_under_error.hidden=false;
+        self.lab_under_error.text=[NSString stringWithFormat:@"超出%d人",peoplecount-[[self getConfig:@"UNDERCOVER_MAX_PEOPLE"] intValue]];
     }
     else
     {
-        [self.btnUndercover setEnabled:false];
+        [self.btnUndercover setEnabled:true];
+        self.lab_under_error.hidden=true;
     }
     
      //杀人游戏 6-16人
-    if(peoplecount>=[[self getConfig:@"KILLER_MIN_PEOPLE"] intValue]&&peoplecount<=[[self getConfig:@"KILLER_MAX_PEOPLE"] intValue]){
-        [self.btnKiller setEnabled:true];
+    if(peoplecount<[[self getConfig:@"KILLER_MIN_PEOPLE"] intValue]){
+        [self.btnKiller setEnabled:false];
+        self.lab_killer_error.hidden=false;
+        self.lab_killer_error.text=[NSString stringWithFormat:@"还差%d人",[[self getConfig:@"KILLER_MIN_PEOPLE"] intValue]-peoplecount];
+    }else if(peoplecount>[[self getConfig:@"KILLER_MAX_PEOPLE"] intValue]){
+        [self.btnKiller setEnabled:false];
+        self.lab_killer_error.hidden=false;
+        self.lab_killer_error.text=[NSString stringWithFormat:@"超出%d人",peoplecount-[[self getConfig:@"KILLER_MAX_PEOPLE"] intValue]];
     }
     else
     {
-        [self.btnKiller setEnabled:false];
+        [self.btnKiller setEnabled:true];
+        self.lab_killer_error.hidden=true;
+       
     }
     [self.btnDouble setEnabled:true];
 }
