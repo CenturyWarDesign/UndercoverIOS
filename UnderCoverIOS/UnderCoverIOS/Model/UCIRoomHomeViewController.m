@@ -47,6 +47,7 @@
     }
     
     [self checkIsInRoom];
+    
     //如果已经设置过姓名，则跳过
     
     [self setEnable];
@@ -65,6 +66,26 @@
         [self performSegueWithIdentifier:@"joinroom" sender:self];
         [self.his_join setHidden:false];
         [self.his_create setHidden:true];
+    }else{
+        [self.his_join setHidden:true];
+        [self.his_create setHidden:true];
+    }
+}
+-(void)checkRoom{
+    int roomid=[[self getObjectFromDefault:@"roomid"] intValue];
+    //如果已经在一个房间内，那么直接跳过去
+    NSString *roomtype= [self getObjectFromDefault:@"roomtype"];
+    if([roomtype isEqualToString:@"create"]&&roomid>0){
+//        [self performSegueWithIdentifier:@"createroom" sender:self];
+        [self.his_join setHidden:true];
+        [self.his_create setHidden:false];
+    }else if([roomtype isEqualToString:@"join"]&&roomid>0){
+//        [self performSegueWithIdentifier:@"joinroom" sender:self];
+        [self.his_join setHidden:false];
+        [self.his_create setHidden:true];
+    }else{
+        [self.his_join setHidden:true];
+        [self.his_create setHidden:true];
     }
 }
 
@@ -77,6 +98,7 @@
 - (void)viewWillAppear:(BOOL)animated{
     NSString * welcomeword=[NSString stringWithFormat:@"%@,创建或加入一个游戏吧",[self getObjectFromDefault:@"username"]];
     [self.labName setText: welcomeword];
+    [self checkRoom];
 }
 /*
 #pragma mark - Navigation

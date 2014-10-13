@@ -193,6 +193,10 @@
         userinfo=[data objectForKey:@"room_user"];
         if([userinfo count]==0){
             [self showAlert:@"" content:@"未取得任何房间信息，请重新创建"];
+            //把房间信息清空
+            [self setObjectFromDefault:@"" key:@"roomtype"];
+            [self setObjectFromDefault:@"" key:@"roomid"];
+            
             [self.navigationController popViewControllerAnimated:YES];
             return;
         }

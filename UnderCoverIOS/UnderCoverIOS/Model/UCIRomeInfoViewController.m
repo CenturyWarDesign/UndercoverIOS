@@ -97,6 +97,9 @@
 //        NSString *createtime=[data objectForKey:@"createtime"];
         if(roomid==0){
             [self showAlert:@"" content:@"房间已经不存在,或已经被踢出房间"];
+            //把房间信息清空
+            [self setObjectFromDefault:@"" key:@"roomtype"];
+            [self setObjectFromDefault:@"" key:@"roomid"];
             [self.navigationController popViewControllerAnimated:YES];
             [UCIAppDelegate setRoomPush:@""];
         }
