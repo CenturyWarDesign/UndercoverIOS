@@ -19,6 +19,9 @@
     CGPoint startPoint;
     CGPoint nowPoint;
     BOOL istouch;
+    NSMutableArray * userinfotem;
+    NSString * willChangeUserName;
+    int willChangeUserGameuid;
 }
 @property (strong, nonatomic) IBOutlet UILabel *labRoomId;
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollUsers;

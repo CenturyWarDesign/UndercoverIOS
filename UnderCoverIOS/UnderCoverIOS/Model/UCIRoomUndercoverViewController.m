@@ -60,25 +60,27 @@
         NSString * temgameuidStr=[NSString stringWithFormat:@"%d",temgameuid];
         [datagame addObject:[NSDictionary dictionaryWithObjectsAndKeys:temusername,@"user",temcontent,@"content",temgameuidStr,@"gameuid",temphoto,@"photo",nil]];
         
-        
+            
+       
         if(temgameuid==-1){
-            NSString * content=[NSString stringWithFormat:@"NO1:%@",temcontent];
+            NSString * content=[NSString stringWithFormat:@"%@:%@",[self getUserNewName:-1 oldName:@"NO1:"],temcontent];
             [self.btn_no1 setTitle:content forState:UIControlStateNormal];
         }else if(temgameuid==-2){
-            NSString * content=[NSString stringWithFormat:@"NO2:%@",temcontent];
+            NSString * content=[NSString stringWithFormat:@"%@:%@",[self getUserNewName:-2 oldName:@"NO2:"],temcontent];
             [self.btn_no2 setTitle:content forState:UIControlStateNormal];
         }else if(temgameuid==-3){
-            NSString * content=[NSString stringWithFormat:@"NO3:%@",temcontent];
+             NSString * content=[NSString stringWithFormat:@"%@:%@",[self getUserNewName:-3 oldName:@"NO3:"],temcontent];
             [self.btn_no3 setTitle:content forState:UIControlStateNormal];
         }
         else if(temgameuid==-4){
-            NSString * content=[NSString stringWithFormat:@"NO4:%@",temcontent];
+             NSString * content=[NSString stringWithFormat:@"%@:%@",[self getUserNewName:-4 oldName:@"NO4:"],temcontent];
             [self.btn_no4 setTitle:content forState:UIControlStateNormal];
         }
         else if(zhuchigameuid==temgameuid){
             NSString * content=[NSString stringWithFormat:@"自己:%@",temcontent];
             [self.btn_self setTitle:content forState:UIControlStateNormal];
         }
+        
     }
     
     showShenfen=[[NSMutableDictionary alloc] init];
@@ -152,6 +154,7 @@
 }
 
 
+
 /**
  *initArray 里面是字典，名称，user，内容,content
  */
@@ -174,7 +177,17 @@
         NSString * shenfen=[(NSDictionary *)[initArray objectAtIndex:i] objectForKey:@"content"];
         NSString * userName=[(NSDictionary *)[initArray objectAtIndex:i] objectForKey:@"user"];
          NSString * photo=[(NSDictionary *)[initArray objectAtIndex:i] objectForKey:@"photo"];
+        
+    
+        
+         NSString * temgameuid=[(NSDictionary *)[initArray objectAtIndex:i] objectForKey:@"gameuid"];
+        NSString * userNameChange=[self getObjectFromDefault:[NSString stringWithFormat:@"%@_Newname",temgameuid]];
+        if(userNameChange.length>0){
+            userName=userNameChange;
+        }
+        //看看有没有备注名称
         [someAddButton setTitle:userName forState:UIControlStateNormal];
+        
         [someAddButton  sd_setBackgroundImageWithURL:[NSURL URLWithString: photo] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"default_photo.png"]];
         
         if(roomtype==2&&[shenfen isEqualToString:@"法官"])

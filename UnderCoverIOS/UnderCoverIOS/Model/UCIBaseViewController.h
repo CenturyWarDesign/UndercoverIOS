@@ -48,4 +48,5 @@
 -(void)initSay:(int)count;//点过的用户排除掉
 -(void)disableSay:(int)removeid;//下一个发言人的编号
 -(int)nextSay;
+-(NSString*)getUserNewName:(int)gameuid oldName:(NSString *)oldName;
 @end

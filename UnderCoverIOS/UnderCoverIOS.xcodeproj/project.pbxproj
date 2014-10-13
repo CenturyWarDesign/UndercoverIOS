@@ -54,6 +54,7 @@
 		385A5EEF19E8F98E00C4A974 /* logo_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 385A5EEA19E8F98E00C4A974 /* logo_4.png */; };
 		385A5EF019E8F98E00C4A974 /* logo_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 385A5EEB19E8F98E00C4A974 /* logo_5.png */; };
 		385A5EF419E9183C00C4A974 /* btn_history.png in Resources */ = {isa = PBXBuildFile; fileRef = 385A5EF319E9183B00C4A974 /* btn_history.png */; };
+		385A5EF719EBC5F600C4A974 /* ChangeUserName.m in Sources */ = {isa = PBXBuildFile; fileRef = 385A5EF619EBC5F600C4A974 /* ChangeUserName.m */; };
 		387172DC190C231B009D649B /* ViewHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 387172DB190C231B009D649B /* ViewHomeViewController.m */; };
 		3873F70519055D26003827E4 /* UCIPublishNet.m in Sources */ = {isa = PBXBuildFile; fileRef = 3873F70219055D26003827E4 /* UCIPublishNet.m */; };
 		3873F70619055D26003827E4 /* UCIPunishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3873F70419055D26003827E4 /* UCIPunishViewController.m */; };
@@ -263,6 +264,8 @@
 		385A5EEA19E8F98E00C4A974 /* logo_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_4.png; sourceTree = "<group>"; };
 		385A5EEB19E8F98E00C4A974 /* logo_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_5.png; sourceTree = "<group>"; };
 		385A5EF319E9183B00C4A974 /* btn_history.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_history.png; sourceTree = "<group>"; };
+		385A5EF519EBC5F600C4A974 /* ChangeUserName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChangeUserName.h; path = Model/ChangeUserName.h; sourceTree = "<group>"; };
+		385A5EF619EBC5F600C4A974 /* ChangeUserName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChangeUserName.m; path = Model/ChangeUserName.m; sourceTree = "<group>"; };
 		387172DA190C231B009D649B /* ViewHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewHomeViewController.h; path = Model/ViewHomeViewController.h; sourceTree = "<group>"; };
 		387172DB190C231B009D649B /* ViewHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewHomeViewController.m; path = Model/ViewHomeViewController.m; sourceTree = "<group>"; };
 		3873F70119055D26003827E4 /* UCIPublishNet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UCIPublishNet.h; path = UnderCoverIOS/Model/UCIPublishNet.h; sourceTree = "<group>"; };
@@ -815,6 +818,8 @@
 				38ECA858192CEE5D007672BA /* UCIRoomSettingViewController.h */,
 				38ECA859192CEE5D007672BA /* UCIRoomSettingViewController.m */,
 				38E53E5D1907FA06004F8F51 /* Main.storyboard */,
+				385A5EF519EBC5F600C4A974 /* ChangeUserName.h */,
+				385A5EF619EBC5F600C4A974 /* ChangeUserName.m */,
 				383D2C9F19E684F100079C21 /* UCIViewNetPunishController.h */,
 				383D2CA019E684F100079C21 /* UCIViewNetPunishController.m */,
 				38FD7CEB19D95B8600691EA8 /* UCIViewWenxin.h */,
@@ -1156,6 +1161,7 @@
 				3827470419D93E380055977D /* NSData+ImageContentType.m in Sources */,
 				C3089DC518C778D400A7BAAD /* EAIntroPage.m in Sources */,
 				3873F70919055D51003827E4 /* BIDNameAndColorTableViewCell.m in Sources */,
+				385A5EF719EBC5F600C4A974 /* ChangeUserName.m in Sources */,
 				3884010B19397B1500A1904B /* UCIHelpViewController.m in Sources */,
 				3827470C19D93E380055977D /* UIButton+WebCache.m in Sources */,
 				C3089DC618C778D400A7BAAD /* EAIntroView.m in Sources */,

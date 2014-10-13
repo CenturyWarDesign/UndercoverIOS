@@ -63,6 +63,10 @@
     }
 
     NSString * username=[self.punishinfo[indexPath.row] objectForKey:@"username"];
+    int gameuid=[[self.punishinfo[indexPath.row] objectForKey:@"gameuid"] intValue];
+    username=[self getUserNewName:gameuid oldName:username];
+    
+    
     NSString * punish=[self.punishinfo[indexPath.row] objectForKey:@"content"];
     NSString * photo=[self.punishinfo[indexPath.row] objectForKey:@"photo"];
 

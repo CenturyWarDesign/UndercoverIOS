@@ -65,7 +65,13 @@
     else{
         [self.peopleCount setMaximumValue:2];
     }
+//    [self.view addSubview:self.navigationController.view];
 }
+
+//-(void)viewWillAppear:(BOOL)animated{
+//    [super viewWillAppear:animated];
+//
+//}
 
 - (void) dragMoving: (UIButton *) c withEvent:ev
 {
@@ -139,15 +145,16 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    int peoplecount=[[self getObjectFromDefault:@"addOtherPeople"] integerValue];
+    int peoplecount=(int)[[self getObjectFromDefault:@"addOtherPeople"] integerValue];
     if(peoplecount<=0){
         peoplecount=1;
     }
     thistotalpeople=peoplecount;
-    int totalcount=[userinfo count]+peoplecount-1;
+    int totalcount=(int)[userinfo count]+peoplecount-1;
     [self checkifEnable:totalcount];
 //    self.btnPeople.center=nowPoint;
 //    [self moveToCount:peoplecount];
+    [self ReflashUsers];
 }
 
 
@@ -206,7 +213,7 @@
 //            [self performSegueWithIdentifier:@"gameKiller" sender:self];
 //        }
         NSLog(@"RoomStartGame 函数的回调");
-        [self checkifEnable:[userinfo count]+(int)self.peopleCount.value];
+        [self checkifEnable:(int)[userinfo count]+(int)self.peopleCount.value];
     }
     else if([command isEqualToString:@"RoomRemoveSomeone"]){
         [self showAlert:@"" content:@"删除玩家成功"];
@@ -220,9 +227,9 @@
 -(void)ReflashUsers{
     
     int progress=addPeopleCount;
-    NSMutableArray * userinfotem=[[NSMutableArray alloc] init];
+    userinfotem=[[NSMutableArray alloc] init];
     for (int i=0; i<progress; i++) {
-        NSDictionary * tem=[NSDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:@"NO.%d",i+1],@"username",@"ddd",@"content",nil];
+        NSDictionary * tem=[NSDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:@"NO.%d",i+1],@"username",@"ddd",@"content",[self intToString:-i-1],@"gameuid",nil];
         [userinfotem addObject:tem];
     }
     
@@ -232,7 +239,7 @@
 
     
     //显示哪些可以显示，哪些活动不可以显示
-    [self checkifEnable:[userinfotem count]];
+    [self checkifEnable:(int)[userinfotem count]];
     
     //scrollUsers = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 460)];
     
@@ -264,12 +271,16 @@
         
        
         
-        
         UIButton *someAddButton = [self getCircleBtn:btnWidth];
         
-        NSString * userName=[(NSMutableDictionary *)[userinfotem objectAtIndex:i] objectForKey:@"username"];
-        NSString * photo=[(NSMutableDictionary *)[userinfotem objectAtIndex:i] objectForKey:@"photo"];
         int temgameuid=[[(NSMutableDictionary *)[userinfotem objectAtIndex:i] objectForKey:@"gameuid"] intValue];
+        NSString * userName=[(NSMutableDictionary *)[userinfotem objectAtIndex:i] objectForKey:@"username"];
+        NSString * userNameChange=[self getObjectFromDefault:[NSString stringWithFormat:@"%d_Newname",temgameuid]];
+        if(userNameChange.length>0){
+            userName=userNameChange;
+        }
+        NSString * photo=[(NSMutableDictionary *)[userinfotem objectAtIndex:i] objectForKey:@"photo"];
+ 
         [someAddButton setTitle:userName forState:UIControlStateNormal];
         
         [someAddButton  sd_setBackgroundImageWithURL:[NSURL URLWithString: photo] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"default_photo.png"]];
@@ -291,7 +302,8 @@
         [someAddButton setTag:i];
         //点击删除某个玩家
         
-        //[someAddButton addTarget:self action:@selector(tapPeople:) forControlEvents:UIControlEventTouchUpInside];
+        [someAddButton addTarget:self action:@selector(clickPeople:) forControlEvents:UIControlEventTouchUpInside];
+        
         [self.scrollUsers addSubview:someAddButton];
         if(showdel){
             //这里是删除按键
@@ -372,6 +384,10 @@
         [theSegue setValue:[NSString stringWithFormat:@"%d",gametype] forKey:@"gameType"];
         [theSegue setValue:[NSString stringWithFormat:@"%d",addPeopleCount] forKey:@"addPeople"];
     }
+    else if([segue.identifier isEqualToString:@"changeName"]){
+        [theSegue setValue:willChangeUserName forKey:@"username"];
+        [theSegue setValue:[self intToString:willChangeUserGameuid] forKey:@"gameuid"];
+    }
 }
 
 
@@ -443,6 +459,13 @@
     [self.viewAllGamel setHidden:YES];
 }
 
+//打开修改某人昵称页面
+-(void)clickPeople:(UIButton *)sender{
+    int tag=(int)sender.tag;
+    willChangeUserName=[(NSMutableDictionary *)[userinfotem objectAtIndex:tag] objectForKey:@"username"];
+    willChangeUserGameuid=(int)[[(NSMutableDictionary *)[userinfotem objectAtIndex:tag] objectForKey:@"gameuid"] integerValue];
+    [self performSegueWithIdentifier:@"changeName" sender:self];
+}
 
 
 @end

@@ -361,4 +361,13 @@
     return [[allPeopleSay objectAtIndex:sayindex] intValue];
 }
 
+
+
+-(NSString*)getUserNewName:(int)gameuid oldName:(NSString *)oldName{
+    NSString * userNameChange=[self getObjectFromDefault:[NSString stringWithFormat:@"%d_Newname",gameuid]];
+    if(userNameChange.length>0){
+        oldName=userNameChange;
+    }
+    return oldName;
+}
 @end
