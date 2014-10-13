@@ -1,65 +1,91 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment defaultVersion="1552" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="75" id="dnQ-eb-RiR" customClass="BIDNameAndColorTableViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="118" id="dnQ-eb-RiR" customClass="BIDNameAndColorTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="341" height="118"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dnQ-eb-RiR" id="1qc-mp-Epp">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="74"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="298" translatesAutoresizingMaskIntoConstraints="NO" id="GJR-UF-Qh4">
-                        <rect key="frame" x="11" y="2" width="298" height="44"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="298" translatesAutoresizingMaskIntoConstraints="NO" id="GJR-UF-Qh4">
+                        <rect key="frame" x="11" y="2" width="319" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="EA3-a9-tih"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="top" restorationIdentifier="btnUnlike" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rg-RR-zMX">
-                        <rect key="frame" x="249" y="54" width="60" height="20"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <button opaque="NO" contentMode="top" restorationIdentifier="btnUnlike" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rg-RR-zMX">
+                        <rect key="frame" x="189" y="64" width="70" height="20"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="60" id="89K-2X-JNr"/>
+                            <constraint firstAttribute="height" constant="20" id="ZnT-pT-KRW"/>
+                            <constraint firstAttribute="width" constant="70" id="bqd-rw-zeE"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <state key="normal" title="不喜欢"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <state key="normal" title="3" image="heart_gray.png">
+                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                        </state>
                     </button>
-                    <button opaque="NO" contentMode="top" restorationIdentifier="btnLike" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Unw-Ar-Jrj">
-                        <rect key="frame" x="177" y="54" width="60" height="20"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <button opaque="NO" contentMode="top" restorationIdentifier="btnLike" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Unw-Ar-Jrj">
+                        <rect key="frame" x="111" y="64" width="70" height="20"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="60" id="gEK-pO-qUw"/>
-                            <constraint firstAttribute="height" constant="20" id="vlT-Up-XcY"/>
+                            <constraint firstAttribute="width" constant="70" id="66n-dW-ttB"/>
+                            <constraint firstAttribute="height" constant="20" id="y6P-eK-djr"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <state key="normal" title="喜欢">
+                        <state key="normal" title="2" image="heart.png">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="top" restorationIdentifier="btnShare" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZ1-d9-vm0">
+                        <rect key="frame" x="266" y="64" width="70" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="9LN-Zu-rY5"/>
+                            <constraint firstAttribute="width" constant="70" id="oNp-KI-goJ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <state key="normal" title=" 分享" image="share.png">
+                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                         </state>
                     </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Unw-Ar-Jrj" firstAttribute="top" secondItem="GJR-UF-Qh4" secondAttribute="bottom" constant="8" symbolic="YES" id="3My-UD-FuW"/>
-                    <constraint firstAttribute="trailing" secondItem="2rg-RR-zMX" secondAttribute="trailing" constant="11" id="4SE-ai-xg4"/>
-                    <constraint firstItem="2rg-RR-zMX" firstAttribute="leading" secondItem="Unw-Ar-Jrj" secondAttribute="trailing" constant="12" id="ALD-YG-7Yv"/>
-                    <constraint firstItem="Unw-Ar-Jrj" firstAttribute="bottom" secondItem="2rg-RR-zMX" secondAttribute="bottom" id="BAP-Kk-EWH"/>
+                    <constraint firstAttribute="trailing" secondItem="hZ1-d9-vm0" secondAttribute="trailing" constant="5" id="4Ha-kJ-iwd"/>
+                    <constraint firstItem="hZ1-d9-vm0" firstAttribute="leading" secondItem="2rg-RR-zMX" secondAttribute="trailing" constant="7" id="6PI-e8-3zD"/>
+                    <constraint firstItem="2rg-RR-zMX" firstAttribute="leading" secondItem="Unw-Ar-Jrj" secondAttribute="trailing" constant="8" id="9TX-PV-sUE"/>
                     <constraint firstItem="GJR-UF-Qh4" firstAttribute="top" secondItem="1qc-mp-Epp" secondAttribute="top" constant="2" id="Cjm-ak-rph"/>
+                    <constraint firstItem="hZ1-d9-vm0" firstAttribute="top" secondItem="1qc-mp-Epp" secondAttribute="top" constant="64" id="GZ3-cR-RKV"/>
                     <constraint firstItem="GJR-UF-Qh4" firstAttribute="centerX" secondItem="1qc-mp-Epp" secondAttribute="centerX" id="LNY-B5-2oV"/>
-                    <constraint firstAttribute="bottom" secondItem="2rg-RR-zMX" secondAttribute="bottom" id="eZG-cW-aXe"/>
+                    <constraint firstItem="Unw-Ar-Jrj" firstAttribute="baseline" secondItem="hZ1-d9-vm0" secondAttribute="baseline" id="XB8-Ic-j5h"/>
+                    <constraint firstItem="Unw-Ar-Jrj" firstAttribute="baseline" secondItem="2rg-RR-zMX" secondAttribute="baseline" id="gfL-l7-RM0"/>
                     <constraint firstItem="GJR-UF-Qh4" firstAttribute="leading" secondItem="1qc-mp-Epp" secondAttribute="leading" constant="11" id="lRJ-vc-q8L"/>
                     <constraint firstAttribute="trailing" secondItem="GJR-UF-Qh4" secondAttribute="trailing" constant="11" id="q9N-su-UEI"/>
-                    <constraint firstItem="2rg-RR-zMX" firstAttribute="top" secondItem="GJR-UF-Qh4" secondAttribute="bottom" constant="8" symbolic="YES" id="x20-Xp-men"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="btnLike" destination="Unw-Ar-Jrj" id="dNN-hF-Uho"/>
+                <outlet property="btnShare" destination="hZ1-d9-vm0" id="iVd-BW-Tax"/>
                 <outlet property="btnUnlike" destination="2rg-RR-zMX" id="PTF-TM-anN"/>
                 <outlet property="txt3" destination="GJR-UF-Qh4" id="GOW-87-9HE"/>
             </connections>
+            <point key="canvasLocation" x="149.5" y="175"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="heart.png" width="25" height="20"/>
+        <image name="heart_gray.png" width="25" height="20"/>
+        <image name="share.png" width="25" height="20"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>

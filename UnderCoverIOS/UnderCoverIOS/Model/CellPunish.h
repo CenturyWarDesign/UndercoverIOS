@@ -12,9 +12,11 @@
     IBOutlet UILabel *labName;
     IBOutlet UILabel *labPunish;
     IBOutlet UIImageView *imgPhoto;
+    IBOutlet UIButton *btnShare;
 }
 @property (strong, nonatomic) IBOutlet UIImageView *imgPhoto;
 @property (strong, nonatomic) IBOutlet UILabel *labName;
 @property (strong, nonatomic) IBOutlet UILabel *labPunish;
+@property (strong, nonatomic) IBOutlet UIButton *btnShare;
 
 @end

@@ -138,17 +138,19 @@
 
     cell.txt3.text=[self.dowarves[indexPath.row] objectForKey:@"content"];
 //    cell..text=[self.dowarves[indexPath.row] objectForKey:@"content"];
-    NSString * txtLike=[NSString stringWithFormat:@"喜欢 %@",[self.dowarves[indexPath.row] objectForKey:@"like"] ];
-    NSString * distxtLike=[NSString stringWithFormat:@"不喜欢 %@",[self.dowarves[indexPath.row] objectForKey:@"dislike"] ];
+    NSString * txtLike=[NSString stringWithFormat:@" %@",[self.dowarves[indexPath.row] objectForKey:@"like"] ];
+    NSString * distxtLike=[NSString stringWithFormat:@" %@",[self.dowarves[indexPath.row] objectForKey:@"dislike"] ];
 
     [cell.btnLike  setTitle:txtLike forState:UIControlStateNormal];
     
     
     [cell.btnLike setTag:[[self.dowarves[indexPath.row] objectForKey:@"id"] intValue]];
     [cell.btnUnlike setTag:[[self.dowarves[indexPath.row] objectForKey:@"id"] intValue]];
+    [cell.btnShare setTag:[[self.dowarves[indexPath.row] objectForKey:@"id"] intValue]];
     
     [cell.btnLike setTag:indexPath.row];
     [cell.btnUnlike setTag:indexPath.row];
+    [cell.btnShare setTag:indexPath.row];
     
     
 //    [cell.btnEdit setTag:indexPath.row];
@@ -157,6 +159,7 @@
 
     [cell.btnLike addTarget:self  action:@selector(likeit:) forControlEvents:UIControlEventTouchUpInside];
     [cell.btnUnlike addTarget:self  action:@selector(unlikeit:) forControlEvents:UIControlEventTouchUpInside];
+    [cell.btnShare addTarget:self  action:@selector(share:) forControlEvents:UIControlEventTouchUpInside];
     
     [cell.btnUnlike  setTitle:distxtLike forState:UIControlStateNormal];
 //    int row=indexPath.row;
@@ -179,7 +182,7 @@
     HTTPBase *classBtest = [[HTTPBase alloc] init];
     int temcount=[[self.dowarves[btn.tag] objectForKey:@"like"] intValue]+1;
 
-    [btn setTitle:[NSString stringWithFormat:@"喜欢 %d",temcount] forState:UIControlStateNormal];
+    [btn setTitle:[NSString stringWithFormat:@" %d",temcount] forState:UIControlStateNormal];
         [btn setEnabled:false];
     classBtest.delegate = self;
     [classBtest baseHttp:@"PublishCollect" paramsdata:[NSDictionary dictionaryWithObjectsAndKeys: [NSString stringWithFormat:@"%d",index],@"id",@"1",@"type",nil]];
@@ -196,7 +199,7 @@
     int temcount=[[self.dowarves[btn.tag] objectForKey:@"dislike"] intValue]+1;
 //    [self.dowarves[btn.tag] setObject:[NSString stringWithFormat:@"%d",temcount] forKey:@"dislike"];
 //    [self.tableview reloadData];
-    [btn setTitle:[NSString stringWithFormat:@"不喜欢 %d",temcount] forState:UIControlStateNormal];
+    [btn setTitle:[NSString stringWithFormat:@" %d",temcount] forState:UIControlStateNormal];
     [btn setEnabled:false];
     
     
@@ -211,6 +214,13 @@
     //从喜欢的列表里面移除
     [self removeliketoDefault:[self.dowarves[btn.tag] objectForKey:@"content"]];
 
+}
+
+-(IBAction)share:(id)sender{
+    UIButton *btn =(UIButton *)sender;
+    NSString* content=[self.dowarves[btn.tag] objectForKey:@"content"];
+
+    [self shareSomeThing:content imageName:@""];
 }
 
 -(IBAction)editPunish:(id)sender{

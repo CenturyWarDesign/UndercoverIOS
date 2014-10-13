@@ -67,15 +67,32 @@
     username=[self getUserNewName:gameuid oldName:username];
     
     
+    
+    
+    
     NSString * punish=[self.punishinfo[indexPath.row] objectForKey:@"content"];
     NSString * photo=[self.punishinfo[indexPath.row] objectForKey:@"photo"];
 
     [[cell labName] setText: username];
     [[cell labPunish] setText:punish];
-        [[cell imgPhoto] sd_setImageWithURL:[NSURL URLWithString: photo] placeholderImage:[UIImage imageNamed:@"default_photo.png"]];
+    [[cell imgPhoto] sd_setImageWithURL:[NSURL URLWithString: photo] placeholderImage:[UIImage imageNamed:@"default_photo.png"]];
+    [cell.btnShare setTag:indexPath.row];
+     [cell.btnShare addTarget:self  action:@selector(sharPunish:) forControlEvents:UIControlEventTouchUpInside];
     
 //    [[cell imgPhoto] setImage:[UIImage imageNamed:@"default_photo.png"]];
     return cell;
+}
+
+-(void)sharPunish:(UIButton *)sender{
+    int tag=(int)sender.tag;
+    int gameuid=[[self.punishinfo[tag] objectForKey:@"gameuid"] intValue];
+    NSString * username=[self.punishinfo[tag] objectForKey:@"username"];
+    username=[self getUserNewName:gameuid oldName:username];
+    NSString * punish=[self.punishinfo[tag] objectForKey:@"content"];
+//    NSString* content=[self.dowarves[btn.tag] objectForKey:@"content"];
+    NSString* content=[NSString stringWithFormat:@"@%@ 受到了惩罚  [%@]  ,我们玩的这么嗨，你也快来参加吧！--爱上聚会",username,punish];
+    [self shareSomeThing:content imageName:@""];
+    
 }
 
 

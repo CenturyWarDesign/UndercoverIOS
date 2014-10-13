@@ -49,4 +49,5 @@
 -(void)disableSay:(int)removeid;//下一个发言人的编号
 -(int)nextSay;
 -(NSString*)getUserNewName:(int)gameuid oldName:(NSString *)oldName;
+-(void)shareSomeThing:(NSString *)content imageName:(NSString *)imageName;
 @end

@@ -11,6 +11,7 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import "UCIAppDelegate.h"
 #import "AFNetworking.h"
+#import "UMSocial.h"
 @interface UCIBaseViewController ()
 
 @end
@@ -369,5 +370,18 @@
         oldName=userNameChange;
     }
     return oldName;
+}
+
+
+-(void)shareSomeThing:(NSString *)content imageName:(NSString *)imageName{
+    if([imageName isEqualToString:@""]){
+        imageName=@"icon.png";
+    }
+    [UMSocialSnsService presentSnsIconSheetView:self
+                                         appKey:@"531f3fcd56240b7b2a0415ac"
+                                      shareText:content
+                                     shareImage:[UIImage imageNamed:imageName]
+                                shareToSnsNames:[NSArray arrayWithObjects:UMShareToSina,UMShareToTencent,UMShareToQzone,UMShareToRenren,nil]
+                                       delegate:nil];
 }
 @end

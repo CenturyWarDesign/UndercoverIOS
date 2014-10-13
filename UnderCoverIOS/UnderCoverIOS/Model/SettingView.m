@@ -36,11 +36,13 @@
     //把声音标记做了
     [self.swiSound setOn:soundon];
     
-    [self checkIsLogin];
+    
 }
 
 
-
+-(void)viewWillAppear:(BOOL)animated{
+    [self checkIsLogin];
+}
 
 - (IBAction)changeSoundSetting:(UISwitch *)sender {
 //    NSString * tem=[baseCommand getObjectFromDefault:@"ISOPENSOUND"];
