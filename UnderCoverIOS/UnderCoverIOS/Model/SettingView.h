@@ -14,5 +14,6 @@
 @property (strong, nonatomic) IBOutlet UISwitch *swiSound;
 @property (strong, nonatomic) IBOutlet UILabel *labName;
 @property (strong, nonatomic) IBOutlet UIImageView *imgPhoto;
+@property (strong, nonatomic) IBOutlet UILabel *labVersion;
 
 @end

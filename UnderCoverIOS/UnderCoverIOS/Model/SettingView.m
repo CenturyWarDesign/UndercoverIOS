@@ -35,8 +35,9 @@
     bool soundon=[[baseCommand getObjectFromDefault:@"ISOPENSOUND"]  isEqual:@"1"];
     //把声音标记做了
     [self.swiSound setOn:soundon];
-    
-    
+    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+    NSString *app_Version = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
+    self.labVersion.text=app_Version;
 }
 
 
@@ -138,4 +139,5 @@
                                   });
     
 }
+
 @end

@@ -52,7 +52,7 @@
     
     //这里为滚动视图添加了子视图，为了能添加后续操作，我这里定义的子视图是按键UIButton
     for(int i = 0; i < PAGENUM; i++) {
-            NSString  * fileName =[NSString stringWithFormat:@"logo_%d.png",i+1];
+            NSString  * fileName =[NSString stringWithFormat:@"logo_1%d.png",i+1];
             UIButton *imageButton = [[UIButton alloc] initWithFrame:CGRectMake(i * 320.0f+50,  0.0f, 220.0f, 300.0f)];
             [imageButton setBackgroundImage:[UIImage imageNamed:fileName] forState:UIControlStateNormal];
             [imageButton setTitle:[array objectAtIndex:i] forState:UIControlStateNormal];

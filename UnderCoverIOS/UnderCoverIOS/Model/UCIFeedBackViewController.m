@@ -33,6 +33,9 @@
     range.length = 0;
     self.textFeedBack.selectedRange=range;
     
+    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+    NSString *app_Version = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
+    self.textFeedBack.text=[NSString stringWithFormat:@"[%@]",app_Version];
 //    [self.textFeedBack.layer setb:1];
     
 //    someAddButton.layer.borderWidth=1;
