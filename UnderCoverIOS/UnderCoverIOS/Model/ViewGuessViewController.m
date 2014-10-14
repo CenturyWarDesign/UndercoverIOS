@@ -62,14 +62,14 @@
 }
 
 -(void)initGuess{
-    int width=self.viewGuess.bounds.size.width;
+    int width=self.scrollGuess.bounds.size.width;
 //    int height=self.viewGuess.bounds.size.height;
     int btnWidth=(width-30)/4;
     int btnHeight=btnWidth;
     curPeople = 0;
     btnPeople = [[NSMutableArray alloc] init];
     for (int i=0; i<PeopleCount; i++) {
-        CGRect frame = CGRectMake((btnWidth+5)*(i%4)+10, (i/4)*(btnHeight+10)+80, btnWidth, btnHeight);
+        CGRect frame = CGRectMake((btnWidth+5)*(i%4)+10, (i/4)*(btnHeight+10), btnWidth, btnHeight);
         UIButton *someAddButton =[self getCircleBtn:btnWidth];
         [someAddButton setTitle:[NSString stringWithFormat:@"%d号",i+1] forState:UIControlStateNormal];
         someAddButton.frame = frame;
@@ -80,7 +80,7 @@
          else{
              [someAddButton addTarget:self action:@selector(tapPeopleKiller:) forControlEvents:UIControlEventTouchUpInside];
          }
-        [self.view addSubview:someAddButton];
+        [self.scrollGuess addSubview:someAddButton];
         [btnPeople addObject:someAddButton];
     }
     //初始化用户发言表

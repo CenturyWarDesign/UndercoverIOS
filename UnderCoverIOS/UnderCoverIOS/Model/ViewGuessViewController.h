@@ -34,7 +34,8 @@
 @property(nonatomic,weak)NSString *soncount;
 @property(nonatomic,weak)NSString *fatherWord;
 @property(nonatomic,weak)NSMutableDictionary *arrContent;
-@property (strong, nonatomic) IBOutlet UIView *viewGuess;
+
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollGuess;
 @property (strong, nonatomic) IBOutlet UIButton *btnPublish;
 
 @property(nonatomic,weak)NSString *killer;

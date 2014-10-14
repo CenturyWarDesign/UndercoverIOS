@@ -131,9 +131,10 @@
      [cell.btnLike setEnabled:true];
     
     [cell.btnUnlike setEnabled:true];
-    
+//    cell.frame.size=CGSizeMake(216, CGFLOAT_MAX);
     
 //    cell.txtName.text=@"wanbin";
+//    cell.contentView.frame.size.height=90;
 //    [cell txtName] setText
 
     cell.txt3.text=[self.dowarves[indexPath.row] objectForKey:@"content"];
@@ -176,6 +177,12 @@
     return cell;
 }
 
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    //    UITableViewCell *cell = [self tableView:tableView cellForRowAtIndexPath:indexPath];
+    return 90.0f;
+}
+
 -(IBAction)likeit:(id)sender{
     UIButton *btn =(UIButton *)sender;
     int index=[[self.dowarves[btn.tag] objectForKey:@"id"] intValue];
@@ -215,6 +222,7 @@
     [self removeliketoDefault:[self.dowarves[btn.tag] objectForKey:@"content"]];
 
 }
+
 
 -(IBAction)share:(id)sender{
     UIButton *btn =(UIButton *)sender;
