@@ -51,4 +51,10 @@
 -(NSString*)getUserNewName:(int)gameuid oldName:(NSString *)oldName;
 -(void)shareSomeThing:(NSString *)content imageName:(NSString *)imageName;
 -(UIWebView *)showHelp:(NSString *)url fatherView:(UIView * )fatherView;
+
+
+-(UIColor*)getPinkColor;
+-(UIColor*)getBlueColor;
+-(UIColor*)getPurPleColor;
+
 @end

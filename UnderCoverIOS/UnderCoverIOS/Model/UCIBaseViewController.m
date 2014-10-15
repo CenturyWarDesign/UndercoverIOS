@@ -401,4 +401,16 @@
     
 }
 
+
+//返回几种系统常用的颜色
+-(UIColor*)getPinkColor{
+    return [UIColor colorWithRed:235.0/255 green:172.0/255 blue:184.0/255 alpha:1];
+}
+-(UIColor*)getBlueColor{
+    return [UIColor colorWithRed:180.0/255 green:210.0/255 blue:224.0/255 alpha:1];
+}
+-(UIColor*)getPurPleColor{
+    return [UIColor colorWithRed:165.0/255 green:131.0/255 blue:179.0/255 alpha:1];
+}
+
 @end

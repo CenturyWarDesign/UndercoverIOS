@@ -29,7 +29,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self getMessage];
+   
 //    return ;
     
 //    Class cls = NSClassFromString(@"UMANUtil");
@@ -73,8 +73,26 @@
         }
     
     //定义PageController 设定总页数，当前页，定义当控件被用户操作时,要触发的动作。
-   self.page.numberOfPages= PAGENUM;
+    self.page.numberOfPages= PAGENUM;
     self.page.currentPage= 0;
+    [self getMessage];
+    [self checkNewer];
+}
+
+-(void)checkNewer{
+    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+    NSString *app_Version = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
+    
+    NSString *string=[NSString stringWithFormat:@"newer_%@",app_Version];
+    
+    NSString * isNewer=[self getObjectFromDefault:string];
+    if(![isNewer isEqualToString:@"1"]){
+        [self performSegueWithIdentifier:@"newer" sender:self];
+        [self setObjectFromDefault:@"1" key:string];
+    }
+    
+    
+
 }
 
 

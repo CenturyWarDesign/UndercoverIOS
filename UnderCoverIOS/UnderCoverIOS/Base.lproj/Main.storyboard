@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" initialViewController="vWh-ec-t9B">
     <dependencies>
-        <deployment version="1536" identifier="iOS"/>
+        <deployment version="1536" defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
@@ -330,7 +330,13 @@
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" title="爱上聚会" id="b9X-UG-2bZ"/>
+                    <navigationItem key="navigationItem" title="爱上聚会" id="b9X-UG-2bZ">
+                        <barButtonItem key="rightBarButtonItem" title="关于" id="jJ7-2V-2be">
+                            <connections>
+                                <segue destination="FOw-um-ASc" kind="push" identifier="newer" id="H75-6s-qBD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="imageScrollView" destination="Qu9-Id-9Xn" id="cYU-3M-ZGd"/>
@@ -343,7 +349,56 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M3f-qJ-oUi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-135" y="-650"/>
+            <point key="canvasLocation" x="-487" y="-924"/>
+        </scene>
+        <!--关于-->
+        <scene sceneID="HJY-R5-hbV">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="FOw-um-ASc" customClass="NewerView" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="No2-s9-gMj"/>
+                        <viewControllerLayoutGuide type="bottom" id="BAg-dI-EwH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="G1Y-tL-rSI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="436"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Blz-S3-fw4">
+                                <rect key="frame" x="0.0" y="18" width="320" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="yzw-HC-zZK"/>
+                                </constraints>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="lLZ-5z-aK4">
+                                <rect key="frame" x="110" y="406" width="100" height="10"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="SIF-eF-ypi"/>
+                                    <constraint firstAttribute="width" constant="100" id="wEi-Gg-eJ6"/>
+                                </constraints>
+                                <color key="pageIndicatorTintColor" white="0.80443088500000004" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="currentPageIndicatorTintColor" red="0.5" green="0.16904019379999999" blue="0.10611801060000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Blz-S3-fw4" firstAttribute="leading" secondItem="G1Y-tL-rSI" secondAttribute="leading" id="D0t-OZ-6Ng"/>
+                            <constraint firstAttribute="centerX" secondItem="lLZ-5z-aK4" secondAttribute="centerX" id="dG9-fG-ube"/>
+                            <constraint firstAttribute="trailing" secondItem="Blz-S3-fw4" secondAttribute="trailing" id="ha0-Ql-EHy"/>
+                            <constraint firstAttribute="centerY" secondItem="Blz-S3-fw4" secondAttribute="centerY" id="oNs-Gd-EBt"/>
+                            <constraint firstAttribute="bottom" secondItem="lLZ-5z-aK4" secondAttribute="bottom" constant="20" id="xaY-gC-EdP"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" title="关于" id="maw-jS-S2O"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="page" destination="lLZ-5z-aK4" id="jAi-bF-Qvj"/>
+                        <outlet property="viewImage" destination="Blz-S3-fw4" id="ci2-lm-k1i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GlR-T8-B7y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="73" y="-720"/>
         </scene>
         <!--有胆量就转-->
         <scene sceneID="bkw-lh-Vvm">
@@ -1442,7 +1497,7 @@
                                 <color key="textColor" red="1" green="0.030171554530539435" blue="0.055692702413654982" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8th-nu-R2A">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8th-nu-R2A">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -1873,7 +1928,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-588" y="-767"/>
+            <point key="canvasLocation" x="-1084" y="-1075"/>
         </scene>
         <!--游戏-->
         <scene sceneID="Jo2-wA-uUV">

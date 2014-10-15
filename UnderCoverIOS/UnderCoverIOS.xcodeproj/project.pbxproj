@@ -71,6 +71,8 @@
 		3878394019BF4CE4008D552C /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = 3878393D19BF4CE4008D552C /* setting.png */; };
 		387D703E1940C63400D57408 /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 387D703D1940C63400D57408 /* config.plist */; };
 		3884010B19397B1500A1904B /* UCIHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3884010A19397B1500A1904B /* UCIHelpViewController.m */; };
+		389791F419EEC9E200BD16A2 /* NewerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 389791F319EEC9E200BD16A2 /* NewerView.m */; };
+		38AEE8DE19EEE5BD00FBE7AD /* btn_line_purple.png in Resources */ = {isa = PBXBuildFile; fileRef = 38AEE8DD19EEE5BD00FBE7AD /* btn_line_purple.png */; };
 		38B1EF8F1944563900A8759A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38B1EF8E1944563900A8759A /* StoreKit.framework */; };
 		38B55491191946A500E41984 /* words.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38B55490191946A500E41984 /* words.plist */; };
 		38B5549719194F4B00E41984 /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B5549619194F4B00E41984 /* EGORefreshTableHeaderView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -289,6 +291,9 @@
 		387D703D1940C63400D57408 /* config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
 		3884010919397B1500A1904B /* UCIHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UCIHelpViewController.h; path = Model/UCIHelpViewController.h; sourceTree = "<group>"; };
 		3884010A19397B1500A1904B /* UCIHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UCIHelpViewController.m; path = Model/UCIHelpViewController.m; sourceTree = "<group>"; };
+		389791F219EEC9E200BD16A2 /* NewerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewerView.h; path = Model/NewerView.h; sourceTree = "<group>"; };
+		389791F319EEC9E200BD16A2 /* NewerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewerView.m; path = Model/NewerView.m; sourceTree = "<group>"; };
+		38AEE8DD19EEE5BD00FBE7AD /* btn_line_purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_line_purple.png; sourceTree = "<group>"; };
 		38B1EF8E1944563900A8759A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		38B55490191946A500E41984 /* words.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = words.plist; sourceTree = "<group>"; };
 		38B5549519194F4B00E41984 /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
@@ -657,6 +662,7 @@
 				385A5F0519ECF0BE00C4A974 /* logo_12.png */,
 				385A5F1A19EE227F00C4A974 /* iphone4.png */,
 				385A5F1619EE215700C4A974 /* circle.png */,
+				38AEE8DD19EEE5BD00FBE7AD /* btn_line_purple.png */,
 				385A5F0819ECF0BE00C4A974 /* logo_15.png */,
 				385A5EF319E9183B00C4A974 /* btn_history.png */,
 				382E3F7D19DBF7DE006F9740 /* tag_yellow.png */,
@@ -821,6 +827,8 @@
 				38ECA858192CEE5D007672BA /* UCIRoomSettingViewController.h */,
 				38ECA859192CEE5D007672BA /* UCIRoomSettingViewController.m */,
 				38E53E5D1907FA06004F8F51 /* Main.storyboard */,
+				389791F219EEC9E200BD16A2 /* NewerView.h */,
+				389791F319EEC9E200BD16A2 /* NewerView.m */,
 				385A5EF519EBC5F600C4A974 /* ChangeUserName.h */,
 				385A5EF619EBC5F600C4A974 /* ChangeUserName.m */,
 				383D2C9F19E684F100079C21 /* UCIViewNetPunishController.h */,
@@ -1038,6 +1046,7 @@
 				382746DA19D927C20055977D /* default_photo.png in Resources */,
 				3878393E19BF4CE4008D552C /* help.png in Resources */,
 				38B554BC191BE87000E41984 /* failshout.mp3 in Resources */,
+				38AEE8DE19EEE5BD00FBE7AD /* btn_line_purple.png in Resources */,
 				385A5F0D19ECF0BE00C4A974 /* logo_15.png in Resources */,
 				C3089DF018C77A9D00A7BAAD /* Icon-72@2x.png in Resources */,
 				38FD7D0D19DA27D400691EA8 /* UMSCommentInputControlleriPad.xib in Resources */,
@@ -1163,6 +1172,7 @@
 				8074BC5619AF85D200E7FE62 /* UCIKillerSettingViewController.m in Sources */,
 				3827470619D93E380055977D /* SDWebImageCompat.m in Sources */,
 				3827470419D93E380055977D /* NSData+ImageContentType.m in Sources */,
+				389791F419EEC9E200BD16A2 /* NewerView.m in Sources */,
 				C3089DC518C778D400A7BAAD /* EAIntroPage.m in Sources */,
 				3873F70919055D51003827E4 /* BIDNameAndColorTableViewCell.m in Sources */,
 				385A5EF719EBC5F600C4A974 /* ChangeUserName.m in Sources */,
