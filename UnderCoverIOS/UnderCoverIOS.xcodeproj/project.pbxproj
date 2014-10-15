@@ -54,7 +54,6 @@
 		385A5F0D19ECF0BE00C4A974 /* logo_15.png in Resources */ = {isa = PBXBuildFile; fileRef = 385A5F0819ECF0BE00C4A974 /* logo_15.png */; };
 		385A5F0F19ECF1D700C4A974 /* logo_13.png in Resources */ = {isa = PBXBuildFile; fileRef = 385A5F0E19ECF1D700C4A974 /* logo_13.png */; };
 		385A5F1119ED144300C4A974 /* logo_14.png in Resources */ = {isa = PBXBuildFile; fileRef = 385A5F1019ED144300C4A974 /* logo_14.png */; };
-		385A5F1519EE1CB800C4A974 /* tapImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 385A5F1419EE1CB800C4A974 /* tapImage.png */; };
 		385A5F1819EE215700C4A974 /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 385A5F1619EE215700C4A974 /* circle.png */; };
 		385A5F1B19EE227F00C4A974 /* iphone4.png in Resources */ = {isa = PBXBuildFile; fileRef = 385A5F1A19EE227F00C4A974 /* iphone4.png */; };
 		385A5F1D19EE22E400C4A974 /* red_ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 385A5F1C19EE22E400C4A974 /* red_ball.png */; };
@@ -73,6 +72,7 @@
 		3884010B19397B1500A1904B /* UCIHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3884010A19397B1500A1904B /* UCIHelpViewController.m */; };
 		389791F419EEC9E200BD16A2 /* NewerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 389791F319EEC9E200BD16A2 /* NewerView.m */; };
 		38AEE8DE19EEE5BD00FBE7AD /* btn_line_purple.png in Resources */ = {isa = PBXBuildFile; fileRef = 38AEE8DD19EEE5BD00FBE7AD /* btn_line_purple.png */; };
+		38AEE8E019EEEE5B00FBE7AD /* tapImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 38AEE8DF19EEEE5B00FBE7AD /* tapImage.png */; };
 		38B1EF8F1944563900A8759A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38B1EF8E1944563900A8759A /* StoreKit.framework */; };
 		38B55491191946A500E41984 /* words.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38B55490191946A500E41984 /* words.plist */; };
 		38B5549719194F4B00E41984 /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B5549619194F4B00E41984 /* EGORefreshTableHeaderView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -268,7 +268,6 @@
 		385A5F0819ECF0BE00C4A974 /* logo_15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_15.png; sourceTree = "<group>"; };
 		385A5F0E19ECF1D700C4A974 /* logo_13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_13.png; sourceTree = "<group>"; };
 		385A5F1019ED144300C4A974 /* logo_14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_14.png; sourceTree = "<group>"; };
-		385A5F1419EE1CB800C4A974 /* tapImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tapImage.png; sourceTree = "<group>"; };
 		385A5F1619EE215700C4A974 /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
 		385A5F1A19EE227F00C4A974 /* iphone4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphone4.png; sourceTree = "<group>"; };
 		385A5F1C19EE22E400C4A974 /* red_ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_ball.png; sourceTree = "<group>"; };
@@ -294,6 +293,7 @@
 		389791F219EEC9E200BD16A2 /* NewerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewerView.h; path = Model/NewerView.h; sourceTree = "<group>"; };
 		389791F319EEC9E200BD16A2 /* NewerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewerView.m; path = Model/NewerView.m; sourceTree = "<group>"; };
 		38AEE8DD19EEE5BD00FBE7AD /* btn_line_purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_line_purple.png; sourceTree = "<group>"; };
+		38AEE8DF19EEEE5B00FBE7AD /* tapImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tapImage.png; sourceTree = "<group>"; };
 		38B1EF8E1944563900A8759A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		38B55490191946A500E41984 /* words.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = words.plist; sourceTree = "<group>"; };
 		38B5549519194F4B00E41984 /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
@@ -649,7 +649,6 @@
 				382E3F7819DBF7DE006F9740 /* btn_yellow.png */,
 				382CAAB419E78ED500428162 /* login_qq.png */,
 				382CAAB519E78ED500428162 /* login_weibo.png */,
-				385A5F1419EE1CB800C4A974 /* tapImage.png */,
 				382E3F7919DBF7DE006F9740 /* tag_blue.png */,
 				385A5F1019ED144300C4A974 /* logo_14.png */,
 				382E3F7A19DBF7DE006F9740 /* tag_green.png */,
@@ -665,6 +664,7 @@
 				38AEE8DD19EEE5BD00FBE7AD /* btn_line_purple.png */,
 				385A5F0819ECF0BE00C4A974 /* logo_15.png */,
 				385A5EF319E9183B00C4A974 /* btn_history.png */,
+				38AEE8DF19EEEE5B00FBE7AD /* tapImage.png */,
 				382E3F7D19DBF7DE006F9740 /* tag_yellow.png */,
 				38FD7D1A19DA3DEF00691EA8 /* peoplecount.png */,
 				38FD7D1619DA391200691EA8 /* remove.png */,
@@ -1004,7 +1004,6 @@
 				385A5F1B19EE227F00C4A974 /* iphone4.png in Resources */,
 				38ECA84B191FCD4B007672BA /* punish.plist in Resources */,
 				385A5F0F19ECF1D700C4A974 /* logo_13.png in Resources */,
-				385A5F1519EE1CB800C4A974 /* tapImage.png in Resources */,
 				C3089DEE18C77A9D00A7BAAD /* Icon-60@2x.png in Resources */,
 				38B554A019194F6F00E41984 /* blackArrow.png in Resources */,
 				385A5EF419E9183C00C4A974 /* btn_history.png in Resources */,
@@ -1074,6 +1073,7 @@
 				382E3F7F19DBF7DE006F9740 /* tag_blue.png in Resources */,
 				387D703E1940C63400D57408 /* config.plist in Resources */,
 				3878394019BF4CE4008D552C /* setting.png in Resources */,
+				38AEE8E019EEEE5B00FBE7AD /* tapImage.png in Resources */,
 				382E3F8319DBF7DE006F9740 /* tag_yellow.png in Resources */,
 				C3089DF918C77A9D00A7BAAD /* iTunesArtwork.png in Resources */,
 				38B554A719194F6F00E41984 /* whiteArrow@2x.png in Resources */,

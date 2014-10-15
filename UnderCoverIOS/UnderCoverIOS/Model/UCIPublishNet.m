@@ -274,13 +274,13 @@
             [self.tableview reloadData];
             [self doneLoadingTableViewData];
         }
-        NSLog(@"PublishAll 函数的回调");
+//        NSLog(@"PublishAll 函数的回调");
     }else if([command isEqualToString:@"PublishCollect"]){
         if([data count]>0){
             self.dowarves=data;
 //            [self.tableview reloadData];
         }
-        NSLog(@"PublishCollect 函数的回调");
+//        NSLog(@"PublishCollect 函数的回调");
     }
 }
 - (IBAction)getPunish:(id)sender {

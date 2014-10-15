@@ -127,7 +127,7 @@
     UMSocialSnsPlatform *snsPlatform = [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToSina];
     snsPlatform.loginClickHandler(self,[UMSocialControllerService defaultControllerService],YES,^(UMSocialResponseEntity *response)
                                   {
-                                      NSLog(@"response is %@",response);
+//                                      NSLog(@"response is %@",response);
                                       [self checkIsLoginSina];
                                   });
 
@@ -136,7 +136,7 @@
     UMSocialSnsPlatform *snsPlatform = [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToQzone];
     snsPlatform.loginClickHandler(self,[UMSocialControllerService defaultControllerService],YES,^(UMSocialResponseEntity *response)
                                   {
-                                      NSLog(@"response is %@",response);
+//                                      NSLog(@"response is %@",response);
                                       [self checkIsLoginQQ];
                                   });
 

@@ -175,7 +175,7 @@
 //            [self setBadgeValue:[data objectForKey:@"newgame"] atTabIndex:3 tap:(UITabBar *)self.tabBarItem];
         }
         
-        NSLog(@"UserGetInfo 函数的回调");
+//        NSLog(@"UserGetInfo 函数的回调");
     }
 }
 -(void)updateRecomImage:(NSString *)gamename gameImg:(NSString *)gameImg{

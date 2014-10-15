@@ -62,11 +62,12 @@
     NSString *URLTmp = [NSString stringWithFormat:@"%@Entry.php?cmd=%@&sign=%@&data=%@",ipaddress,command,sign,temjson];
     NSString *URLTmp1 = [URLTmp stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];  //转码成UTF-8  否则可能会出现错误
     URLTmp = URLTmp1;
-    NSLog(@"调用的报文:%@",URLTmp);
+
+//    NSLog(@"调用的报文:%@",URLTmp);
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString: URLTmp]];
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"Success: %@", operation.responseString);
+//        NSLog(@"Success: %@", operation.responseString);
         
         NSString *requestTmp = [NSString stringWithString:operation.responseString];
         NSData *resData = [[NSData alloc] initWithData:[requestTmp dataUsingEncoding:NSUTF8StringEncoding]];
@@ -84,7 +85,7 @@
         [self.delegate callBack:resultDic2 commandName:command code:code];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Failure: %@", error);
+//        NSLog(@"Failure: %@", error);
         
     }];
     [operation start];
@@ -115,7 +116,7 @@
                                                        options:0 // Pass 0 if you don't care about the readability of the generated string
                                                     error:&error];
     if (! jsonData) {
-        NSLog(@"Got an error: %@", error);
+//        NSLog(@"Got an error: %@", error);
     } else {
         jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
     }
@@ -126,7 +127,7 @@
 -(NSString *)getUDID{
     NSString * udid= [[[UIDevice currentDevice] identifierForVendor] UUIDString];
     udid=[udid stringByReplacingOccurrencesOfString:@"-" withString:@""];
-    NSLog(@"UDID:%@",udid);
+//    NSLog(@"UDID:%@",udid);
     return udid;
 }
 

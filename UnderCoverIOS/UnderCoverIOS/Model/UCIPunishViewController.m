@@ -107,7 +107,7 @@
     if (motion == UIEventSubtypeMotionShake)
     {
         [self initnewword];
-        NSLog(@"摇啊摇");
+//        NSLog(@"摇啊摇");
     }
     [self uMengClick:@"shack"];
 }
@@ -133,7 +133,7 @@
             [self reflashWords:@"可以免除惩罚"];
         }
         
-        NSLog(@"PublishRandomOne 函数的回调");
+//        NSLog(@"PublishRandomOne 函数的回调");
     }
 }
 

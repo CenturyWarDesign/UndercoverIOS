@@ -26,7 +26,7 @@
         for (int i=0; i<cardCount; i++) {
             Card *card =[deck drawRandomCard];
             if (card) {
-                NSLog(@"card content is %@",card.contents);
+//                NSLog(@"card content is %@",card.contents);
                 [self.cards addObject:card];
             }else{
                 self = Nil;
@@ -61,7 +61,7 @@ static const int COST_TO_CHOOSE = 2;
             for (Card *otherCard in self.cards) {
                 if (otherCard.choosen && !otherCard.matched) {
                     int matchScore = [card match:@[otherCard]];
-                    NSLog(@"matchScore:%d",matchScore);
+//                    NSLog(@"matchScore:%d",matchScore);
                     if (matchScore) {
                         self.score += MATCH_BONUS;
                         card.matched = YES;

@@ -50,7 +50,7 @@
 -(void)checkFlash{
     int a=[UCIAppDelegate messageHandler];
     if(a>0){
-        NSLog(@"reflash");
+//        NSLog(@"reflash");
         [UCIAppDelegate clearHandler];
         [self reflash];
     }
@@ -107,13 +107,13 @@
 //        [self.labRoomId setText:[NSString stringWithFormat:@"%d",roomid]];
         [self.labContent setText:content];
         [self.labGameName setText:gamename];
-        NSLog(@"RoomGetContent 函数的回调");
+//        NSLog(@"RoomGetContent 函数的回调");
     }
     else if([command isEqualToString:@"RoomLevel"]){
         [self setObjectFromDefault:@"" key:@"roomtype"];
         [self.navigationController popViewControllerAnimated:YES];
         [UCIAppDelegate setRoomPush:@""];
-        NSLog(@"RoomLevel 函数的回调");
+//        NSLog(@"RoomLevel 函数的回调");
     }
 }
 

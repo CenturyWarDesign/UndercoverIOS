@@ -326,11 +326,11 @@
         NSURL *fileURL1 = [NSURL URLWithString:path];
         NSURL *fileURL = [NSURL fileURLWithPath:path];
         
-        NSLog(@"== %@ |||| %@", fileURL1, fileURL);
+//        NSLog(@"== %@ |||| %@", fileURL1, fileURL);
         
         return fileURL;
     } completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
-        NSLog(@"%@ %@", filePath, error);
+//        NSLog(@"%@ %@", filePath, error);
     }];
     
     [task resume];

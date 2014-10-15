@@ -163,7 +163,7 @@
 -(void)callBack:(NSDictionary *)data commandName:(NSString*) command{
     [self setEnable];
     if([command isEqualToString:@"RoomNew"]){
-        NSLog(@"RoomNew 函数的回调");
+//        NSLog(@"RoomNew 函数的回调");
 //        NSString * roomid=[data objectForKey:@"roomid"];
 //        [UCIAppDelegate setRoomPush:[NSString stringWithFormat:@"ROOM_%@",roomid]];
         [self setObjectFromDefault:@"create" key:@"roomtype"];
@@ -186,7 +186,7 @@
         [self.his_join setHidden:false];
         [self.his_create setHidden:true];
         [self performSegueWithIdentifier:@"joinroom" sender:self];
-        NSLog(@"RoomJoin 函数的回调");
+//        NSLog(@"RoomJoin 函数的回调");
 
     }
 

@@ -369,7 +369,7 @@
 -(void)callBack:(NSDictionary *)data commandName:(NSString*) command{
     if([command isEqualToString:@"RoomPunish"]){
         punishinfo=[data objectForKey:@"punish"];
-        NSLog(@"RoomPunish 函数的回调");
+//        NSLog(@"RoomPunish 函数的回调");
     }
 }
 

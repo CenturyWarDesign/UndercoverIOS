@@ -62,7 +62,7 @@
 
 -(void)callBack:(NSDictionary *)data commandName:(NSString*) command{
     if([command isEqualToString:@"NameChange"]){
-        NSLog(@"NameChange 函数的回调");
+//        NSLog(@"NameChange 函数的回调");
         [self setObjectFromDefault:self.labName.text key:@"username"];
         //成功修改昵称
         [self uMengClick:@"room_changename"];

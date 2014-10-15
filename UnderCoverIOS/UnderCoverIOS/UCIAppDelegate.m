@@ -19,6 +19,7 @@ static bool GAME_DEBUG;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    GAME_DEBUG=false;
 //    [self readXML];
 //    NSLog(@"Hello world!");
     application.applicationSupportsShakeToEdit = YES;//添加此处
@@ -26,7 +27,8 @@ static bool GAME_DEBUG;
     [MobClick startWithAppkey:@"531f3fcd56240b7b2a0415ac" reportPolicy:SEND_INTERVAL   channelId:@"TEST"];
     NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
     [MobClick setAppVersion:version];
-    [MobClick setLogEnabled:YES];
+    
+    [MobClick setLogEnabled:GAME_DEBUG];
     [MobClick updateOnlineConfig];
     
     [UMSocialData setAppKey:@"531f3fcd56240b7b2a0415ac"];
@@ -37,8 +39,9 @@ static bool GAME_DEBUG;
     if(cls && [cls respondsToSelector:deviceIDSelector]){
         deviceID = [cls performSelector:deviceIDSelector];
     }
-    
-    NSLog(@"{\"oid\": \"%@\"}", deviceID);
+    if(GAME_DEBUG){
+        NSLog(@"{\"oid\": \"%@\"}", deviceID);
+    }
     // Override point for customization after application launch.
     
 //        NSArray * tem=[MobClick classFallbacksForKeyedArchiver];
@@ -60,7 +63,7 @@ static bool GAME_DEBUG;
     
     //清除脚标
     [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
-    GAME_DEBUG=true;
+    
 
 
     

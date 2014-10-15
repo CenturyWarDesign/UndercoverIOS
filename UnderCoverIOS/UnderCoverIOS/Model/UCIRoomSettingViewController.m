@@ -170,7 +170,7 @@
 -(void)checkFlash{
     int a=[UCIAppDelegate messageHandler];
     if(a>0){
-        NSLog(@"reflash");
+//        NSLog(@"reflash");
         [UCIAppDelegate clearHandler];
         [self reflash];
     }
@@ -207,7 +207,7 @@
 //        [self dismissViewControllerAnimated:false completion:nil];
         
         [self.navigationController popViewControllerAnimated:YES];
-        NSLog(@"RoomLevel 函数的回调");
+//        NSLog(@"RoomLevel 函数的回调");
     }
     else if([command isEqualToString:@"RoomStartGame"]){
         datatosend=data;
@@ -216,13 +216,13 @@
 //        }else if(gametype==2){
 //            [self performSegueWithIdentifier:@"gameKiller" sender:self];
 //        }
-        NSLog(@"RoomStartGame 函数的回调");
+//        NSLog(@"RoomStartGame 函数的回调");
         [self checkifEnable:(int)[userinfo count]+(int)self.peopleCount.value];
     }
     else if([command isEqualToString:@"RoomRemoveSomeone"]){
         [self showAlert:@"" content:@"删除玩家成功"];
         [self reflash];
-        NSLog(@"RoomRemoveSomeone 函数的回调");
+//        NSLog(@"RoomRemoveSomeone 函数的回调");
     }
 
 }
