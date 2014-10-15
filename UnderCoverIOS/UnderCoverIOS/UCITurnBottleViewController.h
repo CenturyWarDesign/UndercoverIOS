@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) IBOutlet UIButton *btnBottle;
 @property (strong, nonatomic) IBOutlet UIButton *btnPunish;
+@property (strong, nonatomic) IBOutlet UIButton *btnTap;
 
 
 @end

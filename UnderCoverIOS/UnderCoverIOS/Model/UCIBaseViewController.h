@@ -50,4 +50,5 @@
 -(int)nextSay;
 -(NSString*)getUserNewName:(int)gameuid oldName:(NSString *)oldName;
 -(void)shareSomeThing:(NSString *)content imageName:(NSString *)imageName;
+-(UIWebView *)showHelp:(NSString *)url fatherView:(UIView * )fatherView;
 @end

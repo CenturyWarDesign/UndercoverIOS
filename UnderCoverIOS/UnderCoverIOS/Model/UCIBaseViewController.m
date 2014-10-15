@@ -384,4 +384,21 @@
                                 shareToSnsNames:[NSArray arrayWithObjects:UMShareToSina,UMShareToTencent,UMShareToQzone,UMShareToRenren,nil]
                                        delegate:nil];
 }
+-(UIWebView *)showHelp:(NSString *)url fatherView:(UIView * )fatherView{
+    NSURLRequest * request=[NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+    CGRect bounds =fatherView.bounds;
+    UIWebView* webView = [[UIWebView alloc]initWithFrame:bounds];
+    [webView loadRequest:request];
+//    fatherView.subviews.a
+    [fatherView addSubview:webView];
+//    UIButton *someAddButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+//    someAddButton.
+    return webView;
+}
+-(void)removeHelpView:(UIView *)helpview{
+    [helpview removeFromSuperview];
+
+    
+}
+
 @end

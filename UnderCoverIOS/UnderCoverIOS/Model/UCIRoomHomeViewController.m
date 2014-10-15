@@ -52,6 +52,8 @@
     
     [self setEnable];
     // Do any additional setup after loading the view.
+    
+//    [self showHelp:@"http://192.168.1.120/CenturyServer/www/index.php?showpage=helpimage&name=online_help2" fatherView:self.view];
 }
 
 -(IBAction) checkIsInRoom{

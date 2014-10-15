@@ -34,7 +34,13 @@
 
 -(void)initGame{
     [self.btnPunish setHidden:YES];
-    [self.btnBottle setEnabled:true];
+    [self.btnTap setEnabled:true];
+//    CGRect oldFrame=self.btnBottle.frame;
+
+    self.btnBottle.layer.anchorPoint=CGPointMake(self.btnTap.bounds.size.width/self.btnBottle.bounds.size.width/2, 0.5);
+//    self.btnBottle.frame=CGRectMake(143, 278, 12, 12);
+//    CGRect oldFrame2=self.btnBottle.frame;
+//    self.btnBottle.bounds.origin.x= self.btnTap.bounds.origin.x;
 }
 - (IBAction)beginTurnBottle:(id)sender
 {
@@ -43,7 +49,7 @@
     float needRotate=14*M_PI+(randnum % 628)/100.0f;
     CABasicAnimation* animation=[self rotation:5 degree:needRotate  repeatCount:0];
     [self.btnBottle.layer addAnimation:animation forKey:nil];
-    [self.btnBottle setEnabled:false];
+    [self.btnTap setEnabled:false];
 }
 
 -(CABasicAnimation *)rotation:(float)dur degree:(float)degree repeatCount:(int)repeatCount
@@ -57,6 +63,7 @@
     animation.cumulative= YES;
     animation.removedOnCompletion=NO;
     animation.fillMode=kCAFillModeForwards;
+    
     animation.repeatCount= repeatCount;
     animation.delegate= self;
     return animation;

@@ -119,6 +119,9 @@
     [self shareSomeThing:punishText imageName:@""];
 }
 
+
+
+
 -(void)callBack:(NSDictionary *)data commandName:(NSString*) command{
     if([command isEqualToString:@"PublishRandomOne"]){
         NSArray * punishArr=[data objectForKey:@"content"];
