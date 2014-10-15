@@ -77,6 +77,7 @@ int randNum=0;
     else{
         float rate= index_n /(float)(P_count*2.5)/2+0.5;
         [self.touchButton setAlpha:rate];
+        [self playChuishao];
     }
 }
 

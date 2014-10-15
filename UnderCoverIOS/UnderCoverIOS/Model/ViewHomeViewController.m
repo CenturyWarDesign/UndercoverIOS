@@ -8,6 +8,8 @@
 
 #import "ViewHomeViewController.h"
 #import "MobClick.h"
+//#import
+#import "UIButton+WebCache.h"
 @interface ViewHomeViewController ()
 
 @end
@@ -41,18 +43,23 @@
 //
     // Do any additional setup after loading the view.
     
+
+    array = [[NSArray alloc] initWithObjects:@"谁是卧底", @"杀人游戏",
+                      @"真心话大冒险", @"有胆量就点", @"有胆量就转",@"每周推荐", nil];
+    PAGENUM=[array count];
     
     imageScrollView.contentSize= CGSizeMake(PAGENUM * 320.0f, imageScrollView.frame.size.height);
     imageScrollView.pagingEnabled= YES;
     imageScrollView.showsHorizontalScrollIndicator= NO;
     imageScrollView.delegate=self;
     
-    NSArray *array = [[NSArray alloc] initWithObjects:@"谁是卧底", @"杀人游戏",
-                      @"真心话大冒险", @"有胆量就点", @"有胆量就转", nil];
-    
     //这里为滚动视图添加了子视图，为了能添加后续操作，我这里定义的子视图是按键UIButton
     for(int i = 0; i < PAGENUM; i++) {
             NSString  * fileName =[NSString stringWithFormat:@"logo_1%d.png",i+1];
+            if ([[array objectAtIndex:i] isEqualToString:@"每周推荐"]) {
+                fileName =@"week_recom.png";
+            }
+        
             UIButton *imageButton = [[UIButton alloc] initWithFrame:CGRectMake(i * 320.0f+50,  0.0f, 220.0f, 300.0f)];
             [imageButton setBackgroundImage:[UIImage imageNamed:fileName] forState:UIControlStateNormal];
             [imageButton setTitle:[array objectAtIndex:i] forState:UIControlStateNormal];
@@ -60,7 +67,7 @@
             imageButton.titleLabel.font= [UIFont systemFontOfSize: 24.0];
              UIEdgeInsets insets = {270, 0 , 0, 0};
             imageButton.titleEdgeInsets=insets;
-        [imageButton setTag:i];
+            [imageButton setTag:i];
             [imageButton addTarget:self action:@selector(jumpTuGame:) forControlEvents:UIControlEventTouchUpInside];
 
         }
@@ -73,12 +80,17 @@
 
 -(void)jumpTuGame:(UIButton *)sender{
     int tag=(int)sender.tag;
+    
+    if ([[array objectAtIndex:tag] isEqualToString:@"每周推荐"]) {
+        [self.tabBarController setSelectedIndex:2];
+        [self setObjectFromDefault:@"gamenow" key:@"HELP_OPEN"];
+        return;
+    }
     switch (tag) {
-  case 0:
+        case 0:
             [self setObjectFromDefault:@"1" key:@"localGameType"];
             [self performSegueWithIdentifier:@"game_undercover" sender:self];
-            
-    break;
+            break;
         case 1:
             [self setObjectFromDefault:@"2" key:@"localGameType"];
             [self performSegueWithIdentifier:@"game_undercover" sender:self];
@@ -131,6 +143,14 @@
             UCIBaseViewController * tem= [self.tabBarController.childViewControllers objectAtIndex:2];
           
             [tem setBadgeValue:[[data objectForKey:@"newgame"] intValue]];
+
+            newGameName=[data objectForKey:@"newgamename"];
+            newGameImage=[data objectForKey:@"newgameimage"];
+            
+            if(newGameImage.length>0&&newGameImage.length>0){
+                [self updateRecomImage:newGameName gameImg:newGameImage];
+            }
+
 //         UITabBarItem * tem=   (UITabBarItem *)[self.tabBarController.toolbarItems objectAtIndex:[@"2" intValue]];
 //            tem.badgeValue=@"3";
 
@@ -140,7 +160,16 @@
         NSLog(@"UserGetInfo 函数的回调");
     }
 }
-
+-(void)updateRecomImage:(NSString *)gamename gameImg:(NSString *)gameImg{
+    for (int i=0; i< [array count]; i++) {
+        if([[array objectAtIndex:i] isEqualToString:@"每周推荐"]){
+            UIButton * tem= (UIButton *)[imageScrollView viewWithTag:i];
+            [tem setTitle:gamename forState:UIControlStateNormal];
+            [tem sd_setBackgroundImageWithURL:[NSURL URLWithString:gameImg] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"week_recom.png"]];
+//            [tem setBackgroundImage:[UIImage imageNamed:fileName] forState:UIControlStateNormal];
+        }
+    }
+}
 
 
 

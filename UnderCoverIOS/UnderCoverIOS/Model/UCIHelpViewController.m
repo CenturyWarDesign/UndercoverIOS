@@ -35,19 +35,27 @@
     [super viewDidLoad];
     [self uMengClick:@"game_help"];
     [self setBadgeValue:0];
+ 
+    [self loadPage:@"help"];
+    // Do any additional setup after loading the view.
+}
+-(void)loadPage:(NSString *)page{
     HTTPBase *ht=[[HTTPBase alloc] init];;
     
     NSString * homepage=[self getObjectFromDefault:@"homepage"];
-    if(homepage.length==0){
+    if(homepage.length==0||[UCIAppDelegate isdebug]){
         homepage=[UCIAppDelegate getConfig:@"homepage"];
     }
-    NSString * ipaddress=[NSString stringWithFormat:@"%@?showpage=help&username=%@", homepage,[ht getUDID]];
+    NSString * ipaddress=[NSString stringWithFormat:@"%@?showpage=%@&username=%@", homepage,page,[ht getUDID]];
     NSURLRequest * request=[NSURLRequest requestWithURL:[NSURL URLWithString:ipaddress]];
     [self.webView loadRequest:request];
-    
-    // Do any additional setup after loading the view.
 }
 -(void) viewWillAppear:(BOOL)animated{
+    NSString * showPage=[self getObjectFromDefault:@"HELP_OPEN"];
+    if(showPage.length>0){
+        [self loadPage:showPage];
+        [self setObjectFromDefault:@"" key:@"HELP_OPEN"];
+    }
 
 }
 

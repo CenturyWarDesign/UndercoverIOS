@@ -7,9 +7,12 @@
 //
 
 #import "UCIBaseViewController.h"
-#define PAGENUM 5
 
 @interface ViewHomeViewController : UCIBaseViewController<UIScrollViewDelegate>{
+    int PAGENUM;
+    NSArray *array ;
+    NSString *newGameName;
+    NSString *newGameImage;
 }
 @property (strong, nonatomic) IBOutlet UILabel *labMessage;
 
