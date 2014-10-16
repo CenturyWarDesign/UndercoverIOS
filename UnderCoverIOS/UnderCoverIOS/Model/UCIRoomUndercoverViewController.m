@@ -63,17 +63,17 @@
             
        
         if(temgameuid==-1){
-            NSString * content=[NSString stringWithFormat:@"%@:%@",[self getUserNewName:-1 oldName:@"NO1:"],temcontent];
+            NSString * content=[NSString stringWithFormat:@"%@:%@",[self getUserNewName:-1 oldName:@"NO1"],temcontent];
             [self.btn_no1 setTitle:content forState:UIControlStateNormal];
         }else if(temgameuid==-2){
-            NSString * content=[NSString stringWithFormat:@"%@:%@",[self getUserNewName:-2 oldName:@"NO2:"],temcontent];
+            NSString * content=[NSString stringWithFormat:@"%@:%@",[self getUserNewName:-2 oldName:@"NO2"],temcontent];
             [self.btn_no2 setTitle:content forState:UIControlStateNormal];
         }else if(temgameuid==-3){
-             NSString * content=[NSString stringWithFormat:@"%@:%@",[self getUserNewName:-3 oldName:@"NO3:"],temcontent];
+             NSString * content=[NSString stringWithFormat:@"%@:%@",[self getUserNewName:-3 oldName:@"NO3"],temcontent];
             [self.btn_no3 setTitle:content forState:UIControlStateNormal];
         }
         else if(temgameuid==-4){
-             NSString * content=[NSString stringWithFormat:@"%@:%@",[self getUserNewName:-4 oldName:@"NO4:"],temcontent];
+             NSString * content=[NSString stringWithFormat:@"%@:%@",[self getUserNewName:-4 oldName:@"NO4"],temcontent];
             [self.btn_no4 setTitle:content forState:UIControlStateNormal];
         }
         else if(zhuchigameuid==temgameuid){
