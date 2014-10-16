@@ -181,6 +181,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		B12F89CB19EFA0360098CDD8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B12F89C619EFA0360098CDD8 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 13F135F9799243EA9BADBB21;
+			remoteInfo = Pods;
+		};
+		B12F89CD19EFA0360098CDD8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B12F89C619EFA0360098CDD8 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F9BAA1DAD73F4A7EBD713FBB;
+			remoteInfo = "Pods-AFNetworking";
+		};
+		B12F89CF19EFA0400098CDD8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B12F89C619EFA0360098CDD8 /* Pods.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C1447C11B0440BF83278C3C;
+			remoteInfo = Pods;
+		};
 		C3F06C4218B6432D00F08642 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C3F06C1418B6432C00F08642 /* Project object */;
@@ -396,6 +417,7 @@
 		8013309919A3A2C8009AC1A3 /* UCITouchButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCITouchButtonViewController.m; sourceTree = "<group>"; };
 		8074BC5419AF85D200E7FE62 /* UCIKillerSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCIKillerSettingViewController.h; sourceTree = "<group>"; };
 		8074BC5519AF85D200E7FE62 /* UCIKillerSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCIKillerSettingViewController.m; sourceTree = "<group>"; };
+		B12F89C619EFA0360098CDD8 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		C3089DC118C778D400A7BAAD /* EAIntroPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAIntroPage.h; sourceTree = "<group>"; };
 		C3089DC218C778D400A7BAAD /* EAIntroPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAIntroPage.m; sourceTree = "<group>"; };
 		C3089DC318C778D400A7BAAD /* EAIntroView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAIntroView.h; sourceTree = "<group>"; };
@@ -610,6 +632,15 @@
 			path = SocialSDKXib;
 			sourceTree = "<group>";
 		};
+		B12F89C719EFA0360098CDD8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B12F89CC19EFA0360098CDD8 /* libPods.a */,
+				B12F89CE19EFA0360098CDD8 /* libPods-AFNetworking.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		C3089DC018C778D400A7BAAD /* EAIntroView */ = {
 			isa = PBXGroup;
 			children = (
@@ -774,6 +805,7 @@
 		C3F06C1318B6432C00F08642 = {
 			isa = PBXGroup;
 			children = (
+				B12F89C619EFA0360098CDD8 /* Pods.xcodeproj */,
 				38FD7CEE19DA27D400691EA8 /* UMSocial_Sdk_4.1 */,
 				382746E119D93E380055977D /* SDWebImage */,
 				38E53E601907FAC7004F8F51 /* View */,
@@ -922,6 +954,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				B12F89D019EFA0400098CDD8 /* PBXTargetDependency */,
 			);
 			name = UnderCoverIOS;
 			productName = UnderCoverIOS;
@@ -973,6 +1006,12 @@
 			mainGroup = C3F06C1318B6432C00F08642;
 			productRefGroup = C3F06C1D18B6432C00F08642 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B12F89C719EFA0360098CDD8 /* Products */;
+					ProjectRef = B12F89C619EFA0360098CDD8 /* Pods.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C3F06C1B18B6432C00F08642 /* UnderCoverIOS */,
@@ -980,6 +1019,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		B12F89CC19EFA0360098CDD8 /* libPods.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libPods.a;
+			remoteRef = B12F89CB19EFA0360098CDD8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B12F89CE19EFA0360098CDD8 /* libPods-AFNetworking.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libPods-AFNetworking.a";
+			remoteRef = B12F89CD19EFA0360098CDD8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C3F06C1A18B6432C00F08642 /* Resources */ = {
@@ -1200,6 +1256,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		B12F89D019EFA0400098CDD8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Pods;
+			targetProxy = B12F89CF19EFA0400098CDD8 /* PBXContainerItemProxy */;
+		};
 		C3F06C4318B6432D00F08642 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C3F06C1B18B6432C00F08642 /* UnderCoverIOS */;
@@ -1323,6 +1384,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: chen linzhang (638Q87HF92)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: chen linzhang (638Q87HF92)";
+				FRAMEWORK_SEARCH_PATHS = "./**";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UnderCoverIOS/UnderCoverIOS-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -1336,6 +1398,7 @@
 					"$(PROJECT_DIR)/UnderCoverIOS/External/umeng",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/UMSocial_Sdk_4.1",
+					"$(PODS_ROOT)/build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 				);
 				OTHER_LDFLAGS = (
 					"-lxml2",
@@ -1350,7 +1413,7 @@
 					SystemConfiguration,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "38689F58-8F8F-45DB-B932-143D2118469A";
+				PROVISIONING_PROFILE = "A802B3B1-AC42-4439-9F1F-6122FAC13251";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1360,8 +1423,9 @@
 			baseConfigurationReference = 69C0D4BC55754114AF83A8A1 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: chen linzhang (638Q87HF92)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: chen linzhang (638Q87HF92)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: chen linzhang (NSMZK62Q8R)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: chen linzhang (NSMZK62Q8R)";
+				FRAMEWORK_SEARCH_PATHS = "./**";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UnderCoverIOS/UnderCoverIOS-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -1375,6 +1439,7 @@
 					"$(PROJECT_DIR)/UnderCoverIOS/External/umeng",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/UMSocial_Sdk_4.1",
+					"$(PODS_ROOT)/build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 				);
 				OTHER_LDFLAGS = (
 					"-lxml2",
@@ -1389,7 +1454,7 @@
 					SystemConfiguration,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "38689F58-8F8F-45DB-B932-143D2118469A";
+				PROVISIONING_PROFILE = "A802B3B1-AC42-4439-9F1F-6122FAC13251";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

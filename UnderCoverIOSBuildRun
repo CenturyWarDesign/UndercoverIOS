@@ -1,0 +1,51 @@
+#!/bin/bash
+
+die() {
+    echo "$*" >&2
+    echo Sending error
+    exit 1
+}
+
+projectname=$1
+appname=$2
+config=$3
+incversion=$4
+generateipa=$5
+sendemail=$6
+version=$7
+project_dir=$(pwd)
+
+echo Using configuration $config
+
+
+fullversion="$(agvtool mvers -terse1).$(agvtool vers -terse)"
+echo Building version $fullversion
+
+
+echo Clean build environment
+rm -f ../clean_log.txt
+xcodebuild -project ./UnderCoverIOS/$projectname.xcodeproj -target UnderCoverIOS -configuration "$config" clean > ./clean_log_$config.txt || die "build failed"
+
+security unlock-keychain -p "abc123" /Users/linzhang/Library/Keychains/login.keychain
+
+echo Building code
+rm -f ../build_log.txt
+xcodebuild -project ./UnderCoverIOS/$projectname.xcodeproj -target UnderCoverIOS -configuration "$config" build > ./build_log_$config.txt || die "build failed"
+
+if [[ "$generateipa" = "Yes" ]] ;
+then
+	echo Generating ipa file
+	# packaging
+	cd ./UnderCoverIOS/build/Release-iphoneos || die "no such directory"
+	rm -rf Payload
+	rm -f *.ipa
+    rm -f *.dSYM
+	mkdir Payload
+	cp -Rpf UnderCoverIOS.app Payload/
+
+	zip -r "$appname.ipa" Payload
+
+	echo finished making "$appname.ipa"
+	
+fi
+
