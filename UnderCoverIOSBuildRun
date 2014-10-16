@@ -26,7 +26,7 @@ echo Clean build environment
 rm -f ../clean_log.txt
 xcodebuild -project ./UnderCoverIOS/$projectname.xcodeproj -target UnderCoverIOS -configuration "$config" clean > ./clean_log_$config.txt || die "build failed"
 
-security unlock-keychain -p "abc123" /Users/linzhang/Library/Keychains/login.keychain
+security unlock-keychain -p "wanbinWJC" /Users/wanbin/Library/Keychains/login.keychain
 
 echo Building code
 rm -f ../build_log.txt
