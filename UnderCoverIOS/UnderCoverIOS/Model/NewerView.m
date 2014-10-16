@@ -54,12 +54,12 @@
             
             UIButton *imageButton = [[UIButton alloc] initWithFrame:CGRectMake(i * 320.0f+20,  240, 150.0f, 50.0f)];
             [imageButton setBackgroundImage:[UIImage imageNamed:@"btn_line_purple.png"] forState:UIControlStateNormal];
-            [imageButton setTitle:@"马上开始" forState:UIControlStateNormal];
-            [viewImage addSubview:imageButton];
-            imageButton.titleLabel.font= [UIFont systemFontOfSize: 24.0];
-            imageButton.titleLabel.textColor=[self getPurPleColor];
+//            imageButton.titleLabel.text=@"马上开始";
+//            [imageButton setTitle:@"马上开始" forState:UIControlStateNormal];
+//            imageButton.titleLabel.font= [UIFont systemFontOfSize: 24.0];
+//            imageButton.titleLabel.textColor=[self getPinkColor];
             [imageButton addTarget:self action:@selector(startGame) forControlEvents:UIControlEventTouchUpInside];
-
+            [viewImage addSubview:imageButton];
         }
         else{
             //快速

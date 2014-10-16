@@ -1652,7 +1652,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tapImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="K2Q-D2-sH0">
-                                <rect key="frame" x="57" y="78" width="206" height="280"/>
+                                <rect key="frame" x="57" y="96" width="206" height="244"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="244" id="LQZ-VV-T8E"/>
+                                    <constraint firstAttribute="width" constant="206" id="eh5-1z-gg8"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="43" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iJh-1U-NIV">
                                 <rect key="frame" x="64" y="367" width="193" height="49"/>
@@ -1982,7 +1986,7 @@
         <image name="tag_pink.png" width="200" height="51"/>
         <image name="tag_puple.png" width="200" height="51"/>
         <image name="tag_yellow.png" width="200" height="51"/>
-        <image name="tapImage.png" width="206" height="280"/>
+        <image name="tapImage.png" width="207" height="244"/>
         <image name="wx_qcode.jpg" width="258" height="258"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

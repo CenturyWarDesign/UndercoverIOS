@@ -44,6 +44,8 @@
 		383D2CAE19E68B7A00079C21 /* CellPunish.xib in Resources */ = {isa = PBXBuildFile; fileRef = 383D2CAC19E68B7A00079C21 /* CellPunish.xib */; };
 		383D2CB119E76E4B00079C21 /* SettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 383D2CB019E76E4B00079C21 /* SettingView.m */; };
 		384B3E681916762B0027201E /* testViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 384B3E671916762B0027201E /* testViewController.m */; };
+		3858CBEB19EF613300AC1E6F /* tapImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 3858CBEA19EF613300AC1E6F /* tapImage.png */; };
+		3858CBED19EF64BD00AC1E6F /* btn_line_purple.png in Resources */ = {isa = PBXBuildFile; fileRef = 3858CBEC19EF64BD00AC1E6F /* btn_line_purple.png */; };
 		385A5EF419E9183C00C4A974 /* btn_history.png in Resources */ = {isa = PBXBuildFile; fileRef = 385A5EF319E9183B00C4A974 /* btn_history.png */; };
 		385A5EF719EBC5F600C4A974 /* ChangeUserName.m in Sources */ = {isa = PBXBuildFile; fileRef = 385A5EF619EBC5F600C4A974 /* ChangeUserName.m */; };
 		385A5F0019EBF8D300C4A974 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 385A5EFE19EBF8D300C4A974 /* heart.png */; };
@@ -71,8 +73,6 @@
 		387D703E1940C63400D57408 /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 387D703D1940C63400D57408 /* config.plist */; };
 		3884010B19397B1500A1904B /* UCIHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3884010A19397B1500A1904B /* UCIHelpViewController.m */; };
 		389791F419EEC9E200BD16A2 /* NewerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 389791F319EEC9E200BD16A2 /* NewerView.m */; };
-		38AEE8DE19EEE5BD00FBE7AD /* btn_line_purple.png in Resources */ = {isa = PBXBuildFile; fileRef = 38AEE8DD19EEE5BD00FBE7AD /* btn_line_purple.png */; };
-		38AEE8E019EEEE5B00FBE7AD /* tapImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 38AEE8DF19EEEE5B00FBE7AD /* tapImage.png */; };
 		38B1EF8F1944563900A8759A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38B1EF8E1944563900A8759A /* StoreKit.framework */; };
 		38B55491191946A500E41984 /* words.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38B55490191946A500E41984 /* words.plist */; };
 		38B5549719194F4B00E41984 /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B5549619194F4B00E41984 /* EGORefreshTableHeaderView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -257,6 +257,8 @@
 		383D2CB019E76E4B00079C21 /* SettingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingView.m; path = UnderCoverIOS/Model/SettingView.m; sourceTree = "<group>"; };
 		384B3E661916762B0027201E /* testViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = testViewController.h; path = Model/testViewController.h; sourceTree = "<group>"; };
 		384B3E671916762B0027201E /* testViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = testViewController.m; path = Model/testViewController.m; sourceTree = "<group>"; };
+		3858CBEA19EF613300AC1E6F /* tapImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tapImage.png; sourceTree = "<group>"; };
+		3858CBEC19EF64BD00AC1E6F /* btn_line_purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_line_purple.png; sourceTree = "<group>"; };
 		385A5EF319E9183B00C4A974 /* btn_history.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_history.png; sourceTree = "<group>"; };
 		385A5EF519EBC5F600C4A974 /* ChangeUserName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChangeUserName.h; path = Model/ChangeUserName.h; sourceTree = "<group>"; };
 		385A5EF619EBC5F600C4A974 /* ChangeUserName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChangeUserName.m; path = Model/ChangeUserName.m; sourceTree = "<group>"; };
@@ -292,8 +294,6 @@
 		3884010A19397B1500A1904B /* UCIHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UCIHelpViewController.m; path = Model/UCIHelpViewController.m; sourceTree = "<group>"; };
 		389791F219EEC9E200BD16A2 /* NewerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewerView.h; path = Model/NewerView.h; sourceTree = "<group>"; };
 		389791F319EEC9E200BD16A2 /* NewerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewerView.m; path = Model/NewerView.m; sourceTree = "<group>"; };
-		38AEE8DD19EEE5BD00FBE7AD /* btn_line_purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_line_purple.png; sourceTree = "<group>"; };
-		38AEE8DF19EEEE5B00FBE7AD /* tapImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tapImage.png; sourceTree = "<group>"; };
 		38B1EF8E1944563900A8759A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		38B55490191946A500E41984 /* words.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = words.plist; sourceTree = "<group>"; };
 		38B5549519194F4B00E41984 /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
@@ -661,12 +661,12 @@
 				385A5F0519ECF0BE00C4A974 /* logo_12.png */,
 				385A5F1A19EE227F00C4A974 /* iphone4.png */,
 				385A5F1619EE215700C4A974 /* circle.png */,
-				38AEE8DD19EEE5BD00FBE7AD /* btn_line_purple.png */,
 				385A5F0819ECF0BE00C4A974 /* logo_15.png */,
 				385A5EF319E9183B00C4A974 /* btn_history.png */,
-				38AEE8DF19EEEE5B00FBE7AD /* tapImage.png */,
 				382E3F7D19DBF7DE006F9740 /* tag_yellow.png */,
 				38FD7D1A19DA3DEF00691EA8 /* peoplecount.png */,
+				3858CBEA19EF613300AC1E6F /* tapImage.png */,
+				3858CBEC19EF64BD00AC1E6F /* btn_line_purple.png */,
 				38FD7D1619DA391200691EA8 /* remove.png */,
 				38FD7CE919D9596F00691EA8 /* wx_qcode.jpg */,
 				385A5EFE19EBF8D300C4A974 /* heart.png */,
@@ -1045,8 +1045,8 @@
 				382746DA19D927C20055977D /* default_photo.png in Resources */,
 				3878393E19BF4CE4008D552C /* help.png in Resources */,
 				38B554BC191BE87000E41984 /* failshout.mp3 in Resources */,
-				38AEE8DE19EEE5BD00FBE7AD /* btn_line_purple.png in Resources */,
 				385A5F0D19ECF0BE00C4A974 /* logo_15.png in Resources */,
+				3858CBED19EF64BD00AC1E6F /* btn_line_purple.png in Resources */,
 				C3089DF018C77A9D00A7BAAD /* Icon-72@2x.png in Resources */,
 				38FD7D0D19DA27D400691EA8 /* UMSCommentInputControlleriPad.xib in Resources */,
 				38E53E5F1907FA06004F8F51 /* Main.storyboard in Resources */,
@@ -1073,7 +1073,7 @@
 				382E3F7F19DBF7DE006F9740 /* tag_blue.png in Resources */,
 				387D703E1940C63400D57408 /* config.plist in Resources */,
 				3878394019BF4CE4008D552C /* setting.png in Resources */,
-				38AEE8E019EEEE5B00FBE7AD /* tapImage.png in Resources */,
+				3858CBEB19EF613300AC1E6F /* tapImage.png in Resources */,
 				382E3F8319DBF7DE006F9740 /* tag_yellow.png in Resources */,
 				C3089DF918C77A9D00A7BAAD /* iTunesArtwork.png in Resources */,
 				38B554A719194F6F00E41984 /* whiteArrow@2x.png in Resources */,
