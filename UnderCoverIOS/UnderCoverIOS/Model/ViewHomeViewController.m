@@ -52,6 +52,7 @@
     imageScrollView.pagingEnabled= YES;
     imageScrollView.showsHorizontalScrollIndicator= NO;
     imageScrollView.delegate=self;
+    imageScrollView.delaysContentTouches=NO;
     
     //这里为滚动视图添加了子视图，为了能添加后续操作，我这里定义的子视图是按键UIButton
     for(int i = 0; i < PAGENUM; i++) {
